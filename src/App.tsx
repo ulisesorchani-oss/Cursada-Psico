@@ -153,6 +153,17 @@ export default function App() {
     );
   }, []);
 
+  const toggleManyApproved = useCallback((ids: string[], approve: boolean) => {
+    setApprovedIds((prev) => {
+      const next = new Set(prev);
+      for (const id of ids) {
+        if (approve) next.add(id);
+        else next.delete(id);
+      }
+      return Array.from(next);
+    });
+  }, []);
+
   const handleShareMateria = useCallback(async (materia: Materia) => {
     const shareUrl = `${window.location.origin}${window.location.pathname}?materia=${encodeURIComponent(materia.id)}`;
     try {
@@ -555,8 +566,20 @@ export default function App() {
         )}
       </main>
 
-      {/* Official Flowchart Diagram */}
-      <CurriculumFlowchart />
+      {/* Official Interactive Flowchart Diagram */}
+      <CurriculumFlowchart
+        materias={PLAN_ESTUDIOS}
+        approvedSet={approvedSet}
+        onToggleApproved={toggleApproved}
+        onToggleManyApproved={toggleManyApproved}
+        onOpenMateria={(materia) => setSelectedMateria(materia)}
+        onJumpToCycle={(cycle) => {
+          setSelectedCycle(cycle);
+          setSelectedArea('all');
+          setSearchQuery('');
+          document.getElementById('plan')?.scrollIntoView({ behavior: 'smooth' });
+        }}
+      />
 
       {/* Modal for Materia Details */}
       <AnimatePresence>

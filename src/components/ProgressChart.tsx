@@ -220,7 +220,7 @@ export function ProgressChart({
           <CheckCircle2 size={20} className="text-bordo shrink-0 mt-0.5" />
           <div>
             <h3 className="text-base sm:text-lg font-serif font-bold text-ink leading-tight">
-              Avance en el Plan de Estudios 1985
+              Avance en el Plan de Estudios 1985 y modificatorias
             </h3>
             <p className="text-xs text-muted mt-1 tabular-nums">
               CBC: <strong className="text-ink">{cbcCounted}/6</strong>

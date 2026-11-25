@@ -2,6 +2,8 @@ import { Materia } from '../constants';
 import { EDI_PORTAL_URL, EDI_RECURSOS_AUTORES } from './ediBibliografias';
 import { AUTORES_TANDA_2 } from './autoresTanda2';
 import { AUTORES_TANDA_3 } from './autoresTanda3';
+import { AUTORES_TANDA_4 } from './autoresTanda4';
+import { AUTORES_TANDA_5 } from './autoresTanda5';
 
 export type CorrienteAutor =
   | 'Psicoanálisis'
@@ -10,6 +12,7 @@ export type CorrienteAutor =
   | 'Desarrollo y Cognición'
   | 'Social e Institucional'
   | 'Epistemología y Lenguaje'
+  | 'Filosofía y Fenomenología'
   | 'Referentes UBA / Argentina';
 
 export const CORRIENTES_AUTORES: readonly CorrienteAutor[] = [
@@ -19,6 +22,7 @@ export const CORRIENTES_AUTORES: readonly CorrienteAutor[] = [
   'Desarrollo y Cognición',
   'Social e Institucional',
   'Epistemología y Lenguaje',
+  'Filosofía y Fenomenología',
   'Referentes UBA / Argentina'
 ] as const;
 
@@ -147,6 +151,7 @@ export const AUTORES: AutorProfile[] = [
     influenciadoPor: [
       { nombre: 'Jean-Martin Charcot', nota: 'Estudios clínicos sobre histeria e hipnosis' },
       { nombre: 'Josef Breuer', nota: 'Método catártico y Estudios sobre la histeria' },
+      { nombre: 'Franz Brentano', autorId: 'brentano', nota: 'Profesor de filosofía de Freud en Viena y teoría del acto psíquico' },
       { nombre: 'Ernst Brücke', nota: 'Fisiología y modelo energético inicial' },
       { nombre: 'Charles Darwin', nota: 'Perspectiva evolutiva y continuidad natural' }
     ],
@@ -154,8 +159,9 @@ export const AUTORES: AutorProfile[] = [
       { nombre: 'Jacques Lacan', autorId: 'lacan', nota: 'Retorno a Freud desde el lenguaje' },
       { nombre: 'Melanie Klein', autorId: 'klein', nota: 'Psicoanálisis de niños y relaciones objetales' },
       { nombre: 'Anna Freud', autorId: 'anna-freud', nota: 'Psicología del Yo y mecanismos de defensa' },
+      { nombre: 'Carl G. Jung', autorId: 'jung', nota: 'Colaboración inicial y posterior creación de la Psicología Analítica' },
+      { nombre: 'Sándor Ferenczi', autorId: 'ferenczi', nota: 'Clínica del trauma temprano y elasticidad de la técnica' },
       { nombre: 'Donald Winnicott', autorId: 'winnicott', nota: 'Clínica temprana y objeto transicional' },
-      { nombre: 'Françoise Dolto', autorId: 'dolto', nota: 'Psicoanálisis infantil en Francia' },
       { nombre: 'Enrique Pichon-Rivière', autorId: 'pichon-riviere', nota: 'Psicología social y grupos operativos' }
     ],
     ediRecursos: [
@@ -244,15 +250,16 @@ export const AUTORES: AutorProfile[] = [
     influenciadoPor: [
       { nombre: 'Sigmund Freud', autorId: 'freud', nota: 'Eje central del "retorno a Freud"' },
       { nombre: 'Ferdinand de Saussure', autorId: 'saussure', nota: 'Subversión del signo lingüístico (S/s)' },
-      { nombre: 'Claude Lévi-Strauss', nota: 'Estructuralismo y eficacia simbólica' },
-      { nombre: 'Alexandre Kojève / Hegel', nota: 'Dialéctica del deseo y reconocimiento' }
+      { nombre: 'Karl Jaspers', autorId: 'jaspers', nota: 'Psicopatología fenomenológica en su tesis doctoral sobre la paranoia' },
+      { nombre: 'Martin Heidegger', autorId: 'heidegger', nota: 'Ser, palabra plena y verdad como desocultamiento' },
+      { nombre: 'Maurice Merleau-Ponty', autorId: 'merleau-ponty', nota: 'Diálogo sobre la mirada y lo visible en el Seminario 11' }
     ],
     influencioA: [
       { nombre: 'Jacques-Alain Miller', autorId: 'miller', nota: 'Establecimiento de Seminarios y orientación lacaniana' },
       { nombre: 'Oscar Masotta', autorId: 'masotta', nota: 'Introducción de Lacan en Argentina y habla hispana' },
+      { nombre: 'Juan-David Nasio', autorId: 'nasio', nota: 'Transmisión clínica de Lacan y traducción de los Escritos' },
       { nombre: 'Gabriel Lombardi', autorId: 'lombardi', nota: 'Clínica de las neurosis y psicosis en la UBA' },
-      { nombre: 'Françoise Dolto', autorId: 'dolto', nota: 'Diálogo clínico en la escuela francesa' },
-      { nombre: 'Slavoj Žižek', nota: 'Filosofía política y crítica cultural lacaniana' }
+      { nombre: 'Françoise Dolto', autorId: 'dolto', nota: 'Diálogo clínico en la escuela francesa' }
     ],
     ediRecursos: [
       {
@@ -405,7 +412,7 @@ export const AUTORES: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Sigmund Freud', autorId: 'freud', nota: 'Dualidad pulsional y pulsión de muerte' },
-      { nombre: 'Sándor Ferenczi', nota: 'Primer analista e impulso al análisis de niños' },
+      { nombre: 'Sándor Ferenczi', autorId: 'ferenczi', nota: 'Primer analista e impulso al análisis de niños' },
       { nombre: 'Karl Abraham', nota: 'Fases libidinales y melancolía' }
     ],
     influencioA: [
@@ -697,9 +704,9 @@ export const AUTORES: AutorProfile[] = [
     ],
     influencioA: [
       { nombre: 'Emilia Ferreiro', autorId: 'ferreiro', nota: 'Psicogénesis de la lengua escrita en Argentina y México' },
+      { nombre: 'Lawrence Kohlberg', autorId: 'kohlberg', nota: 'Estadios del desarrollo moral' },
       { nombre: 'Juan Ignacio Pozo', autorId: 'pozo', nota: 'Teorías cognitivas del aprendizaje' },
-      { nombre: 'Juan Samaja', autorId: 'samaja', nota: 'Epistemología genética y metodología dialéctica en la UBA' },
-      { nombre: 'Lawrence Kohlberg', nota: 'Estadios del desarrollo moral' }
+      { nombre: 'Juan Samaja', autorId: 'samaja', nota: 'Epistemología genética y metodología dialéctica en la UBA' }
     ]
   },
   {
@@ -987,7 +994,7 @@ export const AUTORES: AutorProfile[] = [
     ],
     fechas: '1926 – 1984',
     origen: 'Poitiers · París, Francia',
-    corriente: 'Social e Institucional',
+    corriente: 'Filosofía y Fenomenología',
     resumenCorto:
       'Filósofo e historiador de las ideas francés. Analizó las relaciones entre saber, poder y subjetividad en la psiquiatría, la cárcel, la clínica y la sexualidad.',
     biografia:
@@ -1038,14 +1045,17 @@ export const AUTORES: AutorProfile[] = [
       }
     ],
     influenciadoPor: [
-      { nombre: 'Friedrich Nietzsche', nota: 'Método genealógico y crítica de la verdad' },
+      { nombre: 'Friedrich Nietzsche', autorId: 'nietzsche', nota: 'Método genealógico y crítica de la verdad' },
       { nombre: 'Georges Canguilhem', autorId: 'canguilhem', nota: 'Historia de las ciencias y lo normal y lo patológico' },
-      { nombre: 'Louis Althusser', nota: 'Diálogo sobre ideología y prácticas institucionales' }
+      { nombre: 'Maurice Merleau-Ponty', autorId: 'merleau-ponty', nota: 'Formación filosófica inicial en París' }
     ],
     influencioA: [
-      { nombre: 'Alicia Stolkiner', autorId: 'stolkiner', nota: 'Crítica al modelo médico hegemónico y salud mental' },
-      { nombre: 'Judith Butler', nota: 'Teoría de género y performatividad' },
-      { nombre: 'Nikolas Rose', nota: 'Historia crítica de las disciplinas "psi"' }
+      { nombre: 'Giorgio Agamben', autorId: 'agamben', nota: 'Biopolítica contemporánea, Homo Sacer y dispositivos' },
+      { nombre: 'Roberto Esposito', autorId: 'esposito', nota: 'Paradigma inmunitario y biopolítica afirmativa' },
+      { nombre: 'Byung-Chul Han', autorId: 'byung-chul-han', nota: 'Pasaje de la sociedad disciplinaria a la sociedad del rendimiento' },
+      { nombre: 'Gilles Deleuze', autorId: 'deleuze', nota: 'Sociedades de control y dispositivos contemporáneos' },
+      { nombre: 'Judith Butler', autorId: 'butler', nota: 'Genealogía de la sexualidad y teoría de género' },
+      { nombre: 'Alicia Stolkiner', autorId: 'stolkiner', nota: 'Crítica al modelo médico hegemónico y salud mental' }
     ]
   },
   {
@@ -1692,8 +1702,8 @@ export const AUTORES: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Michel Foucault', autorId: 'foucault', nota: 'Biopolítica y crítica a las instituciones asilares' },
-      { nombre: 'Eduardo Menéndez', nota: 'Crítica al Modelo Médico Hegemónico' },
-      { nombre: 'Franco Basaglia', nota: 'Desmanicomialización y salud mental comunitaria' }
+      { nombre: 'Franco Basaglia', autorId: 'basaglia', nota: 'Desmanicomialización y salud mental comunitaria' },
+      { nombre: 'Eduardo Menéndez', nota: 'Crítica al Modelo Médico Hegemónico' }
     ],
     influencioA: [
       { nombre: 'Martín De Lellis', autorId: 'de-lellis', nota: 'Políticas públicas de salud mental y APS en la UBA' },
@@ -1756,7 +1766,9 @@ export const AUTORES: AutorProfile[] = [
     ]
   },
   ...AUTORES_TANDA_2,
-  ...AUTORES_TANDA_3
+  ...AUTORES_TANDA_3,
+  ...AUTORES_TANDA_4,
+  ...AUTORES_TANDA_5
 ];
 
 function normalizeKey(value: string): string {

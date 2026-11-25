@@ -64,8 +64,8 @@ export const AUTORES_TANDA_2: AutorProfile[] = [
       { nombre: 'Sigmund Freud', autorId: 'freud', nota: 'Segunda tópica, teoría de la angustia y metapsicología' }
     ],
     influencioA: [
+      { nombre: 'Erik H. Erikson', autorId: 'erikson', nota: 'Psicología del Yo y teoría del desarrollo psicosocial (junto a Hartmann)' },
       { nombre: 'René Spitz', autorId: 'spitz', nota: 'Observación psicoanalítica temprana del desarrollo' },
-      { nombre: 'Heinz Hartmann y Erik Erikson', nota: 'Psicología del Yo y teoría psicosocial' },
       { nombre: 'John Bowlby', autorId: 'bowlby', nota: 'Observación directa de separaciones infantiles' }
     ]
   },
@@ -620,8 +620,8 @@ export const AUTORES_TANDA_2: AutorProfile[] = [
       { nombre: 'Émile Durkheim', nota: 'Rituales sociales en la interacción cotidiana' }
     ],
     influencioA: [
-      { nombre: 'Alicia Stolkiner', autorId: 'stolkiner', nota: 'Crítica a las instituciones manicomiales y salud mental comunitaria' },
-      { nombre: 'Franco Basaglia y reformas psiquiátricas', nota: 'Desinstitucionalización en Italia y Argentina' }
+      { nombre: 'Franco Basaglia', autorId: 'basaglia', nota: 'Desinstitucionalización y reforma psiquiátrica en Italia y Argentina' },
+      { nombre: 'Alicia Stolkiner', autorId: 'stolkiner', nota: 'Crítica a las instituciones manicomiales y salud mental comunitaria' }
     ]
   },
 
@@ -683,6 +683,7 @@ export const AUTORES_TANDA_2: AutorProfile[] = [
       { nombre: 'Immanuel Kant', nota: 'Categorías lógicas y teoría del conocimiento' }
     ],
     influencioA: [
+      { nombre: 'William James', autorId: 'james', nota: 'Difusión del pragmatismo en filosofía y psicología' },
       { nombre: 'Juan Samaja', autorId: 'samaja', nota: 'Lógica abductiva e indiciaria en Metodología de la Investigación (UBA)' },
       { nombre: 'Umberto Eco y Eliseo Verón', nota: 'Semiótica contemporánea y teoría de los discursos sociales' }
     ]

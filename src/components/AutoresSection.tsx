@@ -59,6 +59,7 @@ export function AutoresSection({ materias, onSelectAutor }: AutoresSectionProps)
       if (query) {
         return (
           normalizeText(a.nombre).includes(query) ||
+          a.matchKeys.some((k) => normalizeText(k).includes(query)) ||
           normalizeText(a.corriente).includes(query) ||
           normalizeText(a.origen).includes(query) ||
           normalizeText(a.resumenCorto).includes(query) ||

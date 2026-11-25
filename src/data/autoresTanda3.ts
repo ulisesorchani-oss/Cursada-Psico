@@ -328,7 +328,7 @@ export const AUTORES_TANDA_3: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Sigmund Freud', autorId: 'freud', nota: 'Psicoanálisis vienés del cual se diferencia incorporando la dimensión noológica' },
-      { nombre: 'Max Scheler y Martin Heidegger', nota: 'Fenomenología, valores y filosofía de la existencia' }
+      { nombre: 'Martin Heidegger', autorId: 'heidegger', nota: 'Fenomenología y filosofía de la existencia (junto a Max Scheler)' }
     ],
     influencioA: [
       { nombre: 'Psicoterapia Existencial y Cuidados Paliativos', nota: 'Acompañamiento clínico en crisis vitales y final de la vida' },
@@ -389,7 +389,8 @@ export const AUTORES_TANDA_3: AutorProfile[] = [
       }
     ],
     influenciadoPor: [
-      { nombre: 'Edmund Husserl y Martin Heidegger', nota: 'Fenomenología y analítica del Dasein' },
+      { nombre: 'Edmund Husserl', autorId: 'husserl', nota: 'Método fenomenológico y descripción de la experiencia vivida' },
+      { nombre: 'Martin Heidegger', autorId: 'heidegger', nota: 'Analítica existencial del Dasein y ser-en-el-mundo' },
       { nombre: 'Sigmund Freud', autorId: 'freud', nota: 'Vínculo personal y debate epistemológico sobre el sujeto' }
     ],
     influencioA: [
@@ -808,7 +809,7 @@ export const AUTORES_TANDA_3: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Michel Foucault', autorId: 'foucault', nota: 'Genealogía, dispositivos y relaciones saber-poder' },
-      { nombre: 'Cornelius Castoriadis y Gilles Deleuze', nota: 'Imaginario social, multiplicidades y lógicas colectivas' },
+      { nombre: 'Gilles Deleuze', autorId: 'deleuze', nota: 'Multiplicidades, agenciamientos y lógicas colectivas (junto a Castoriadis)' },
       { nombre: 'Enrique Pichon-Rivière', autorId: 'pichon-riviere', nota: 'Tradición grupalista argentina que retoma y reelabora' }
     ],
     influencioA: [
@@ -945,6 +946,7 @@ export const AUTORES_TANDA_3: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Jacques Lacan', autorId: 'lacan', nota: 'Eje de su transmisión psicoanalítica y epistolar' },
+      { nombre: 'Jean-Paul Sartre', autorId: 'sartre', nota: 'Existencialismo y formación filosófica inicial' },
       { nombre: 'Sigmund Freud', autorId: 'freud', nota: 'Relectura estructural de los conceptos fundamentales' },
       { nombre: 'Ferdinand de Saussure', autorId: 'saussure', nota: 'Lingüística estructural y semiología' }
     ],
@@ -1209,6 +1211,7 @@ export const AUTORES_TANDA_3: AutorProfile[] = [
     influenciadoPor: [
       { nombre: 'Jacques Lacan', autorId: 'lacan', nota: 'Enseñanza estructural, acto, locura y clínica psicoanalítica' },
       { nombre: 'Sigmund Freud', autorId: 'freud', nota: 'Psicopatología y clínica del síntoma y el acto' },
+      { nombre: 'Karl Jaspers', autorId: 'jaspers', nota: 'Psicopatología fenomenológica y límites de la comprensión' },
       { nombre: 'Ludwig Binswanger', autorId: 'binswanger', nota: 'Psiquiatría fenomenológico-existencial y Daseinsanalyse' },
       { nombre: 'Fabián Schejtman', autorId: 'schejtman', nota: 'Diálogo académico y trabajo compartido en Psicopatología UBA' }
     ],

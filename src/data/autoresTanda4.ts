@@ -254,8 +254,9 @@ export const AUTORES_TANDA_4: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Edmund Husserl', autorId: 'husserl', nota: 'Fenomenología descriptiva aplicada a las vivencias clínicas' },
-      { nombre: 'Wilhelm Dilthey y Max Weber', nota: 'Distinción entre ciencias naturales (explicar) y del espíritu (comprender)' },
-      { nombre: 'Søren Kierkegaard y Friedrich Nietzsche', autorId: 'nietzsche', nota: 'Pensamiento existencial y situaciones límite' }
+      { nombre: 'Wilhelm Dilthey', autorId: 'dilthey', nota: 'Distinción entre ciencias naturales (explicar) y del espíritu (comprender)' },
+      { nombre: 'Søren Kierkegaard', autorId: 'kierkegaard', nota: 'Pensamiento existencial, angustia y situaciones límite' },
+      { nombre: 'Friedrich Nietzsche', autorId: 'nietzsche', nota: 'Crítica cultural y psicología profunda' }
     ],
     influencioA: [
       { nombre: 'Jacques Lacan', autorId: 'lacan', nota: 'Referente central en su tesis de 1932 y crítica de las "relaciones de comprensión"' },
@@ -328,8 +329,9 @@ export const AUTORES_TANDA_4: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Edmund Husserl', autorId: 'husserl', nota: 'Método fenomenológico que transforma en hermenéutica existencial' },
+      { nombre: 'Wilhelm Dilthey', autorId: 'dilthey', nota: 'Historicidad de la vida y hermenéutica de la facticidad' },
       { nombre: 'Friedrich Nietzsche', autorId: 'nietzsche', nota: 'Crítica a la metafísica occidental' },
-      { nombre: 'Søren Kierkegaard', nota: 'Concepto existencial de angustia y singularidad' }
+      { nombre: 'Søren Kierkegaard', autorId: 'kierkegaard', nota: 'Concepto existencial de angustia y singularidad' }
     ],
     influencioA: [
       { nombre: 'Ludwig Binswanger', autorId: 'binswanger', nota: 'Fundación del Daseinsanalyse en psicopatología' },
@@ -403,7 +405,8 @@ export const AUTORES_TANDA_4: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Edmund Husserl', autorId: 'husserl', nota: 'Intencionalidad y descripción fenomenológica' },
-      { nombre: 'Martin Heidegger', autorId: 'heidegger', nota: 'Ontología existencial, nada y angustia' }
+      { nombre: 'Martin Heidegger', autorId: 'heidegger', nota: 'Ontología existencial, nada y angustia' },
+      { nombre: 'Søren Kierkegaard', autorId: 'kierkegaard', nota: 'Angustia como vértigo de la libertad y singularidad subjetiva' }
     ],
     influencioA: [
       { nombre: 'Jacques Lacan', autorId: 'lacan', nota: 'Diálogo decisivo sobre la mirada del otro en el Seminario 11' },

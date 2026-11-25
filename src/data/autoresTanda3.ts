@@ -689,13 +689,13 @@ export const AUTORES_TANDA_3: AutorProfile[] = [
       'psico-clinica-psicoterapias-2',
       'clinica-trastornos-personalidad-psicosis'
     ],
-    fechas: '1943 – presente',
+    fechas: '1943 – 2026',
     origen: 'Tulsa (Oklahoma) · Seattle, Estados Unidos',
     corriente: 'TCC y Neurociencias',
     resumenCorto:
       'Psicóloga clínica estadounidense referente de la tercera ola de TCC y creadora de la Terapia Dialéctico-Conductual (DBT). Revolucionó el tratamiento de la desregulación emocional severa y el riesgo suicida.',
     biografia:
-      'Profesora emérita de la Universidad de Washington, Marsha Linehan desarrolló a fines de los años 80 la Terapia Dialéctico-Conductual (DBT) al comprobar que las técnicas conductuales centradas únicamente en el cambio resultaban invalidantes para personas con sufrimiento emocional extremo y conductas autolesivas.\n\nAl integrar estrategias basadas en evidencia del conductismo con la filosofía dialéctica y la aceptación radical inspirada en la práctica zen (mindfulness), construyó el tratamiento con mayor respaldo empírico para el trastorno límite de la personalidad y la desregulación emocional grave.',
+      'Profesora emérita de la Universidad de Washington, Marsha Linehan (fallecida en noviembre de 2026) desarrolló a fines de los años 80 la Terapia Dialéctico-Conductual (DBT) al comprobar que las técnicas conductuales centradas únicamente en el cambio resultaban invalidantes para personas con sufrimiento emocional extremo y conductas autolesivas.\n\nAl integrar estrategias basadas en evidencia del conductismo con la filosofía dialéctica y la aceptación radical inspirada en la práctica zen (mindfulness), dejó el tratamiento con mayor respaldo empírico para el trastorno límite de la personalidad y la desregulación emocional grave.',
     principalesAportes: [
       'Creación de la Terapia Dialéctico-Conductual (DBT), articulando la dialéctica central entre validación/aceptación radical y estrategias activas de cambio.',
       'Teoría Biosocial del trastorno límite: interacción transaccional entre vulnerabilidad emocional biológica y un ambiente invalidante.',

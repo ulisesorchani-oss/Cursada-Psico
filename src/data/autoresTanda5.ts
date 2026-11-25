@@ -779,7 +779,7 @@ export const AUTORES_TANDA_5: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Jean Piaget', autorId: 'piaget', nota: 'El criterio moral en el niño y el enfoque constructivista por estadios' },
-      { nombre: 'Immanuel Kant y John Rawls', nota: 'Ética deontológica, autonomía y principios de justicia' }
+      { nombre: 'Immanuel Kant', autorId: 'kant', nota: 'Ética deontológica, autonomía y principios universales (junto a John Rawls)' }
     ],
     influencioA: [
       { nombre: 'Carol Gilligan', autorId: 'gilligan', nota: 'Crítica decisiva que dio origen a la Ética del Cuidado' },
@@ -990,7 +990,7 @@ export const AUTORES_TANDA_5: AutorProfile[] = [
       }
     ],
     influenciadoPor: [
-      { nombre: 'René Descartes y Wilhelm von Humboldt', nota: 'Racionalismo, ideas innatas y uso infinito de medios finitos' },
+      { nombre: 'René Descartes', autorId: 'descartes', nota: 'Racionalismo, ideas innatas y "lingüística cartesiana" (junto a Humboldt)' },
       { nombre: 'Ferdinand de Saussure', autorId: 'saussure', nota: 'Referencia estructural con la que contrasta competencia y lengua' }
     ],
     influencioA: [
@@ -1066,6 +1066,7 @@ export const AUTORES_TANDA_5: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'William James', autorId: 'james', nota: 'Papel decisivo de los estados corporales en la experiencia emocional' },
+      { nombre: 'René Descartes', autorId: 'descartes', nota: 'Contrapunto crítico del dualismo razón/emoción en "El error de Descartes"' },
       { nombre: 'Alexander R. Luria', autorId: 'luria', nota: 'Neuropsicología de los lóbulos frontales y sistemas funcionales' },
       { nombre: 'Baruch Spinoza', nota: 'Monismo mente–cuerpo y afectos ligados a la conservación de la vida' }
     ],

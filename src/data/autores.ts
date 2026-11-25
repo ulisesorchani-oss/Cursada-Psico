@@ -5,6 +5,7 @@ import { AUTORES_TANDA_3 } from './autoresTanda3';
 import { AUTORES_TANDA_4 } from './autoresTanda4';
 import { AUTORES_TANDA_5 } from './autoresTanda5';
 import { AUTORES_TANDA_6 } from './autoresTanda6';
+import { AUTORES_TANDA_7 } from './autoresTanda7';
 
 export type CorrienteAutor =
   | 'Psicoanálisis'
@@ -153,6 +154,7 @@ export const AUTORES: AutorProfile[] = [
       { nombre: 'Jean-Martin Charcot', nota: 'Estudios clínicos sobre histeria e hipnosis' },
       { nombre: 'Josef Breuer', nota: 'Método catártico y Estudios sobre la histeria' },
       { nombre: 'Franz Brentano', autorId: 'brentano', nota: 'Profesor de filosofía de Freud en Viena y teoría del acto psíquico' },
+      { nombre: 'Théodule-Armand Ribot', autorId: 'ribot', nota: 'Método patológico y paso de las pasiones hacia las tendencias afectivas y la pulsión' },
       { nombre: 'Ernst Brücke', nota: 'Fisiología y modelo energético inicial' },
       { nombre: 'Charles Darwin', nota: 'Perspectiva evolutiva y continuidad natural' }
     ],
@@ -1069,13 +1071,13 @@ export const AUTORES: AutorProfile[] = [
     apellidoCorto: 'Danziger',
     matchKeys: ['danziger'],
     materiaIdsExtra: ['historia-psico'],
-    fechas: '1926 – presente',
+    fechas: '1926 – 2026',
     origen: 'Breslavia, Alemania · Sudáfrica / Canadá',
     corriente: 'Social e Institucional',
     resumenCorto:
       'Historiador crítico de la psicología. Mostró que los métodos y categorías psicológicas (como inteligencia o personalidad) son construcciones históricas y sociales.',
     biografia:
-      'Nacido en Alemania, formado en Sudáfrica y Oxford y profesor emérito de la Universidad de York en Canadá, Kurt Danziger es una de las figuras centrales de la nueva historia crítica de la psicología. Su trabajo rompió con las historias tradicionales "celebratorias" que presentaban a la psicología como un progreso lineal y acumulativo.\n\nEn Historia de la Psicología de la UBA es bibliografía obligatoria para comprender cómo los laboratorios de Wundt, Galton y el experimento clínico francés configuraron diferentes prácticas investigativas y definieron qué significa "investigar al sujeto".',
+      'Nacido en Alemania, formado en Sudáfrica y Oxford y profesor emérito de la Universidad de York en Canadá (fallecido en agosto de 2026 a los 100 años), Kurt Danziger fue una de las figuras centrales de la nueva historia crítica de la psicología. Su trabajo rompió con las historias tradicionales "celebratorias" que presentaban a la psicología como un progreso lineal y acumulativo.\n\nEn Historia de la Psicología de la UBA es bibliografía obligatoria para comprender cómo los laboratorios de Wundt, Galton y el experimento clínico francés configuraron diferentes prácticas investigativas y definieron qué significa "investigar al sujeto".',
     principalesAportes: [
       'Análisis de los tres modelos históricos de investigación psicológica: el experimento de Leipzig (Wundt), el experimento clínico (Francia) y el modelo de Galton (grupos estadísticos).',
       'Crítica a la naturalización de las categorías psicológicas (motivación, inteligencia, actitud, personalidad).',
@@ -1776,7 +1778,8 @@ export const AUTORES: AutorProfile[] = [
   ...AUTORES_TANDA_3,
   ...AUTORES_TANDA_4,
   ...AUTORES_TANDA_5,
-  ...AUTORES_TANDA_6
+  ...AUTORES_TANDA_6,
+  ...AUTORES_TANDA_7
 ];
 
 function normalizeKey(value: string): string {

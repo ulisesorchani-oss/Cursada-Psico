@@ -544,7 +544,9 @@ export const AUTORES_TANDA_2: AutorProfile[] = [
       }
     ],
     influenciadoPor: [
-      { nombre: 'Gustav Fechner y Hermann von Helmholtz', nota: 'Psicofísica y fisiología sensorial alemana' }
+      { nombre: 'Gustav Fechner y Hermann von Helmholtz', nota: 'Psicofísica y fisiología sensorial alemana' },
+      { nombre: 'David Hume', autorId: 'hume', nota: 'Asociacionismo clásico de los elementos de la experiencia' },
+      { nombre: 'Immanuel Kant', autorId: 'kant', nota: 'Desafío epistemológico que Wundt busca responder con el laboratorio de Leipzig' }
     ],
     influencioA: [
       { nombre: 'Kurt Danziger', autorId: 'danziger', nota: 'Relectura historiográfica crítica del modelo de Leipzig' },

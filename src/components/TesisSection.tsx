@@ -7,12 +7,16 @@ import {
   PlayCircle,
   Calendar,
   Mail,
-  Building2
+  Building2,
+  FolderOpen,
+  Instagram
 } from 'lucide-react';
 
 const UBA_TESIS_URL = 'https://www.psi.uba.ar/estudiantes.php?var=tesis_licenciatura/index.php';
 const EDI_TESIS_URL = 'https://edipsicouba.net.ar/academico/que-es-la-tesis/';
 const SISTEMA_ACADEMICO_URL = 'http://academica.psi.uba.ar/';
+const MAGA_DRIVE_URL = 'https://drive.google.com/drive/folders/1CGyZY7Dl8Vg_QMafk95GGrWiGdAZOP7V';
+const MAGA_IG_URL = 'https://www.instagram.com/maga.creaycomunica?cnvx=MWswMWZsMWhneW4zMA==';
 
 interface TesisResource {
   title: string;
@@ -129,8 +133,8 @@ export function TesisSection() {
               Tesis de Licenciatura
             </h2>
             <p className="text-sm sm:text-base text-muted mt-2 max-w-2xl leading-relaxed">
-              Información oficial de la Facultad de Psicología UBA y guía estudiantil de EDI sobre
-              requisitos, tutoría, trámites administrativos y defensas.
+              Información oficial de la Facultad de Psicología UBA, guía de EDI y recursos prácticos
+              de escritura y defensa compartidos con autorización estudiantil.
             </p>
           </div>
 
@@ -237,7 +241,7 @@ export function TesisSection() {
             </div>
 
             {/* Reservorio de Tesis + Important Notes */}
-            <div className="p-5 rounded-2xl bg-violeta/[0.04] border border-violeta/15 text-xs leading-relaxed space-y-2 mb-6">
+            <div className="p-5 rounded-2xl bg-violeta/[0.04] border border-violeta/15 text-xs leading-relaxed space-y-2 mb-5">
               <p className="font-bold text-violeta uppercase tracking-wide text-[11px]">
                 Reservorio de Tesis Publicadas
               </p>
@@ -254,6 +258,52 @@ export function TesisSection() {
                 en la sección <em>Consultas académicas / Tesis publicadas</em>. Recordá que si
                 ingresaste a la Facultad antes de 2011, el requisito de Tesis no aplica a tu plan.
               </p>
+            </div>
+
+            {/* Authorized Student Drive Card — Magalí */}
+            <div className="p-5 rounded-2xl bg-amber-50/60 border border-amber-600/20 space-y-4 mb-5">
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+                <div className="space-y-1.5">
+                  <p className="text-[11px] font-bold uppercase tracking-wide text-amber-800 flex items-center gap-1.5">
+                    <FolderOpen size={14} className="shrink-0" />
+                    Aporte estudiantil autorizado · Carpeta Drive
+                  </p>
+                  <h4 className="text-sm sm:text-base font-serif font-bold text-ink leading-snug">
+                    Recursos para el armado de la Tesis
+                  </h4>
+                  <p className="text-xs text-muted leading-relaxed">
+                    Incluye guía de escritura de tesis, guía para el armado de la defensa oral,
+                    Normas APA 7ª edición e instructivo para alumnos.
+                  </p>
+                </div>
+
+                <a
+                  href={MAGA_DRIVE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-bordo text-white text-xs font-bold hover:bg-bordo-light transition-colors whitespace-nowrap shrink-0 self-start"
+                >
+                  Abrir Drive
+                  <ExternalLink size={12} />
+                </a>
+              </div>
+
+              <div className="pt-3 border-t border-amber-600/15 flex flex-wrap items-center justify-between gap-2 text-xs">
+                <p className="text-ink">
+                  Material recopilado y compartido por{' '}
+                  <span className="font-bold">Magalí</span>{' '}
+                  <span className="text-muted">(estudiante avanzada de Psicología UBA)</span>.
+                </p>
+                <a
+                  href={MAGA_IG_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-bold text-bordo hover:underline whitespace-nowrap"
+                >
+                  <Instagram size={13} />
+                  @maga.creaycomunica
+                </a>
+              </div>
             </div>
 
             {/* Official Contact & Source Attribution Bar */}

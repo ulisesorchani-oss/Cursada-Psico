@@ -62,10 +62,12 @@ export const AUTORES_TANDA_5: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Sigmund Freud', autorId: 'freud', nota: 'Diálogo fundacional, teoría del inconsciente y ruptura posterior' },
+      { nombre: 'Eugen Bleuler', autorId: 'bleuler', nota: 'Director del hospital Burghölzli donde Jung se formó en psiquiatría' },
       { nombre: 'Friedrich Nietzsche', autorId: 'nietzsche', nota: 'Psicología profunda, mitología y crítica de la conciencia' },
       { nombre: 'William James', autorId: 'james', nota: 'Pragmatismo y tipologías del temperamento' }
     ],
     influencioA: [
+      { nombre: 'Hermann Rorschach', autorId: 'rorschach', nota: 'Tipología introversión/extraversión y test de asociación' },
       { nombre: 'Psicología Analítica y Psicología de la Personalidad', nota: 'Teorías de rasgos (introversión/extraversión) y clínica simbólica' }
     ]
   },
@@ -141,6 +143,80 @@ export const AUTORES_TANDA_5: AutorProfile[] = [
       { nombre: 'Donald W. Winnicott', autorId: 'winnicott', nota: 'Regresión en la cura, trauma temprano y ambiente fallido' },
       { nombre: 'Anna Freud', autorId: 'anna-freud', nota: 'Retoma el concepto de identificación con el agresor' },
       { nombre: 'Fernando Ulloa', autorId: 'ulloa', nota: 'Resonancias en la institución de la ternura y la clínica del desamparo' }
+    ]
+  },
+  {
+    id: 'adler',
+    nombre: 'Alfred Adler',
+    apellidoCorto: 'Adler',
+    matchKeys: ['adler', 'addler'],
+    materiaIdsExtra: [
+      'historia-psico',
+      'psicoanalisis-freud',
+      'psico-personalidad',
+      'psico-clinica-psicoterapias-2'
+    ],
+    fechas: '1870 – 1937',
+    origen: 'Viena, Austria · Nueva York, Estados Unidos',
+    corriente: 'Psicoanálisis',
+    resumenCorto:
+      'Médico y psicoterapeuta austríaco, fundador de la Psicología Individual ("Segunda Escuela Vienesa de Psicoterapia") y primer gran disidente de Freud en 1911. Acuñó el complejo de inferioridad, el estilo de vida y el sentimiento de comunidad.',
+    biografia:
+      'Miembro temprano de la Sociedad Psicológica de los Miércoles junto a Sigmund Freud —y primer presidente de la Sociedad Psicoanalítica de Viena—, Alfred Adler rompió con el freudismo en 1911 al rechazar la primacía de la sexualidad infantil y las pulsiones biológicas como motor exclusivo de la neurosis.\n\nSu Psicología Individual (pionera de las tradiciones psicodinámicas relacionales) concibió al sujeto como una totalidad indivisible orientada hacia metas futuras (teleología) y marcada por su lazo social. Sus ideas sobre esquemas de apercepción, aliento y objetivos vitales influyeron decisivamente en Viktor Frankl, la psicología humanista y las terapias cognitivas de Ellis y Beck.',
+    principalesAportes: [
+      'Fundación de la Psicología Individual: concepción holística y teleológica del psiquismo (el sujeto se entiende por sus metas y proyectos, no solo por causas pasadas).',
+      'Formulación del sentimiento y complejo de inferioridad, la compensación y el afán de superación/perfección como motores del desarrollo.',
+      'Centralidad del "sentimiento de comunidad" (Gemeinschaftsgefühl / interés social) como criterio fundamental de salud mental y cooperación.',
+      'Estudio del "estilo de vida" forjado en la primera infancia, la constelación familiar (orden de nacimiento) y las clínicas pioneras de orientación infantil en Viena.'
+    ],
+    conceptosClave: [
+      {
+        termino: 'Sentimiento y Complejo de inferioridad',
+        explicacion:
+          'Todo niño experimenta una inferioridad natural que impulsa la superación; cuando se vuelve abrumadora y rígida produce el complejo de inferioridad o su reverso defensivo, el complejo de superioridad.'
+      },
+      {
+        termino: 'Sentimiento de comunidad (Interés social)',
+        explicacion:
+          'Capacidad empática de sentirse parte de la humanidad y cooperar con los otros; para Adler, la neurosis implica un repliegue egocéntrico que debilita este lazo.'
+      },
+      {
+        termino: 'Estilo de vida y Teleología',
+        explicacion:
+          'Patrón singular de creencias, metas y estrategias con que cada persona busca pertenencia y valor, orientado hacia un "finalismo ficticio" futuro.'
+      },
+      {
+        termino: 'Constelación familiar (Orden de nacimiento)',
+        explicacion:
+          'No es el lugar biológico sino la posición subjetiva percibida entre hermanos (primogénito, intermedio, menor, hijo único) lo que incide en el estilo de vida.'
+      }
+    ],
+    obrasEsenciales: [
+      {
+        titulo: 'El carácter neurótico',
+        año: '1912',
+        resumen: 'Primera gran sistematización de la Psicología Individual tras la ruptura con Freud.'
+      },
+      {
+        titulo: 'Conocimiento del hombre',
+        año: '1927',
+        resumen: 'Exposición clara y accesible sobre sentimiento de inferioridad, interés social y carácter.'
+      },
+      {
+        titulo: 'El sentido de la vida',
+        año: '1933',
+        resumen: 'Síntesis madura sobre estilo de vida, cooperación comunitaria y psicoterapia adleriana.'
+      }
+    ],
+    influenciadoPor: [
+      { nombre: 'Sigmund Freud', autorId: 'freud', nota: 'Diálogo inicial en Viena y ruptura teórica fundacional de 1911' },
+      { nombre: 'Friedrich Nietzsche', autorId: 'nietzsche', nota: 'Voluntad de poder reelaborada luego como afán de superación' }
+    ],
+    influencioA: [
+      { nombre: 'Viktor E. Frankl', autorId: 'frankl', nota: 'Formación temprana en Viena antes de fundar la Tercera Escuela (Logoterapia)' },
+      { nombre: 'Albert Ellis', autorId: 'ellis', nota: 'Creencias básicas, metas vitales y enfoque psicoterapéutico activo' },
+      { nombre: 'Aaron T. Beck', autorId: 'beck', nota: 'Antecedente directo de los esquemas cognitivos ("esquema de apercepción")' },
+      { nombre: 'Psicología Humanista y Psicodinámica Relacional', nota: 'Visión holística, foco en recursos, aliento y contexto social' }
     ]
   },
 
@@ -843,6 +919,7 @@ export const AUTORES_TANDA_5: AutorProfile[] = [
       { nombre: 'Edmund Husserl y Jean-Paul Sartre', autorId: 'sartre', nota: 'Epojé fenomenológica y compromiso existencial' }
     ],
     influencioA: [
+      { nombre: 'Emiliano Galende', autorId: 'galende', nota: 'Salud mental comunitaria y crítica a la institución manicomial en Argentina' },
       { nombre: 'Alicia Stolkiner', autorId: 'stolkiner', nota: 'Reforma en salud mental y Ley Nacional 26.657 en Argentina' },
       { nombre: 'Martín De Lellis', autorId: 'de-lellis', nota: 'Políticas públicas sustitutivas y atención territorial comunitaria' }
     ]

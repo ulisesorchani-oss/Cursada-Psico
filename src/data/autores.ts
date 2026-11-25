@@ -4,6 +4,7 @@ import { AUTORES_TANDA_2 } from './autoresTanda2';
 import { AUTORES_TANDA_3 } from './autoresTanda3';
 import { AUTORES_TANDA_4 } from './autoresTanda4';
 import { AUTORES_TANDA_5 } from './autoresTanda5';
+import { AUTORES_TANDA_6 } from './autoresTanda6';
 
 export type CorrienteAutor =
   | 'Psicoanálisis'
@@ -160,6 +161,7 @@ export const AUTORES: AutorProfile[] = [
       { nombre: 'Melanie Klein', autorId: 'klein', nota: 'Psicoanálisis de niños y relaciones objetales' },
       { nombre: 'Anna Freud', autorId: 'anna-freud', nota: 'Psicología del Yo y mecanismos de defensa' },
       { nombre: 'Carl G. Jung', autorId: 'jung', nota: 'Colaboración inicial y posterior creación de la Psicología Analítica' },
+      { nombre: 'Alfred Adler', autorId: 'adler', nota: 'Primer disidente vienés (1911) y creador de la Psicología Individual' },
       { nombre: 'Sándor Ferenczi', autorId: 'ferenczi', nota: 'Clínica del trauma temprano y elasticidad de la técnica' },
       { nombre: 'Donald Winnicott', autorId: 'winnicott', nota: 'Clínica temprana y objeto transicional' },
       { nombre: 'Enrique Pichon-Rivière', autorId: 'pichon-riviere', nota: 'Psicología social y grupos operativos' }
@@ -249,6 +251,7 @@ export const AUTORES: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Sigmund Freud', autorId: 'freud', nota: 'Eje central del "retorno a Freud"' },
+      { nombre: 'Gaëtan Gatian de Clérambault', autorId: 'clerambault', nota: 'Su "único maestro en psiquiatría" (automatismo mental)' },
       { nombre: 'Ferdinand de Saussure', autorId: 'saussure', nota: 'Subversión del signo lingüístico (S/s)' },
       { nombre: 'Karl Jaspers', autorId: 'jaspers', nota: 'Psicopatología fenomenológica en su tesis doctoral sobre la paranoia' },
       { nombre: 'Martin Heidegger', autorId: 'heidegger', nota: 'Ser, palabra plena y verdad como desocultamiento' },
@@ -256,6 +259,8 @@ export const AUTORES: AutorProfile[] = [
     ],
     influencioA: [
       { nombre: 'Jacques-Alain Miller', autorId: 'miller', nota: 'Establecimiento de Seminarios y orientación lacaniana' },
+      { nombre: 'Colette Soler', autorId: 'soler', nota: 'Foros del Campo Lacaniano, clínica de las psicosis y afectos' },
+      { nombre: 'Piera Aulagnier', autorId: 'aulagnier', nota: 'Formación inicial y posterior elaboración propia de lo originario y la psicosis' },
       { nombre: 'Oscar Masotta', autorId: 'masotta', nota: 'Introducción de Lacan en Argentina y habla hispana' },
       { nombre: 'Juan-David Nasio', autorId: 'nasio', nota: 'Transmisión clínica de Lacan y traducción de los Escritos' },
       { nombre: 'Gabriel Lombardi', autorId: 'lombardi', nota: 'Clínica de las neurosis y psicosis en la UBA' },
@@ -1643,7 +1648,8 @@ export const AUTORES: AutorProfile[] = [
       { nombre: 'Enrique Pichon-Rivière', autorId: 'pichon-riviere', nota: 'Vínculo familiar y contexto clínico argentino' }
     ],
     influencioA: [
-      { nombre: 'Psicoanálisis con niños y adolescentes en Argentina', nota: 'Formación clínica y diagnóstica' },
+      { nombre: 'Mauricio Knobel', autorId: 'knobel', nota: 'Coautor de "La adolescencia normal" y el síndrome normal adolescente' },
+      { nombre: 'María Luisa Siquier de Ocampo', autorId: 'siquier-de-ocampo', nota: 'Discípula en psicoanálisis de niños y proceso psicodiagnóstico' },
       { nombre: 'Susana Quiroga', nota: 'Estudio de la adolescencia en Psicología UBA' }
     ]
   },
@@ -1703,6 +1709,7 @@ export const AUTORES: AutorProfile[] = [
     influenciadoPor: [
       { nombre: 'Michel Foucault', autorId: 'foucault', nota: 'Biopolítica y crítica a las instituciones asilares' },
       { nombre: 'Franco Basaglia', autorId: 'basaglia', nota: 'Desmanicomialización y salud mental comunitaria' },
+      { nombre: 'Emiliano Galende', autorId: 'galende', nota: 'Crítica de la razón psiquiátrica y salud mental comunitaria en Argentina' },
       { nombre: 'Eduardo Menéndez', nota: 'Crítica al Modelo Médico Hegemónico' }
     ],
     influencioA: [
@@ -1768,7 +1775,8 @@ export const AUTORES: AutorProfile[] = [
   ...AUTORES_TANDA_2,
   ...AUTORES_TANDA_3,
   ...AUTORES_TANDA_4,
-  ...AUTORES_TANDA_5
+  ...AUTORES_TANDA_5,
+  ...AUTORES_TANDA_6
 ];
 
 function normalizeKey(value: string): string {

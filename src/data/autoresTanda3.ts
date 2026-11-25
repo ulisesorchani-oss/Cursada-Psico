@@ -328,6 +328,7 @@ export const AUTORES_TANDA_3: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Sigmund Freud', autorId: 'freud', nota: 'Psicoanálisis vienés del cual se diferencia incorporando la dimensión noológica' },
+      { nombre: 'Alfred Adler', autorId: 'adler', nota: 'Segunda Escuela Vienesa (Psicología Individual), con quien se formó en su juventud' },
       { nombre: 'Martin Heidegger', autorId: 'heidegger', nota: 'Fenomenología y filosofía de la existencia (junto a Max Scheler)' }
     ],
     influencioA: [
@@ -459,6 +460,7 @@ export const AUTORES_TANDA_3: AutorProfile[] = [
       { nombre: 'Ivan Sechenov', nota: 'Fisiología reflexológica rusa del cerebro' }
     ],
     influencioA: [
+      { nombre: 'John B. Watson', autorId: 'watson', nota: 'Base experimental del Conductismo clásico (condicionamiento emocional)' },
       { nombre: 'B. F. Skinner', autorId: 'skinner', nota: 'Diferenciación entre condicionamiento respondiente y operante' },
       { nombre: 'Alexander R. Luria', autorId: 'luria', nota: 'Fisiología de la actividad nerviosa superior' },
       { nombre: 'Joseph Wolpe y Terapia de Exposición', nota: 'Modelos de extinción del miedo y fobias en TCC' }
@@ -596,7 +598,8 @@ export const AUTORES_TANDA_3: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Epicteto y filosofía estoica', nota: 'El papel mediador de los juicios y creencias sobre las emociones' },
-      { nombre: 'Karen Horney y Alfred Adler', nota: 'La "tiranía de los deberías" y objetivos vitales' }
+      { nombre: 'Alfred Adler', autorId: 'adler', nota: 'Esquemas de apercepción, objetivos vitales y psicoterapia activa' },
+      { nombre: 'Karen Horney', autorId: 'horney', nota: 'La "tiranía de los deberías" y demandas irracionales' }
     ],
     influencioA: [
       { nombre: 'Aaron T. Beck', autorId: 'beck', nota: 'Desarrollo de la Terapia Cognitiva y la segunda ola de TCC' },
@@ -810,7 +813,8 @@ export const AUTORES_TANDA_3: AutorProfile[] = [
     influenciadoPor: [
       { nombre: 'Michel Foucault', autorId: 'foucault', nota: 'Genealogía, dispositivos y relaciones saber-poder' },
       { nombre: 'Gilles Deleuze', autorId: 'deleuze', nota: 'Multiplicidades, agenciamientos y lógicas colectivas (junto a Castoriadis)' },
-      { nombre: 'Enrique Pichon-Rivière', autorId: 'pichon-riviere', nota: 'Tradición grupalista argentina que retoma y reelabora' }
+      { nombre: 'Enrique Pichon-Rivière', autorId: 'pichon-riviere', nota: 'Tradición grupalista argentina que retoma y reelabora' },
+      { nombre: 'Eduardo "Tato" Pavlovsky', autorId: 'pavlovsky', nota: 'Interlocución clave en psicodrama, multiplicación dramática y lo grupal' }
     ],
     influencioA: [
       { nombre: 'Teoría y Técnica de Grupos y Estudios de Género (UBA)', nota: 'Formación crítica en dispositivos grupales y feminismos' }
@@ -952,7 +956,8 @@ export const AUTORES_TANDA_3: AutorProfile[] = [
     ],
     influencioA: [
       { nombre: 'Psicoanálisis Lacaniano en Argentina y España', nota: 'Generaciones de docentes y analistas en la UBA y escuelas freudianas' },
-      { nombre: 'Gabriel Lombardi', autorId: 'lombardi', nota: 'Tradición lacaniana argentina en la Facultad de Psicología' }
+      { nombre: 'Gabriel Lombardi', autorId: 'lombardi', nota: 'Tradición lacaniana argentina en la Facultad de Psicología' },
+      { nombre: 'Víctor Korman', autorId: 'korman', nota: 'Participación en los primeros grupos lacanianos de Buenos Aires' }
     ]
   },
   {

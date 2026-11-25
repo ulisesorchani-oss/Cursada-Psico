@@ -175,7 +175,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 544)',
         titular: 'Federico González',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=544&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Vygotsky, L.', titulo: 'El desarrollo de los procesos psicológicos superiores', editorial: 'Crítica', año: '1979', tipo: 'Obligatoria' }
         ]
@@ -183,7 +183,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 545)',
         titular: 'Félix Ricardo Bur',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=545&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Neisser, U.', titulo: 'Psicología Cognitiva', editorial: 'Trillas', año: '1976', tipo: 'Obligatoria' }
         ]
@@ -205,7 +205,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 546)',
         titular: 'Alicia Barreiro',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=546&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Piaget, J.', titulo: 'Psicología y Pedagogía', editorial: 'Ariel', año: '1969', tipo: 'Obligatoria' }
         ]
@@ -213,7 +213,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 547)',
         titular: 'Diana Concepción Fernández Zalazar',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=547&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Pozo, J. I.', titulo: 'Teorías cognitivas del aprendizaje', editorial: 'Morata', año: '1989', tipo: 'Obligatoria' }
         ]
@@ -235,7 +235,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 060)',
         titular: 'María Silvia Galibert',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=60&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Galibert, M. S.', titulo: 'Estadística para Psicología', editorial: 'Eudeba', año: '2015', tipo: 'Obligatoria' }
         ]
@@ -243,7 +243,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 167)',
         titular: 'Roberto Muiños',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=167&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Muiños, R.', titulo: 'Análisis de datos en Psicología', editorial: 'Eudeba', año: '2012', tipo: 'Obligatoria' }
         ]
@@ -265,7 +265,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 035)',
         titular: 'Gabriel Sergio Vodovotz',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=35&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Moscovici, S.', titulo: 'Psicología Social', editorial: 'Paidós', año: '1985', tipo: 'Obligatoria' }
         ]
@@ -273,7 +273,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 036)',
         titular: 'Elena Zubieta',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=36&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Zubieta, E.', titulo: 'Psicología Social y Cultura', editorial: 'Eudeba', año: '2010', tipo: 'Obligatoria' }
         ]
@@ -295,7 +295,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 049)',
         titular: 'Silvia Patricia Pino',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=49&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Freud, S.', titulo: 'La interpretación de los sueños', editorial: 'Amorrortu', año: '1900', tipo: 'Obligatoria' }
         ]
@@ -303,7 +303,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 050)',
         titular: 'David Laznik',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=50&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Freud, S.', titulo: 'Más allá del principio de placer', editorial: 'Amorrortu', año: '1920', tipo: 'Obligatoria' }
         ]
@@ -325,7 +325,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 048)',
         titular: 'Nancy China',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=48&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Kandel, E.', titulo: 'Principios de Neurociencia', editorial: 'McGraw-Hill', año: '2001', tipo: 'Obligatoria' }
         ]
@@ -333,7 +333,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 123)',
         titular: 'María del Pilar Kufa',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=123&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Purves, D.', titulo: 'Neurociencia', editorial: 'Panamericana', año: '2007', tipo: 'Obligatoria' }
         ]
@@ -355,7 +355,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 118)',
         titular: 'Marcela Borinsky',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=118&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Danziger, K.', titulo: 'Nombrar la mente', editorial: 'Ada Korn', año: '1997', tipo: 'Obligatoria' }
         ]
@@ -363,7 +363,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 034)',
         titular: 'Florencia Ibarra',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=34&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Rossi, L.', titulo: 'Historia de la Psicología en Argentina', editorial: 'Eudeba', año: '2001', tipo: 'Obligatoria' }
         ]
@@ -385,7 +385,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 061)',
         titular: 'Susana Azzollini',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=61&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Azzollini, S.', titulo: 'Metodología de la Investigación', editorial: 'Eudeba', año: '2014', tipo: 'Obligatoria' }
         ]
@@ -393,7 +393,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 062)',
         titular: 'Roxana Ynoub',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=62&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Ynoub, R.', titulo: 'Cuestión de método', editorial: 'Cengage Learning', año: '2015', tipo: 'Obligatoria' }
         ]
@@ -415,7 +415,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 065)',
         titular: 'Martín De Lellis',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=65&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'De Lellis, M.', titulo: 'Salud Pública y Salud Mental', editorial: 'Eudeba', año: '2010', tipo: 'Obligatoria' }
         ]
@@ -423,7 +423,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 066)',
         titular: 'Débora Tajer',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=66&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Tajer, D.', titulo: 'Género y Salud Mental', editorial: 'Lugar Editorial', año: '2012', tipo: 'Obligatoria' }
         ]
@@ -445,7 +445,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 063)',
         titular: 'A designar',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=63&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Pichon-Rivière, E.', titulo: 'El proceso grupal', editorial: 'Nueva Visión', año: '1975', tipo: 'Obligatoria' }
         ]
@@ -453,7 +453,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 064)',
         titular: 'Cintia Gisela Rolón',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=64&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Bauleo, A.', titulo: 'Ideología, grupo y familia', editorial: 'Kargieman', año: '1970', tipo: 'Obligatoria' }
         ]
@@ -475,7 +475,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 553)',
         titular: 'A designar',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=553&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Piaget, J.', titulo: 'La psicología del niño', editorial: 'Morata', año: '1966', tipo: 'Obligatoria' }
         ]
@@ -483,7 +483,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 554)',
         titular: 'Eugenia Sorgen',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=554&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Winnicott, D.', titulo: 'El niño y el mundo externo', editorial: 'Paidós', año: '1957', tipo: 'Obligatoria' }
         ]
@@ -505,7 +505,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 555)',
         titular: 'A designar',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=555&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Aberastury, A.', titulo: 'La adolescencia normal', editorial: 'Paidós', año: '1971', tipo: 'Obligatoria' }
         ]
@@ -513,7 +513,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 556)',
         titular: 'A designar',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=556&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Dolto, F.', titulo: 'La causa de los adolescentes', editorial: 'Paidós', año: '1988', tipo: 'Obligatoria' }
         ]
@@ -535,7 +535,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 037)',
         titular: 'Fabián Naparstek',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=37&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 3: Las psicosis', editorial: 'Paidós', año: '1984', tipo: 'Obligatoria' }
         ]
@@ -543,7 +543,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 038)',
         titular: 'Fabián Schejtman',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=38&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Schejtman, F.', titulo: 'Psicopatología: Clínica y Ética', editorial: 'Gramma', año: '2013', tipo: 'Obligatoria' }
         ]
@@ -565,7 +565,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 059)',
         titular: 'Isabel M. Mikulic',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=59&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Mikulic, I. M.', titulo: 'Evaluación Psicológica', editorial: 'Eudeba', año: '2010', tipo: 'Obligatoria' }
         ]
@@ -573,7 +573,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 058)',
         titular: 'Alejandro Castro Solano',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=58&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Castro Solano, A.', titulo: 'Técnicas de exploración psicológica', editorial: 'Paidós', año: '2004', tipo: 'Obligatoria' }
         ]
@@ -595,7 +595,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 113)',
         titular: 'Andrés Febbraio',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=113&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Febbraio, A.', titulo: 'El proceso de diagnóstico psicológico', editorial: 'Eudeba', año: '2012', tipo: 'Obligatoria' }
         ]
@@ -603,7 +603,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 042)',
         titular: 'Andrea Vinue',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=42&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Vinue, A.', titulo: 'Diagnóstico y Evaluación', editorial: 'Eudeba', año: '2015', tipo: 'Obligatoria' }
         ]
@@ -628,7 +628,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 577)',
         titular: 'Elizabeth Beatriz Ormart',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=577&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Ormart, E.', titulo: 'Ética y formación profesional', editorial: 'Eudeba', año: '2015', tipo: 'Obligatoria' }
         ]
@@ -636,7 +636,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 578)',
         titular: 'Julieta Bareiro',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=578&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Bareiro, J.', titulo: 'Ética y Psicoanálisis', editorial: 'Lugar Editorial', año: '2014', tipo: 'Obligatoria' }
         ]
@@ -658,7 +658,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 644)',
         titular: 'Mariana Funes Molineri',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=644&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Schlemenson, A.', titulo: 'La perspectiva ética en el análisis organizacional', editorial: 'Paidós', año: '1990', tipo: 'Obligatoria' }
         ]
@@ -666,7 +666,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 539)',
         titular: 'Nora Vitale',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=539&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Vitale, N.', titulo: 'Psicología de las Instituciones', editorial: 'Eudeba', año: '2012', tipo: 'Obligatoria' }
         ]
@@ -688,7 +688,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 083)',
         titular: 'Débora Nakache',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=83&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Baquero, R.', titulo: 'Vygotsky y el aprendizaje escolar', editorial: 'Aique', año: '1996', tipo: 'Obligatoria' }
         ]
@@ -696,7 +696,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 041)',
         titular: 'A designar',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=41&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Erausquin, C.', titulo: 'Psicología Educativa', editorial: 'Eudeba', año: '2014', tipo: 'Obligatoria' }
         ]
@@ -718,7 +718,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 040)',
         titular: 'Liliana Edith Ferrari',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=40&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Ferrari, L.', titulo: 'Psicología del Trabajo', editorial: 'Eudeba', año: '2015', tipo: 'Obligatoria' }
         ]
@@ -726,7 +726,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 724)',
         titular: 'Virginia Borrajo',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=724&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Filippi, G.', titulo: 'El aporte de la psicología del trabajo', editorial: 'Eudeba', año: '2013', tipo: 'Obligatoria' }
         ]
@@ -748,7 +748,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 574)',
         titular: 'Vanina Muraro',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=574&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Lombardi, G.', titulo: 'La clínica del psicoanálisis', editorial: 'Eudeba', año: '2010', tipo: 'Obligatoria' }
         ]
@@ -756,7 +756,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 575)',
         titular: 'Silvia Vazquez',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=575&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Vazquez, S.', titulo: 'Modelos en Psicoterapia', editorial: 'Eudeba', año: '2012', tipo: 'Obligatoria' }
         ]
@@ -778,7 +778,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 768)',
         titular: 'Claudio Ghiso',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=768&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Ghiso, C.', titulo: 'Psicología Jurídica', editorial: 'Eudeba', año: '2014', tipo: 'Obligatoria' }
         ]
@@ -786,7 +786,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 769)',
         titular: 'Stella M. Puhl',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=769&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Puhl, S. M.', titulo: 'La psicología en el ámbito jurídico', editorial: 'Eudeba', año: '2015', tipo: 'Obligatoria' }
         ]
@@ -808,7 +808,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra I (Cód. 570)',
         titular: 'Martín Etchevers',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=570&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Etchevers, M.', titulo: 'Avances en Psicoterapia', editorial: 'Eudeba', año: '2016', tipo: 'Obligatoria' }
         ]
@@ -816,7 +816,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
       {
         nombre: 'Cátedra II (Cód. 571)',
         titular: 'Eduardo G. Keegan',
-        link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=571&anio=2026&cuatrimestre=2',
         bibliografia: [
           { autor: 'Keegan, E.', titulo: 'Escritos sobre Psicoterapia Cognitiva', editorial: 'Eudeba', año: '2010', tipo: 'Obligatoria' }
         ]
@@ -833,7 +833,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Estudio de los desarrollos posfreudianos en la escuela inglesa, centrándose en autores como Melanie Klein.',
     objetivos: ['Analizar la teoría de las posiciones esquizo-paranoide y depresiva.', 'Comprender el concepto de fantasía inconsciente.'],
-    catedras: [{ nombre: 'Cátedra I (Cód. 051)', titular: 'Estela S. Eisenberg', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra I (Cód. 051)', titular: 'Estela S. Eisenberg', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=51&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicoanálisis: Freud']
   },
   {
@@ -844,7 +844,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Profundización en la clínica y teoría de la escuela inglesa de psicoanálisis.',
     objetivos: ['Estudiar los aportes de Bion y Winnicott.', 'Analizar la técnica del juego en el análisis de niños.'],
-    catedras: [{ nombre: 'Cátedra II (Cód. 052)', titular: 'Fabiana Freidin', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra II (Cód. 052)', titular: 'Fabiana Freidin', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=52&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicoanálisis: Freud']
   },
   {
@@ -855,7 +855,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Introducción a los conceptos fundamentales de la escuela francesa de psicoanálisis.',
     objetivos: ['Analizar el retorno a Freud de Jacques Lacan.', 'Estudiar la función del lenguaje en el inconsciente.'],
-    catedras: [{ nombre: 'Cátedra I (Cód. 057)', titular: 'Juan de Olaso', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra I (Cód. 057)', titular: 'Juan de Olaso', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=57&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicoanálisis: Freud']
   },
   {
@@ -866,7 +866,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Desarrollos avanzados de la teoría lacaniana y sus aplicaciones clínicas.',
     objetivos: ['Estudiar los cuatro conceptos fundamentales del psicoanálisis.', 'Analizar la lógica del fantasma.'],
-    catedras: [{ nombre: 'Cátedra II (Cód. 122)', titular: 'Pablo Diego Muñoz', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra II (Cód. 122)', titular: 'Pablo Diego Muñoz', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=122&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicoanálisis: Freud']
   },
   {
@@ -877,7 +877,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Estudio de las bases filosóficas y psicológicas de la fenomenología y el existencialismo.',
     objetivos: ['Analizar los conceptos de Dasein y ser-en-el-mundo.', 'Comprender la relación entre filosofía y psicología clínica.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 078)', titular: 'Pablo Diego Muñoz', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 078)', titular: 'Pablo Diego Muñoz', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=78&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicoanálisis: Freud', 'Historia de la Psicología']
   },
   {
@@ -899,7 +899,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Estudio de los procesos psicológicos y sociales durante el envejecimiento.',
     objetivos: ['Comprender la subjetividad en la vejez.', 'Analizar los mitos y prejuicios sobre el envejecimiento.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 080)', titular: 'Ricardo Iacub', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 080)', titular: 'Ricardo Iacub', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=80&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología']
   },
   {
@@ -910,7 +910,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Teoría y técnica de la aplicación e interpretación del test de Rorschach.',
     objetivos: ['Aprender la administración del test.', 'Interpretar los resultados desde una perspectiva diagnóstica.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 082)', titular: 'Ariana García', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 082)', titular: 'Ariana García', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=82&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -921,7 +921,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Análisis de la relación entre los procesos sociales y la subjetividad.',
     objetivos: ['Estudiar las principales teorías sociológicas contemporáneas.', 'Analizar el impacto de lo social en la salud mental.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 087)', titular: 'Liliana Ferrari', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 087)', titular: 'Liliana Ferrari', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=87&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['CBC']
   },
   {
@@ -932,7 +932,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Estudio de la dimensión cultural y antropológica del ser humano.',
     objetivos: ['Analizar el concepto de hombre en las diferentes culturas.', 'Estudiar la relación entre naturaleza y cultura.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 089)', titular: 'Fernando Gabriel Montañez', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 089)', titular: 'Fernando Gabriel Montañez', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=89&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['CBC']
   },
   {
@@ -943,7 +943,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Bases biológicas y evolutivas del comportamiento animal y humano.',
     objetivos: ['Estudiar la etología y la psicología comparada.', 'Analizar las bases genéticas de la conducta.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 090)', titular: 'Rubén Muzio', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 090)', titular: 'Rubén Muzio', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=90&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['CBC']
   },
   {
@@ -954,7 +954,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Reflexión sobre los fundamentos filosóficos de las teorías psicológicas.',
     objetivos: ['Analizar la relación mente-cuerpo.', 'Estudiar la ética y la epistemología en psicología.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 096)', titular: 'Fabián Allegro', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 096)', titular: 'Fabián Allegro', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=96&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['CBC']
   },
   {
@@ -965,7 +965,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Teoría y técnica de las terapias conductuales y cognitivo-conductuales.',
     objetivos: ['Aprender técnicas de modificación de conducta.', 'Analizar los principios del aprendizaje aplicados a la clínica.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 780)', titular: 'José Dahab', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 780)', titular: 'José Dahab', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=780&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -976,7 +976,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Estudio de la clínica lacaniana contemporánea y la importancia de la escritura en psicoanálisis.',
     objetivos: ['Analizar el concepto de letra y escritura en Lacan.', 'Estudiar casos clínicos desde la orientación lacaniana.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 806)', titular: 'María Inés Sotelo', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 806)', titular: 'María Inés Sotelo', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=806&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicoanálisis: Freud']
   },
   {
@@ -987,7 +987,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Análisis histórico y epistemológico de la formación de los conceptos en psicoanálisis.',
     objetivos: ['Estudiar la evolución de los conceptos freudianos.', 'Analizar las rupturas y continuidades en la teoría.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 798)', titular: 'María de los Ángeles Córdoba', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 798)', titular: 'María de los Ángeles Córdoba', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=798&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicoanálisis: Freud']
   },
   {
@@ -998,7 +998,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Estudio de los procesos psicológicos involucrados en la vida política y social.',
     objetivos: ['Analizar el comportamiento electoral y la opinión pública.', 'Estudiar el liderazgo político y la ideología.'],
-    catedras: [{ nombre: 'Cátedra II (Cód. 810)', titular: 'Jorge Biglieri', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra II (Cód. 810)', titular: 'Jorge Biglieri', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=810&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicología Social']
   },
   {
@@ -1009,7 +1009,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Estudio de las diferentes teorías sobre la estructura y dinámica de la personalidad.',
     objetivos: ['Comparar los modelos psicométricos y dinámicos de la personalidad.', 'Analizar el desarrollo de la personalidad.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 860)', titular: 'Cristian Garay', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 860)', titular: 'Cristian Garay', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=860&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Procesos Psicológicos Básicos', 'Psicología Social']
   },
 
@@ -1024,7 +1024,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Estudio de las dificultades de aprendizaje desde una perspectiva clínica y psicopedagógica.',
     objetivos: ['Analizar los procesos de aprendizaje y sus obstáculos.', 'Intervenir en problemas de aprendizaje en niños y adolescentes.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 085)', titular: 'Patricia Álvarez', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 085)', titular: 'Patricia Álvarez', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=85&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicología Evolutiva: Adolescencia', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1036,7 +1036,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Teoría y técnica de los procesos de orientación para la elección de carrera y ocupación.',
     objetivos: ['Comprender la elección vocacional como proceso subjetivo.', 'Aprender técnicas de orientación individual y grupal.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 086)', titular: 'Gabriela Aisenson', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 086)', titular: 'Gabriela Aisenson', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=86&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicología Evolutiva: Adolescencia', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1048,7 +1048,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Abordaje psicológico de la discapacidad en los ámbitos educativo y social.',
     objetivos: ['Analizar la subjetividad y la discapacidad.', 'Estudiar los procesos de integración e inclusión.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 136)', titular: 'Andrés Febbraio', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 136)', titular: 'Andrés Febbraio', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=136&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicología Evolutiva: Adolescencia', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1060,7 +1060,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Impacto de las nuevas tecnologías en los procesos educativos y en la subjetividad contemporánea.',
     objetivos: ['Analizar la relación entre tecnología y aprendizaje.', 'Estudiar la brecha digital y la inclusión tecnológica.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 660)', titular: 'Diana Fernández Zalazar', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 660)', titular: 'Diana Fernández Zalazar', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=660&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicología Evolutiva: Adolescencia', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
 
@@ -1074,7 +1074,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Práctica clínica orientada específicamente a la infancia y la adolescencia.',
     objetivos: ['Estudiar la técnica del juego y el dibujo.', 'Analizar las entrevistas con padres y el encuadre clínico.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 043)', titular: 'Paul Douglas Yorston', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 043)', titular: 'Paul Douglas Yorston', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=43&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1086,7 +1086,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Estudio de la relación entre los procesos psíquicos y las afecciones somáticas.',
     objetivos: ['Comprender la lógica del fenómeno psicosomático.', 'Analizar el abordaje clínico de pacientes con enfermedades orgánicas.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 081)', titular: 'Jorge Ulnik', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 081)', titular: 'Jorge Ulnik', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=81&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1098,7 +1098,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Estudio de las funciones cognitivas y sus alteraciones por daño cerebral.',
     objetivos: ['Aprender la evaluación neuropsicológica.', 'Estudiar los procesos de rehabilitación cognitiva.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 091)', titular: 'Daniel Politis', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 091)', titular: 'Daniel Politis', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=91&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Neurofisiología']
   },
   {
@@ -1110,7 +1110,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Introducción al modelo sistémico y su aplicación en terapia individual, de pareja y familia.',
     objetivos: ['Estudiar la comunicación y los sistemas humanos.', 'Aprender técnicas de intervención sistémica.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 158)', titular: 'Valeria Wittner', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 158)', titular: 'Valeria Wittner', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=158&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1122,7 +1122,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Bases farmacológicas del tratamiento de los trastornos mentales.',
     objetivos: ['Comprender el mecanismo de acción de los psicofármacos.', 'Analizar la relación entre psicoterapias y farmacología.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 616)', titular: 'Silvia Leonor Herlyn', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 616)', titular: 'Silvia Leonor Herlyn', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=616&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1134,7 +1134,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Profundización en la técnica y práctica clínica desde la orientación psicoanalítica.',
     objetivos: ['Analizar la transferencia y la interpretación.', 'Estudiar las diferentes estructuras clínicas.'],
-    catedras: [{ nombre: 'Cátedra I (Cód. 654)', titular: 'David Laznik', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra I (Cód. 654)', titular: 'David Laznik', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=654&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1146,7 +1146,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Estudio de las adicciones desde una perspectiva clínica y social.',
     objetivos: ['Comprender la función del tóxico en la economía psíquica.', 'Analizar los dispositivos de tratamiento para adicciones.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 770)', titular: 'Fabián Naparstek', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 770)', titular: 'Fabián Naparstek', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=770&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1158,7 +1158,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Fundamentos y aplicaciones de la terapia cognitivo-conductual.',
     objetivos: ['Aprender protocolos de tratamiento basados en la evidencia.', 'Estudiar la reestructuración cognitiva y técnicas conductuales.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 771)', titular: 'Eduardo Keegan', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 771)', titular: 'Eduardo Keegan', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=771&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1170,7 +1170,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Análisis del concepto de síntoma en la clínica psicoanalítica contemporánea.',
     objetivos: ['Estudiar el síntoma como formación del inconsciente y como goce.', 'Analizar la dirección de la cura.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 807)', titular: 'Marcelo Mazzuca', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 807)', titular: 'Marcelo Mazzuca', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=807&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1182,7 +1182,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Abordaje clínico de los trastornos del desarrollo y la discapacidad en la infancia.',
     objetivos: ['Estudiar las patologías graves del desarrollo.', 'Analizar la intervención temprana y el trabajo con la familia.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 808)', titular: 'Norma Bruner', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 808)', titular: 'Norma Bruner', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=808&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1194,7 +1194,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Estudio de los trastornos de la conducta alimentaria desde un enfoque clínico e interdisciplinario.',
     objetivos: ['Comprender la psicopatología de los trastornos alimentarios.', 'Analizar el trabajo en equipo interdisciplinario.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 815)', titular: 'Rodrigo Abínzano', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 815)', titular: 'Rodrigo Abínzano', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=815&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
 
@@ -1208,7 +1208,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Procesos de búsqueda, selección e inducción de personas en las organizaciones.',
     objetivos: ['Aprender a realizar perfiles de puesto.', 'Estudiar las técnicas de entrevista de selección y evaluación.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 662)', titular: 'María Santarsiero', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 662)', titular: 'María Santarsiero', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=662&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicología del Trabajo']
   },
 
@@ -1222,7 +1222,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'El rol del psicólogo forense en conflictos familiares y protección de derechos.',
     objetivos: ['Analizar las pericias en casos de familia.', 'Estudiar la violencia familiar y el abuso infantil desde lo jurídico.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 191)', titular: 'Matilde A. De La Iglesia', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 191)', titular: 'Matilde A. De La Iglesia', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=191&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1234,7 +1234,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Estudio de la conducta criminal y los perfiles delictivos.',
     objetivos: ['Analizar las teorías sobre la criminalidad.', 'Estudiar la psicología del testimonio y la investigación criminal.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 692)', titular: 'Verónica Llull Casado', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 692)', titular: 'Verónica Llull Casado', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=692&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1246,7 +1246,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Estudio de la víctima de delitos y los procesos de victimización.',
     objetivos: ['Analizar el impacto psíquico del delito en la víctima.', 'Estudiar los derechos de las víctimas y la asistencia victimológica.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 781)', titular: 'Flabia Rodríguez', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 781)', titular: 'Flabia Rodríguez', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=781&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1258,7 +1258,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Aplicación de instrumentos diagnósticos y técnicas de evaluación en el contexto legal.',
     objetivos: ['Aprender la realización de informes periciales.', 'Estudiar las técnicas específicas para el ámbito forense.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 782)', titular: 'José Rodriguez', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 782)', titular: 'José Rodriguez', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=782&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
 
@@ -1272,7 +1272,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Teoría y práctica de la prevención en salud mental y promoción de la salud.',
     objetivos: ['Estudiar los niveles de prevención.', 'Diseñar programas de intervención preventiva.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 067)', titular: 'Ana Tisera', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 067)', titular: 'Ana Tisera', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=67&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos', 'Psicología Evolutiva: Adolescencia']
   },
   {
@@ -1284,7 +1284,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Modelos y técnicas de trabajo psicológico en comunidades y organizaciones sociales.',
     objetivos: ['Aprender metodologías participativas.', 'Analizar el rol del psicólogo comunitario.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 084)', titular: 'Cora Pesiney', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 084)', titular: 'Cora Pesiney', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=84&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos', 'Psicología Evolutiva: Adolescencia']
   },
   {
@@ -1296,7 +1296,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Estudio de la perspectiva de género y su relevancia en la psicología y la salud.',
     objetivos: ['Analizar la construcción social del género.', 'Estudiar las desigualdades y violencias de género.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 105)', titular: 'Débora Tajer', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 105)', titular: 'Débora Tajer', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=105&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos', 'Psicología Evolutiva: Adolescencia']
   },
   {
@@ -1308,7 +1308,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Procesos psicológicos involucrados en el rendimiento deportivo y la actividad física.',
     objetivos: ['Estudiar la motivación y el estrés en el deporte.', 'Analizar el trabajo con atletas y equipos deportivos.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 607)', titular: 'Raúl Barrios', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 607)', titular: 'Raúl Barrios', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=607&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos', 'Psicología Evolutiva: Adolescencia']
   },
   {
@@ -1320,7 +1320,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Análisis de la inserción del psicólogo en instituciones de salud y el trabajo interdisciplinario.',
     objetivos: ['Comprender la dinámica de los equipos de salud.', 'Estudiar la ética y la práctica en el hospital público.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 816)', titular: 'Gabriela Perrotta', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 816)', titular: 'Gabriela Perrotta', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=816&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicología Evolutiva: Adolescencia', 'Teoría y Técnica de Grupos', 'Salud Pública y Salud Mental']
   },
 
@@ -1335,7 +1335,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Práctica profesional centrada en la intervención en situaciones de urgencia subjetiva.',
     objetivos: ['Analizar la demanda en la urgencia.', 'Estudiar los dispositivos de atención en crisis.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 109)', titular: 'María Inés Sotelo', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 109)', titular: 'María Inés Sotelo', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=109&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1347,7 +1347,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica en el ámbito hospitalario sobre afecciones psicosomáticas.',
     objetivos: ['Intervenir en pacientes con afecciones orgánicas.', 'Estudiar la relación médico-paciente.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 125)', titular: 'Roberto Raúl Patrono', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 125)', titular: 'Roberto Raúl Patrono', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=125&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1359,7 +1359,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Abordaje clínico en situaciones de emergencia y desastres.',
     objetivos: ['Estudiar los protocolos de intervención en emergencias.', 'Analizar el impacto subjetivo de eventos traumáticos.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 126)', titular: 'Martín Trigo', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 126)', titular: 'Martín Trigo', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=126&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1371,7 +1371,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica sobre las diversas modalidades de consulta en dispositivos ambulatorios.',
     objetivos: ['Analizar el encuadre en la consulta ambulatoria.', 'Estudiar las entrevistas preliminares.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 128)', titular: 'Guido Revale', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 128)', titular: 'Guido Revale', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=128&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1383,7 +1383,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Práctica clínica enfocada en la infancia y adolescencia desde la perspectiva del síntoma.',
     objetivos: ['Analizar el síntoma en el niño.', 'Estudiar la transferencia en el análisis con niños.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 130)', titular: 'Mariana Martinez Liss', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 130)', titular: 'Mariana Martinez Liss', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=130&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1395,7 +1395,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Inserción en el equipo de salud mental de un hospital pediátrico de referencia.',
     objetivos: ['Participar en ateneos y supervisiones.', 'Realizar entrevistas clínicas en el hospital.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 135)', titular: 'Andrea Fränkel', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 135)', titular: 'Andrea Fränkel', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=135&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1407,7 +1407,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Práctica en instituciones dedicadas al tratamiento de las adicciones.',
     objetivos: ['Estudiar el abordaje interdisciplinario de las toxicomanías.', 'Analizar los dispositivos de internación y ambulatorios.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 138)', titular: 'Gustavo Torres', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 138)', titular: 'Gustavo Torres', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=138&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1419,7 +1419,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Abordaje de la pubertad y adolescencia en el contexto de la salud pública.',
     objetivos: ['Analizar las crisis subjetivas en la adolescencia.', 'Estudiar el rol del psicólogo en el hospital.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 161)', titular: 'Marcela Reyes', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 161)', titular: 'Marcela Reyes', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=161&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1431,7 +1431,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Acompañamiento psicológico a pacientes con enfermedades terminales y sus familias.',
     objetivos: ['Estudiar el proceso de duelo.', 'Analizar la ética en el final de la vida.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 579)', titular: 'Silvina Noemi Dulitzky', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 579)', titular: 'Silvina Noemi Dulitzky', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=579&anio=2026&cuatrimestre=1', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1443,7 +1443,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica intensiva en modelos cognitivo-conductuales de tercera generación.',
     objetivos: ['Aprender técnicas de exposición y reestructuración.', 'Estudiar la eficacia de los tratamientos.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 580)', titular: 'Guido Korman', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 580)', titular: 'Guido Korman', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=580&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1455,7 +1455,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Intervención clínica en contextos comunitarios y sociales.',
     objetivos: ['Articular psicoanálisis y comunidad.', 'Analizar el trabajo con poblaciones vulnerables.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 639)', titular: 'Fabiana Freidin', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 639)', titular: 'Fabiana Freidin', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=639&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1467,7 +1467,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Teoría y técnica del acompañamiento terapéutico en diversos dispositivos.',
     objetivos: ['Definir el rol del acompañante terapéutico.', 'Analizar la inserción en el equipo interdisciplinario.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 687)', titular: 'Gustavo Rossi', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 687)', titular: 'Gustavo Rossi', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=687&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1479,7 +1479,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Práctica general de atención clínica en el sistema público de salud.',
     objetivos: ['Realizar admisiones y seguimientos.', 'Estudiar la dinámica institucional hospitalaria.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 689)', titular: 'Silvia Di Biasi', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 689)', titular: 'Silvia Di Biasi', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=689&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1491,7 +1491,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Aplicación de baterías neuropsicológicas y elaboración de informes.',
     objetivos: ['Dominar técnicas de evaluación cognitiva.', 'Analizar perfiles neuropsicológicos.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 703)', titular: 'Sandra Vanotti', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 703)', titular: 'Sandra Vanotti', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=703&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1503,7 +1503,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Abordaje psicológico del embarazo, parto, puerperio y primer año de vida.',
     objetivos: ['Estudiar el vínculo temprano.', 'Analizar las patologías perinatales.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 721)', titular: 'Elena Teresa Galindez', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 721)', titular: 'Elena Teresa Galindez', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=721&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1515,7 +1515,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica sobre la discapacidad y trastornos graves del desarrollo en la infancia.',
     objetivos: ['Analizar la función del juego en la discapacidad.', 'Estudiar la posición del analista.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 722)', titular: 'Norma Bruner', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 722)', titular: 'Norma Bruner', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=722&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1527,7 +1527,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Abordaje integral de los conflictos familiares y su impacto en los hijos.',
     objetivos: ['Analizar la dinámica familiar.', 'Estudiar intervenciones en crisis familiares.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 726)', titular: 'María Eugenia Otero', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 726)', titular: 'María Eugenia Otero', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=726&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1539,7 +1539,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Inserción en dispositivos específicos de tratamiento de trastornos alimentarios.',
     objetivos: ['Analizar la posición subjetiva frente al alimento.', 'Estudiar el trabajo interdisciplinario.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 772)', titular: 'Osvaldo Rodríguez', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 772)', titular: 'Osvaldo Rodríguez', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=772&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1551,7 +1551,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Articulación entre los conceptos de cultura, sociedad y práctica clínica.',
     objetivos: ['Analizar la diversidad cultural en la consulta.', 'Estudiar el impacto de las creencias en la salud.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 779)', titular: 'Norberto Aldo Conti', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 779)', titular: 'Norberto Aldo Conti', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=779&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1563,7 +1563,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica sobre la gestión y atención en salud mental en contextos institucionales complejos.',
     objetivos: ['Analizar las políticas de salud mental.', 'Estudiar los dispositivos de red comunitaria.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 812)', titular: 'Marcelo Ferraro', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 812)', titular: 'Marcelo Ferraro', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=812&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1575,7 +1575,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Estudio de las actuaciones, pasajes al acto y conductas impulsivas.',
     objetivos: ['Diferenciar actuar-out y pasaje al acto.', 'Analizar la dirección de la cura en estos casos.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 817)', titular: 'Sandra Szmuszkowiez', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 817)', titular: 'Sandra Szmuszkowiez', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=817&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1587,7 +1587,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica clínica orientada a patologías graves y estructuras psicóticas.',
     objetivos: ['Estudiar el diagnóstico diferencial.', 'Analizar las intervenciones en la psicosis.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 820)', titular: 'Martín Etchevers', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 820)', titular: 'Martín Etchevers', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=820&anio=2026&cuatrimestre=1', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1599,7 +1599,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Práctica sobre la dirección de la cura y los fundamentos del psicoanálisis aplicado.',
     objetivos: ['Analizar la demanda de análisis.', 'Estudiar el fin de análisis y la salida del tratamiento.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 822)', titular: 'María Luján Iuale', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 822)', titular: 'María Luján Iuale', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=822&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1611,7 +1611,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Abordaje ético y psicológico de la infertilidad y las nuevas formas de parentalidad.',
     objetivos: ['Analizar el impacto de las TRHA en la subjetividad.', 'Estudiar el marco legal y ético.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 824)', titular: 'Elizabeth Ormart', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 824)', titular: 'Elizabeth Ormart', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=824&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1623,7 +1623,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Aplicación de la psicología en el ámbito de la aviación y la seguridad operacional.',
     objetivos: ['Estudiar el error humano.', 'Analizar el estrés y la fatiga en tripulaciones.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 851)', titular: 'Nicolás G. Machín', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 851)', titular: 'Nicolás G. Machín', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=851&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1635,7 +1635,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica especializada en la evaluación e intervención en autismo.',
     objetivos: ['Aprender instrumentos de detección temprana.', 'Estudiar modelos de intervención integral.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 857)', titular: 'Ana María D´Anna', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 857)', titular: 'Ana María D´Anna', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=857&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1647,7 +1647,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Entrenamiento práctico en técnicas de entrevista sistémica.',
     objetivos: ['Realizar genogramas.', 'Aprender técnicas de circularidad y reformulación.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 861)', titular: 'Valeria Wittner', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 861)', titular: 'Valeria Wittner', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=861&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
   {
@@ -1659,7 +1659,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Profundización en el tratamiento psicoanalítico de las psicosis.',
     objetivos: ['Analizar el desencadenamiento y la estabilización.', 'Estudiar el concepto de nudo borromeo.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 862)', titular: 'Martín Carlos Alomo', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 862)', titular: 'Martín Carlos Alomo', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=862&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicopatología', 'Salud Pública y Salud Mental', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo I', 'Teoría y Técnica de Exploración y Diagnóstico Psicológico. Módulo II']
   },
 
@@ -1673,7 +1673,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Práctica profesional en procesos de orientación vocacional.',
     objetivos: ['Realizar procesos de orientación individual.', 'Participar en talleres grupales en escuelas.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 100)', titular: 'Gabriela Aisenson', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 100)', titular: 'Gabriela Aisenson', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=100&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicología Evolutiva: Adolescencia', 'Salud Pública y Salud Mental']
   },
   {
@@ -1685,7 +1685,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica sobre la integración escolar de niños con discapacidad.',
     objetivos: ['Analizar el rol del psicólogo integrador.', 'Estudiar las configuraciones de apoyo.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 107)', titular: 'Andrés Febbraio', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 107)', titular: 'Andrés Febbraio', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=107&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicología Evolutiva: Adolescencia', 'Salud Pública y Salud Mental']
   },
 
@@ -1699,7 +1699,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Práctica profesional en orientación para el mundo del trabajo.',
     objetivos: ['Analizar perfiles laborales.', 'Realizar asesoramiento ocupacional.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 100)', titular: 'Gabriela Aisenson', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 100)', titular: 'Gabriela Aisenson', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=100&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicología Evolutiva: Adolescencia', 'Salud Pública y Salud Mental']
   },
   {
@@ -1711,7 +1711,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica sobre el acompañamiento a personas en búsqueda de empleo.',
     objetivos: ['Diseñar talleres de búsqueda laboral.', 'Estudiar la empleabilidad.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 657)', titular: 'Arnaldo Martín Sandoval', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 657)', titular: 'Arnaldo Martín Sandoval', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=657&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicología del Trabajo']
   },
 
@@ -1725,7 +1725,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Inserción en juzgados, asesorías y otros organismos del poder judicial.',
     objetivos: ['Observar la práctica pericial.', 'Analizar el rol del psicólogo en la justicia.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 119)', titular: 'Gustavo M. Laursen', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 119)', titular: 'Gustavo M. Laursen', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=119&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicología Jurídica']
   },
   {
@@ -1737,7 +1737,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica sobre conflictos familiares judicializados.',
     objetivos: ['Analizar regímenes de comunicación.', 'Estudiar el impacto del divorcio en los hijos.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 601)', titular: 'Melina Siderakis', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 601)', titular: 'Melina Siderakis', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=601&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicología Jurídica']
   },
   {
@@ -1749,7 +1749,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Práctica intensiva en la realización de pericias psicológicas.',
     objetivos: ['Aprender la redacción de informes periciales.', 'Estudiar la ética del perito.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 718)', titular: 'Ma. de los Ángeles Izcurdia', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 718)', titular: 'Ma. de los Ángeles Izcurdia', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=718&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicología Jurídica']
   },
   {
@@ -1773,7 +1773,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Inserción en fiscalías para la asistencia a víctimas y testigos.',
     objetivos: ['Realizar entrevistas en cámara Gesell.', 'Asesorar a fiscales en temas psicológicos.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 858)', titular: 'Roxana Laura Marqués', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 858)', titular: 'Roxana Laura Marqués', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=858&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Psicología Jurídica']
   },
 
@@ -1787,7 +1787,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Práctica sobre el diseño y evaluación de programas de salud pública.',
     objetivos: ['Analizar indicadores de salud.', 'Estudiar la planificación estratégica.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 581)', titular: 'Sara Elena Ardila Gómez', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 581)', titular: 'Sara Elena Ardila Gómez', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=581&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1799,7 +1799,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica sobre la ética y los derechos humanos en la clínica.',
     objetivos: ['Analizar dilemas éticos.', 'Estudiar la ley de salud mental.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 582)', titular: 'Gabriela Salomone', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 582)', titular: 'Gabriela Salomone', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=582&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1811,7 +1811,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Práctica sobre la implementación de la ESI desde una perspectiva ética.',
     objetivos: ['Analizar contenidos de ESI.', 'Intervenir en instituciones educativas.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 583)', titular: 'Elizabeth Beatriz Ormart', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 583)', titular: 'Elizabeth Beatriz Ormart', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=583&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1823,7 +1823,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Uso del material audiovisual como herramienta de intervención comunitaria.',
     objetivos: ['Analizar narrativas cinematográficas.', 'Realizar talleres de cine-debate.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 584)', titular: 'Paula Belén Mastandrea', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 584)', titular: 'Paula Belén Mastandrea', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=584&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1835,7 +1835,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Abordaje de familias con integrantes que padecen enfermedades crónicas.',
     objetivos: ['Estudiar el impacto de la cronicidad.', 'Fortalecer redes de apoyo.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 632)', titular: 'Analía Liliana Benvenuto', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 632)', titular: 'Analía Liliana Benvenuto', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=632&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1847,7 +1847,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica sobre los procesos de externación y vida en comunidad.',
     objetivos: ['Analizar dispositivos intermedios.', 'Estudiar la inclusión social.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 638)', titular: 'Ana Tisera', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 638)', titular: 'Ana Tisera', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=638&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1871,7 +1871,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica sobre la prevención y asistencia de adicciones en el territorio.',
     objetivos: ['Analizar el consumo problemático.', 'Estudiar la reducción de daños.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 707)', titular: 'Daniel Cóppola', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 707)', titular: 'Daniel Cóppola', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=707&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1883,7 +1883,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Práctica en el primer nivel de atención de salud.',
     objetivos: ['Realizar tareas de promoción de salud.', 'Atender consultas de baja complejidad.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 786)', titular: 'Martín De Lellis', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 786)', titular: 'Martín De Lellis', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=786&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1895,7 +1895,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica sobre la salud adolescente en el ámbito escolar.',
     objetivos: ['Realizar talleres de prevención.', 'Detectar situaciones de riesgo.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 788)', titular: 'Vanina Schmidt', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 788)', titular: 'Vanina Schmidt', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=788&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1907,7 +1907,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Abordaje de las diversas formas de violencia en la sociedad actual.',
     objetivos: ['Analizar la violencia de género y familiar.', 'Estudiar protocolos de asistencia.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 805)', titular: 'Marisa Morao', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 805)', titular: 'Marisa Morao', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=805&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1919,7 +1919,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica sobre la psicología aplicada al deporte en clubes y centros vecinales.',
     objetivos: ['Estudiar la cohesión grupal.', 'Analizar el liderazgo deportivo.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 811)', titular: 'Raul Barrios', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 811)', titular: 'Raul Barrios', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=811&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1931,7 +1931,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Práctica sobre la salud sexual y reproductiva desde una perspectiva de derechos.',
     objetivos: ['Asesorar en métodos anticonceptivos.', 'Estudiar la interrupción voluntaria del embarazo.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 825)', titular: 'Gabriela Perrotta', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 825)', titular: 'Gabriela Perrotta', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=825&anio=2026&cuatrimestre=1', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1943,7 +1943,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica clínica con jóvenes en contextos de exclusión social.',
     objetivos: ['Analizar la subjetividad en la pobreza.', 'Estudiar el lazo social.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 826)', titular: 'Nazarena Suarez', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 826)', titular: 'Nazarena Suarez', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=826&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1955,7 +1955,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Práctica especializada en la prevención de la violencia de género.',
     objetivos: ['Diseñar campañas de sensibilización.', 'Asistir a mujeres en situación de violencia.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 842)', titular: 'Mariana C. Miracco', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 842)', titular: 'Mariana C. Miracco', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=842&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1967,7 +1967,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica territorial en asentamientos y barrios populares.',
     objetivos: ['Fortalecer la organización comunitaria.', 'Realizar relevamientos de salud.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 852)', titular: 'Nicolás Alejandro Vizioli', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 852)', titular: 'Nicolás Alejandro Vizioli', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=852&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental', 'Teoría y Técnica de Grupos']
   },
   {
@@ -1979,7 +1979,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Estudio de las bases biológicas del comportamiento mediante métodos psicofisiológicos.',
     objetivos: ['Conocer los métodos de registro psicofisiológico.', 'Analizar la relación entre procesos mentales y respuestas fisiológicas.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 585)', titular: 'R. Muzio', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 585)', titular: 'R. Muzio', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=585&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental']
   },
   {
@@ -1991,7 +1991,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Práctica sobre la evaluación psicológica aplicada en diversos contextos sociales y clínicos.',
     objetivos: ['Aplicar técnicas de evaluación en contextos reales.', 'Analizar la validez y confiabilidad de los instrumentos.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 819)', titular: 'I. M. Mikulic', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 819)', titular: 'I. M. Mikulic', link: 'http://academica.psi.uba.ar/Psi/Ver521_.php?catedra=819&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental']
   },
   {
@@ -2003,7 +2003,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Investigación sobre los procesos psicológicos y sociales en la vejez.',
     objetivos: ['Estudiar el envejecimiento desde una perspectiva integral.', 'Realizar investigaciones sobre la calidad de vida en adultos mayores.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 845)', titular: 'R. Iacub', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 845)', titular: 'R. Iacub', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=845&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental']
   },
   {
@@ -2015,7 +2015,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 2,
     descripcion: 'Análisis de los dilemas éticos en la práctica de la salud y la investigación.',
     objetivos: ['Comprender los principios de la bioética.', 'Analizar casos clínicos y de investigación desde una perspectiva ética.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 849)', titular: 'N. S. Lima', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 849)', titular: 'N. S. Lima', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=849&anio=2026&cuatrimestre=2', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental']
   },
   {
@@ -2027,7 +2027,7 @@ export const PLAN_ESTUDIOS: Materia[] = [
     cuatrimestre: 1,
     descripcion: 'Investigación sobre el desarrollo temprano y estrategias de prevención en la infancia.',
     objetivos: ['Estudiar los procesos de constitución subjetiva temprana.', 'Investigar sobre intervenciones preventivas en la primera infancia.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 856)', titular: 'C. A. Duhalde', link: 'https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php', bibliografia: [] }],
+    catedras: [{ nombre: 'Cátedra Única (Cód. 856)', titular: 'C. A. Duhalde', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=856&anio=2026&cuatrimestre=1', bibliografia: [] }],
     correlativas: ['Salud Pública y Salud Mental']
   }
 ];

@@ -809,17 +809,33 @@ export default function App() {
                                 </p>
                               </div>
 
-                              {catedra.link && (
-                                <a
-                                  href={catedra.link}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-1.5 text-xs font-bold text-bordo hover:text-white hover:bg-bordo transition-colors bg-bordo/8 px-3.5 py-1.5 rounded-full whitespace-nowrap"
-                                >
-                                  Programas UBA
-                                  <ExternalLink size={12} />
-                                </a>
-                              )}
+                              {catedra.link && (() => {
+                                const isDirectPdf = catedra.link.includes('Ver521');
+                                return (
+                                  <div className="flex flex-wrap items-center gap-2">
+                                    <a
+                                      href={catedra.link}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="inline-flex items-center gap-1.5 text-xs font-bold text-bordo hover:text-white hover:bg-bordo transition-colors bg-bordo/8 px-3.5 py-1.5 rounded-full whitespace-nowrap"
+                                    >
+                                      {isDirectPdf ? 'Programa (PDF)' : 'Ver en Portal UBA'}
+                                      <ExternalLink size={12} />
+                                    </a>
+                                    {isDirectPdf && (
+                                      <a
+                                        href="https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="Abrir índice de materias de la facultad"
+                                        className="text-[11px] font-semibold text-muted hover:text-bordo transition-colors whitespace-nowrap"
+                                      >
+                                        Portal UBA
+                                      </a>
+                                    )}
+                                  </div>
+                                );
+                              })()}
                             </div>
 
                             {obligatoria.length > 0 && (

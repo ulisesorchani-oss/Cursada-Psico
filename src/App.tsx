@@ -46,15 +46,19 @@ const MARQUEE_AUTOR_IDS = [
   'vygotsky',
   'winnicott',
   'klein',
+  'bateson',
+  'watzlawick',
+  'beck',
+  'hayes',
+  'linehan',
+  'rogers',
   'moscovici',
   'foucault',
   'pichon-riviere',
   'bleger',
-  'dolto',
-  'miller',
-  'lombardi',
+  'ana-maria-fernandez',
+  'masotta',
   'stolkiner',
-  'barlow',
   'kandel'
 ];
 

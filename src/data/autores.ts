@@ -1,21 +1,24 @@
 import { Materia } from '../constants';
 import { EDI_PORTAL_URL, EDI_RECURSOS_AUTORES } from './ediBibliografias';
 import { AUTORES_TANDA_2 } from './autoresTanda2';
+import { AUTORES_TANDA_3 } from './autoresTanda3';
 
 export type CorrienteAutor =
   | 'Psicoanálisis'
+  | 'TCC y Neurociencias'
+  | 'Sistémica y Humanista'
   | 'Desarrollo y Cognición'
   | 'Social e Institucional'
   | 'Epistemología y Lenguaje'
-  | 'Neurociencias y Clínica'
   | 'Referentes UBA / Argentina';
 
 export const CORRIENTES_AUTORES: readonly CorrienteAutor[] = [
   'Psicoanálisis',
+  'TCC y Neurociencias',
+  'Sistémica y Humanista',
   'Desarrollo y Cognición',
   'Social e Institucional',
   'Epistemología y Lenguaje',
-  'Neurociencias y Clínica',
   'Referentes UBA / Argentina'
 ] as const;
 
@@ -246,6 +249,7 @@ export const AUTORES: AutorProfile[] = [
     ],
     influencioA: [
       { nombre: 'Jacques-Alain Miller', autorId: 'miller', nota: 'Establecimiento de Seminarios y orientación lacaniana' },
+      { nombre: 'Oscar Masotta', autorId: 'masotta', nota: 'Introducción de Lacan en Argentina y habla hispana' },
       { nombre: 'Gabriel Lombardi', autorId: 'lombardi', nota: 'Clínica de las neurosis y psicosis en la UBA' },
       { nombre: 'Françoise Dolto', autorId: 'dolto', nota: 'Diálogo clínico en la escuela francesa' },
       { nombre: 'Slavoj Žižek', nota: 'Filosofía política y crítica cultural lacaniana' }
@@ -544,7 +548,7 @@ export const AUTORES: AutorProfile[] = [
     ],
     influencioA: [
       { nombre: 'Orientación Lacaniana Contemporánea (EOL / AMP)', nota: 'Formación clínica en Argentina y Latinoamérica' },
-      { nombre: 'Fabián Schejtman', nota: 'Clínica de los nudos y psicopatología UBA' }
+      { nombre: 'Fabián Schejtman', autorId: 'schejtman', nota: 'Clínica de los nudos y psicopatología UBA' }
     ]
   },
   {
@@ -692,9 +696,9 @@ export const AUTORES: AutorProfile[] = [
       { nombre: 'James Mark Baldwin', nota: 'Reacciones circulares y desarrollo genético' }
     ],
     influencioA: [
-      { nombre: 'Emilia Ferreiro', nota: 'Psicogénesis de la lengua escrita en Argentina y México' },
+      { nombre: 'Emilia Ferreiro', autorId: 'ferreiro', nota: 'Psicogénesis de la lengua escrita en Argentina y México' },
       { nombre: 'Juan Ignacio Pozo', autorId: 'pozo', nota: 'Teorías cognitivas del aprendizaje' },
-      { nombre: 'Rolando García', nota: 'Sistemas complejos y epistemología constructivista' },
+      { nombre: 'Juan Samaja', autorId: 'samaja', nota: 'Epistemología genética y metodología dialéctica en la UBA' },
       { nombre: 'Lawrence Kohlberg', nota: 'Estadios del desarrollo moral' }
     ]
   },
@@ -1231,7 +1235,7 @@ export const AUTORES: AutorProfile[] = [
     materiaIdsExtra: ['neuro-fisiologia', 'neuropsicologia'],
     fechas: '1929 – presente',
     origen: 'Viena, Austria · Nueva York, Estados Unidos',
-    corriente: 'Neurociencias y Clínica',
+    corriente: 'TCC y Neurociencias',
     resumenCorto:
       'Neurocientífico austríaco-estadounidense, Premio Nobel de Medicina (2000). Demostró las bases celulares y sinápticas de la memoria y la plasticidad neuronal.',
     biografia:
@@ -1291,7 +1295,7 @@ export const AUTORES: AutorProfile[] = [
     ],
     fechas: '1942 – presente',
     origen: 'Needham, Massachusetts, Estados Unidos',
-    corriente: 'Neurociencias y Clínica',
+    corriente: 'TCC y Neurociencias',
     resumenCorto:
       'Psicólogo clínico referente en trastornos de ansiedad y psicoterapia basada en evidencia. Creador del Protocolo Unificado transdiagnóstico y editor del Clinical Handbook.',
     biografia:
@@ -1373,7 +1377,7 @@ export const AUTORES: AutorProfile[] = [
     ],
     fechas: '1921 – 2021',
     origen: 'Providence · Filadelfia, Estados Unidos',
-    corriente: 'Neurociencias y Clínica',
+    corriente: 'TCC y Neurociencias',
     resumenCorto:
       'Psiquiatra estadounidense fundador de la Terapia Cognitiva. Demostró el papel de los pensamientos automáticos, los esquemas y las distorsiones cognitivas en la depresión y la ansiedad.',
     biografia:
@@ -1418,14 +1422,15 @@ export const AUTORES: AutorProfile[] = [
       }
     ],
     influenciadoPor: [
-      { nombre: 'Albert Ellis', nota: 'Terapia racional emotiva y mediación cognitiva' },
+      { nombre: 'Albert Ellis', autorId: 'ellis', nota: 'Terapia racional emotiva y mediación cognitiva' },
       { nombre: 'George Kelly', nota: 'Psicología de los constructos personales' },
       { nombre: 'Sigmund Freud', autorId: 'freud', nota: 'Formación psicoanalítica inicial de la cual se diferencia' }
     ],
     influencioA: [
       { nombre: 'David H. Barlow', autorId: 'barlow', nota: 'Psicoterapia cognitivo-conductual basada en evidencia' },
-      { nombre: 'Judith Beck', nota: 'Sistematización y enseñanza de la terapia cognitiva' },
-      { nombre: 'Jeffrey Young', nota: 'Terapia centrada en esquemas' }
+      { nombre: 'Steven C. Hayes', autorId: 'hayes', nota: 'Evolución hacia la tercera ola contextual (ACT)' },
+      { nombre: 'Eduardo Keegan', autorId: 'keegan', nota: 'Enseñanza e investigación en terapia cognitiva en la UBA' },
+      { nombre: 'Judith Beck', nota: 'Sistematización y enseñanza de la terapia cognitiva' }
     ]
   },
 
@@ -1571,6 +1576,7 @@ export const AUTORES: AutorProfile[] = [
     ],
     influencioA: [
       { nombre: 'Fernando Ulloa', autorId: 'ulloa', nota: 'Psicología institucional y clínica en organizaciones públicas' },
+      { nombre: 'Aldo Schlemenson', autorId: 'aldo-schlemenson', nota: 'Análisis organizacional y perspectiva ética en el trabajo' },
       { nombre: 'Generaciones de psicólogos de la UBA', nota: 'Rol profesional más allá de la clínica individual' }
     ]
   },
@@ -1690,8 +1696,8 @@ export const AUTORES: AutorProfile[] = [
       { nombre: 'Franco Basaglia', nota: 'Desmanicomialización y salud mental comunitaria' }
     ],
     influencioA: [
-      { nombre: 'Políticas de Salud Mental en Argentina', nota: 'Debate e implementación de la Ley 26.657' },
-      { nombre: 'Cátedras de Salud Pública y Salud Mental (UBA)', nota: 'Formación comunitaria e interdisciplinaria' }
+      { nombre: 'Martín De Lellis', autorId: 'de-lellis', nota: 'Políticas públicas de salud mental y APS en la UBA' },
+      { nombre: 'Políticas de Salud Mental en Argentina', nota: 'Debate e implementación de la Ley 26.657' }
     ]
   },
   {
@@ -1749,7 +1755,8 @@ export const AUTORES: AutorProfile[] = [
       { nombre: 'Clínica de Adultos en Psicología UBA', nota: 'Formación de generaciones de practicantes e investigadores' }
     ]
   },
-  ...AUTORES_TANDA_2
+  ...AUTORES_TANDA_2,
+  ...AUTORES_TANDA_3
 ];
 
 function normalizeKey(value: string): string {

@@ -411,12 +411,14 @@ export const AUTORES_TANDA_2: AutorProfile[] = [
       }
     ],
     influenciadoPor: [
-      { nombre: 'Ivan Pavlov y Edward Thorndike', nota: 'Reflejo condicionado y ley del efecto' },
+      { nombre: 'Ivan P. Pavlov', autorId: 'pavlov', nota: 'Reflejo condicionado (junto a la ley del efecto de Thorndike)' },
       { nombre: 'John B. Watson', nota: 'Manifiesto conductista y psicología objetiva' }
     ],
     influencioA: [
-      { nombre: 'David H. Barlow', autorId: 'barlow', nota: 'Principios de aprendizaje en terapia de exposición' },
-      { nombre: 'Análisis y Modificación de la Conducta (UBA)', nota: 'Evaluación funcional y terapias conductuales de tercera ola' }
+      { nombre: 'Albert Bandura', autorId: 'bandura', nota: 'Puente hacia el aprendizaje social y sociocognitivo' },
+      { nombre: 'Steven C. Hayes', autorId: 'hayes', nota: 'Contextualismo funcional y tercera ola (ACT / RFT)' },
+      { nombre: 'Marsha M. Linehan', autorId: 'linehan', nota: 'Análisis conductual en la Terapia Dialéctico-Conductual (DBT)' },
+      { nombre: 'David H. Barlow', autorId: 'barlow', nota: 'Principios de aprendizaje en terapia de exposición' }
     ]
   },
 
@@ -681,8 +683,8 @@ export const AUTORES_TANDA_2: AutorProfile[] = [
       { nombre: 'Immanuel Kant', nota: 'Categorías lógicas y teoría del conocimiento' }
     ],
     influencioA: [
-      { nombre: 'Umberto Eco y Eliseo Verón', nota: 'Semiótica contemporánea y teoría de los discursos sociales' },
-      { nombre: 'Metodología de la Investigación (Samaja / Ynoub)', nota: 'Lógica abductiva e indiciaria en psicología' }
+      { nombre: 'Juan Samaja', autorId: 'samaja', nota: 'Lógica abductiva e indiciaria en Metodología de la Investigación (UBA)' },
+      { nombre: 'Umberto Eco y Eliseo Verón', nota: 'Semiótica contemporánea y teoría de los discursos sociales' }
     ]
   },
   {
@@ -815,7 +817,7 @@ export const AUTORES_TANDA_2: AutorProfile[] = [
     materiaIdsExtra: ['neuro-fisiologia', 'neuropsicologia', 'neuropsicologia-practica', 'procesos-psico-basicos'],
     fechas: '1902 – 1977',
     origen: 'Kazán · Moscú, Rusia / URSS',
-    corriente: 'Neurociencias y Clínica',
+    corriente: 'TCC y Neurociencias',
     resumenCorto:
       'Médico y psicólogo ruso, discípulo directo de Vygotsky y padre de la neuropsicología moderna. Formuló el concepto de sistemas funcionales complejos y las tres unidades funcionales del cerebro.',
     biografia:
@@ -867,7 +869,7 @@ export const AUTORES_TANDA_2: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Lev S. Vygotsky', autorId: 'vygotsky', nota: 'Origen sociohistórico y mediación lingüística de las funciones superiores' },
-      { nombre: 'Ivan Pavlov y Pyotr Anokhin', nota: 'Fisiología nerviosa y teoría de los sistemas funcionales' }
+      { nombre: 'Ivan P. Pavlov', autorId: 'pavlov', nota: 'Fisiología nerviosa (junto a Pyotr Anokhin)' }
     ],
     influencioA: [
       { nombre: 'Neuropsicología clínica contemporánea', nota: 'Evaluación cualitativa, funciones ejecutivas y rehabilitación' },
@@ -887,7 +889,7 @@ export const AUTORES_TANDA_2: AutorProfile[] = [
     ],
     fechas: '1921 – 2007',
     origen: 'Villach, Austria · Palo Alto, California',
-    corriente: 'Neurociencias y Clínica',
+    corriente: 'Sistémica y Humanista',
     resumenCorto:
       'Psicólogo y teórico de la comunicación austríaco-estadounidense, referente del Mental Research Institute (Escuela de Palo Alto). Formuló los 5 axiomas de la comunicación humana y el modelo de terapia breve sistémica.',
     biografia:
@@ -938,10 +940,11 @@ export const AUTORES_TANDA_2: AutorProfile[] = [
       }
     ],
     influenciadoPor: [
-      { nombre: 'Gregory Bateson y Don D. Jackson', nota: 'Cibernética, doble vínculo y terapia familiar de Palo Alto' }
+      { nombre: 'Gregory Bateson', autorId: 'bateson', nota: 'Cibernética, doble vínculo y Escuela de Palo Alto (junto a Don D. Jackson)' }
     ],
     influencioA: [
-      { nombre: 'Terapia Sistémica y Breve Estratégica', nota: 'Clínica de familias, parejas e intervenciones reencuadradoras' }
+      { nombre: 'Mara Selvini Palazzoli', autorId: 'selvini-palazzoli', nota: 'Escuela de Milán e intervenciones paradójicas' },
+      { nombre: 'Salvador Minuchin', autorId: 'minuchin', nota: 'Diálogo clínico en terapia familiar sistémica' }
     ]
   },
 
@@ -1207,7 +1210,9 @@ export const AUTORES_TANDA_2: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Aaron T. Beck', autorId: 'beck', nota: 'Modelo cognitivo de la depresión y los trastornos de ansiedad' },
-      { nombre: 'David H. Barlow', autorId: 'barlow', nota: 'Clínica basada en la evidencia y enfoque transdiagnóstico' }
+      { nombre: 'David H. Barlow', autorId: 'barlow', nota: 'Clínica basada en la evidencia y enfoque transdiagnóstico' },
+      { nombre: 'Albert Ellis', autorId: 'ellis', nota: 'Fundamentos de la psicoterapia cognitiva' },
+      { nombre: 'Steven C. Hayes', autorId: 'hayes', nota: 'Diálogo con la tercera ola contextual (ACT)' }
     ],
     influencioA: [
       { nombre: 'Clínica Cognitivo-Comportamental en Psicología UBA', nota: 'Formación e investigación clínica contemporánea en Argentina' }

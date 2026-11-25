@@ -10,13 +10,23 @@ import {
   ExternalLink,
   X,
   Check,
-  Share2
+  Share2,
+  Library
 } from 'lucide-react';
 import { PLAN_ESTUDIOS, Materia } from './constants';
 import { cn } from './lib/utils';
 import { ProgressChart } from './components/ProgressChart';
 import { CurriculumFlowchart } from './components/CurriculumFlowchart';
+import { AutoresSection } from './components/AutoresSection';
+import { AutorModal } from './components/AutorModal';
 import { TesisSection } from './components/TesisSection';
+import {
+  AUTORES,
+  AutorProfile,
+  findAutorById,
+  findAutorByBibName
+} from './data/autores';
+import { EDI_SHEET_URL, getEdiLinkForCatedra } from './data/ediBibliografias';
 
 const STORAGE_KEY = 'psi_uba_aprobadas_v1';
 
@@ -29,19 +39,23 @@ const CYCLES = [
   'Prácticas'
 ] as const;
 
-const AUTHORS = [
-  'Freud',
-  'Lacan',
-  'Piaget',
-  'Vygotsky',
-  'Winnicott',
-  'Moscovici',
-  'Foucault',
-  'Assoun',
-  'Miller',
-  'Lombardi',
-  'Rabinovich',
-  'Stolkiner'
+const MARQUEE_AUTOR_IDS = [
+  'freud',
+  'lacan',
+  'piaget',
+  'vygotsky',
+  'winnicott',
+  'klein',
+  'moscovici',
+  'foucault',
+  'pichon-riviere',
+  'bleger',
+  'dolto',
+  'miller',
+  'lombardi',
+  'stolkiner',
+  'barlow',
+  'kandel'
 ];
 
 function normalizeText(value?: string): string {
@@ -74,6 +88,16 @@ export default function App() {
       const materiaId = params.get('materia');
       if (!materiaId) return null;
       return PLAN_ESTUDIOS.find((m) => m.id === materiaId) ?? null;
+    } catch {
+      return null;
+    }
+  });
+  const [selectedAutor, setSelectedAutor] = useState<AutorProfile | null>(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const autorId = params.get('autor');
+      if (!autorId) return null;
+      return findAutorById(autorId) ?? null;
     } catch {
       return null;
     }
@@ -113,7 +137,7 @@ export default function App() {
     }
   }, [approvedIds]);
 
-  // Keep URL query parameter in sync with selected materia for easy sharing
+  // Keep URL query parameter in sync with selected materia or autor for easy sharing
   useEffect(() => {
     try {
       const url = new URL(window.location.href);
@@ -122,11 +146,16 @@ export default function App() {
       } else {
         url.searchParams.delete('materia');
       }
+      if (selectedAutor) {
+        url.searchParams.set('autor', selectedAutor.id);
+      } else {
+        url.searchParams.delete('autor');
+      }
       window.history.replaceState({}, '', url.toString());
     } catch {
       // Ignore history errors in restricted environments
     }
-  }, [selectedMateria]);
+  }, [selectedMateria, selectedAutor]);
 
   // Close modal with Escape and lock background scroll while open
   useEffect(() => {
@@ -259,18 +288,21 @@ export default function App() {
             </span>
           </a>
 
-          <div className="flex items-center gap-3.5 sm:gap-8 text-xs font-semibold text-muted">
+          <div className="flex items-center gap-3.5 sm:gap-7 text-xs font-semibold text-muted">
             <a href="#plan" className="hover:text-bordo transition-colors whitespace-nowrap">
               Plan de Estudios
             </a>
             <a href="#diagrama" className="hover:text-bordo transition-colors whitespace-nowrap">
               Diagrama
             </a>
+            <a href="#autores" className="hover:text-bordo transition-colors whitespace-nowrap">
+              Autores
+            </a>
             <a href="#tesis" className="hover:text-bordo transition-colors whitespace-nowrap">
               Tesis
             </a>
-            <a href="#enlaces" className="hidden sm:inline hover:text-bordo transition-colors whitespace-nowrap">
-              Enlaces Útiles
+            <a href="#enlaces" className="hidden md:inline hover:text-bordo transition-colors whitespace-nowrap">
+              Enlaces
             </a>
           </div>
         </div>
@@ -318,17 +350,27 @@ export default function App() {
           </motion.div>
         </div>
 
-        {/* Marquee of Authors */}
-        <div className="mt-16 sm:mt-24 border-y border-ink/5 py-5 sm:py-7 overflow-hidden relative" aria-hidden="true">
-          <div className="flex animate-marquee whitespace-nowrap">
-            {[...AUTHORS, ...AUTHORS].map((author, idx) => (
-              <span
-                key={idx}
-                className="text-5xl sm:text-7xl lg:text-8xl font-serif font-bold italic text-ink/[0.06] mx-8 sm:mx-12 uppercase tracking-tighter select-none"
-              >
-                {author}
-              </span>
-            ))}
+        {/* Interactive Marquee of Core Authors */}
+        <div className="mt-16 sm:mt-24 border-y border-ink/5 py-5 sm:py-7 overflow-hidden relative">
+          <div className="flex animate-marquee whitespace-nowrap w-max">
+            {[...MARQUEE_AUTOR_IDS, ...MARQUEE_AUTOR_IDS].map((autorId, idx) => {
+              const autor = AUTORES.find((a) => a.id === autorId);
+              if (!autor) return null;
+              return (
+                <button
+                  key={`${autor.id}-${idx}`}
+                  type="button"
+                  onClick={() => {
+                    setSelectedMateria(null);
+                    setSelectedAutor(autor);
+                  }}
+                  title={`Ver ficha de ${autor.nombre}`}
+                  className="text-5xl sm:text-7xl lg:text-8xl font-serif font-bold italic text-ink/[0.08] hover:text-bordo transition-colors mx-8 sm:mx-12 uppercase tracking-tighter cursor-pointer focus:outline-none focus-visible:text-bordo"
+                >
+                  {autor.apellidoCorto}
+                </button>
+              );
+            })}
           </div>
         </div>
       </header>
@@ -588,6 +630,15 @@ export default function App() {
         }}
       />
 
+      {/* Core Authors Library */}
+      <AutoresSection
+        materias={PLAN_ESTUDIOS}
+        onSelectAutor={(autor) => {
+          setSelectedMateria(null);
+          setSelectedAutor(autor);
+        }}
+      />
+
       {/* Tesis de Licenciatura Guide & Resources */}
       <TesisSection />
 
@@ -809,19 +860,37 @@ export default function App() {
                                 </p>
                               </div>
 
-                              {catedra.link && (() => {
-                                const isDirectPdf = catedra.link.includes('Ver521');
+                              {(() => {
+                                const ediLink = getEdiLinkForCatedra(selectedMateria, catedra);
+                                const isDirectPdf = Boolean(catedra.link?.includes('Ver521'));
+                                if (!catedra.link && !ediLink) return null;
+
                                 return (
                                   <div className="flex flex-wrap items-center gap-2">
-                                    <a
-                                      href={catedra.link}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="inline-flex items-center gap-1.5 text-xs font-bold text-bordo hover:text-white hover:bg-bordo transition-colors bg-bordo/8 px-3.5 py-1.5 rounded-full whitespace-nowrap"
-                                    >
-                                      {isDirectPdf ? 'Programa (PDF)' : 'Ver en Portal UBA'}
-                                      <ExternalLink size={12} />
-                                    </a>
+                                    {catedra.link && (
+                                      <a
+                                        href={catedra.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1.5 text-xs font-bold text-bordo hover:text-white hover:bg-bordo transition-colors bg-bordo/8 px-3.5 py-1.5 rounded-full whitespace-nowrap"
+                                      >
+                                        {isDirectPdf ? 'Programa (PDF)' : 'Ver en Portal UBA'}
+                                        <ExternalLink size={12} />
+                                      </a>
+                                    )}
+                                    {ediLink && (
+                                      <a
+                                        href={ediLink.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="Bibliografía digital gratuita autorizada por el Centro de Estudiantes (EDI – CEP)"
+                                        className="inline-flex items-center gap-1.5 text-xs font-bold text-violeta hover:text-white hover:bg-violeta transition-colors bg-violeta/8 px-3.5 py-1.5 rounded-full whitespace-nowrap"
+                                      >
+                                        <Library size={12} />
+                                        {ediLink.label}
+                                        <ExternalLink size={11} />
+                                      </a>
+                                    )}
                                     {isDirectPdf && (
                                       <a
                                         href="https://www.psi.uba.ar/estudiantes.php?var=psicologia/index.php"
@@ -844,14 +913,31 @@ export default function App() {
                                   Bibliografía Obligatoria
                                 </p>
                                 <ul className="space-y-2">
-                                  {obligatoria.map((bib, bIdx) => (
-                                    <li key={bIdx} className="text-xs text-ink leading-relaxed">
-                                      <span className="font-bold text-bordo">{bib.autor}</span>
-                                      {bib.año ? ` (${bib.año})` : ''}.{' '}
-                                      <span className="italic">{bib.titulo}</span>
-                                      {bib.editorial ? `. Ed. ${bib.editorial}` : ''}.
-                                    </li>
-                                  ))}
+                                  {obligatoria.map((bib, bIdx) => {
+                                    const matchedAutor = findAutorByBibName(bib.autor);
+                                    return (
+                                      <li key={bIdx} className="text-xs text-ink leading-relaxed">
+                                        {matchedAutor ? (
+                                          <button
+                                            type="button"
+                                            onClick={() => {
+                                              setSelectedMateria(null);
+                                              setSelectedAutor(matchedAutor);
+                                            }}
+                                            title={`Ver ficha completa de ${matchedAutor.nombre}`}
+                                            className="font-bold text-bordo underline decoration-bordo/35 underline-offset-2 hover:text-violeta hover:decoration-violeta transition-colors cursor-pointer"
+                                          >
+                                            {bib.autor}
+                                          </button>
+                                        ) : (
+                                          <span className="font-bold text-bordo">{bib.autor}</span>
+                                        )}
+                                        {bib.año ? ` (${bib.año})` : ''}.{' '}
+                                        <span className="italic">{bib.titulo}</span>
+                                        {bib.editorial ? `. Ed. ${bib.editorial}` : ''}.
+                                      </li>
+                                    );
+                                  })}
                                 </ul>
                               </div>
                             )}
@@ -862,14 +948,33 @@ export default function App() {
                                   Bibliografía Complementaria
                                 </p>
                                 <ul className="space-y-2">
-                                  {complementaria.map((bib, bIdx) => (
-                                    <li key={bIdx} className="text-xs text-muted leading-relaxed">
-                                      <span className="font-semibold text-violeta">{bib.autor}</span>
-                                      {bib.año ? ` (${bib.año})` : ''}.{' '}
-                                      <span className="italic">{bib.titulo}</span>
-                                      {bib.editorial ? `. Ed. ${bib.editorial}` : ''}.
-                                    </li>
-                                  ))}
+                                  {complementaria.map((bib, bIdx) => {
+                                    const matchedAutor = findAutorByBibName(bib.autor);
+                                    return (
+                                      <li key={bIdx} className="text-xs text-muted leading-relaxed">
+                                        {matchedAutor ? (
+                                          <button
+                                            type="button"
+                                            onClick={() => {
+                                              setSelectedMateria(null);
+                                              setSelectedAutor(matchedAutor);
+                                            }}
+                                            title={`Ver ficha completa de ${matchedAutor.nombre}`}
+                                            className="font-semibold text-violeta underline decoration-violeta/35 underline-offset-2 hover:text-bordo hover:decoration-bordo transition-colors cursor-pointer"
+                                          >
+                                            {bib.autor}
+                                          </button>
+                                        ) : (
+                                          <span className="font-semibold text-violeta">
+                                            {bib.autor}
+                                          </span>
+                                        )}
+                                        {bib.año ? ` (${bib.año})` : ''}.{' '}
+                                        <span className="italic">{bib.titulo}</span>
+                                        {bib.editorial ? `. Ed. ${bib.editorial}` : ''}.
+                                      </li>
+                                    );
+                                  })}
                                 </ul>
                               </div>
                             )}
@@ -883,6 +988,23 @@ export default function App() {
                           </div>
                         );
                       })}
+
+                      {selectedMateria.catedras.every(
+                        (cat) => !getEdiLinkForCatedra(selectedMateria, cat)
+                      ) && (
+                        <a
+                          href={EDI_SHEET_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-between gap-3 p-4 rounded-2xl bg-violeta/[0.04] border border-violeta/15 text-xs font-semibold text-violeta hover:border-violeta transition-colors"
+                        >
+                          <span className="inline-flex items-center gap-2">
+                            <Library size={14} className="shrink-0" />
+                            Consultar planilla de Bibliografía Digital (EDI – CEP)
+                          </span>
+                          <ExternalLink size={13} className="shrink-0" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -905,6 +1027,18 @@ export default function App() {
           </div>
         )}
       </AnimatePresence>
+
+      {/* Modal for Autor Profile */}
+      <AutorModal
+        autor={selectedAutor}
+        materias={PLAN_ESTUDIOS}
+        onClose={() => setSelectedAutor(null)}
+        onSelectAutor={(nextAutor) => setSelectedAutor(nextAutor)}
+        onSelectMateria={(materia) => {
+          setSelectedAutor(null);
+          setSelectedMateria(materia);
+        }}
+      />
 
       {/* Footer */}
       <footer id="enlaces" className="bg-white py-16 sm:py-24 px-4 sm:px-6 border-t border-ink/8">
@@ -975,12 +1109,23 @@ export default function App() {
                 </li>
                 <li>
                   <a
+                    href={EDI_SHEET_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 hover:text-bordo transition-colors"
+                  >
+                    Bibliografía Digital (EDI – CEP)
+                    <ExternalLink size={13} />
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="https://edipsicouba.net.ar/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 hover:text-bordo transition-colors"
                   >
-                    Centro de Estudiantes
+                    Centro de Estudiantes (EDI)
                     <ExternalLink size={13} />
                   </a>
                 </li>

@@ -1,5 +1,6 @@
 import { Materia } from '../constants';
 import { EDI_PORTAL_URL, EDI_RECURSOS_AUTORES } from './ediBibliografias';
+import { AUTORES_TANDA_2 } from './autoresTanda2';
 
 export type CorrienteAutor =
   | 'Psicoanálisis'
@@ -149,6 +150,7 @@ export const AUTORES: AutorProfile[] = [
     influencioA: [
       { nombre: 'Jacques Lacan', autorId: 'lacan', nota: 'Retorno a Freud desde el lenguaje' },
       { nombre: 'Melanie Klein', autorId: 'klein', nota: 'Psicoanálisis de niños y relaciones objetales' },
+      { nombre: 'Anna Freud', autorId: 'anna-freud', nota: 'Psicología del Yo y mecanismos de defensa' },
       { nombre: 'Donald Winnicott', autorId: 'winnicott', nota: 'Clínica temprana y objeto transicional' },
       { nombre: 'Françoise Dolto', autorId: 'dolto', nota: 'Psicoanálisis infantil en Francia' },
       { nombre: 'Enrique Pichon-Rivière', autorId: 'pichon-riviere', nota: 'Psicología social y grupos operativos' }
@@ -404,9 +406,9 @@ export const AUTORES: AutorProfile[] = [
     ],
     influencioA: [
       { nombre: 'Donald W. Winnicott', autorId: 'winnicott', nota: 'Debate sobre mundo interno y ambiente' },
+      { nombre: 'Wilfred R. Bion', autorId: 'bion', nota: 'Teoría del pensamiento y dinámica grupal' },
       { nombre: 'Arminda Aberastury', autorId: 'aberastury', nota: 'Introducción del psicoanálisis de niños en Argentina' },
-      { nombre: 'Enrique Pichon-Rivière', autorId: 'pichon-riviere', nota: 'Ansiedades básicas en la teoría de grupos' },
-      { nombre: 'Wilfred Bion', nota: 'Teoría del pensamiento y dinámica grupal' }
+      { nombre: 'Enrique Pichon-Rivière', autorId: 'pichon-riviere', nota: 'Ansiedades básicas en la teoría de grupos' }
     ]
   },
   {
@@ -603,7 +605,7 @@ export const AUTORES: AutorProfile[] = [
     ],
     influencioA: [
       { nombre: 'Estudiantes y clínicos psicoanalíticos', nota: 'Referencia terminológica estándar en Psicología UBA' },
-      { nombre: 'Silvia Bleichmar', nota: 'Metapsicología y fundación del inconsciente en Argentina' }
+      { nombre: 'Silvia Bleichmar', autorId: 'bleichmar', nota: 'Metapsicología y fundación del inconsciente en Argentina' }
     ],
     ediRecursos: [
       {
@@ -760,9 +762,9 @@ export const AUTORES: AutorProfile[] = [
       { nombre: 'Jean Piaget', autorId: 'piaget', nota: 'Diálogo crítico sobre el lenguaje egocéntrico' }
     ],
     influencioA: [
-      { nombre: 'Alexander Luria y Alexei Leontiev', nota: 'Neuropsicología y teoría de la actividad' },
-      { nombre: 'Jerome Bruner', nota: 'Andamiaje y psicología cultural' },
-      { nombre: 'Ricardo Baquero', nota: 'Psicología educacional y aprendizaje escolar en Argentina' },
+      { nombre: 'Alexander R. Luria', autorId: 'luria', nota: 'Neuropsicología y sistemas funcionales complejos' },
+      { nombre: 'Jerome S. Bruner', autorId: 'bruner', nota: 'Andamiaje y psicología cultural' },
+      { nombre: 'Ricardo Baquero', autorId: 'baquero', nota: 'Psicología educacional y aprendizaje escolar en Argentina' },
       { nombre: 'Juan Ignacio Pozo', autorId: 'pozo', nota: 'Psicología cognitiva del aprendizaje' }
     ]
   },
@@ -819,7 +821,7 @@ export const AUTORES: AutorProfile[] = [
       }
     ],
     influenciadoPor: [
-      { nombre: 'George Miller y Jerome Bruner', nota: 'Revolución cognitiva de Harvard' },
+      { nombre: 'Jerome S. Bruner', autorId: 'bruner', nota: 'Revolución cognitiva de Harvard (junto a George Miller)' },
       { nombre: 'Frederic Bartlett', nota: 'Teoría de los esquemas y memoria reconstructiva' },
       { nombre: 'James J. Gibson', nota: 'Psicología ecológica de la percepción' }
     ],
@@ -1033,7 +1035,7 @@ export const AUTORES: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Friedrich Nietzsche', nota: 'Método genealógico y crítica de la verdad' },
-      { nombre: 'Georges Canguilhem', nota: 'Historia de las ciencias y lo normal y lo patológico' },
+      { nombre: 'Georges Canguilhem', autorId: 'canguilhem', nota: 'Historia de las ciencias y lo normal y lo patológico' },
       { nombre: 'Louis Althusser', nota: 'Diálogo sobre ideología y prácticas institucionales' }
     ],
     influencioA: [
@@ -1340,10 +1342,10 @@ export const AUTORES: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Aaron T. Beck', autorId: 'beck', nota: 'Reestructuración cognitiva y clínica de la ansiedad' },
-      { nombre: 'Joseph Wolpe y B. F. Skinner', nota: 'Principios del aprendizaje y terapia de exposición' }
+      { nombre: 'B. F. Skinner', autorId: 'skinner', nota: 'Principios del aprendizaje y terapia de exposición (junto a Wolpe)' }
     ],
     influencioA: [
-      { nombre: 'Eduardo Keegan', nota: 'Difusión de la clínica cognitivo-conductual en Psicología UBA' },
+      { nombre: 'Eduardo Keegan', autorId: 'keegan', nota: 'Difusión de la clínica cognitivo-conductual en Psicología UBA' },
       { nombre: 'Clínica transdiagnóstica contemporánea', nota: 'Protocolos integrados basados en evidencia' }
     ],
     ediRecursos: [
@@ -1489,13 +1491,13 @@ export const AUTORES: AutorProfile[] = [
     influenciadoPor: [
       { nombre: 'Sigmund Freud', autorId: 'freud', nota: 'Teoría psicoanalítica y psicología de las masas' },
       { nombre: 'Melanie Klein', autorId: 'klein', nota: 'Ansiedades básicas y relaciones objetales' },
-      { nombre: 'Kurt Lewin', nota: 'Teoría del campo y dinámica de grupos' },
+      { nombre: 'Kurt Lewin', autorId: 'lewin', nota: 'Teoría del campo y dinámica de grupos' },
       { nombre: 'George Herbert Mead', nota: 'Interaccionismo simbólico y roles sociales' }
     ],
     influencioA: [
       { nombre: 'José Bleger', autorId: 'bleger', nota: 'Psicohigiene, psicología de la conducta e instituciones' },
       { nombre: 'Arminda Aberastury', autorId: 'aberastury', nota: 'Pionera del psicoanálisis de niños y familia' },
-      { nombre: 'Armando Bauleo y Fernando Ulloa', nota: 'Psicología institucional y clínica grupal argentina' }
+      { nombre: 'Fernando Ulloa', autorId: 'ulloa', nota: 'Psicología institucional y clínica grupal argentina' }
     ]
   },
   {
@@ -1568,7 +1570,7 @@ export const AUTORES: AutorProfile[] = [
       { nombre: 'Sigmund Freud y Melanie Klein', autorId: 'freud', nota: 'Metapsicología y clínica psicoanalítica' }
     ],
     influencioA: [
-      { nombre: 'Psicología Institucional Argentina (Ulloa, Schlemenson, Malfé)', nota: 'Intervención en organizaciones y salud pública' },
+      { nombre: 'Fernando Ulloa', autorId: 'ulloa', nota: 'Psicología institucional y clínica en organizaciones públicas' },
       { nombre: 'Generaciones de psicólogos de la UBA', nota: 'Rol profesional más allá de la clínica individual' }
     ]
   },
@@ -1746,7 +1748,8 @@ export const AUTORES: AutorProfile[] = [
     influencioA: [
       { nombre: 'Clínica de Adultos en Psicología UBA', nota: 'Formación de generaciones de practicantes e investigadores' }
     ]
-  }
+  },
+  ...AUTORES_TANDA_2
 ];
 
 function normalizeKey(value: string): string {
@@ -1764,9 +1767,17 @@ export function findAutorById(id: string): AutorProfile | undefined {
 export function findAutorByBibName(bibAuthor: string): AutorProfile | undefined {
   const norm = normalizeKey(bibAuthor);
   if (!norm) return undefined;
-  return AUTORES.find((autor) =>
-    autor.matchKeys.some((key) => norm.includes(normalizeKey(key)))
-  );
+
+  let bestMatch: { autor: AutorProfile; keyLen: number } | undefined;
+  for (const autor of AUTORES) {
+    for (const key of autor.matchKeys) {
+      const normKey = normalizeKey(key);
+      if (norm.includes(normKey) && (!bestMatch || normKey.length > bestMatch.keyLen)) {
+        bestMatch = { autor, keyLen: normKey.length };
+      }
+    }
+  }
+  return bestMatch?.autor;
 }
 
 export function getMateriasForAutor(autor: AutorProfile, materias: Materia[]): Materia[] {

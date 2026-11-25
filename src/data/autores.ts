@@ -1833,3 +1833,37 @@ export function getMateriasForAutor(autor: AutorProfile, materias: Materia[]): M
 
   return matched;
 }
+
+export function getAutoresForMateria(materia: Materia): AutorProfile[] {
+  const direct: AutorProfile[] = [];
+  const directIds = new Set<string>();
+
+  for (const catedra of materia.catedras) {
+    const titularMatch = findAutorByBibName(catedra.titular);
+    if (titularMatch && !directIds.has(titularMatch.id)) {
+      directIds.add(titularMatch.id);
+      direct.push(titularMatch);
+    }
+
+    for (const bib of catedra.bibliografia) {
+      const bibMatch = findAutorByBibName(bib.autor);
+      if (bibMatch && !directIds.has(bibMatch.id)) {
+        directIds.add(bibMatch.id);
+        direct.push(bibMatch);
+      }
+    }
+  }
+
+  const extra: AutorProfile[] = [];
+  for (const autor of AUTORES) {
+    if (directIds.has(autor.id)) continue;
+    if (autor.materiaIdsExtra?.includes(materia.id)) {
+      extra.push(autor);
+    }
+  }
+
+  extra.sort((a, b) => a.apellidoCorto.localeCompare(b.apellidoCorto, 'es'));
+
+  return [...direct, ...extra];
+}
+

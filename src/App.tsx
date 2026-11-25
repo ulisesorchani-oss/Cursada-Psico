@@ -24,7 +24,8 @@ import {
   AUTORES,
   AutorProfile,
   findAutorById,
-  findAutorByBibName
+  findAutorByBibName,
+  getAutoresForMateria
 } from './data/autores';
 import { EDI_SHEET_URL, getEdiLinkForCatedra } from './data/ediBibliografias';
 
@@ -112,8 +113,18 @@ export default function App() {
   });
   const [approvedIds, setApprovedIds] = useState<string[]>(loadApprovedIds);
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [showAllMateriaAutores, setShowAllMateriaAutores] = useState(false);
 
   const approvedSet = useMemo(() => new Set(approvedIds), [approvedIds]);
+
+  const selectedMateriaAutores = useMemo(
+    () => (selectedMateria ? getAutoresForMateria(selectedMateria) : []),
+    [selectedMateria]
+  );
+
+  useEffect(() => {
+    setShowAllMateriaAutores(false);
+  }, [selectedMateria?.id]);
 
   const materiaByNormalizedName = useMemo(() => {
     const map = new Map<string, Materia>();
@@ -864,7 +875,29 @@ export default function App() {
                                 </h4>
                                 <p className="text-xs text-muted mt-0.5">
                                   {selectedMateria.ciclo === 'Prácticas' ? 'Coordinador/a' : 'Titular'}:{' '}
-                                  <span className="text-ink font-semibold">{catedra.titular}</span>
+                                  {(() => {
+                                    const titularAutor = findAutorByBibName(catedra.titular);
+                                    if (!titularAutor) {
+                                      return (
+                                        <span className="text-ink font-semibold">
+                                          {catedra.titular}
+                                        </span>
+                                      );
+                                    }
+                                    return (
+                                      <button
+                                        type="button"
+                                        onClick={() => {
+                                          setSelectedMateria(null);
+                                          setSelectedAutor(titularAutor);
+                                        }}
+                                        title={`Ver ficha completa de ${titularAutor.nombre}`}
+                                        className="text-bordo font-semibold underline decoration-bordo/35 underline-offset-2 hover:text-violeta hover:decoration-violeta transition-colors cursor-pointer"
+                                      >
+                                        {catedra.titular}
+                                      </button>
+                                    );
+                                  })()}
                                 </p>
                               </div>
 
@@ -996,6 +1029,55 @@ export default function App() {
                           </div>
                         );
                       })}
+
+                      {selectedMateriaAutores.length > 0 && (
+                        <section className="p-5 rounded-2xl bg-paper border border-ink/8 space-y-3.5">
+                          <div className="flex items-center justify-between gap-2">
+                            <h4 className="text-xs font-bold uppercase tracking-[0.14em] text-bordo flex items-center gap-2">
+                              <BookOpen size={14} className="shrink-0" />
+                              Autores clave en la biblioteca
+                            </h4>
+                            <span className="text-[11px] font-bold text-muted tabular-nums">
+                              {selectedMateriaAutores.length}
+                            </span>
+                          </div>
+                          <p className="text-xs text-muted leading-relaxed">
+                            Autores estudiados en esta materia que ya cuentan con ficha conceptual
+                            completa. Tocá cualquiera para explorar su obra e influencias.
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            {(showAllMateriaAutores
+                              ? selectedMateriaAutores
+                              : selectedMateriaAutores.slice(0, 14)
+                            ).map((autor) => (
+                              <button
+                                key={autor.id}
+                                type="button"
+                                onClick={() => {
+                                  setSelectedMateria(null);
+                                  setSelectedAutor(autor);
+                                }}
+                                title={`Abrir ficha completa de ${autor.nombre}`}
+                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-ink/10 text-xs font-semibold text-ink hover:border-bordo hover:text-bordo hover:bg-bordo/[0.03] transition-colors cursor-pointer"
+                              >
+                                <span>{autor.nombre}</span>
+                                <ChevronRight size={12} className="opacity-55 shrink-0" />
+                              </button>
+                            ))}
+                          </div>
+                          {selectedMateriaAutores.length > 14 && (
+                            <button
+                              type="button"
+                              onClick={() => setShowAllMateriaAutores((prev) => !prev)}
+                              className="text-xs font-bold text-bordo hover:text-violeta transition-colors cursor-pointer"
+                            >
+                              {showAllMateriaAutores
+                                ? 'Mostrar menos autores'
+                                : `Ver los ${selectedMateriaAutores.length} autores`}
+                            </button>
+                          )}
+                        </section>
+                      )}
 
                       {selectedMateria.catedras.every(
                         (cat) => !getEdiLinkForCatedra(selectedMateria, cat)

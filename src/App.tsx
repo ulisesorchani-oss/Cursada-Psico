@@ -16,6 +16,7 @@ import { PLAN_ESTUDIOS, Materia } from './constants';
 import { cn } from './lib/utils';
 import { ProgressChart } from './components/ProgressChart';
 import { CurriculumFlowchart } from './components/CurriculumFlowchart';
+import { TesisSection } from './components/TesisSection';
 
 const STORAGE_KEY = 'psi_uba_aprobadas_v1';
 
@@ -258,14 +259,17 @@ export default function App() {
             </span>
           </a>
 
-          <div className="flex items-center gap-4 sm:gap-8 text-xs font-semibold text-muted">
+          <div className="flex items-center gap-3.5 sm:gap-8 text-xs font-semibold text-muted">
             <a href="#plan" className="hover:text-bordo transition-colors whitespace-nowrap">
               Plan de Estudios
             </a>
             <a href="#diagrama" className="hover:text-bordo transition-colors whitespace-nowrap">
               Diagrama
             </a>
-            <a href="#enlaces" className="hover:text-bordo transition-colors whitespace-nowrap">
+            <a href="#tesis" className="hover:text-bordo transition-colors whitespace-nowrap">
+              Tesis
+            </a>
+            <a href="#enlaces" className="hidden sm:inline hover:text-bordo transition-colors whitespace-nowrap">
               Enlaces Útiles
             </a>
           </div>
@@ -579,7 +583,13 @@ export default function App() {
           setSearchQuery('');
           document.getElementById('plan')?.scrollIntoView({ behavior: 'smooth' });
         }}
+        onOpenTesis={() => {
+          document.getElementById('tesis')?.scrollIntoView({ behavior: 'smooth' });
+        }}
       />
+
+      {/* Tesis de Licenciatura Guide & Resources */}
+      <TesisSection />
 
       {/* Modal for Materia Details */}
       <AnimatePresence>

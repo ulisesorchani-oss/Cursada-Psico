@@ -241,6 +241,7 @@ interface CurriculumFlowchartProps {
   onToggleManyApproved: (ids: string[], approve: boolean) => void;
   onOpenMateria: (materia: Materia) => void;
   onJumpToCycle: (cycle: string) => void;
+  onOpenTesis: () => void;
 }
 
 export function CurriculumFlowchart({
@@ -249,7 +250,8 @@ export function CurriculumFlowchart({
   onToggleApproved,
   onToggleManyApproved,
   onOpenMateria,
-  onJumpToCycle
+  onJumpToCycle,
+  onOpenTesis
 }: CurriculumFlowchartProps) {
   const [viewMode, setViewMode] = useState<'interactive' | 'poster'>('interactive');
   const [hoveredId, setHoveredId] = useState<string | null>(null);
@@ -687,19 +689,31 @@ export function CurriculumFlowchart({
                     )}
 
                     {activeNode.kind === 'requirement' && (
-                      <button
-                        type="button"
-                        onClick={() => toggleRequirement(activeNode.id)}
-                        className={cn(
-                          'inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-bold border transition-colors whitespace-nowrap',
-                          completedReqSet.has(activeNode.id)
-                            ? 'bg-emerald-700 border-emerald-700 text-white'
-                            : 'bg-white border-ink/15 text-ink hover:border-bordo hover:text-bordo'
+                      <>
+                        <button
+                          type="button"
+                          onClick={() => toggleRequirement(activeNode.id)}
+                          className={cn(
+                            'inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-bold border transition-colors whitespace-nowrap',
+                            completedReqSet.has(activeNode.id)
+                              ? 'bg-emerald-700 border-emerald-700 text-white'
+                              : 'bg-white border-ink/15 text-ink hover:border-bordo hover:text-bordo'
+                          )}
+                        >
+                          <Check size={13} />
+                          {completedReqSet.has(activeNode.id) ? 'Cumplido' : 'Marcar cumplido'}
+                        </button>
+                        {activeNode.id === 'req-tesis' && (
+                          <button
+                            type="button"
+                            onClick={onOpenTesis}
+                            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-bold bg-bordo text-white hover:bg-bordo-light transition-colors whitespace-nowrap"
+                          >
+                            <BookOpen size={13} />
+                            Ver guía y recursos de Tesis
+                          </button>
                         )}
-                      >
-                        <Check size={13} />
-                        {completedReqSet.has(activeNode.id) ? 'Cumplido' : 'Marcar cumplido'}
-                      </button>
+                      </>
                     )}
 
                     {activeNode.kind === 'slot' && activeNode.targetCycle && (
@@ -940,6 +954,11 @@ export function CurriculumFlowchart({
                       onMouseEnter={() => setHoveredId(node.id)}
                       onMouseLeave={() => setHoveredId(null)}
                       onClick={() => {
+                        if (node.id === 'req-tesis') {
+                          setPinnedId(node.id);
+                          onOpenTesis();
+                          return;
+                        }
                         setPinnedId((prev) => (prev === node.id ? null : node.id));
                       }}
                       className={cn(
@@ -981,7 +1000,13 @@ export function CurriculumFlowchart({
                         )}
                         {node.kind === 'requirement' && (
                           <p className="text-[10px] text-muted mt-0.5">
-                            {approved ? 'Cumplido' : 'Requisito'}
+                            {node.id === 'req-tesis'
+                              ? approved
+                                ? 'Cumplido · Ver guía ↓'
+                                : 'Clic para ver guía y recursos ↓'
+                              : approved
+                                ? 'Cumplido'
+                                : 'Requisito'}
                           </p>
                         )}
                       </div>

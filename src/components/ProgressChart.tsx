@@ -1,8 +1,16 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useCallback } from 'react';
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
-import { CheckCircle2, RotateCcw } from 'lucide-react';
+import { CheckCircle2, RotateCcw, Download, Check } from 'lucide-react';
 import { Materia } from '../constants';
 import { cn } from '../lib/utils';
+
+function escapeCsvCell(value: string): string {
+  const safe = /^[=+\-@\t\r]/.test(value) ? `'${value}` : value;
+  if (/[",\n\r]/.test(safe)) {
+    return `"${safe.replace(/"/g, '""')}"`;
+  }
+  return safe;
+}
 
 export const CYCLE_COLORS: Record<string, string> = {
   CBC: '#3D0066',
@@ -109,6 +117,8 @@ export function ProgressChart({
   onChangeApprovedFilter,
   onResetProgress
 }: ProgressChartProps) {
+  const [exportedCsv, setExportedCsv] = useState(false);
+
   const {
     cycleStats,
     totalCounted,
@@ -209,6 +219,134 @@ export function ProgressChart({
     };
   }, [materias, cycles, approvedSet]);
 
+  const handleExportCsv = useCallback(() => {
+    const statByCycle = new Map<string, CycleStat>(cycleStats.map((s) => [s.cycle, s]));
+    const rows: string[][] = [
+      [
+        'Ciclo',
+        'Estado',
+        'Materia',
+        'Año',
+        'Cuatrimestre',
+        'Área',
+        'Correlativas',
+        'Cátedras / Titulares'
+      ]
+    ];
+
+    for (const cycle of cycles) {
+      const stat = statByCycle.get(cycle);
+      const cyclePendingReq = stat ? Math.max(0, stat.required - stat.counted) : 0;
+      const isElectiveOrPractice = stat ? stat.catalogTotal > stat.required : false;
+
+      const cycleMaterias = materias
+        .filter((m) => m.ciclo === cycle)
+        .sort((a, b) => {
+          const aApproved = approvedSet.has(a.id) ? 0 : 1;
+          const bApproved = approvedSet.has(b.id) ? 0 : 1;
+          if (aApproved !== bApproved) return aApproved - bApproved;
+          if (a.año !== b.año) return a.año - b.año;
+          return a.nombre.localeCompare(b.nombre, 'es');
+        });
+
+      for (const m of cycleMaterias) {
+        const isApproved = approvedSet.has(m.id);
+        let estado: string;
+        if (isApproved) {
+          estado = 'Aprobada';
+        } else if (isElectiveOrPractice && cyclePendingReq === 0) {
+          estado = 'No requerida (ciclo completo)';
+        } else if (isElectiveOrPractice) {
+          estado = `Pendiente (opción electiva · faltan ${cyclePendingReq})`;
+        } else {
+          estado = 'Pendiente';
+        }
+
+        const anioLabel = m.año === 0 ? 'CBC' : `${m.año}°`;
+        const cuatLabel = m.cuatrimestre === 'Anual' ? 'Anual' : `${m.cuatrimestre}°`;
+        const correlativas =
+          m.correlativas && m.correlativas.length > 0
+            ? m.correlativas.join(' / ')
+            : 'Sin correlativas';
+        const catedras = m.catedras
+          .map((c) => (c.titular ? `${c.nombre} (${c.titular})` : c.nombre))
+          .join(' / ');
+
+        rows.push([
+          m.ciclo,
+          estado,
+          m.nombre,
+          anioLabel,
+          cuatLabel,
+          m.area ?? '-',
+          correlativas,
+          catedras
+        ]);
+      }
+    }
+
+    // Add concise Plan 1985 summary block at the end for personal reference
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    const dateStamp = `${yyyy}-${mm}-${dd}`;
+
+    rows.push([]);
+    rows.push(['RESUMEN DE AVANCE · PLAN 1985 (PSICOLOGÍA UBA)', `Fecha: ${dateStamp}`]);
+    rows.push(['Ciclo', 'Computadas', 'Requeridas', 'Pendientes reales', 'Avance']);
+    for (const stat of cycleStats) {
+      rows.push([
+        stat.cycle,
+        String(stat.counted),
+        String(stat.required),
+        String(Math.max(0, stat.required - stat.counted)),
+        `${stat.percentage}%`
+      ]);
+    }
+    rows.push([
+      'Total Plan 1985',
+      String(totalCounted),
+      String(TOTAL_REQUIRED_MATERIAS),
+      String(Math.max(0, TOTAL_REQUIRED_MATERIAS - totalCounted)),
+      `${overallPercent}%`
+    ]);
+
+    try {
+      const rawTesis = window.localStorage.getItem('psi_uba_tesis_progress_v1');
+      if (rawTesis) {
+        const parsedTesis = JSON.parse(rawTesis);
+        if (Array.isArray(parsedTesis) && parsedTesis.length > 0) {
+          rows.push([
+            'Tesis de Licenciatura',
+            `${parsedTesis.length} de 6 hitos`,
+            '6',
+            String(Math.max(0, 6 - parsedTesis.length)),
+            `${Math.round((parsedTesis.length / 6) * 100)}%`
+          ]);
+        }
+      }
+    } catch {
+      // Ignore storage errors silently
+    }
+
+    const csvContent =
+      '\uFEFF' + rows.map((row) => row.map((cell) => escapeCsvCell(cell)).join(',')).join('\r\n');
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `progreso-psicologia-uba-${dateStamp}.csv`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+
+    setExportedCsv(true);
+    window.setTimeout(() => setExportedCsv(false), 2400);
+  }, [cycleStats, cycles, materias, approvedSet, totalCounted, overallPercent]);
+
   return (
     <section
       aria-label="Progreso académico por ciclo"
@@ -235,8 +373,8 @@ export function ProgressChart({
           </div>
         </div>
 
-        {totalRawApproved > 0 && (
-          <div className="flex flex-wrap items-center gap-2 shrink-0">
+        <div className="flex flex-wrap items-center gap-2 shrink-0">
+          {totalRawApproved > 0 && (
             <div
               role="group"
               aria-label="Filtrar materias por estado"
@@ -265,7 +403,23 @@ export function ProgressChart({
                 </button>
               ))}
             </div>
+          )}
 
+          <button
+            type="button"
+            onClick={handleExportCsv}
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-paper border border-ink/12 text-xs font-semibold text-ink hover:border-bordo hover:text-bordo transition-colors whitespace-nowrap cursor-pointer"
+            title="Descargar materias aprobadas y pendientes en formato CSV"
+          >
+            {exportedCsv ? (
+              <Check size={13} className="text-emerald-700" />
+            ) : (
+              <Download size={13} />
+            )}
+            {exportedCsv ? 'CSV descargado' : 'Exportar CSV'}
+          </button>
+
+          {totalRawApproved > 0 && (
             <button
               type="button"
               onClick={onResetProgress}
@@ -275,8 +429,8 @@ export function ProgressChart({
               <RotateCcw size={13} />
               Reiniciar
             </button>
-          </div>
-        )}
+          )}
+        </div>
       </div>
 
       {/* Chart + Cycle Breakdown Grid */}

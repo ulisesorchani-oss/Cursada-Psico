@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import {
   FileText,
   ExternalLink,
@@ -9,8 +9,73 @@ import {
   Mail,
   Building2,
   FolderOpen,
-  Instagram
+  Instagram,
+  Check,
+  RotateCcw
 } from 'lucide-react';
+import { cn } from '../lib/utils';
+
+const TESIS_PROGRESS_STORAGE_KEY = 'psi_uba_tesis_progress_v1';
+
+interface TesisMilestone {
+  id: string;
+  step: string;
+  label: string;
+  detail: string;
+}
+
+const TESIS_MILESTONES: readonly TesisMilestone[] = [
+  {
+    id: 'tema-tutor',
+    step: '01',
+    label: 'Tema y Tutor/a acordados',
+    detail: 'Definir recorte temático y acordar la dirección con un/a Profesor/a, JTP o ATP 1°.'
+  },
+  {
+    id: 'nota-1',
+    step: '02',
+    label: 'Nota 1 presentada',
+    detail: 'Formalizar el inicio en el Sistema Académico (con Práctica en curso o aprobada).'
+  },
+  {
+    id: 'proyecto-aprobado',
+    step: '03',
+    label: 'Proyecto aprobado',
+    detail: 'Plan de trabajo, objetivos, marco teórico y metodología avalados por tu tutoría.'
+  },
+  {
+    id: 'redaccion-borrador',
+    step: '04',
+    label: 'Redacción de borrador',
+    detail: 'Escritura completa del desarrollo, devoluciones y citas en Normas APA.'
+  },
+  {
+    id: 'entrega-escrita',
+    step: '05',
+    label: 'Tesis escrita aprobada',
+    detail: 'Entrega formal del manuscrito final y dictamen favorable del Jurado evaluador.'
+  },
+  {
+    id: 'defensa-final',
+    step: '06',
+    label: 'Defensa final',
+    detail: 'Exposición oral ante el Jurado con la totalidad de las materias del plan aprobadas.'
+  }
+] as const;
+
+function loadTesisCompletedIds(): string[] {
+  try {
+    const raw = window.localStorage.getItem(TESIS_PROGRESS_STORAGE_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    const validIds = new Set(TESIS_MILESTONES.map((m) => m.id));
+    return Array.isArray(parsed)
+      ? parsed.filter((id): id is string => typeof id === 'string' && validIds.has(id))
+      : [];
+  } catch {
+    return [];
+  }
+}
 
 const UBA_TESIS_URL = 'https://www.psi.uba.ar/estudiantes.php?var=tesis_licenciatura/index.php';
 const EDI_TESIS_URL = 'https://edipsicouba.net.ar/academico/que-es-la-tesis/';
@@ -114,6 +179,31 @@ const KEY_POINTS: KeyPoint[] = [
 ];
 
 export function TesisSection() {
+  const [completedIds, setCompletedIds] = useState<string[]>(loadTesisCompletedIds);
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(TESIS_PROGRESS_STORAGE_KEY, JSON.stringify(completedIds));
+    } catch {
+      // Ignore storage quota or private mode errors
+    }
+  }, [completedIds]);
+
+  const completedSet = useMemo(() => new Set(completedIds), [completedIds]);
+  const totalMilestones = TESIS_MILESTONES.length;
+  const completedCount = completedIds.length;
+  const progressPct = Math.round((completedCount / totalMilestones) * 100);
+  const nextMilestone = useMemo(
+    () => TESIS_MILESTONES.find((m) => !completedSet.has(m.id)) ?? null,
+    [completedSet]
+  );
+
+  const toggleMilestone = (id: string) => {
+    setCompletedIds((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
+  };
+
   return (
     <section
       id="tesis"
@@ -157,6 +247,136 @@ export function TesisSection() {
               ¿Qué es la Tesis? (EDI)
               <ExternalLink size={12} />
             </a>
+          </div>
+        </div>
+
+        {/* Interactive Tesis Progress Tracker */}
+        <div className="pb-8 mb-8 border-b border-ink/8 space-y-5">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div className="space-y-1">
+              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <h3 className="text-lg sm:text-xl font-serif font-bold text-ink">
+                  Seguimiento de tu Tesis
+                </h3>
+                <span className="text-xs font-bold text-bordo tabular-nums">
+                  {completedCount} de {totalMilestones} hitos · {progressPct}%
+                </span>
+              </div>
+              <p className="text-xs sm:text-sm text-muted">
+                {nextMilestone ? (
+                  <>
+                    Próximo paso sugerido:{' '}
+                    <span className="font-semibold text-ink">{nextMilestone.label}</span>. Tocá cada
+                    hito para registrar tu avance.
+                  </>
+                ) : (
+                  <span className="font-semibold text-emerald-700">
+                    ¡Completaste todos los hitos de la Tesis de Licenciatura!
+                  </span>
+                )}
+              </p>
+            </div>
+
+            <div className="flex items-center gap-4 text-xs text-muted shrink-0">
+              <span>Guardado en este dispositivo</span>
+              {completedCount > 0 && (
+                <>
+                  <span aria-hidden="true">·</span>
+                  <button
+                    type="button"
+                    onClick={() => setCompletedIds([])}
+                    className="inline-flex items-center gap-1.5 font-semibold text-muted hover:text-bordo transition-colors whitespace-nowrap cursor-pointer"
+                  >
+                    <RotateCcw size={12} />
+                    Reiniciar
+                  </button>
+                </>
+              )}
+            </div>
+          </div>
+
+          {/* Visual Progress Bar */}
+          <div
+            role="progressbar"
+            aria-label="Progreso de la Tesis de Licenciatura"
+            aria-valuenow={progressPct}
+            aria-valuemin={0}
+            aria-valuemax={100}
+            className="h-2.5 w-full bg-paper rounded-full overflow-hidden border border-ink/6"
+          >
+            <div
+              className={cn(
+                'h-full rounded-full transition-all duration-300 ease-out',
+                progressPct === 100 ? 'bg-emerald-700' : 'bg-bordo'
+              )}
+              style={{ width: `${progressPct}%` }}
+            />
+          </div>
+
+          {/* Interactive Milestones Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {TESIS_MILESTONES.map((milestone) => {
+              const isDone = completedSet.has(milestone.id);
+              const isNext = nextMilestone?.id === milestone.id;
+
+              return (
+                <button
+                  key={milestone.id}
+                  type="button"
+                  role="checkbox"
+                  aria-checked={isDone}
+                  onClick={() => toggleMilestone(milestone.id)}
+                  className={cn(
+                    'text-left p-4 rounded-2xl border transition-all flex items-start gap-3 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-bordo/40',
+                    isDone
+                      ? 'bg-emerald-50/60 border-emerald-700/25 hover:border-emerald-700/45'
+                      : isNext
+                        ? 'bg-paper border-bordo/35 hover:border-bordo'
+                        : 'bg-paper/70 border-ink/8 hover:border-ink/25'
+                  )}
+                >
+                  <span
+                    aria-hidden="true"
+                    className={cn(
+                      'w-6 h-6 rounded-full border flex items-center justify-center shrink-0 mt-0.5 transition-colors',
+                      isDone
+                        ? 'bg-emerald-700 border-emerald-700 text-white'
+                        : isNext
+                          ? 'bg-white border-bordo text-bordo'
+                          : 'bg-white border-ink/20 text-transparent'
+                    )}
+                  >
+                    <Check size={13} strokeWidth={2.75} />
+                  </span>
+
+                  <div className="min-w-0 space-y-1">
+                    <p className="text-[11px] font-semibold tabular-nums text-muted">
+                      Hito {milestone.step} ·{' '}
+                      <span
+                        className={cn(
+                          isDone
+                            ? 'text-emerald-700 font-bold'
+                            : isNext
+                              ? 'text-bordo font-bold'
+                              : 'text-muted'
+                        )}
+                      >
+                        {isDone ? 'Completado' : isNext ? 'En foco' : 'Pendiente'}
+                      </span>
+                    </p>
+                    <p
+                      className={cn(
+                        'text-sm font-bold leading-snug',
+                        isDone ? 'text-ink line-through decoration-emerald-700/40' : 'text-ink'
+                      )}
+                    >
+                      {milestone.label}
+                    </p>
+                    <p className="text-xs text-muted leading-relaxed">{milestone.detail}</p>
+                  </div>
+                </button>
+              );
+            })}
           </div>
         </div>
 

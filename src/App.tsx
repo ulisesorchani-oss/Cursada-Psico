@@ -21,6 +21,7 @@ import { AutoresSection } from './components/AutoresSection';
 import { AutorModal } from './components/AutorModal';
 import { DescubriteSection } from './components/DescubriteSection';
 import { TesisSection } from './components/TesisSection';
+import { FaqSection } from './components/FaqSection';
 import {
   AUTORES,
   AutorProfile,
@@ -477,7 +478,10 @@ export default function App() {
             <a href="#tesis" className="hover:text-bordo transition-colors whitespace-nowrap">
               Tesis
             </a>
-            <a href="#enlaces" className="hidden md:inline hover:text-bordo transition-colors whitespace-nowrap">
+            <a href="#faq" className="hover:text-bordo transition-colors whitespace-nowrap">
+              FAQ
+            </a>
+            <a href="#enlaces" className="hidden lg:inline hover:text-bordo transition-colors whitespace-nowrap">
               Enlaces
             </a>
           </div>
@@ -981,6 +985,9 @@ export default function App() {
 
       {/* Tesis de Licenciatura Guide & Resources */}
       <TesisSection />
+
+      {/* Frequently Asked Questions */}
+      <FaqSection />
 
       {/* Modal for Materia Details */}
       <AnimatePresence>

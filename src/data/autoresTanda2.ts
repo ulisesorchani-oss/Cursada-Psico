@@ -1024,7 +1024,7 @@ export const AUTORES_TANDA_2: AutorProfile[] = [
     id: 'bleichmar',
     nombre: 'Silvia Bleichmar',
     apellidoCorto: 'Bleichmar',
-    matchKeys: ['bleichmar'],
+    matchKeys: ['bleichmar, s.', 'silvia bleichmar'],
     materiaIdsExtra: [
       'psico-desarrollo-niñez',
       'psico-desarrollo-adolescencia',

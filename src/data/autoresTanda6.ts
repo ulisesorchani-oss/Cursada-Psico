@@ -80,7 +80,7 @@ export const AUTORES_TANDA_6: AutorProfile[] = [
     id: 'soler',
     nombre: 'Colette Soler',
     apellidoCorto: 'Soler',
-    matchKeys: ['soler', 'colette soler'],
+    matchKeys: ['soler, c.', 'colette soler'],
     materiaIdsExtra: [
       'psicoanalisis-francesa-1',
       'psicoanalisis-francesa-2',
@@ -1207,7 +1207,7 @@ export const AUTORES_TANDA_6: AutorProfile[] = [
     id: 'michel-farina',
     nombre: 'Juan Jorge Michel Fariña',
     apellidoCorto: 'Michel Fariña',
-    matchKeys: ['michel farina', 'farina', 'juan jorge michel farina', 'juan jose michel farina'],
+    matchKeys: ['michel farina', 'juan jorge michel farina', 'juan jose michel farina'],
     materiaIdsExtra: [
       'etica-deontologia-ddhh',
       'cine-subjetividad-intervenciones',

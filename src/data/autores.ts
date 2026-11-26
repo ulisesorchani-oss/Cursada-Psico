@@ -1793,6 +1793,21 @@ function normalizeKey(value: string): string {
     .trim();
 }
 
+function matchesAuthorKey(normText: string, normKey: string): boolean {
+  if (!normKey) return false;
+  let pos = 0;
+  while ((pos = normText.indexOf(normKey, pos)) !== -1) {
+    const before = pos === 0 ? '' : normText[pos - 1];
+    const afterPos = pos + normKey.length;
+    const after = afterPos >= normText.length ? '' : normText[afterPos];
+    const beforeOk = !before || !/[a-z0-9]/.test(before);
+    const afterOk = !after || !/[a-z0-9]/.test(after);
+    if (beforeOk && afterOk) return true;
+    pos += 1;
+  }
+  return false;
+}
+
 export function findAutorById(id: string): AutorProfile | undefined {
   return AUTORES.find((a) => a.id === id);
 }
@@ -1805,7 +1820,7 @@ export function findAutorByBibName(bibAuthor: string): AutorProfile | undefined 
   for (const autor of AUTORES) {
     for (const key of autor.matchKeys) {
       const normKey = normalizeKey(key);
-      if (norm.includes(normKey) && (!bestMatch || normKey.length > bestMatch.keyLen)) {
+      if (matchesAuthorKey(norm, normKey) && (!bestMatch || normKey.length > bestMatch.keyLen)) {
         bestMatch = { autor, keyLen: normKey.length };
       }
     }
@@ -1822,7 +1837,7 @@ export function getMateriasForAutor(autor: AutorProfile, materias: Materia[]): M
     const inBib = m.catedras.some((c) =>
       c.bibliografia.some((b) => {
         const normBib = normalizeKey(b.autor);
-        return autor.matchKeys.some((key) => normBib.includes(normalizeKey(key)));
+        return autor.matchKeys.some((key) => matchesAuthorKey(normBib, normalizeKey(key)));
       })
     );
 

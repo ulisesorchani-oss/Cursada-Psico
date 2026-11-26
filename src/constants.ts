@@ -4779,29 +4779,437 @@ export const PLAN_ESTUDIOS: Materia[] = [
   {
     id: 'metodologia-inv',
     nombre: 'Metodología de la Investigación',
-    año: 3,
+    año: 2,
     ciclo: 'Formación General',
-    cuatrimestre: 2,
-    descripcion: 'Métodos y técnicas de investigación científica en psicología.',
+    cuatrimestre: 1,
+    correlativas: ['Procesos Psicológicos Básicos', 'Estadística'],
+    descripcion:
+      'Única materia obligatoria del plan de estudios orientada específicamente al método científico y al diseño de investigaciones en Psicología: aborda paradigmas cuantitativos, cualitativos y mixtos, operacionalización de variables, lectura crítica de artículos científicos, ética de la investigación y formulación del proyecto base para la Tesis de Licenciatura.',
     objetivos: [
-      'Diseñar proyectos de investigación.',
-      'Aplicar técnicas de recolección de datos.'
+      'Formular problemas de investigación psicológica, hipótesis y objetivos articulados con marcos conceptuales y antecedentes científicos actualizados.',
+      'Distinguir y aplicar diseños cuantitativos (experimentales, cuasi-experimentales, correlacionales, descriptivos y de sujeto único), cualitativos (teoría fundamentada, hermenéuticos, IAP) y mixtos.',
+      'Adquirir herramientas de búsqueda documental, operacionalización de datos, escritura científica (normas APA) y resguardos éticos aplicables al proyecto de Tesis de Licenciatura.'
     ],
     catedras: [
       {
         nombre: 'Cátedra I (Cód. 061)',
-        titular: 'Susana Azzollini',
+        titular: 'Susana Celeste Azzollini',
         link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=61&anio=2026&cuatrimestre=2',
+        enfoque:
+          'Adopta el modelo del «científico-practicante» (Modelo Boulder) articulando rigurosidad metodológica con ejercicio profesional y base concreta para la tesina de grado. Recorre abordajes cuantitativos (diseños experimentales, cuasi-experimentales, factoriales, de sujeto único, correlacionales y descriptivos con apoyo de software de análisis de datos), cualitativos (entrevistas en profundidad, teoría fundada y análisis del discurso descriptivo, axial y selectivo) y diseños mixtos, junto con lectura de papers, búsqueda en bases de datos científicas, sistema de Ciencia y Técnica argentino, ética y asesoramiento para el Congreso de Psicología de la Facultad.',
+        evaluacion:
+          'Dictado 1° y 2° cuatrimestre. 3 evaluaciones obligatorias: 2 exámenes parciales escritos individuales presenciales (TP VIII —hasta mitad de Unidad 3— y TP XII —integrador—) + evaluación pormenorizada del proyecto de investigación desarrollado en Comisión de Trabajos Prácticos (búsqueda en bases de datos, hipótesis, operacionalización, normas APA y exposición en TP XIII, 3ª nota). Promoción sin examen final (PSE): ≥ 7 en las 3 notas + ≥ 75% asistencia en prácticos (ir a recuperatorio por aplazo o ausencia sin justificación impide promocionar). Con alguna nota entre 4 y 6 se rinde examen final.',
         bibliografia: [
-          { autor: 'Azzollini, S.', titulo: 'Metodología de la Investigación', editorial: 'Eudeba', año: '2014', tipo: 'Obligatoria' }
+          // Unidad 1
+          {
+            unidad: 'Unidad 1 · Introducción: métodos de investigación en psicología',
+            autor: 'Hernández Sampieri, R., Fernández Collado, C. y Baptista Lucio, M. del P.',
+            titulo: 'Metodología de la investigación (6ª ed.) — Cap. 1: Definiciones de los enfoques cuantitativo y cualitativo, sus similitudes y diferencias',
+            editorial: 'McGraw-Hill Education',
+            año: '2014',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad 1 · Introducción: métodos de investigación en psicología',
+            autor: 'Hernández Sampieri, R., Fernández Collado, C. y Baptista Lucio, M. del P.',
+            titulo: 'Metodología de la investigación (6ª ed.) — Cap. 2 (online): Ética en la investigación',
+            editorial: 'McGraw-Hill Education',
+            año: '2014',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad 1 · Introducción: métodos de investigación en psicología',
+            autor: 'Hernández Sampieri, R., Fernández Collado, C. y Baptista Lucio, M. del P.',
+            titulo: 'Metodología de la investigación (6ª ed.) — Cap. 3: Planteamiento cuantitativo del problema',
+            editorial: 'McGraw-Hill Education',
+            año: '2014',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad 1 · Introducción: métodos de investigación en psicología',
+            autor: 'Hernández Sampieri, R., Fernández Collado, C. y Baptista Lucio, M. del P.',
+            titulo: 'Metodología de la investigación (6ª ed.) — Cap. 5: Definición del alcance (exploratorio, descriptivo, correlacional o explicativo)',
+            editorial: 'McGraw-Hill Education',
+            año: '2014',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad 1 · Introducción: métodos de investigación en psicología',
+            autor: 'Hernández Sampieri, R., Fernández Collado, C. y Baptista Lucio, M. del P.',
+            titulo: 'Metodología de la investigación (6ª ed.) — Cap. 6: Formulación de hipótesis',
+            editorial: 'McGraw-Hill Education',
+            año: '2014',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad 1 · Introducción: métodos de investigación en psicología',
+            autor: 'Hernández Sampieri, R., Fernández Collado, C. y Baptista Lucio, M. del P.',
+            titulo: 'Metodología de la investigación (6ª ed.) — Cap. 9 (online): Elaboración de propuestas cuantitativas, cualitativas y mixtas',
+            editorial: 'McGraw-Hill Education',
+            año: '2014',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad 1 · Introducción: métodos de investigación en psicología',
+            autor: 'Puddington, M.',
+            titulo: 'La teoría como punto de partida en la elaboración de un proyecto de investigación',
+            editorial: 'Ficha de cátedra',
+            año: '2024',
+            tipo: 'Obligatoria'
+          },
+          // Unidad 2
+          {
+            unidad: 'Unidad 2 · Abordajes cuantitativos: estudio explicativo, diseño experimental y cuasi-experimental',
+            autor: 'Hernández Sampieri, R., Fernández Collado, C. y Baptista Lucio, M. del P.',
+            titulo: 'Metodología de la investigación (6ª ed.) — Cap. 7: Concepción o elección del diseño; Cap. 10 (pp. 304–316) y Cap. 5 online: Diseños experimentales, 2ª parte (pp. 26–33)',
+            editorial: 'McGraw-Hill Education',
+            año: '2014',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad 2 · Abordajes cuantitativos: estudio explicativo, diseño experimental y cuasi-experimental',
+            autor: 'Pereda Marín, S.',
+            titulo: 'Psicología Experimental — Cap. 7: Las variables en la investigación psicológica y Cap. 8: El control experimental',
+            editorial: 'Ediciones Pirámide',
+            año: '1987',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad 2 · Abordajes cuantitativos: estudio explicativo, diseño experimental y cuasi-experimental',
+            autor: 'León, O. G. y Montero, I.',
+            titulo: 'Diseño de Investigaciones (2ª ed.) — Cap. 5: Diseños experimentales con grupos de sujetos distintos y Cap. 6: Con los mismos sujetos',
+            editorial: 'McGraw-Hill',
+            año: '2003',
+            tipo: 'Obligatoria'
+          },
+          // Unidad 3
+          {
+            unidad: 'Unidad 3 · Abordajes cuantitativos: estudio correlacional y descriptivo',
+            autor: 'Hernández Sampieri, R., Fernández Collado, C. y Baptista Lucio, M. del P.',
+            titulo: 'Metodología de la investigación (6ª ed.) — Cap. 5 (pp. 92–95), Cap. 8: Selección de muestra, Cap. 9: Recolección de datos cuantitativos y Cap. 10 (pp. 282–290 y 304–310)',
+            editorial: 'McGraw-Hill Education',
+            año: '2014',
+            tipo: 'Obligatoria'
+          },
+          // Unidad 4
+          {
+            unidad: 'Unidad 4 · Abordajes cualitativos y mixtos',
+            autor: 'Hernández Sampieri, R., Fernández Collado, C. y Baptista Lucio, M. del P.',
+            titulo: 'Metodología de la investigación (6ª ed.) — Cap. 15: Diseños del proceso de investigación cualitativa y Cap. 17: Los métodos mixtos',
+            editorial: 'McGraw-Hill Education',
+            año: '2014',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad 4 · Abordajes cualitativos y mixtos',
+            autor: 'Rada Cadenas, D. M.',
+            titulo: 'El rigor en la investigación cualitativa: Técnicas de análisis, credibilidad, transferibilidad y confirmabilidad',
+            editorial: 'Sinopsis Educativa, Revista Venezolana de Investigación, 7(1), 17–26',
+            año: '2007',
+            tipo: 'Obligatoria'
+          },
+          // Unidad 5
+          {
+            unidad: 'Unidad 5 · Producción del informe, difusión y cuestiones éticas',
+            autor: 'Hernández Sampieri, R., Fernández Collado, C. y Baptista Lucio, M. del P.',
+            titulo: 'Metodología de la investigación (6ª ed.) — Cap. 11: El reporte de resultados del proceso cuantitativo y Cap. 16: El reporte de resultados del proceso cualitativo',
+            editorial: 'McGraw-Hill Education',
+            año: '2014',
+            tipo: 'Obligatoria'
+          },
+          // Complementaria destacada Cátedra I
+          {
+            autor: 'Wainerman, C. y Sautu, R.',
+            titulo: 'La trastienda de la investigación',
+            editorial: 'Ediciones Lumiere',
+            año: '2001',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Argibay, J. C.',
+            titulo: 'Clasificación de los métodos de investigación cuantitativos (3 archivos de campus)',
+            editorial: 'UBA Psicología',
+            año: '2020',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Argibay, J. C.',
+            titulo: 'Técnicas psicométricas. Cuestiones de validez y confiabilidad',
+            editorial: 'Subjetividad y Procesos Cognitivos, 8, 15–33',
+            año: '2006',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Vasilachis de Gialdino, I.',
+            titulo: 'Estrategias de investigación cualitativa (Caps. 3 y 4)',
+            editorial: 'Gedisa',
+            año: '2011',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Eco, U.',
+            titulo: 'Cómo se hace una tesis',
+            editorial: 'Gedisa',
+            año: '2003',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Juni, J. y Urbano, C.',
+            titulo: 'Técnicas para investigar: recursos metodológicos para la preparación de proyectos de investigación (Tomo I)',
+            editorial: 'Brujas',
+            año: '2014',
+            tipo: 'Complementaria'
+          }
         ]
       },
       {
         nombre: 'Cátedra II (Cód. 062)',
-        titular: 'Roxana Ynoub',
+        titular: 'Roxana Cecilia Ynoub',
         link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=62&anio=2026&cuatrimestre=2',
+        enfoque:
+          'Perspectiva epistemológico-crítica, dialéctica, historicista y no prescriptivista (tradición de Juan Samaja y Roxana Ynoub). Concibe la ciencia como praxis social y supera el binarismo apriorismo/empirismo con el Modelo Ternario de la Ciencia (Teoría / Praxis / Observación; Peirce, Kant, Hegel, Vico, Popper, Kuhn y Lakatos). Estructura la investigación como un ciclo de tres fases (sincrética/ideatoria → analítica y sistema de matrices de datos → sintética/tratamiento e interpretación), abarcando diseños cuantitativos, cualitativos, interpretativo-hermenéuticos (en diálogo con el psicoanálisis) e investigación-acción-participativa (Fals Borda, Montero, Martín-Baró). Incorpora revisión documental, entrenamiento crítico en Inteligencia Artificial para la investigación, ética/bioética, acceso abierto y ciencia desde el Sur (Varsavsky, Ley 26.657).',
+        evaluacion:
+          'Dictado 1° y 2° cuatrimestre. Clases teóricas (donde se dictan los contenidos epistemológicos) + Clases prácticas en formato taller con diseño participativo y pilotaje de campo grupal. 3 instancias de evaluación: 1) Examen parcial individual (TP 8); 2) Trabajo práctico grupal (evaluación procesual del diseño y pilotaje de campo); 3) Coloquio final integrador (TP 15, instancia grupal con calificación individual). La nota final es el promedio de las tres. Promoción sin examen final con ≥ 7 en cada instancia + asistencia sincrónica/participación diferida. Opción a 1 recuperatorio por desaprobación. Con nota entre 4 y 6 en alguna instancia se rinde examen final oral.',
         bibliografia: [
-          { autor: 'Ynoub, R.', titulo: 'Cuestión de método', editorial: 'Cengage Learning', año: '2015', tipo: 'Obligatoria' }
+          // Bloque 1
+          {
+            unidad: 'Bloque 1 · Epistemología, ciencia como praxis y modelo ternario (Unidades 1, 2 y 8)',
+            autor: 'Ynoub, R.',
+            titulo: 'Cuestión de método. Aportes para una metodología crítica (Tomo I) — Cap. I: La ciencia como práctica social (pp. 2–21), Cap. II: Modelos, conjeturas y predicciones (pp. 22–61) y Cap. III: La lógica de la investigación (pp. 63–91)',
+            editorial: 'Cengage Learning',
+            año: '2014',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 1 · Epistemología, ciencia como praxis y modelo ternario (Unidades 1, 2 y 8)',
+            autor: 'Samaja, J.',
+            titulo: 'El lado oscuro de la razón — Cap. I: Tres versiones del Principio de la Experiencia (pp. 15–42), Cap. 2: Del Sujeto Teórico al Sujeto Práctico (pp. 43–122) y Cap. 3: El «lado oscuro» del Contrato Social (pp. 123–200)',
+            editorial: 'JVE Ediciones',
+            año: '2002',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 1 · Epistemología, ciencia como praxis y modelo ternario (Unidades 1, 2 y 8)',
+            autor: 'Samaja, J.',
+            titulo: 'Posdata (en Epistemología y Metodología)',
+            editorial: 'Eudeba',
+            año: '1993',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 1 · Epistemología, ciencia como praxis y modelo ternario (Unidades 1, 2 y 8)',
+            autor: 'Samaja, J.',
+            titulo: 'Los caminos del conocimiento (en Semiótica de la ciencia)',
+            editorial: 'Material inédito de la cátedra',
+            año: '2003',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 1 · Epistemología, ciencia como praxis y modelo ternario (Unidades 1, 2 y 8)',
+            autor: 'Bateson, G.',
+            titulo: 'Experimentos en el pensar sobre material etnológico observado (en Pasos hacia una ecología de la mente, pp. 99–113)',
+            editorial: 'Lohlé-Lúmen',
+            año: '1972/1991',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 1 · Epistemología, ciencia como praxis y modelo ternario (Unidades 1, 2 y 8)',
+            autor: 'Ros, C.',
+            titulo: 'La perspectiva de la complejidad y los niveles de integración del objeto de estudio: crónica de una experiencia de investigación',
+            editorial: 'Revista Diagnosis (Fundación PROSAM), N° 5, 11–23',
+            año: '2008',
+            tipo: 'Obligatoria'
+          },
+          // Bloque 2
+          {
+            unidad: 'Bloque 2 · El proceso de investigación en tres fases: problemas, hipótesis y matrices de datos (Unidades 3, 4 y 5)',
+            autor: 'Ynoub, R.',
+            titulo: 'Cuestión de método. Aportes para una metodología crítica (Tomo I) — Cap. IV: El proceso de investigación científica y sus escalas de desarrollo (pp. 92–115)',
+            editorial: 'Cengage Learning',
+            año: '2014',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 2 · El proceso de investigación en tres fases: problemas, hipótesis y matrices de datos (Unidades 3, 4 y 5)',
+            autor: 'Ynoub, R.',
+            titulo: 'Cuestión de método. Aportes para una metodología crítica (Tomo I) — Cap. V: Problemas e hipótesis (pp. 118–151), Cap. VI: Funciones de la hipótesis (pp. 152–195) y Cap. VII: Teoría y objetivos (pp. 196–221)',
+            editorial: 'Cengage Learning',
+            año: '2014',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 2 · El proceso de investigación en tres fases: problemas, hipótesis y matrices de datos (Unidades 3, 4 y 5)',
+            autor: 'Ynoub, R.',
+            titulo: 'Cuestión de método. Aportes para una metodología crítica (Tomo I) — Cap. VIII: Fase 2, de los conceptos a los observables y estructura del dato (pp. 222–293) y Cap. IX: Instrumentalización (pp. 305–384)',
+            editorial: 'Cengage Learning',
+            año: '2014',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 2 · El proceso de investigación en tres fases: problemas, hipótesis y matrices de datos (Unidades 3, 4 y 5)',
+            autor: 'Martinovich, V.',
+            titulo: 'Búsqueda bibliográfica: cómo repensar las formas de buscar, recopilar y analizar la producción científica escrita',
+            editorial: 'EDUNLa (Universidad Nacional de Lanús)',
+            año: '2022',
+            tipo: 'Obligatoria'
+          },
+          // Bloque 3
+          {
+            unidad: 'Bloque 3 · Diseños, investigación cualitativa/hermenéutica/IAP, tratamiento e interpretación de datos (Unidades 6 y 7)',
+            autor: 'Ynoub, R.',
+            titulo: 'Cuestión de método. Aportes para una metodología crítica (Tomo II) — Cap. II: El «Diseño de investigación» y Segunda Parte: Guía para la elaboración de proyectos de investigación y planes de tesis',
+            editorial: 'Lugar Editorial',
+            año: '2023',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 3 · Diseños, investigación cualitativa/hermenéutica/IAP, tratamiento e interpretación de datos (Unidades 6 y 7)',
+            autor: 'Ynoub, R.',
+            titulo: 'De la disección a la revitalización: el tratamiento y la interpretación de datos (en Cuestión de método, Tomo III)',
+            editorial: 'Material inédito de la cátedra',
+            año: '2024',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 3 · Diseños, investigación cualitativa/hermenéutica/IAP, tratamiento e interpretación de datos (Unidades 6 y 7)',
+            autor: 'Ynoub, R.',
+            titulo: 'Revisión de algunos fundamentos lógico-metodológicos de la investigación cualitativa',
+            editorial: 'Revista Perspectivas Metodológicas (Ed. UNLa)',
+            año: '2012',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 3 · Diseños, investigación cualitativa/hermenéutica/IAP, tratamiento e interpretación de datos (Unidades 6 y 7)',
+            autor: 'Ynoub, R.',
+            titulo: 'Metodología y hermenéutica (en E. Díaz, Ed., Investigación científica y biopoder)',
+            editorial: 'UNLa-Biblos',
+            año: '2012',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 3 · Diseños, investigación cualitativa/hermenéutica/IAP, tratamiento e interpretación de datos (Unidades 6 y 7)',
+            autor: 'Vasilachis de Gialdino, I. (Coord.)',
+            titulo: 'Estrategias de Investigación cualitativa (Vol. II)',
+            editorial: 'Gedisa',
+            año: '2019',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 3 · Diseños, investigación cualitativa/hermenéutica/IAP, tratamiento e interpretación de datos (Unidades 6 y 7)',
+            autor: 'Piovani, J. I.',
+            titulo: 'Reflexividad en el proceso de investigación social: entre el diseño y la práctica (en Piovani y Muñiz Terra, ¿Condenados a la reflexividad?, pp. 74–92)',
+            editorial: 'CLACSO-Biblos',
+            año: '2018',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 3 · Diseños, investigación cualitativa/hermenéutica/IAP, tratamiento e interpretación de datos (Unidades 6 y 7)',
+            autor: 'Montero, M.',
+            titulo: 'Hacer para transformar: el método en la psicología comunitaria',
+            editorial: 'Paidós',
+            año: '2006',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 3 · Diseños, investigación cualitativa/hermenéutica/IAP, tratamiento e interpretación de datos (Unidades 6 y 7)',
+            autor: 'Ynoub, R.',
+            titulo: 'Revisitando el legado de Fals Borda y la investigación militante: consideraciones desde su marco histórico, ideológico y metodológico',
+            editorial: 'Perspectivas Metodológicas, Vol. 23 (UNLa)',
+            año: '2023',
+            tipo: 'Obligatoria'
+          },
+          // Bloque 4
+          {
+            unidad: 'Bloque 4 · Ética, conductas responsables, ciencia política, escritura y perspectiva latinoamericana (Unidad 9)',
+            autor: 'Varsavsky, O.',
+            titulo: 'Ciencia, política y cientificismo',
+            editorial: 'Centro Editor de América Latina',
+            año: '1975',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 4 · Ética, conductas responsables, ciencia política, escritura y perspectiva latinoamericana (Unidad 9)',
+            autor: 'Martín-Baró, I.',
+            titulo: 'Fundamentos teóricos y metodológicos de la investigación latinoamericana',
+            editorial: 'Revista Salvadoreña de Psicología, 1(2), 99–101',
+            año: '2010',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 4 · Ética, conductas responsables, ciencia política, escritura y perspectiva latinoamericana (Unidad 9)',
+            autor: 'Ynoub, R.',
+            titulo: 'El proyecto y la metodología de la investigación — Anexo: Cuestiones éticas en investigación y Cap. X: Escribo luego existo',
+            editorial: 'Cengage Learning',
+            año: '2007',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 4 · Ética, conductas responsables, ciencia política, escritura y perspectiva latinoamericana (Unidad 9)',
+            autor: 'American Psychological Association',
+            titulo: 'Principios éticos de los psicólogos y código de conducta (Enmiendas 2010, trad. y coment. G. Z. Salomone y J. J. Michel Fariña)',
+            editorial: 'Facultad de Psicología, UBA',
+            año: '2010',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 4 · Ética, conductas responsables, ciencia política, escritura y perspectiva latinoamericana (Unidad 9)',
+            autor: 'Roussos, A. y otros',
+            titulo: 'Conductas responsables para la investigación en Psicología / Ética y conductas responsables (clases filmadas de cátedra)',
+            editorial: 'FUNICS / Facultad de Psicología, UBA',
+            año: '2012/2020',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Bloque 4 · Ética, conductas responsables, ciencia política, escritura y perspectiva latinoamericana (Unidad 9)',
+            autor: 'AA.VV.',
+            titulo: 'Stanley Milgram. 50 años después',
+            editorial: 'Aesthethika, Revista Internacional, Vol. 9(1), UBA',
+            año: '2013',
+            tipo: 'Obligatoria'
+          },
+          // Complementaria destacada Cátedra II
+          {
+            autor: 'Azaretto, C. y Ros, C. (Comp.)',
+            titulo: 'Investigar en psicoanálisis',
+            editorial: 'JVE Ediciones',
+            año: '2014',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Bourdieu, P., Chamboredon, J. C. y Passeron, J. C.',
+            titulo: 'El oficio de sociólogo',
+            editorial: 'Siglo XXI',
+            año: '1976',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Kuhn, T. S.',
+            titulo: 'La estructura de las revoluciones científicas',
+            editorial: 'Fondo de Cultura Económica',
+            año: '1970',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Gadamer, H. G.',
+            titulo: 'Verdad y Método',
+            editorial: 'Ed. Sígueme',
+            año: '1991',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Glaser, B. y Strauss, A.',
+            titulo: 'The Discovery of Grounded Theory: Strategies for Qualitative Research',
+            editorial: 'Aldine',
+            año: '1964',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Samaja, J.',
+            titulo: 'Epistemología y metodología',
+            editorial: 'Eudeba',
+            año: '1993',
+            tipo: 'Complementaria'
+          }
         ]
       }
     ]
@@ -4809,29 +5217,846 @@ export const PLAN_ESTUDIOS: Materia[] = [
   {
     id: 'salud-publica-mental',
     nombre: 'Salud Pública y Salud Mental',
-    año: 3,
+    año: 2,
     ciclo: 'Formación General',
-    cuatrimestre: 1,
-    descripcion: 'Análisis de la salud mental desde una perspectiva de salud pública y comunitaria.',
+    cuatrimestre: 2,
+    correlativas: ['Psicología Social', 'Metodología de la Investigación'],
+    descripcion:
+      'Única materia obligatoria del área de Salud en el plan de estudios: aborda el proceso salud-enfermedad-atención/cuidado, los determinantes sociales, la epidemiología, la Atención Primaria de la Salud (APS), la planificación sanitaria, el sistema de salud argentino, la Ley Nacional de Salud Mental N° 26.657 y el trabajo interdisciplinario en terreno.',
     objetivos: [
-      'Estudiar las políticas de salud mental.',
-      'Comprender el rol del psicólogo en el sistema de salud pública.'
+      'Comprender la salud y la salud mental desde una perspectiva integral, interdisciplinaria y de derechos humanos, superando el modelo biomédico individual y asilar.',
+      'Incorporar herramientas de epidemiología, diagnóstico situacional, Atención Primaria de la Salud (APS) y planificación estratégica para analizar y gestionar políticas y programas sanitarios.',
+      'Realizar una práctica supervisada en terreno en instituciones o servicios de salud/comunitarios para reflexionar críticamente sobre el rol del psicólogo en el sistema de salud.'
     ],
     catedras: [
       {
         nombre: 'Cátedra I (Cód. 065)',
         titular: 'Martín De Lellis',
         link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=65&anio=2026&cuatrimestre=2',
+        enfoque:
+          'Enfoque sanitarista integral y de Psicología de la Salud / Salud Comunitaria (tradición Saforcada, de Lellis, Mozobancyk y Morales Calatayud), articulado con el pensamiento de la complejidad y el pasaje del paradigma individual restrictivo/asilar al paradigma social expansivo/comunitario. Trabaja determinantes sociales, epidemiología y vigilancia de problemáticas prevalentes en Argentina (suicidio, consumo de sustancias, tabaquismo, desarrollo infantil, mortalidad materna e IVE/ILE), Atención Primaria de la Salud (Alma-Ata, Carta de Ottawa, Escuelas Promotoras de Salud), planificación normativa y estratégica, Sistema Total de Salud y Ley Nacional de Salud Mental 26.657. Incluye Trabajo de Campo obligatorio con salida a terreno en instituciones educativas, sociales o sanitarias del AMBA.',
+        evaluacion:
+          'Dictado 1° y 2° cuatrimestre. 3 instancias obligatorias: 1) Primer parcial presencial a libro abierto (preguntas abiertas y análisis de caso, con nota); 2) Informe Grupal de la Salida a terreno (técnica de taller, observación, entrevistas y recomendaciones institucionales; aprobado/desaprobado sin nota); 3) Trabajo Integrador Final individual no presencial (con nota, articulando teoría y campo). Promoción sin examen final: ≥ 7 en el parcial y ≥ 7 en el Trabajo Integrador + aprobación del Informe Grupal + 75% asistencia en teóricos y prácticos. Regularidad con final: 4 a 6 en el parcial + ≥ 4 en el Trabajo Integrador + Informe Grupal aprobado + 75% asistencia.',
         bibliografia: [
-          { autor: 'De Lellis, M.', titulo: 'Salud Pública y Salud Mental', editorial: 'Eudeba', año: '2010', tipo: 'Obligatoria' }
+          // Unidad I
+          {
+            unidad: 'Unidad I · Marco referencial: la salud, sus determinantes y paradigmas en salud',
+            autor: 'de Lellis, M., Interlandi, C. y Martino, S.',
+            titulo: 'La Salud Pública como área del conocimiento y de la acción (en Perspectivas en salud pública y salud mental, pp. 11–42)',
+            editorial: 'Editorial Nuevos Tiempos',
+            año: '2015',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Marco referencial: la salud, sus determinantes y paradigmas en salud',
+            autor: 'de Lellis, M. y Mozobancyk, S.',
+            titulo: 'El proceso de salud-enfermedad desde la perspectiva de la complejidad. Una nueva mirada en Salud Pública',
+            editorial: 'Eudeba',
+            año: '2013',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Marco referencial: la salud, sus determinantes y paradigmas en salud',
+            autor: 'Morales Calatayud, F.',
+            titulo: 'Una mirada al campo de la salud y la enfermedad (en Introducción a la Psicología de la Salud, pp. 21–64)',
+            editorial: 'Paidós',
+            año: '1999',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Marco referencial: la salud, sus determinantes y paradigmas en salud',
+            autor: 'de Lellis, M.',
+            titulo: 'Concepciones y prácticas en salud: perspectiva clínica y sanitaria (pp. 17–47) y Sobre el concepto de Salud y Enfermedad Mental (pp. 49–70) (en Salud pública, salud mental)',
+            editorial: 'Editorial Nuevos Tiempos',
+            año: '2021',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Marco referencial: la salud, sus determinantes y paradigmas en salud',
+            autor: 'de Lellis, M.',
+            titulo: 'La respuesta institucional: paradigmas en Salud Mental (en Salud pública, salud mental: del paradigma asilar al comunitario, pp. 71–78)',
+            editorial: 'Editorial Nuevos Tiempos',
+            año: '2021',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Marco referencial: la salud, sus determinantes y paradigmas en salud',
+            autor: 'Mozobancyk, S.',
+            titulo: 'Determinantes sociales y desarrollo humano integral (en M. de Lellis, comp., Perspectivas en salud pública y salud mental)',
+            editorial: 'Editorial Nuevos Tiempos',
+            año: '2015',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Marco referencial: la salud, sus determinantes y paradigmas en salud',
+            autor: 'Saforcada, E., de Lellis, M. y Mozobancyk, S.',
+            titulo: 'Salud pública: perspectiva holística, psicología y paradigmas (en Psicología y Salud Pública: nuevos aportes desde la perspectiva del factor humano)',
+            editorial: 'Paidós',
+            año: '2022',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Marco referencial: la salud, sus determinantes y paradigmas en salud',
+            autor: 'Saforcada, E., de Lellis, M. y Mozobancyk, S.',
+            titulo: 'El concepto de salud comunitaria: una nueva perspectiva de la Salud Pública (en Psicología y Salud Pública)',
+            editorial: 'Paidós',
+            año: '2022',
+            tipo: 'Obligatoria'
+          },
+          // Unidad II
+          {
+            unidad: 'Unidad II · Situación de salud en Argentina: epidemiología, problemáticas y diagnóstico local',
+            autor: 'Beaglehole, R., Bonita, R. y Kjellström, T.',
+            titulo: '¿Qué es la epidemiología? (en Epidemiología básica, Cap. 1, pp. 1–10)',
+            editorial: 'OPS',
+            año: '2003',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Situación de salud en Argentina: epidemiología, problemáticas y diagnóstico local',
+            autor: 'Hamui, S. A., Irigoyen, C. A., Fernández, O. M. A. y Castañón, G. J. A.',
+            titulo: 'Epidemiología social: nuevas perspectivas en relación con el fenómeno salud-enfermedad',
+            editorial: 'Medicina Interna de México, 21(3), 163–167',
+            año: '2005',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Situación de salud en Argentina: epidemiología, problemáticas y diagnóstico local',
+            autor: 'Cátedra I Salud Pública y Salud Mental',
+            titulo: 'Indicadores epidemiológicos',
+            editorial: 'Ficha docente, Facultad de Psicología, UBA',
+            año: '2021',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Situación de salud en Argentina: epidemiología, problemáticas y diagnóstico local',
+            autor: 'Organización Panamericana de la Salud',
+            titulo: 'Indicadores epidemiológicos: aspectos conceptuales y operativos',
+            editorial: 'OPS / OMS',
+            año: '2020',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Situación de salud en Argentina: epidemiología, problemáticas y diagnóstico local',
+            autor: 'OPS / Ministerio de Salud de la Nación',
+            titulo: 'Análisis de situación de salud (ASIS) República Argentina',
+            editorial: 'Ministerio de Salud / OPS',
+            año: '2018',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Situación de salud en Argentina: epidemiología, problemáticas y diagnóstico local',
+            autor: 'Ministerio de Salud de la Nación',
+            titulo: 'Indicadores básicos Argentina 2020',
+            editorial: 'Ministerio de Salud de la Nación',
+            año: '2020',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Situación de salud en Argentina: epidemiología, problemáticas y diagnóstico local',
+            autor: 'Dirección de Salud Mental y Adicciones',
+            titulo: 'Perfil epidemiológico del suicidio en Argentina. Algunas aproximaciones (Publicación N° 3)',
+            editorial: 'Ministerio de Salud de la Nación',
+            año: '2011',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Situación de salud en Argentina: epidemiología, problemáticas y diagnóstico local',
+            autor: 'Berra, A. y de Lellis, M.',
+            titulo: 'La mortalidad materna y los servicios de salud y justicia: un abordaje interdisciplinario e intersectorial desde el aporte de la psicología',
+            editorial: 'Anuario de Investigaciones, Facultad de Psicología, UBA',
+            año: '2017',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Situación de salud en Argentina: epidemiología, problemáticas y diagnóstico local',
+            autor: 'Ministerio de Salud de la Nación',
+            titulo: 'Protocolo para la atención integral de las personas con derecho a la interrupción voluntaria del embarazo',
+            editorial: 'Dirección Nacional de Salud Sexual y Reproductiva',
+            año: '2021',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Situación de salud en Argentina: epidemiología, problemáticas y diagnóstico local',
+            autor: 'UNICEF y Sociedad Argentina de Pediatría',
+            titulo: 'Salud materno infanto juvenil en cifras',
+            editorial: 'UNICEF / SAP',
+            año: '2019',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Situación de salud en Argentina: epidemiología, problemáticas y diagnóstico local',
+            autor: 'Ramos Calero, E.',
+            titulo: 'Diagnóstico de salud de la comunidad: métodos y técnicas (en Enfermería comunitaria: métodos y técnicas, Cap. 10)',
+            editorial: 'DAE',
+            año: '2000',
+            tipo: 'Obligatoria'
+          },
+          // Unidad III
+          {
+            unidad: 'Unidad III · Políticas públicas de salud: APS, planificación y promoción',
+            autor: 'OMS / UNICEF',
+            titulo: 'Declaración de Alma-Ata (Conferencia Internacional sobre Atención Primaria de Salud)',
+            editorial: 'OMS',
+            año: '1978',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad III · Políticas públicas de salud: APS, planificación y promoción',
+            autor: 'OPS / OMS',
+            titulo: 'Carta de Ottawa para la Promoción de la Salud (en Promoción de la salud: una antología, pp. 367–372)',
+            editorial: 'OPS',
+            año: '1996',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad III · Políticas públicas de salud: APS, planificación y promoción',
+            autor: 'OPS',
+            titulo: 'Declaración de Caracas (en González Uzcátegui y Levav, Reestructuración de la atención psiquiátrica)',
+            editorial: 'OPS',
+            año: '1990',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad III · Políticas públicas de salud: APS, planificación y promoción',
+            autor: 'de Lellis, M., Berra, A. y Morand, M.',
+            titulo: 'El legado de la Atención Primaria de la Salud (en Perspectivas en salud pública y salud mental)',
+            editorial: 'Editorial Nuevos Tiempos',
+            año: '2015',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad III · Políticas públicas de salud: APS, planificación y promoción',
+            autor: 'de Lellis, M., Interlandi, C. y Martino, J.',
+            titulo: 'Herramientas de planificación en salud comunitaria (en Perspectivas en salud pública y salud mental)',
+            editorial: 'Editorial Nuevos Tiempos',
+            año: '2015',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad III · Políticas públicas de salud: APS, planificación y promoción',
+            autor: 'de Lellis, M.',
+            titulo: 'Políticas públicas y salud comunitaria (en Saforcada, Mañas y Alvarondo, Neurociencias, salud y bienestar comunitario)',
+            editorial: 'Universidad Nacional de San Luis',
+            año: '2006',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad III · Políticas públicas de salud: APS, planificación y promoción',
+            autor: 'de Lellis, M.',
+            titulo: 'Psicología y políticas públicas saludables',
+            editorial: 'PSIENCIA, Revista Latinoamericana de Ciencia Psicológica, 2(2), 102–106',
+            año: '2010',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad III · Políticas públicas de salud: APS, planificación y promoción',
+            autor: 'de Lellis, M., Rebottaro, K. y Possetto, H.',
+            titulo: 'Centros de día y Residencias en la comunidad: una alternativa al modelo asilar',
+            editorial: 'Compilación Premio Facultad de Psicología, UBA, 29–56',
+            año: '2008',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad III · Políticas públicas de salud: APS, planificación y promoción',
+            autor: 'Gómez Arias, R., Rodríguez Ospina, F., Martínez Ruiz, O., Agudelo Vanegas, N., Zea, L. y González, E.',
+            titulo: 'Gestión de políticas públicas y salud',
+            editorial: 'Universidad de Caldas',
+            año: '2004',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad III · Políticas públicas de salud: APS, planificación y promoción',
+            autor: 'Saforcada, E., de Lellis, M. y Mozobancyk, S.',
+            titulo: 'El sistema de servicios de salud: la perspectiva de los usuarios / La psicología en la promoción de la salud: alimentación infantil (en Psicología y Salud Pública)',
+            editorial: 'Paidós',
+            año: '2022',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad III · Políticas públicas de salud: APS, planificación y promoción',
+            autor: 'Montero, M.',
+            titulo: 'La comunidad como objetivo y sujeto de acción social (en Psicología comunitaria. Fundamentos y aplicaciones)',
+            editorial: 'Editorial Síntesis',
+            año: '1998',
+            tipo: 'Obligatoria'
+          },
+          // Unidad IV
+          {
+            unidad: 'Unidad IV · Sistemas de salud, reforma en Salud Mental y perspectiva de derechos',
+            autor: 'Saforcada, E.',
+            titulo: 'El sistema total de salud (en Psicología Sanitaria. Análisis crítico de los sistemas de atención de la salud, pp. 43–57)',
+            editorial: 'Paidós',
+            año: '2000',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad IV · Sistemas de salud, reforma en Salud Mental y perspectiva de derechos',
+            autor: 'de Lellis, M.',
+            titulo: 'El contexto de las Políticas Públicas y el Sistema Total de Salud',
+            editorial: 'Ficha de cátedra',
+            año: '2023',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad IV · Sistemas de salud, reforma en Salud Mental y perspectiva de derechos',
+            autor: 'Rossetto, J.',
+            titulo: 'Del Manicomio a la Comunidad: el proceso de reforma de la Colonia Nacional «Dr. Manuel A. Montes de Oca»',
+            editorial: 'Vertex, Revista Argentina de Psiquiatría, 20(88), 463–473',
+            año: '2009',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad IV · Sistemas de salud, reforma en Salud Mental y perspectiva de derechos',
+            autor: 'de Lellis, M.',
+            titulo: 'Movimiento de Salud Mental: rupturas y caminos de reforma / Antecedentes normativos / Ley Nacional de Salud Mental (en Salud pública, salud mental, pp. 241–338)',
+            editorial: 'Editorial Nuevos Tiempos',
+            año: '2021',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad IV · Sistemas de salud, reforma en Salud Mental y perspectiva de derechos',
+            autor: 'de Lellis, M.',
+            titulo: 'Ética y políticas públicas: problemas y desafíos en la aplicación de la Ley Nacional de Salud Mental',
+            editorial: 'Revista IT, 7(7), Programa Apex, Universidad de la República',
+            año: '2020',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad IV · Sistemas de salud, reforma en Salud Mental y perspectiva de derechos',
+            autor: 'República Argentina',
+            titulo: 'Ley Nacional de Salud Mental N° 26.657, Decreto Reglamentario 603/2013 y Plan Nacional de Salud Mental (2023)',
+            editorial: 'Ministerio de Salud de la Nación',
+            año: '2010/2023',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad IV · Sistemas de salud, reforma en Salud Mental y perspectiva de derechos',
+            autor: 'de Lellis, M. y Saforcada, E.',
+            titulo: 'Políticas de recursos humanos en el ámbito de la salud: el caso de la formación de graduados en psicología (en Psicología, sociedad y políticas públicas de salud, pp. 123–145)',
+            editorial: 'Paidós',
+            año: '2006',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad IV · Sistemas de salud, reforma en Salud Mental y perspectiva de derechos',
+            autor: 'de Lellis, M., Pomares, L. y Da Silva, N.',
+            titulo: 'La Ley Nacional de Salud Mental en la formación universitaria (en A. Trímboli, comp., El fin del manicomio)',
+            editorial: 'Noveduc',
+            año: '2019',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad IV · Sistemas de salud, reforma en Salud Mental y perspectiva de derechos',
+            autor: 'Cátedra I Salud Pública y Salud Mental',
+            titulo: 'Compilado de declaraciones y normativas sobre derechos humanos',
+            editorial: 'Facultad de Psicología, UBA',
+            año: '2026',
+            tipo: 'Obligatoria'
+          },
+          // Complementaria / Electiva destacada Cátedra I
+          {
+            autor: 'Almeida Filho, N.',
+            titulo: 'Epidemiología sin números',
+            editorial: 'OPS / OMS Serie PALTEX',
+            año: '1992',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Dever, D. A.',
+            titulo: 'Epidemiología y administración de servicios de salud',
+            editorial: 'OPS Serie PALTEX',
+            año: '1991',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Capra, F.',
+            titulo: 'La trama de la vida. Una nueva perspectiva de los sistemas vivos',
+            editorial: 'Anagrama',
+            año: '1998',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Sluzki, C.',
+            titulo: 'De cómo la red social afecta a la salud del individuo y la salud del individuo afecta a la red social (en E. Dabas, Redes: el lenguaje de los vínculos)',
+            editorial: 'Paidós',
+            año: '1995',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'OPS / OMS',
+            titulo: 'Las funciones esenciales de la salud pública en las Américas / Una nueva agenda para la salud mental en las Américas',
+            editorial: 'OPS',
+            año: '2020/2023',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'SEDRONAR / INDEC',
+            titulo: 'Encuesta nacional sobre consumos y prácticas de cuidado 2022 (ENCoPraC)',
+            editorial: 'SEDRONAR / INDEC',
+            año: '2023',
+            tipo: 'Complementaria'
+          }
         ]
       },
       {
         nombre: 'Cátedra II (Cód. 066)',
         titular: 'Débora Tajer',
         link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=66&anio=2026&cuatrimestre=2',
+        enfoque:
+          'Adhiere al pensamiento sanitario crítico latinoamericano y a la corriente de la Salud Colectiva (continuidad de Alicia Stolkiner junto a Débora Tajer, Emiliano Galende, Mario Rovere, Eduardo Menéndez, Sara Ardila-Gómez, Claudia Bang y Leonardo Luciani Conde). Propone pasar del modelo salud/enfermedad/atención al proceso salud/enfermedad/cuidado, criticando la biomedicalización, el biopoder, la mercantilización y las lógicas manicomiales. Incorpora de forma transversal la perspectiva de género (cuidados generizados, agendas de género en salud, vulnerabilidad coronaria generizada), estudios decoloniales, clínica ampliada e interdisciplina, enfoque de derechos (Ley 26.657), memorias y luchas en salud mental en Argentina (incluido el aporte psicoanalítico), pandemia de COVID-19 y consumos problemáticos. Cuenta con comisiones temáticas (niñez y adolescencia, adultxs mayores, consumos problemáticos, género) y un Trabajo en terreno en dos fases.',
+        evaluacion:
+          'Dictado 1° y 2° cuatrimestre (1 clase teórica semanal de 2 hs + 1 clase práctica de 4 hs). 2 instancias formales de evaluación: 1) Parcial individual presencial sobre Unidad I (TP 7; recuperatorio en TP 10); 2) Monografía grupal integradora (Unidades I y II) basada en el trabajo en terreno supervisado en una institución o programa de salud/salud mental, con entregas periódicas de avance y presentación grupal final (TP 15). Promoción sin examen final: ≥ 7 en ambas instancias + 75% asistencia en teóricos y prácticos. Regularidad con final: ≥ 4 en ambas instancias + 75% asistencia. Admite examen libre (requiere presentar trabajo en terreno acordado con JTP).',
         bibliografia: [
-          { autor: 'Tajer, D.', titulo: 'Género y Salud Mental', editorial: 'Lugar Editorial', año: '2012', tipo: 'Obligatoria' }
+          // Subunidad I-1
+          {
+            unidad: 'Unidad I · Subunidad I-1: Proceso Salud/Enfermedad/Cuidado y Salud Colectiva',
+            autor: 'Stolkiner, A.',
+            titulo: 'Teórico 4: «El Concepto de Salud de la OMS»',
+            editorial: 'Ficha de cátedra, Cátedra II, UBA',
+            año: '2003',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidad I-1: Proceso Salud/Enfermedad/Cuidado y Salud Colectiva',
+            autor: 'Stolkiner, A. y Ardila Gómez, S.',
+            titulo: 'Conceptualizando la Salud Mental en las prácticas: consideraciones desde el pensamiento de la medicina social / Salud Colectiva latinoamericanas',
+            editorial: 'Vertex, Revista Argentina de Psiquiatría, XXIII(101), 57–67',
+            año: '2012',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidad I-1: Proceso Salud/Enfermedad/Cuidado y Salud Colectiva',
+            autor: 'Tajer, D.',
+            titulo: 'La Medicina Social Latinoamericana en los ’90. Hechos y Desafíos (en Rojas Ochoa y Márquez, ALAMES en la Memoria, pp. 21–37)',
+            editorial: 'Editorial Caminos',
+            año: '2009',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidad I-1: Proceso Salud/Enfermedad/Cuidado y Salud Colectiva',
+            autor: 'Augsburger, C.',
+            titulo: 'De la epidemiología psiquiátrica a la epidemiología en salud mental: el sufrimiento psíquico como categoría clave',
+            editorial: 'Cuadernos Médico Sociales, 81, 61–75',
+            año: '2002',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidad I-1: Proceso Salud/Enfermedad/Cuidado y Salud Colectiva',
+            autor: 'Caponi, S.',
+            titulo: 'Georges Canguilhem: del cuerpo subjetivo a la localización cerebral',
+            editorial: 'Salud Colectiva, 6(2), 149–161',
+            año: '2010',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidad I-1: Proceso Salud/Enfermedad/Cuidado y Salud Colectiva',
+            autor: 'Vasco Uribe, A.',
+            titulo: 'Estructura y Proceso en la conceptualización de la enfermedad',
+            editorial: 'Taller Latinoamericano de Medicina Social, Medellín',
+            año: '1987',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidad I-1: Proceso Salud/Enfermedad/Cuidado y Salud Colectiva',
+            autor: 'Menéndez, E.',
+            titulo: 'Modelos de atención de los padecimientos: de exclusiones teóricas y articulaciones prácticas',
+            editorial: 'Ciência & Saúde Colectiva, 8(1), 185–207',
+            año: '2003',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidad I-1: Proceso Salud/Enfermedad/Cuidado y Salud Colectiva',
+            autor: 'Michalewicz, A., Pierri, C. y Ardila Gómez, S.',
+            titulo: 'Del Proceso Salud/enfermedad/atención al proceso salud/enfermedad/cuidado: Elementos para su conceptualización',
+            editorial: 'Anuario de Investigaciones, Facultad de Psicología, UBA, XXI(1), 217–224',
+            año: '2015',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidad I-1: Proceso Salud/Enfermedad/Cuidado y Salud Colectiva',
+            autor: 'Ceminari, Y. y Stolkiner, A.',
+            titulo: 'El cuidado social y la organización social del cuidado como categorías claves para el análisis de políticas públicas',
+            editorial: 'X Congreso Internacional de Investigación y Práctica Profesional en Psicología, UBA',
+            año: '2018',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidad I-1: Proceso Salud/Enfermedad/Cuidado y Salud Colectiva',
+            autor: 'Tajer, D.',
+            titulo: 'Cuidados generizados en salud',
+            editorial: 'Revista Symploké Estudios de Género, 2(2)',
+            año: '2021',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidad I-1: Proceso Salud/Enfermedad/Cuidado y Salud Colectiva',
+            autor: 'República Argentina',
+            titulo: 'Ley Nacional de Salud Mental N° 26.657 y Decreto Reglamentario 603/2013 (Caps. I–V)',
+            editorial: 'Ministerio de Salud de la Nación',
+            año: '2010/2013',
+            tipo: 'Obligatoria'
+          },
+          // Subunidades I-2 y I-3
+          {
+            unidad: 'Unidad I · Subunidades I-2 y I-3: Enfoque de derechos, decolonialidad, biopoder y medicalización',
+            autor: 'Luciani Conde, L.',
+            titulo: 'Por una matriz formativa alternativa en Salud Mental: Aportes de los estudios decoloniales al campo de la Salud Mental Colectiva/Medicina Social Latinoamericana',
+            editorial: 'Salud Mental y Comunidad, 8(10), 16–33',
+            año: '2021',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidades I-2 y I-3: Enfoque de derechos, decolonialidad, biopoder y medicalización',
+            autor: 'Stolkiner, A.',
+            titulo: 'Derechos Humanos y Salud desde el Pensamiento Médico Social / Salud Colectiva Latinoamericano (en Llambías y Wolff, La enfermedad de los sistemas de salud)',
+            editorial: 'Wolff Eds.',
+            año: '2015',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidades I-2 y I-3: Enfoque de derechos, decolonialidad, biopoder y medicalización',
+            autor: 'Stolkiner, A.',
+            titulo: 'Medicalización de la vida, sufrimiento subjetivo y prácticas en salud mental (en H. Lerner, comp., Los sufrimientos, pp. 211–239)',
+            editorial: 'Ed. Psicolibro',
+            año: '2013',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidades I-2 y I-3: Enfoque de derechos, decolonialidad, biopoder y medicalización',
+            autor: 'Stolkiner, A.',
+            titulo: 'Las formas de transitar la adolescencia hoy y la salud/salud mental: actores y escenarios',
+            editorial: 'Novedades Educativas, 25(269), 40–45',
+            año: '2010',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidades I-2 y I-3: Enfoque de derechos, decolonialidad, biopoder y medicalización',
+            autor: 'Stolkiner, A.',
+            titulo: 'Subjetividades de época y prácticas de Salud Mental',
+            editorial: 'Revista Actualidad Psicológica, XXVI(293), 26–29',
+            año: '2001',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidades I-2 y I-3: Enfoque de derechos, decolonialidad, biopoder y medicalización',
+            autor: 'Stolkiner, A.',
+            titulo: 'Tiempos «Posmodernos»: Procesos de Ajuste y Salud Mental (en Saidon y Troianovsky, Políticas en Salud Mental, pp. 25–55)',
+            editorial: 'Lugar Editorial',
+            año: '1994',
+            tipo: 'Obligatoria'
+          },
+          // Subunidad I-4
+          {
+            unidad: 'Unidad I · Subunidad I-4: Clínica ampliada, interdisciplina y transdisciplina',
+            autor: 'Elichiry, N.',
+            titulo: 'La importancia de la articulación interdisciplinaria para el desarrollo de metodologías transdisciplinarias (en El niño y la Escuela, pp. 333–341)',
+            editorial: 'Nueva Visión',
+            año: '1987',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidad I-4: Clínica ampliada, interdisciplina y transdisciplina',
+            autor: 'García, R.',
+            titulo: 'Dialéctica de la integración en la investigación interdisciplinaria',
+            editorial: 'IV Jornadas de APS y I de Medicina Social, Buenos Aires',
+            año: '1989',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidad I-4: Clínica ampliada, interdisciplina y transdisciplina',
+            autor: 'Stolkiner, A.',
+            titulo: 'De interdisciplinas e indisciplinas (en N. Elichiry, comp., El niño y la Escuela, pp. 313–317)',
+            editorial: 'Nueva Visión',
+            año: '1987',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidad I-4: Clínica ampliada, interdisciplina y transdisciplina',
+            autor: 'Stolkiner, A.',
+            titulo: 'El enfoque interdisciplinario en el campo de la Salud (en Fernández Castrillo, Salud Mental, Comunidad y Derechos Humanos, pp. 189–211)',
+            editorial: 'Psicolibros Universitarios',
+            año: '2017',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad I · Subunidad I-4: Clínica ampliada, interdisciplina y transdisciplina',
+            autor: 'Wagner de Sousa Campos, G.',
+            titulo: 'Desafío epistemológico y práctico: Cómo reformular, ampliando e integrando, la clínica y la salud colectiva (en Método Paideia, pp. 184–206)',
+            editorial: 'Lugar Editorial',
+            año: '2009',
+            tipo: 'Obligatoria'
+          },
+          // Subunidad II-1
+          {
+            unidad: 'Unidad II · Subunidad II-1: Estado, políticas y sector salud/salud mental en Argentina',
+            autor: 'Tajer, D., Luciani Conde, L., Vázquez, A., Quercetti, F., Prado, J., Quinteros, L. y Trejo, L.',
+            titulo: 'Estado, políticas sociales, salud colectiva y salud mental',
+            editorial: 'Ficha de trabajo elaborada para cátedra',
+            año: '2025',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-1: Estado, políticas y sector salud/salud mental en Argentina',
+            autor: 'Ferreyra, J., Stolkiner, A., Luciani Conde, L. y Vázquez, A.',
+            titulo: 'Instancias estatales creadas por la Ley Nacional de Salud Mental: aportes para la descripción de un proceso de implementación',
+            editorial: 'Ficha de cátedra, Cátedra II, UBA',
+            año: '2015',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-1: Estado, políticas y sector salud/salud mental en Argentina',
+            autor: 'Galende, E.',
+            titulo: 'Los fundamentos de la salud mental (en Psicofármacos y Salud Mental: La ilusión de no ser, pp. 137–158)',
+            editorial: 'Lugar Editorial',
+            año: '2008',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-1: Estado, políticas y sector salud/salud mental en Argentina',
+            autor: 'Stolkiner, A.',
+            titulo: 'Un largo camino hasta la Ley Nacional de Salud Mental',
+            editorial: 'Revista Soberanía Sanitaria, Dossier Salud Mental',
+            año: '2020',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-1: Estado, políticas y sector salud/salud mental en Argentina',
+            autor: 'Stolkiner, A.',
+            titulo: 'Salud Mental: Avances y contradicciones de su integración a la salud comunitaria (en Gollan et al., ¿Qué hacer en salud?, pp. 57–70)',
+            editorial: 'Ed. Colihue',
+            año: '2015',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-1: Estado, políticas y sector salud/salud mental en Argentina',
+            autor: 'Stolkiner, A.',
+            titulo: 'El sector salud en la Argentina: ¿Qué pasó luego de la reforma neoliberal de los 90 y la crisis del 2001?',
+            editorial: 'XV Conferencia IAHP, Toledo',
+            año: '2009',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-1: Estado, políticas y sector salud/salud mental en Argentina',
+            autor: 'Rovere, M.',
+            titulo: 'El Sistema de Salud de la Argentina como campo: tensiones, estratagemas y opacidades',
+            editorial: 'Revista Debate Público, 6(12), 23–41',
+            año: '2016',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-1: Estado, políticas y sector salud/salud mental en Argentina',
+            autor: 'Vainer, A.',
+            titulo: 'La Salud Mental en la Argentina: memorias y luchas (en A. Trímboli, Ed., El Fin del Manicomio, pp. 33–42)',
+            editorial: 'Ed. Noveduc',
+            año: '2019',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-1: Estado, políticas y sector salud/salud mental en Argentina',
+            autor: 'Vázquez, A.',
+            titulo: 'Disputas actuales en el campo de la salud mental: los consumos problemáticos en la mira',
+            editorial: 'Ficha de trabajo elaborada para cátedra',
+            año: '2025',
+            tipo: 'Obligatoria'
+          },
+          // Subunidad II-2
+          {
+            unidad: 'Unidad II · Subunidad II-2: Gestión, APS, epidemiología crítica y agenda de género',
+            autor: 'Ardila, S. y Parenti, M.',
+            titulo: 'Gestionando en Salud/Salud Mental',
+            editorial: 'Ficha de cátedra, Cátedra II, UBA',
+            año: '2014',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-2: Gestión, APS, epidemiología crítica y agenda de género',
+            autor: 'OMS / UNICEF',
+            titulo: 'Declaración de Alma-Ata (Conferencia Internacional sobre Atención Primaria de Salud)',
+            editorial: 'OMS',
+            año: '1978',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-2: Gestión, APS, epidemiología crítica y agenda de género',
+            autor: 'Pedernera, S.',
+            titulo: 'Pandemia y rol del equipo de Salud Mental en Atención Primaria de la Salud: experiencia en COVID-19',
+            editorial: 'Diagnosis (Fundación PROSAM), 2(17)',
+            año: '2020',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-2: Gestión, APS, epidemiología crítica y agenda de género',
+            autor: 'Rovere, M.',
+            titulo: 'La atención primaria en la encrucijada: desplegar su potencial transformador o quedar instrumentados en una nueva ofensiva privatizadora',
+            editorial: 'Saúde em Debate, 42(1), 315–327',
+            año: '2018',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-2: Gestión, APS, epidemiología crítica y agenda de género',
+            autor: 'Rovere, M.',
+            titulo: 'Una teoría muy práctica (en Planificación Estratégica de Recursos Humanos en Salud, pp. 13–32)',
+            editorial: 'OPS',
+            año: '1993',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-2: Gestión, APS, epidemiología crítica y agenda de género',
+            autor: 'Stagnaro, J. C., Cía, A., Vázquez, N., Vommaro, H., Nemirovsky, M., Serfaty, E. y Kessler, R.',
+            titulo: 'Estudio epidemiológico de salud mental en población general de la República Argentina',
+            editorial: 'Vertex, Revista Argentina de Psiquiatría, XXIX, 275–299',
+            año: '2018',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-2: Gestión, APS, epidemiología crítica y agenda de género',
+            autor: 'Stolkiner, A., Comes, Y. y Garbus, P.',
+            titulo: 'Alcances y Potencialidades de la Atención Primaria de la Salud en la Argentina',
+            editorial: 'Ciência & Saúde Colectiva, 16(6), 2807–2816',
+            año: '2011',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-2: Gestión, APS, epidemiología crítica y agenda de género',
+            autor: 'Stolkiner, A. y Solitario, R.',
+            titulo: 'Atención Primaria de la Salud y Salud Mental: la articulación entre dos utopías (en D. Maceira, Atención Primaria en Salud, pp. 121–146)',
+            editorial: 'Paidós',
+            año: '2007',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-2: Gestión, APS, epidemiología crítica y agenda de género',
+            autor: 'Stolkiner, A.',
+            titulo: 'La Vida Social de los Virus. El Caso de la Gripe A-H1N1 (PPT)',
+            editorial: 'Instituto Gino Germani, UBA',
+            año: '2009',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-2: Gestión, APS, epidemiología crítica y agenda de género',
+            autor: 'Tajer, D., Luciani Conde, L., Barbieri, A., Pierri, C., Rodríguez, M., Pastorini, G. y Josid, S.',
+            titulo: 'Epidemiología. Elementos para su uso en la Salud Colectiva y en la Salud Mental',
+            editorial: 'Ficha de cátedra',
+            año: '2024',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-2: Gestión, APS, epidemiología crítica y agenda de género',
+            autor: 'Tajer, D.',
+            titulo: 'Heridos corazones. Factores subjetivos y sociales en la construcción generizada de la vulnerabilidad coronaria',
+            editorial: 'Ficha de trabajo elaborada para cátedra',
+            año: '2025',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-2: Gestión, APS, epidemiología crítica y agenda de género',
+            autor: 'Tajer, D.',
+            titulo: 'Construyendo una agenda de género en las políticas públicas en salud (en Género y Salud. Las políticas en acción)',
+            editorial: 'Lugar Editorial',
+            año: '2012',
+            tipo: 'Obligatoria'
+          },
+          // Subunidad II-3
+          {
+            unidad: 'Unidad II · Subunidad II-3: Prácticas comunitarias, desinstitucionalización y rol profesional',
+            autor: 'Ardila, S. y Galende, E.',
+            titulo: 'El concepto de Comunidad en la Salud Mental Comunitaria',
+            editorial: 'Salud Mental y Comunidad, 1(1), 39–50',
+            año: '2011',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-3: Prácticas comunitarias, desinstitucionalización y rol profesional',
+            autor: 'Ardila-Gómez, S.',
+            titulo: 'En nombre propio: Relatos de vida de mujeres que tuvieron internaciones psiquiátricas prolongadas y ahora viven en la comunidad',
+            editorial: 'Edición de autora',
+            año: '2019',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-3: Prácticas comunitarias, desinstitucionalización y rol profesional',
+            autor: 'Bang, C., Cafferata, L. I., Castaño Gómez, V. e Infantino, A. I.',
+            titulo: 'Entre «lo clínico» y «lo comunitario»: tensiones de las prácticas profesionales de psicólogos/as en salud',
+            editorial: 'Revista de Psicología UNLP, 1–21',
+            año: '2020',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-3: Prácticas comunitarias, desinstitucionalización y rol profesional',
+            autor: 'Bang, C.',
+            titulo: 'Abordajes comunitarios en salud mental en el primer nivel de atención: conceptos y prácticas desde una perspectiva integral',
+            editorial: 'Revista Colombiana de Ciencias Sociales, 12(2), 778–804',
+            año: '2021',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-3: Prácticas comunitarias, desinstitucionalización y rol profesional',
+            autor: 'Luciani Conde, L.',
+            titulo: 'Sentidos estratégicos del trabajo comunitario: inercias, interpelaciones y potencias de las prácticas en salud mental',
+            editorial: 'Kera Yvoty, 9(2)',
+            año: '2024',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-3: Prácticas comunitarias, desinstitucionalización y rol profesional',
+            autor: 'Stolkiner, A.',
+            titulo: 'Nuevos Actores en el Campo de la Salud Mental',
+            editorial: 'Revista Intersecciones Psi, 2(4), 27–31',
+            año: '2012',
+            tipo: 'Obligatoria'
+          },
+          {
+            unidad: 'Unidad II · Subunidad II-3: Prácticas comunitarias, desinstitucionalización y rol profesional',
+            autor: 'Stolkiner, A.',
+            titulo: 'Prevención en salud mental: normativización o desanudamiento de situaciones problema',
+            editorial: '4° Congreso Metropolitano de Psicología, Buenos Aires',
+            año: '1988',
+            tipo: 'Obligatoria'
+          },
+          // Complementaria / Optativa destacada Cátedra II
+          {
+            autor: 'CELS / Mental Disability Rights International',
+            titulo: 'Vidas Arrasadas: La segregación de las personas en los asilos psiquiátricos argentinos (Resumen Ejecutivo y Cap. I)',
+            editorial: 'Siglo Veintiuno Editores',
+            año: '2007',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Tajer, D.',
+            titulo: 'El aborto como problema de Salud Colectiva (en Salud Feminista, pp. 75–88)',
+            editorial: 'Fundación Soberanía Sanitaria y Tinta Limón',
+            año: '2019',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Trímboli, A. (Ed.)',
+            titulo: 'El Fin del Manicomio: Construcción Colectiva de políticas y experiencias en salud mental y derechos',
+            editorial: 'Ed. Noveduc',
+            año: '2019',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Cáceres, C., Druetta, I., Hartfiel, M. y Riva, M. R.',
+            titulo: 'El P.R.E.A., una experiencia alternativa a las lógicas manicomiales',
+            editorial: 'Vertex, Revista Argentina de Psiquiatría, XX(86), 299–307',
+            año: '2009',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'República Argentina',
+            titulo: 'Ley 26.378: Convención sobre los Derechos de las Personas con Discapacidad y Protocolo Facultativo',
+            editorial: 'Boletín Oficial',
+            año: '2008',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'República Argentina',
+            titulo: 'Ley 26.934: Plan Integral para el Abordaje de los Consumos Problemáticos (Plan IACOP) / Ley CABA N° 448 de Salud Mental',
+            editorial: 'Legislación vigente',
+            año: '2014',
+            tipo: 'Complementaria'
+          }
         ]
       }
     ]
@@ -4839,29 +6064,1015 @@ export const PLAN_ESTUDIOS: Materia[] = [
   {
     id: 'teoria-tecnica-grupos',
     nombre: 'Teoría y Técnica de Grupos',
-    año: 3,
+    año: 2,
     ciclo: 'Formación General',
-    cuatrimestre: 1,
-    descripcion: 'Estudio de las teorías y técnicas aplicadas al trabajo con grupos.',
+    cuatrimestre: 2,
+    correlativas: ['Psicología Social', 'Psicoanálisis: Freud'],
+    descripcion: 'Estudio de las teorías, dispositivos técnicos y procesos sociohistóricos que atraviesan lo grupal, lo institucional y las prácticas colectivas contemporáneas en los campos clínico, educativo, laboral y comunitario.',
     objetivos: [
-      'Analizar los procesos grupales.',
-      'Aprender técnicas de intervención grupal.'
+      'Articular los discursos teóricos sobre lo grupal con sus dispositivos técnicos y las demandas sociohistóricas que los producen.',
+      'Problematizar las relaciones entre lo grupal, lo institucional y los procesos de producción de subjetividad.',
+      'Incorporar herramientas conceptuales, lúdicas, psicodramáticas y de coordinación para intervenir en grupos en ámbitos clínicos, educativos, laborales y comunitarios.'
     ],
     catedras: [
       {
         nombre: 'Cátedra I (Cód. 063)',
-        titular: 'A designar',
+        titular: 'A designar (ex Ana María Fernández)',
         link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=63&anio=2026&cuatrimestre=2',
+        enfoque:
+          'Perspectiva transdisciplinaria y multirreferencial sustentada en la elucidación crítica y la problematización recursiva (tradición de Ana María Fernández y la Escuela Grupalista Argentina). Articula Ciencias Sociales, Psicoanálisis, Filosofía (Foucault, Deleuze y Guattari, Castoriadis, Byung-Chul Han), Psicología Social (Pichon-Rivière), Movimiento Institucionalista (Ulloa, Baremblitt, Saidón), Psicodrama Psicoanalítico (Pavlovsky, Kesselman, Albizuri de García) y Estudios de Género y Queer. Recorre los tres momentos epistémicos de lo grupal, los imaginarios sociales, la relación grupo-institución y las experiencias de lo público no estatal (asambleas, fábricas recuperadas, extensión universitaria y diversidades sexuales), en diálogo con una experiencia vivencial grupal-colectiva y elaboración de crónicas.',
+        evaluacion:
+          'Dos instancias evaluativas: 1) Primer parcial individual, escrito y presencial en Clase 9 (3 preguntas a desarrollar: 1 de teóricos a elegir entre 2 opciones + 2 obligatorias de prácticos; recuperatorio a los 15 días); 2) Segunda evaluación integrada por un informe grupal escrito domiciliario de 3 capítulos sobre la Jornada de Producciones Grupales (nota grupal) promediado con un coloquio grupal de preguntas individuales en Clase 15 (nota individual). Promoción sin examen final: mínimo de 7 en cada una de las dos evaluaciones, 75% de asistencia en teóricos (11/15) y prácticos (11/15), y asistencia obligatoria a la Jornada de Producciones Grupales (sábado de 13:30 a 20:30 hs). Régimen con examen final (regular): mínimo de 4 en cada evaluación y mismos requisitos de asistencia.',
         bibliografia: [
-          { autor: 'Pichon-Rivière, E.', titulo: 'El proceso grupal', editorial: 'Nueva Visión', año: '1975', tipo: 'Obligatoria' }
+          // Módulo I
+          {
+            autor: 'Fernández, A. M.',
+            titulo: 'Introducción (en El Campo Grupal. Notas para una genealogía)',
+            editorial: 'Nueva Visión',
+            año: '1989',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo I · La problemática grupal'
+          },
+          {
+            autor: 'Fernández, A. M.',
+            titulo: 'Lo singular y lo colectivo (en El Campo Grupal. Notas para una genealogía, p. 37)',
+            editorial: 'Nueva Visión',
+            año: '1989',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo I · La problemática grupal'
+          },
+          {
+            autor: 'Fernández, A. M.',
+            titulo: 'Notas para la constitución de un campo de problemas de la subjetividad (en Instituciones Estalladas, pp. 265–279)',
+            editorial: 'Eudeba',
+            año: '1999',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo I · La problemática grupal'
+          },
+          {
+            autor: 'Fernández, A. M.',
+            titulo: 'Haciendo Met-odhos (en Las lógicas colectivas: Imaginarios, cuerpos y multiplicidades)',
+            editorial: 'Biblos',
+            año: '2007',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo I · La problemática grupal'
+          },
+          {
+            autor: 'Foucault, M.',
+            titulo: 'El orden del Discurso',
+            editorial: 'Tusquets',
+            año: '2004',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo I · La problemática grupal'
+          },
+          // Módulo II
+          {
+            autor: 'Albizuri de García, O.',
+            titulo: 'Contribuciones del psicodrama a la psicoterapia de grupos (en Lo Grupal 3)',
+            editorial: 'Búsqueda',
+            año: '1986',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo II · Genealogía de lo grupal'
+          },
+          {
+            autor: 'Anido, M.',
+            titulo: 'Los grupos homogéneos y sus desafíos: Reflexiones a partir de un grupo para personas con fibromialgia (en Travesías por la clínica vincular)',
+            editorial: 'AAPPG',
+            año: '2018',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo II · Genealogía de lo grupal'
+          },
+          {
+            autor: 'Anzieu, D. y Martin, J. Y.',
+            titulo: 'La dinámica de los grupos pequeños (pp. 51–57 y 58–64)',
+            editorial: 'Kapelusz',
+            año: '1971',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo II · Genealogía de lo grupal'
+          },
+          {
+            autor: 'Anzieu, D.',
+            titulo: 'El método psicoanalítico y sus reglas en situaciones de grupo (en El grupo y el inconsciente)',
+            editorial: 'Biblioteca Nueva',
+            año: '1978',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo II · Genealogía de lo grupal'
+          },
+          {
+            autor: 'Bion, W. R.',
+            titulo: 'Tensiones intragrupo en la Terapia (en Experiencias en grupos)',
+            editorial: 'Paidós',
+            año: '1979',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo II · Genealogía de lo grupal'
+          },
+          {
+            autor: 'Fernández, A. M.',
+            titulo: 'La demanda por los grupos (en El Campo Grupal. Notas para una genealogía, p. 61)',
+            editorial: 'Nueva Visión',
+            año: '1989',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo II · Genealogía de lo grupal'
+          },
+          {
+            autor: 'Fernández, A. M.',
+            titulo: 'Hacia una clínica grupal (en El Campo Grupal. Notas para una genealogía, p. 83)',
+            editorial: 'Nueva Visión',
+            año: '1989',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo II · Genealogía de lo grupal'
+          },
+          {
+            autor: 'Fernández, A. M.',
+            titulo: 'El segundo momento epistémico (en El Campo Grupal. Notas para una genealogía, p. 101)',
+            editorial: 'Nueva Visión',
+            año: '1989',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo II · Genealogía de lo grupal'
+          },
+          {
+            autor: 'Fernández, A. M.',
+            titulo: 'Los organizadores fantasmáticos (en El Campo Grupal. Notas para una genealogía, p. 113)',
+            editorial: 'Nueva Visión',
+            año: '1989',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo II · Genealogía de lo grupal'
+          },
+          {
+            autor: 'Jasiner, G.',
+            titulo: 'Las intervenciones del coordinador (en Una lógica para pequeños grupos)',
+            editorial: 'Lugar Editorial',
+            año: '2008',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo II · Genealogía de lo grupal'
+          },
+          {
+            autor: 'Pavlovsky, E.',
+            titulo: 'Por una ética de la enunciación (en Lo Grupal 4, pp. 13–17)',
+            editorial: 'Búsqueda',
+            año: '1987',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo II · Genealogía de lo grupal'
+          },
+          {
+            autor: 'Pichon-Rivière, E.',
+            titulo: 'Técnica de los grupos operativos (en El proceso grupal)',
+            editorial: 'Nueva Visión',
+            año: '1975',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo II · Genealogía de lo grupal'
+          },
+          {
+            autor: 'Pichon-Rivière, E.',
+            titulo: 'Estructura de una escuela destinada a la formación de psicólogos sociales (en El proceso grupal, p. 149)',
+            editorial: 'Nueva Visión',
+            año: '1975',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo II · Genealogía de lo grupal'
+          },
+          {
+            autor: 'Pichon-Rivière, E.',
+            titulo: 'Aportaciones a la didáctica de la psicología social (en El proceso grupal, p. 205)',
+            editorial: 'Nueva Visión',
+            año: '1975',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo II · Genealogía de lo grupal'
+          },
+          {
+            autor: 'Ulloa, F.',
+            titulo: 'La ternura como fundamento de los Derechos Humanos (en Novela clínica psicoanalítica, pp. 236–256)',
+            editorial: 'Paidós',
+            año: '1995',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo II · Genealogía de lo grupal'
+          },
+          {
+            autor: 'Woronowski, M.',
+            titulo: '¿Tiene vigencia el grupo operativo? (en G. Jasiner y M. Woronowski, Para pensar a Pichón)',
+            editorial: 'Lugar Editorial',
+            año: '1992',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo II · Genealogía de lo grupal'
+          },
+          {
+            autor: 'Zito Lema, V.',
+            titulo: 'Conversaciones con Enrique Pichon-Rivière (Cap. 6)',
+            editorial: 'Ediciones Cinco',
+            año: '1976',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo II · Genealogía de lo grupal'
+          },
+          // Módulo III
+          {
+            autor: 'Byung-Chul Han',
+            titulo: 'Psicopolítica',
+            editorial: 'Herder',
+            año: '2014',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo III · Producción histórica de subjetividad'
+          },
+          {
+            autor: 'Castel, R.',
+            titulo: 'La dinámica de los procesos de marginalización: de la vulnerabilidad a la exclusión (en El Espacio Institucional)',
+            editorial: 'Lugar Editorial',
+            año: '1991',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo III · Producción histórica de subjetividad'
+          },
+          {
+            autor: 'Castoriadis, C.',
+            titulo: 'Lo imaginario: la creación en el dominio socio-histórico (en Los dominios del hombre. Encrucijadas del laberinto, Cap. 3)',
+            editorial: 'Gedisa',
+            año: '1988',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo III · Producción histórica de subjetividad'
+          },
+          {
+            autor: 'Deleuze, G.',
+            titulo: 'Post-scriptum sobre las sociedades de control (en Conversaciones)',
+            editorial: 'Pre-Textos',
+            año: '1995',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo III · Producción histórica de subjetividad'
+          },
+          {
+            autor: 'Fernández, A. M.',
+            titulo: 'Madres en más, mujeres en menos: los mitos sociales de la maternidad (en La mujer de la ilusión, Cap. 7)',
+            editorial: 'Paidós',
+            año: '1993',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo III · Producción histórica de subjetividad'
+          },
+          {
+            autor: 'Fernández, A. M.',
+            titulo: 'Lógicas colectivas y producción de subjetividad (en Las lógicas colectivas: Imaginarios, cuerpos y multiplicidades, p. 271)',
+            editorial: 'Biblos',
+            año: '2007',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo III · Producción histórica de subjetividad'
+          },
+          {
+            autor: 'Fernández, A. M.',
+            titulo: 'Las diferencias desigualadas. Estrategias biopolíticas de dominio (en Las lógicas sexuales: amor, política y violencias)',
+            editorial: 'Nueva Visión',
+            año: '2009',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo III · Producción histórica de subjetividad'
+          },
+          {
+            autor: 'Fernández, A. M.',
+            titulo: 'Los júbilos en visibilidad y los cuerpos en escena (en Jóvenes de vidas grises: Psicoanálisis y Biopolíticas)',
+            editorial: 'Nueva Visión',
+            año: '2013',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo III · Producción histórica de subjetividad'
+          },
+          {
+            autor: 'Foucault, M.',
+            titulo: 'Las disciplinas (en Vigilar y castigar, Cap. 3)',
+            editorial: 'Siglo XXI',
+            año: '1987',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo III · Producción histórica de subjetividad'
+          },
+          {
+            autor: 'Foucault, M.',
+            titulo: 'El sujeto y el poder (en O. Terán, comp., Discurso, Poder, Subjetividad)',
+            editorial: 'El Cielo por Asalto',
+            año: '1995',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo III · Producción histórica de subjetividad'
+          },
+          {
+            autor: 'Varela, J.',
+            titulo: 'Categorías espacio temporales y socialización escolar: del individualismo al narcisismo (en Escuela, Poder y Subjetivación)',
+            editorial: 'La Piqueta',
+            año: '1997',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo III · Producción histórica de subjetividad'
+          },
+          // Módulo IV
+          {
+            autor: 'Deleuze, G. y Guattari, F.',
+            titulo: 'Rizoma (en Mil Mesetas, Cap. 1)',
+            editorial: 'Pre-Textos',
+            año: '1988',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo IV · Especificidad de lo grupal'
+          },
+          {
+            autor: 'Fernández, A. M.',
+            titulo: 'El nudo grupal (en El Campo Grupal. Notas para una genealogía, p. 135)',
+            editorial: 'Nueva Visión',
+            año: '1989',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo IV · Especificidad de lo grupal'
+          },
+          {
+            autor: 'Fernández, A. M., Borakievich, S., Ojam, E. e Imaz, X.',
+            titulo: 'Diversidades y campo grupal (Revista Ensayos y Experiencias N° 51 — TP Clase 6)',
+            editorial: 'Novedades Educativas',
+            año: '2003',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo IV · Especificidad de lo grupal'
+          },
+          {
+            autor: 'Fernández, A. M.',
+            titulo: 'Lógicas colectivas de la multiplicidad: cuerpos, pasiones y políticas (en Política y Subjetividad: asambleas barriales y fábricas recuperadas, p. 243)',
+            editorial: 'Tinta Limón',
+            año: '2006',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo IV · Especificidad de lo grupal'
+          },
+          {
+            autor: 'Fernández, A. M.',
+            titulo: 'La chica de la silueta: problemas a elucidar a partir de una situación (en Las lógicas colectivas, pp. 171–176 y 191–192)',
+            editorial: 'Biblos',
+            año: '2007',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo IV · Especificidad de lo grupal'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'Psicología de las masas y análisis del yo (Caps. 7 y 8, en Obras Completas)',
+            editorial: 'Amorrortu',
+            año: '1976',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo IV · Especificidad de lo grupal'
+          },
+          {
+            autor: 'Pavlovsky, E. y Kesselman, H.',
+            titulo: 'La Multiplicación Dramática',
+            editorial: 'Galerna',
+            año: '2000',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo IV · Especificidad de lo grupal'
+          },
+          // Módulo V
+          {
+            autor: 'Baremblitt, G.',
+            titulo: 'La concepción institucional de la transferencia (en M. J. Acevedo y J. C. Volnovich, eds., El Espacio Institucional)',
+            editorial: 'Lugar Editorial',
+            año: '1991',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo V · La relación grupo-institución'
+          },
+          {
+            autor: 'Kononovich, B. y Saidón, O.',
+            titulo: 'Sufrimiento y goce en las instituciones (en La Escena Institucional)',
+            editorial: 'Lugar Editorial',
+            año: '1991',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo V · La relación grupo-institución'
+          },
+          {
+            autor: 'Saidón, O.',
+            titulo: 'Propuestas para un análisis institucional de los grupos (en Lo Grupal, pp. 87–96 y 110–111)',
+            editorial: 'Búsqueda',
+            año: '1983',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo V · La relación grupo-institución'
+          },
+          {
+            autor: 'Ulloa, F.',
+            titulo: 'Cultura de la mortificación y proceso de manicomialización: una reactualización de las neurosis actuales (en Novela clínica psicoanalítica, pp. 236–256)',
+            editorial: 'Paidós',
+            año: '1995',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo V · La relación grupo-institución'
+          },
+          // Módulo VI
+          {
+            autor: 'Bitrán, R. y Farruggio, L.',
+            titulo: 'Abordaje interdisciplinario comunitario de las problemáticas en Salud Mental (Congreso Mundial de Salud Mental)',
+            editorial: 'WFMH',
+            año: '2013',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo VI · Los grupos y el espacio público'
+          },
+          {
+            autor: 'Borakievich, S., Corino, C., Ragonese, S. y Barroso, J.',
+            titulo: 'Alojar las diversidades, elucidar las implicaciones. Reflexiones acerca de un dispositivo grupal en la sala de espera de un hospital público',
+            editorial: 'UNLP',
+            año: '2013',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo VI · Los grupos y el espacio público'
+          },
+          {
+            autor: 'Borakievich, S., Corino, C. y Frydman, M.',
+            titulo: 'Hacia la construcción colectiva de herramientas para la implementación de la Ley de Identidad de Género en instituciones de Salud y Educación',
+            editorial: 'IV Jornadas de Psicología Institucional · UBA',
+            año: '2014',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo VI · Los grupos y el espacio público'
+          },
+          {
+            autor: 'Calloway, C.',
+            titulo: 'Autorregulación de los colectivos autogestivos de trabajadores/as (Revista Idelcoop N° 218, pp. 11–30)',
+            editorial: 'Idelcoop',
+            año: '2016',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo VI · Los grupos y el espacio público'
+          },
+          {
+            autor: 'Calloway, C., Cabrera, C., Fernández, A. M. y Sánchez, M.',
+            titulo: 'Las marchas del orgullo LGBTTIQ: Políticas, corporalidades y existenciarios (Crítica y Resistencias N° 3, pp. 12–25)',
+            editorial: 'Crítica y Resistencias',
+            año: '2016',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo VI · Los grupos y el espacio público'
+          },
+          {
+            autor: 'Calloway, C., Cabrera, C., Córdoba, A., Farruggio, L., Giménez, F. y Herrera, P.',
+            titulo: 'Entre mujeres: producción de subjetividad y autonomía en un barrio de CABA (Revista de Psicología RevPsi)',
+            editorial: 'UNLP',
+            año: '2020',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo VI · Los grupos y el espacio público'
+          },
+          {
+            autor: 'Calloway, C., Farruggio, L. y Giménez, F.',
+            titulo: 'El rol de la extensión universitaria en la implementación de dispositivos grupales',
+            editorial: 'Material de Cátedra',
+            año: 's/f',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo VI · Los grupos y el espacio público'
+          },
+          {
+            autor: 'Farruggio, L. R.',
+            titulo: 'Salud mental, una cuestión de derechos (en A. Del Do y C. Calloway, eds., Consumos problemáticos y derechos humanos: perspectivas comunitarias)',
+            editorial: 'Teseo',
+            año: '2025',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo VI · Los grupos y el espacio público'
+          },
+          {
+            autor: 'Fernández, A. M., Imaz, X. y Calloway, C.',
+            titulo: 'La invención de las fábricas sin patrón (en Política y subjetividad. Asambleas barriales y fábricas recuperadas, Cap. 10)',
+            editorial: 'Tinta Limón',
+            año: '2006',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo VI · Los grupos y el espacio público'
+          },
+          {
+            autor: 'Fernández, A. M.',
+            titulo: 'Las máquinas colectivas en acción (en Las lógicas colectivas, Cap. 3 Tercera Parte)',
+            editorial: 'Biblos',
+            año: '2007',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo VI · Los grupos y el espacio público'
+          },
+          {
+            autor: 'Siqueira Peres, W.',
+            titulo: 'La psicología, lo queer y la vida (en A. M. Fernández y W. Siqueira Peres, eds., La diferencia desquiciada. Géneros y diversidades sexuales)',
+            editorial: 'Biblos',
+            año: '2013',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo VI · Los grupos y el espacio público'
+          },
+          {
+            autor: 'Ulloa, F.',
+            titulo: 'Barriletes en bandada (en Salud ele-Mental)',
+            editorial: 'Libros del Zorzal',
+            año: '2011',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo VI · Los grupos y el espacio público'
+          },
+          // Complementaria (selección de bibliografía electiva oficial)
+          {
+            autor: 'Grinberg, L., Langer, M. y Rodrigué, E.',
+            titulo: 'Psicoterapia de grupo (Caps. 3 y 4)',
+            editorial: 'Paidós',
+            año: '1971',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Moreno, J. L.',
+            titulo: 'Psicodrama',
+            editorial: 'Hormé',
+            año: '1972',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Lapassade, G.',
+            titulo: 'Grupos, organizaciones e instituciones',
+            editorial: 'Gedisa',
+            año: '1977',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Castoriadis, C.',
+            titulo: 'La institución imaginaria de la sociedad (Tomo I, Cap. 3)',
+            editorial: 'Tusquets',
+            año: '1983',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Kaës, R.',
+            titulo: 'El grupo y el sujeto del grupo',
+            editorial: 'Amorrortu',
+            año: '1993',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Guattari, F.',
+            titulo: 'Caosmosis',
+            editorial: 'Manantial',
+            año: '1996',
+            tipo: 'Complementaria'
+          }
         ]
       },
       {
         nombre: 'Cátedra II (Cód. 064)',
-        titular: 'Cintia Gisela Rolón',
+        titular: 'Cintia Gisella Rolón',
         link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=64&anio=2026&cuatrimestre=2',
+        enfoque:
+          'Pensamiento complejo y enfoque plural que enlaza las teorías clásicas de grupos (Anzieu y Martin, Romero, Bauleo, Pichon-Rivière, Pavlovsky, Ulloa, Winnicott, Lemoine), el psicoanálisis de grupos y el movimiento institucionalista con el pensamiento contemporáneo, el campo del arte y las teorías del juego. Se apoya en tres ejes transversales: (1) perspectiva interseccional y problemática de género; (2) epistemologías feministas, estudios queer, giro afectivo y ética del cuidado (Butler, Sara Ahmed, Lauren Berlant, Remedios Zafra, Elena de la Aldea); y (3) dimensión de época y precariedad (Agamben, Deleuze, Mark Fisher, Lewkowicz, Cantarelli, Bleichmar, Illouz y Cabanas en su crítica a la «happycracia» y el coaching ontológico). Aborda equipos laborales y liderazgos, grupos de aprendizaje, clínica grupal e intervenciones en catástrofes sociales y crisis ecológica (Moffatt, Waisbrot y Berenstein, Morizot), con intenso trabajo áulico en crónicas, dispositivos lúdicos, psicodramáticos y artísticos.',
+        evaluacion:
+          'Dos exámenes parciales individuales, escritos y presenciales (TP 7 y TP 13, rendidos en la banda horaria del teórico correspondiente; se puede recuperar por aplazo solo uno de los parciales adicionando bibliografía del módulo siguiente) más la confección de una crónica grupal presentada en coloquio en comisiones de trabajos prácticos (TP 14). La nota final promedia el 1° parcial con el promedio entre el 2° parcial y la crónica grupal. Promoción sin examen final: mínimo de 7 en cada instancia (ambos parciales y crónica/coloquio) y 75% de asistencia en teóricos, prácticos y Jornada grupal (sábado de 14 a 18 hs). Promoción con examen final: mínimo de 4 en cada instancia y 75% de asistencia. Admite examen en condición de libre (escrito eliminatorio + oral sobre todo el programa vigente).',
         bibliografia: [
-          { autor: 'Bauleo, A.', titulo: 'Ideología, grupo y familia', editorial: 'Kargieman', año: '1970', tipo: 'Obligatoria' }
+          // Temas 1 y 2
+          {
+            autor: 'Bercovich, K.',
+            titulo: 'Antecedentes significativos del estudio de los grupos (en Cuaderno Grupalidades: algunas problemáticas)',
+            editorial: 'Material de Cátedra',
+            año: '2025',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 1 y 2 · Introducción, antecedentes, tipos de grupos y cohesión grupal'
+          },
+          {
+            autor: 'Bernard, M., Edelman, L., Kordon, D., L\'Hoste, M., Segoviano, M. y Cao, M.',
+            titulo: 'Desarrollos sobre grupalidad. Una perspectiva psicoanalítica (Selección)',
+            editorial: 'Lugar Editorial',
+            año: '1995',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 1 y 2 · Introducción, antecedentes, tipos de grupos y cohesión grupal'
+          },
+          {
+            autor: 'Vainer, A. y Carpintero, E.',
+            titulo: 'Psicoanálisis encierro en los consultorios y fracturas en las instituciones (en Las Huellas de la Memoria II: 1970–1983, 2ª ed. ampliada)',
+            editorial: 'Topía',
+            año: '2018',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 1 y 2 · Introducción, antecedentes, tipos de grupos y cohesión grupal'
+          },
+          {
+            autor: 'Rolón, C.',
+            titulo: 'Disquisiciones sobre la técnica. Prefacio. Convites del pensar (en Cuadernos Grupalidades y Conversaciones teóricas)',
+            editorial: 'Material de Cátedra',
+            año: '2024',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 1 y 2 · Introducción, antecedentes, tipos de grupos y cohesión grupal'
+          },
+          {
+            autor: 'Romero, R.',
+            titulo: 'Grupo. Objeto y Teoría I (Cap. 1, selección)',
+            editorial: 'Lugar Editorial',
+            año: '1987',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 1 y 2 · Introducción, antecedentes, tipos de grupos y cohesión grupal'
+          },
+          {
+            autor: 'Anzieu, D. y Martin, J.',
+            titulo: 'La dinámica de los grupos pequeños (Cap. 1)',
+            editorial: 'Kapelusz',
+            año: '1969',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 1 y 2 · Introducción, antecedentes, tipos de grupos y cohesión grupal'
+          },
+          {
+            autor: 'Bauleo, A.',
+            titulo: 'Notas para una conceptualización de grupos (en Contrainstitución y grupos)',
+            editorial: 'Atuel',
+            año: '1989',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 1 y 2 · Introducción, antecedentes, tipos de grupos y cohesión grupal'
+          },
+          {
+            autor: 'Rolón, C.',
+            titulo: 'En nombre de la amistad (en Conversaciones teóricas, manuscritos de aula)',
+            editorial: 'Material de Cátedra',
+            año: '2024',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 1 y 2 · Introducción, antecedentes, tipos de grupos y cohesión grupal'
+          },
+          {
+            autor: 'Romero, R.',
+            titulo: 'Grupo. Objeto y Teoría II (Caps. 1, 2, 3 y 4, selección)',
+            editorial: 'Lugar Editorial',
+            año: '1992',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 1 y 2 · Introducción, antecedentes, tipos de grupos y cohesión grupal'
+          },
+          // Temas 3 y 4
+          {
+            autor: 'Laval, C. y Dardot, P.',
+            titulo: 'Introducción. Lo común: un principio político (en Común)',
+            editorial: 'Gedisa',
+            año: '2014',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 3 y 4 · Procesos grupales, precariedad, interseccionalidad y ética del cuidado'
+          },
+          {
+            autor: 'Pavlovsky, E.',
+            titulo: 'Prólogo (en Lo Grupal 1)',
+            editorial: 'Búsqueda',
+            año: '1983',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 3 y 4 · Procesos grupales, precariedad, interseccionalidad y ética del cuidado'
+          },
+          {
+            autor: 'Rolón, C.',
+            titulo: 'Conversaciones teóricas y Grupalidades: algunas problemáticas (Cuadernos de cátedra, selección)',
+            editorial: 'Material de Cátedra',
+            año: '2025',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 3 y 4 · Procesos grupales, precariedad, interseccionalidad y ética del cuidado'
+          },
+          {
+            autor: 'Ulloa, F.',
+            titulo: 'Que la muerte te agarre vivo (en Cuaderno Grupalidades: algunas problemáticas)',
+            editorial: 'Material de Cátedra',
+            año: '2006',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 3 y 4 · Procesos grupales, precariedad, interseccionalidad y ética del cuidado'
+          },
+          {
+            autor: 'Agamben, G.',
+            titulo: '¿Qué es lo contemporáneo? (en Desnudez)',
+            editorial: 'Adriana Hidalgo',
+            año: '2008',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 3 y 4 · Procesos grupales, precariedad, interseccionalidad y ética del cuidado'
+          },
+          {
+            autor: 'Andrada, L.',
+            titulo: 'Interseccionalidad, grupalidad y conocimiento situado',
+            editorial: 'Material de Cátedra',
+            año: '2025',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 3 y 4 · Procesos grupales, precariedad, interseccionalidad y ética del cuidado'
+          },
+          {
+            autor: 'Butler, J.',
+            titulo: 'Política de género y el derecho a aparecer (Selección, en Cuaderno Escenarios contemporáneos: precariedades)',
+            editorial: 'Material de Cátedra',
+            año: '2017',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 3 y 4 · Procesos grupales, precariedad, interseccionalidad y ética del cuidado'
+          },
+          {
+            autor: 'De la Aldea, E.',
+            titulo: 'Los cuidados en tiempos de descuidos (Selección, en Cuaderno Escenarios contemporáneos: precariedades)',
+            editorial: 'Material de Cátedra',
+            año: '2019',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 3 y 4 · Procesos grupales, precariedad, interseccionalidad y ética del cuidado'
+          },
+          {
+            autor: 'Deleuze, G.',
+            titulo: 'El abecedario: letra «M» de enfermedad (maladie)',
+            editorial: 'Material de Cátedra',
+            año: '1988',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 3 y 4 · Procesos grupales, precariedad, interseccionalidad y ética del cuidado'
+          },
+          {
+            autor: 'Rolón, C.',
+            titulo: 'Prefacio de Escenarios contemporáneos: precariedades (en Conversaciones teóricas, manuscritos de clases)',
+            editorial: 'Material de Cátedra',
+            año: '2025',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 3 y 4 · Procesos grupales, precariedad, interseccionalidad y ética del cuidado'
+          },
+          // Temas 5 y 6
+          {
+            autor: 'Ahmed, S.',
+            titulo: 'Sonreí (en Cuaderno Escenarios contemporáneos: precariedades)',
+            editorial: 'Material de Cátedra',
+            año: '2019',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 5 y 6 · Atmósferas afectivas, precariedad y salud mental comunitaria'
+          },
+          {
+            autor: 'Andrada, L.',
+            titulo: 'Sublevaciones y gestiones del odio (en Cuaderno Escenarios contemporáneos: precariedades)',
+            editorial: 'Material de Cátedra',
+            año: '2021',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 5 y 6 · Atmósferas afectivas, precariedad y salud mental comunitaria'
+          },
+          {
+            autor: 'Berlant, L.',
+            titulo: 'El optimismo cruel (Prólogo)',
+            editorial: 'Caja Negra',
+            año: '2020',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 5 y 6 · Atmósferas afectivas, precariedad y salud mental comunitaria'
+          },
+          {
+            autor: 'Rolón, C.',
+            titulo: 'Por ciertas palabras / Confianzas / Figuras de la intemperie (en Conversaciones teóricas, manuscritos de aula)',
+            editorial: 'Material de Cátedra',
+            año: '2023',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 5 y 6 · Atmósferas afectivas, precariedad y salud mental comunitaria'
+          },
+          {
+            autor: 'Zafra, R.',
+            titulo: 'El Entusiasmo. Precariedad y trabajo creativo en la era digital (Cap. 1)',
+            editorial: 'Anagrama',
+            año: '2018',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 5 y 6 · Atmósferas afectivas, precariedad y salud mental comunitaria'
+          },
+          {
+            autor: 'Deleuze, G.',
+            titulo: 'Posdata sobre las sociedades de control',
+            editorial: 'Ed. Norman',
+            año: '1991',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 5 y 6 · Atmósferas afectivas, precariedad y salud mental comunitaria'
+          },
+          {
+            autor: 'Fisher, M.',
+            titulo: 'Realismo capitalista: ¿no hay alternativa? (Cap. 3)',
+            editorial: 'Caja Negra',
+            año: '2009',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 5 y 6 · Atmósferas afectivas, precariedad y salud mental comunitaria'
+          },
+          {
+            autor: 'Rolón, C.',
+            titulo: 'Escenarios contemporáneos: precariedades (Cuaderno de cátedra, compilación)',
+            editorial: 'Material de Cátedra',
+            año: '2025',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 5 y 6 · Atmósferas afectivas, precariedad y salud mental comunitaria'
+          },
+          // Temas 7 y 8
+          {
+            autor: 'Álvaro, D.',
+            titulo: 'Vidas diseñadas. Crítica del coaching ontológico',
+            editorial: 'Material de Cátedra',
+            año: '2021',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 7 y 8 · Poderes terapéuticos contemporáneos y lógicas institucionales'
+          },
+          {
+            autor: 'Hubert, P.',
+            titulo: 'El bienestar en la cultura y otras composiciones precarias (Introducción y Cap. 1)',
+            editorial: 'Red Editorial',
+            año: '2021',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 7 y 8 · Poderes terapéuticos contemporáneos y lógicas institucionales'
+          },
+          {
+            autor: 'Illouz, E. y Cabanas, E.',
+            titulo: 'Happycracia (Cap. 4: «Se vende ego feliz»)',
+            editorial: 'Planeta',
+            año: '2023',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 7 y 8 · Poderes terapéuticos contemporáneos y lógicas institucionales'
+          },
+          {
+            autor: 'López Petit, S.',
+            titulo: 'Emergencias (en Cuaderno Escenarios contemporáneos: precariedades)',
+            editorial: 'Material de Cátedra',
+            año: '2014',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 7 y 8 · Poderes terapéuticos contemporáneos y lógicas institucionales'
+          },
+          {
+            autor: 'Bleichmar, S.',
+            titulo: 'La difícil tarea de ser joven (Revista Topía)',
+            editorial: 'Topía',
+            año: '2001',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 7 y 8 · Poderes terapéuticos contemporáneos y lógicas institucionales'
+          },
+          {
+            autor: 'Cantarelli, M. y Lewkowicz, I.',
+            titulo: 'Del fragmento a la situación',
+            editorial: 'Red Editorial',
+            año: '2003',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 7 y 8 · Poderes terapéuticos contemporáneos y lógicas institucionales'
+          },
+          {
+            autor: 'Cantarelli, M.',
+            titulo: 'Habitar el Estado. Pensamiento estatal en tiempos a-estatales (Caps. 3 y 6)',
+            editorial: 'Hydra',
+            año: '2010',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 7 y 8 · Poderes terapéuticos contemporáneos y lógicas institucionales'
+          },
+          {
+            autor: 'Freeman, J.',
+            titulo: 'La tiranía de las faltas de estructuras (en Fórum de Políticas Feministas)',
+            editorial: 'Fórum de Políticas Feministas',
+            año: '2003',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 7 y 8 · Poderes terapéuticos contemporáneos y lógicas institucionales'
+          },
+          {
+            autor: 'Ulloa, F.',
+            titulo: 'Novela clínica psicoanalítica (Caps. «Cultura de la mortificación y proceso de manicomialización» y «La tragedia en las instituciones»)',
+            editorial: 'Paidós',
+            año: '1995',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 7 y 8 · Poderes terapéuticos contemporáneos y lógicas institucionales'
+          },
+          // Temas 9 y 10
+          {
+            autor: 'Lewkowicz, I.',
+            titulo: 'La subjetividad heroica. Un obstáculo en las prácticas comunitarias de la salud',
+            editorial: 'Hospital Durand',
+            año: '1999',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 9 y 10 · Clínica grupal, coordinación, técnicas, juego y psicodrama'
+          },
+          {
+            autor: 'Moffatt, A.',
+            titulo: 'Entrevista a cargo de Eduardo Cossi',
+            editorial: 'Material de Cátedra',
+            año: '2014',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 9 y 10 · Clínica grupal, coordinación, técnicas, juego y psicodrama'
+          },
+          {
+            autor: 'Pavlovsky, E. y Frydlewsky, L.',
+            titulo: 'Sobre dos modos de comprender del coordinador grupal (en Lo Grupal 1)',
+            editorial: 'Búsqueda',
+            año: '1983',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 9 y 10 · Clínica grupal, coordinación, técnicas, juego y psicodrama'
+          },
+          {
+            autor: 'Rolón, C.',
+            titulo: 'Figuras para pensar posiciones clínicas',
+            editorial: 'Material de Cátedra',
+            año: '2013',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 9 y 10 · Clínica grupal, coordinación, técnicas, juego y psicodrama'
+          },
+          {
+            autor: 'Ulloa, F.',
+            titulo: 'Comunidad clínica (Ficha de Cátedra de Psicoterapia II)',
+            editorial: 'UNLP',
+            año: '2005',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 9 y 10 · Clínica grupal, coordinación, técnicas, juego y psicodrama'
+          },
+          {
+            autor: 'Lemoine, G. y P.',
+            titulo: 'Teoría del Psicodrama (Caps. «La identificación» y «¿Qué es la identificación?»)',
+            editorial: 'Gedisa',
+            año: '1979',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 9 y 10 · Clínica grupal, coordinación, técnicas, juego y psicodrama'
+          },
+          {
+            autor: 'Pavlovsky, E.',
+            titulo: 'La poesía en psicoterapia (en Lo Grupal 2)',
+            editorial: 'Búsqueda',
+            año: '1985',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 9 y 10 · Clínica grupal, coordinación, técnicas, juego y psicodrama'
+          },
+          {
+            autor: 'Pichon-Rivière, E.',
+            titulo: 'Estructura de una escuela destinada a la formación de psicólogos sociales (en Cuaderno Grupalidades: algunas problemáticas)',
+            editorial: 'Material de Cátedra',
+            año: '1972',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 9 y 10 · Clínica grupal, coordinación, técnicas, juego y psicodrama'
+          },
+          {
+            autor: 'Winnicott, D. W.',
+            titulo: 'Realidad y Juego (Cap. 3: «El juego: exposición teórica» y Cap. 4: «El juego: actividad creadora y búsqueda de la persona»)',
+            editorial: 'Gedisa',
+            año: '1993',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 9 y 10 · Clínica grupal, coordinación, técnicas, juego y psicodrama'
+          },
+          // Temas 11 y 12
+          {
+            autor: 'Ahmed, S.',
+            titulo: 'Un oído feminista para el malestar en las instituciones (Artículo Página/12)',
+            editorial: 'Página/12',
+            año: '2022',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 11 y 12 · Intervenciones situadas (universidad/género) y situaciones de crisis'
+          },
+          {
+            autor: 'Corea, C. y Lewkowicz, I.',
+            titulo: 'Subjetividad pedagógica y subjetividad mediática (en Pedagogía del aburrido — TP 11)',
+            editorial: 'Paidós',
+            año: '2004',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 11 y 12 · Intervenciones situadas (universidad/género) y situaciones de crisis'
+          },
+          {
+            autor: 'Martínez Palacios, J.',
+            titulo: 'No te pongas nerviosa. Sobre cómo hacer hablar a los nervios acerca de la dominación (Cap. 1, selección)',
+            editorial: 'Upaingoa',
+            año: '2018',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 11 y 12 · Intervenciones situadas (universidad/género) y situaciones de crisis'
+          },
+          {
+            autor: 'Molloy, S.',
+            titulo: 'Sentido de ausencias (Revista Iberoamericana)',
+            editorial: 'Revista Iberoamericana',
+            año: '1985',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 11 y 12 · Intervenciones situadas (universidad/género) y situaciones de crisis'
+          },
+          {
+            autor: 'Rolón, C.',
+            titulo: 'Seminario de cátedra: Resistencias estudiantiles universitarias',
+            editorial: 'Material de Cátedra',
+            año: '2019',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 11 y 12 · Intervenciones situadas (universidad/género) y situaciones de crisis'
+          },
+          {
+            autor: 'Gorodischer, J.',
+            titulo: '«Hay que pasar de la ira al llanto». Entrevista a Alfredo Moffatt (Tragedia de Cromañón)',
+            editorial: 'Material de Cátedra',
+            año: '2005',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 11 y 12 · Intervenciones situadas (universidad/género) y situaciones de crisis'
+          },
+          {
+            autor: 'Morizot, B.',
+            titulo: 'La crisis ecológica como crisis de la sensibilidad (en Maneras de estar vivo)',
+            editorial: 'Errata Naturae',
+            año: '2021',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 11 y 12 · Intervenciones situadas (universidad/género) y situaciones de crisis'
+          },
+          {
+            autor: 'Pichon-Rivière, E.',
+            titulo: 'Situaciones catastróficas (en Psicología de la vida cotidiana)',
+            editorial: 'Nueva Visión',
+            año: '1967',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 11 y 12 · Intervenciones situadas (universidad/género) y situaciones de crisis'
+          },
+          {
+            autor: 'Waisbrot, D. y Berenstein, I.',
+            titulo: 'Clínica psicoanalítica ante las catástrofes sociales. Una experiencia argentina: Malvinas (Selección)',
+            editorial: 'Paidós',
+            año: '2003',
+            tipo: 'Obligatoria',
+            unidad: 'Temas 11 y 12 · Intervenciones situadas (universidad/género) y situaciones de crisis'
+          },
+          // Complementaria (selección de bibliografía ampliatoria oficial)
+          {
+            autor: 'Lourau, R.',
+            titulo: 'El análisis institucional (Cap. 5)',
+            editorial: 'Amorrortu',
+            año: '1975',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Huizinga, J.',
+            titulo: 'Homo Ludens',
+            editorial: 'Alianza Editorial',
+            año: '1998',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Barthes, R.',
+            titulo: 'Cómo vivir juntos. Notas de cursos y seminarios en el Collège de France (1976–1977)',
+            editorial: 'Siglo XXI',
+            año: '2005',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Rose, N.',
+            titulo: 'Políticas de la vida. Biomedicina, poder y subjetividad en el siglo XXI (Introducción)',
+            editorial: 'UNIPE',
+            año: '2012',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Ahmed, S.',
+            titulo: 'La política cultural de las emociones (Caps. 1, 2 y 3)',
+            editorial: 'UNAM',
+            año: '2015',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Berardi, F.',
+            titulo: 'Fenomenología del fin. Sensibilidad y mutación conectiva (Selección)',
+            editorial: 'Caja Negra',
+            año: '2017',
+            tipo: 'Complementaria'
+          }
         ]
       }
     ]
@@ -4872,26 +7083,1130 @@ export const PLAN_ESTUDIOS: Materia[] = [
     año: 2,
     ciclo: 'Formación General',
     cuatrimestre: 1,
-    descripcion: 'Estudio del desarrollo psicológico durante la infancia.',
+    correlativas: ['Psicoanálisis: Freud', 'Psicología del Aprendizaje'],
+    descripcion: 'Estudio de los procesos de constitución psíquica, desarrollo cognitivo, emocional, comunicacional y social desde el nacimiento hasta la pubertad, abordando la infancia como categoría sociohistórica y perspectiva de derechos.',
     objetivos: [
-      'Analizar los procesos de maduración y desarrollo infantil.',
-      'Estudiar las teorías del desarrollo cognitivo y emocional.'
+      'Apropiarse de los marcos teóricos clásicos y contemporáneos del desarrollo infantil (psicoanálisis, constructivismo genético, apego, enfoques relacionales, sociohistóricos y neurodesarrollo).',
+      'Entrenar instrumentos fundamentales de indagación psicológica mediante Trabajo de Campo: observación de un niño/a, entrevista a madres/padres, historia vital evolutiva e informe integrador.',
+      'Reflexionar críticamente sobre las infancias actuales, las nuevas configuraciones familiares, los medios digitales y el paradigma de Promoción y Protección Integral de Derechos.'
     ],
     catedras: [
       {
         nombre: 'Cátedra I (Cód. 553)',
-        titular: 'A designar',
+        titular: 'A designar (ex María Elena Pizzo)',
         link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=553&anio=2026&cuatrimestre=2',
+        enfoque:
+          'Abordaje bio-psico-social e histórico-crítico organizado en cuatro partes que articulan modelos clásicos y contemporáneos sin eclecticismo: (I) historia de la infancia, neurodesarrollo abierto al contexto (Fóster y López), pantallas y medios digitales (Haidt), familias actuales (Débora Tajer) y constitución subjetiva (Silvia Bleichmar, Winnicott); (II) profundización teórica en Psicoanálisis (Freud, Dio Bleichmar, Urribarri, Clerici y Tajer sobre género) y Constructivismo Genético junto a Teoría de la Mente (los 6 estadios sensoriomotores de Piaget, función semiótica, operaciones concretas y Ángel Rivière); (III) diacronía y sincronía por franjas etarias (Brazelton y Cramer, Bowlby, Stern, Palacios/Marchesi/Coll), dibujo infantil según Lowenfeld y evaluación psicológica del desarrollo (Escala Argentina EAIS y crítica al DSM-V de Vasen); y (IV) Derechos del Niño (Ley 26.061), maltrato y abuso sexual (Toporosi), pobreza y neurociencias (Sebastián Lipina), Derecho a la Identidad y restitución (Abuelas de Plaza de Mayo) y cine.',
+        evaluacion:
+          'Dos instancias evaluativas: 1) Trabajo de Campo (TC) en grupos de 2 estudiantes con 3 entregas progresivas a lo largo de los TP: observación no participante de un niño/a (TP 4), entrevista a madres/padres con genograma y esquema diacrónico (TP 9), e historia vital evolutiva e informe integrador escrito (TP 14), calificado con una nota cuantitativa global; 2) Un examen parcial escrito, individual y presencial dividido en 2 módulos cuyas notas se promedian en una única calificación, que luego se promedia con el TC. Promoción sin examen final: 75% de asistencia (2 teóricos y 1 práctico semanales; jornadas académicas optativas) y mínimo de 7 tanto en el TC como en el promedio de ambos módulos del parcial. Con examen final (regular): 75% de asistencia y mínimo de 4 en el TC y en el promedio de ambos módulos.',
         bibliografia: [
-          { autor: 'Piaget, J.', titulo: 'La psicología del niño', editorial: 'Morata', año: '1966', tipo: 'Obligatoria' }
+          // Parte I
+          {
+            autor: 'García, M. J.',
+            titulo: '¿Por qué Psicología Evolutiva?',
+            editorial: 'Dpto. de Publicaciones · UBA',
+            año: '1987',
+            tipo: 'Obligatoria',
+            unidad: 'Parte I · Introducción a la Psicología del desarrollo'
+          },
+          {
+            autor: 'García, M. J.',
+            titulo: '¿Qué se entiende por desarrollo?',
+            editorial: 'Dpto. de Publicaciones · UBA',
+            año: '1997',
+            tipo: 'Obligatoria',
+            unidad: 'Parte I · Introducción a la Psicología del desarrollo'
+          },
+          {
+            autor: 'Pizzo, M. E.',
+            titulo: 'El niño como objeto de estudio de los distintos modelos teóricos',
+            editorial: 'Dpto. de Publicaciones · UBA',
+            año: '2011',
+            tipo: 'Obligatoria',
+            unidad: 'Parte I · Introducción a la Psicología del desarrollo'
+          },
+          {
+            autor: 'Carli, S.',
+            titulo: 'La infancia como construcción social (en De la familia a la escuela. Infancia, socialización y subjetividad, pp. 11–38)',
+            editorial: 'Santillana',
+            año: '1999',
+            tipo: 'Obligatoria',
+            unidad: 'Parte I · Introducción a la Psicología del desarrollo'
+          },
+          {
+            autor: 'Moreno, J.',
+            titulo: 'Lo Infantil II. Historia de la Infancia y del juguete (en Ser Humano. La inconsistencia, los vínculos, la crianza, pp. 149–166)',
+            editorial: 'Letra Viva',
+            año: '2010',
+            tipo: 'Obligatoria',
+            unidad: 'Parte I · Introducción a la Psicología del desarrollo'
+          },
+          {
+            autor: 'Fóster, J. y López, I.',
+            titulo: 'Neurodesarrollo humano: un proceso de cambio continuo de un sistema abierto y sensible al contexto (Rev. Méd. Clín. Las Condes 33(4), pp. 338–346)',
+            editorial: 'Clínica Las Condes',
+            año: '2022',
+            tipo: 'Obligatoria',
+            unidad: 'Parte I · Introducción a la Psicología del desarrollo'
+          },
+          {
+            autor: 'Haidt, J.',
+            titulo: 'Introducción: Crecer en Marte (en La generación ansiosa, pp. 11–28)',
+            editorial: 'Paidós',
+            año: '2025',
+            tipo: 'Obligatoria',
+            unidad: 'Parte I · Introducción a la Psicología del desarrollo'
+          },
+          {
+            autor: 'Tajer, D.',
+            titulo: 'El modelo familiar moderno, sus alternativas actuales y los nuevos desafíos (en Psicoanálisis para todxs, pp. 49–64)',
+            editorial: 'Topía',
+            año: '2020',
+            tipo: 'Obligatoria',
+            unidad: 'Parte I · Introducción a la Psicología del desarrollo'
+          },
+          {
+            autor: 'Vasen, J.',
+            titulo: 'Escuelas del presente (en Las certezas perdidas. Padres y maestros ante los desafíos del presente, pp. 75–92)',
+            editorial: 'Paidós',
+            año: '2008',
+            tipo: 'Obligatoria',
+            unidad: 'Parte I · Introducción a la Psicología del desarrollo'
+          },
+          {
+            autor: 'Aranda, N.',
+            titulo: 'La familia y desarrollo infantil',
+            editorial: 'Ficha de Cátedra · UBA',
+            año: '2012',
+            tipo: 'Obligatoria',
+            unidad: 'Parte I · Introducción a la Psicología del desarrollo'
+          },
+          {
+            autor: 'Bleichmar, S.',
+            titulo: 'Producción de subjetividad y constitución del psiquismo (en El desmantelamiento de la subjetividad. Estallido del yo, pp. 33–49)',
+            editorial: 'Topía',
+            año: '2009',
+            tipo: 'Obligatoria',
+            unidad: 'Parte I · Introducción a la Psicología del desarrollo'
+          },
+          {
+            autor: 'Winnicott, D. W.',
+            titulo: 'La familia y la madurez emocional [1960] (en La familia y el desarrollo del individuo, pp. 117–124)',
+            editorial: 'Hormé',
+            año: '2006',
+            tipo: 'Obligatoria',
+            unidad: 'Parte I · Introducción a la Psicología del desarrollo'
+          },
+          // Parte II-1: Psicoanálisis
+          {
+            autor: 'Freud, S.',
+            titulo: 'Esquema del psicoanálisis (Parte I, Cap. III, Obras Completas Vol. XXIII, pp. 150–154)',
+            editorial: 'Amorrortu',
+            año: '2000',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'La interpretación de los sueños (Cap. VII, Pto. C: «Acerca del cumplimiento de deseo», Vol. V, pp. 543–564)',
+            editorial: 'Amorrortu',
+            año: '2000',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          {
+            autor: 'Clerici, G. y Tajer, D.',
+            titulo: 'Infancias, Psicoanálisis y Género. Conversaciones entre Débora Tajer y el equipo docente de Niñez Cátedra I',
+            editorial: 'Ficha de Cátedra · UBA',
+            año: '2024',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          {
+            autor: 'Dio Bleichmar, E.',
+            titulo: 'Introducción (en La sexualidad femenina, pp. 21–31)',
+            editorial: 'Paidós',
+            año: '1997',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'Tres ensayos de teoría sexual (Ensayo II: La sexualidad infantil, Vol. VII, pp. 157–188)',
+            editorial: 'Amorrortu',
+            año: '2000',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'El carácter y el erotismo anal (Vol. IX, pp. 149–158)',
+            editorial: 'Amorrortu',
+            año: '2000',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'Sobre las teorías sexuales infantiles (Vol. IX, pp. 183–201)',
+            editorial: 'Amorrortu',
+            año: '2000',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'Conferencias de introducción al psicoanálisis (Conferencia XXI: Desarrollo libidinal y organizaciones sexuales, Vol. XVI, pp. 292–308)',
+            editorial: 'Amorrortu',
+            año: '2000',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'La organización genital infantil (Vol. XIX, pp. 141–149)',
+            editorial: 'Amorrortu',
+            año: '2000',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'El sepultamiento del complejo de Edipo (Vol. XIX, pp. 177–187)',
+            editorial: 'Amorrortu',
+            año: '2000',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'El yo y el ello (Pto. III: El yo y el superyó / ideal del yo, Vol. XIX, pp. 30–40)',
+            editorial: 'Amorrortu',
+            año: '2000',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'Algunas consecuencias psíquicas de la diferencia anatómica entre los sexos (Vol. XIX, pp. 259–276)',
+            editorial: 'Amorrortu',
+            año: '2000',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          {
+            autor: 'Laplanche, J. y Pontalis, J.-B.',
+            titulo: 'Diccionario de Psicoanálisis',
+            editorial: 'Labor',
+            año: '1971',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          {
+            autor: 'Urribarri, R.',
+            titulo: 'Consideraciones sobre el período de latencia',
+            editorial: 'Ficha de Cátedra · UBA',
+            año: '1990',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          {
+            autor: 'Urribarri, R.',
+            titulo: 'Planteando la Latencia (en Estructuración psíquica y subjetivación del niño de escolaridad primaria, pp. 95–108)',
+            editorial: 'Noveduc',
+            año: '2008',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'El creador literario y el fantaseo (Vol. IX, pp. 123–135)',
+            editorial: 'Amorrortu',
+            año: '2000',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'Más allá del principio del placer (Cap. II, Vol. XVIII, pp. 12–17)',
+            editorial: 'Amorrortu',
+            año: '2000',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          {
+            autor: 'Winnicott, D. W.',
+            titulo: 'Objetos y fenómenos transicionales (en Realidad y juego, pp. 17–45)',
+            editorial: 'Gedisa',
+            año: '1985',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Psicoanálisis y constitución subjetiva'
+          },
+          // Parte II-2: Constructivismo Genético y desarrollo cognitivo
+          {
+            autor: 'Piaget, J.',
+            titulo: 'Estadios 1 y 2: ejercicio de los reflejos, primeras adaptaciones adquiridas y reacción circular primaria (en El nacimiento de la inteligencia en el niño, pp. 12–149)',
+            editorial: 'Grijalbo',
+            año: '1994',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Constructivismo Genético y desarrollo cognitivo'
+          },
+          {
+            autor: 'Piaget, J.',
+            titulo: 'Estadios 3 y 4: reacciones circulares secundarias y coordinación de esquemas secundarios (en El nacimiento de la inteligencia en el niño, pp. 150–251)',
+            editorial: 'Grijalbo',
+            año: '1936',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Constructivismo Genético y desarrollo cognitivo'
+          },
+          {
+            autor: 'Piaget, J.',
+            titulo: 'Estadios 5 y 6: reacción circular terciaria e invención de nuevos medios por combinación mental (en El nacimiento de la inteligencia en el niño, pp. 252–340)',
+            editorial: 'Grijalbo',
+            año: '1936',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Constructivismo Genético y desarrollo cognitivo'
+          },
+          {
+            autor: 'Vila, I.',
+            titulo: 'Los inicios de la comunicación, la representación y el lenguaje (en Palacios, Marchesi y Coll, Desarrollo Psicológico y Educación, Tomo 1, pp. 133–150)',
+            editorial: 'Alianza',
+            año: '1999',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Constructivismo Genético y desarrollo cognitivo'
+          },
+          {
+            autor: 'Piaget, J.',
+            titulo: 'La función semiótica o simbólica (en Psicología del niño, pp. 59–95)',
+            editorial: 'Morata',
+            año: '1971',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Constructivismo Genético y desarrollo cognitivo'
+          },
+          {
+            autor: 'Rivière, A.',
+            titulo: 'Investigaciones empíricas sobre las destrezas mentalistas (en A. Rivière y M. Núñez, La mirada mental, pp. 17–40)',
+            editorial: 'Aique',
+            año: '2008',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Constructivismo Genético y desarrollo cognitivo'
+          },
+          {
+            autor: 'Piaget, J.',
+            titulo: 'El paso de los esquemas sensorio-motores a los conceptuales y De las categorías prácticas a las representativas (en La formación del símbolo en el niño, pp. 297–370)',
+            editorial: 'Fondo de Cultura Económica',
+            año: '1961',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Constructivismo Genético y desarrollo cognitivo'
+          },
+          {
+            autor: 'Piaget, J.',
+            titulo: 'La elaboración del pensamiento. Intuición y operaciones (en Psicología de la inteligencia, pp. 130–165)',
+            editorial: 'Psique',
+            año: '1966',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Constructivismo Genético y desarrollo cognitivo'
+          },
+          {
+            autor: 'Piaget, J.',
+            titulo: 'Las operaciones concretas del pensamiento y las relaciones interindividuales (en Psicología del niño, pp. 96–130)',
+            editorial: 'Morata',
+            año: '1971',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Constructivismo Genético y desarrollo cognitivo'
+          },
+          {
+            autor: 'Piaget, J.',
+            titulo: 'La clasificación de los juegos y La explicación del juego (en La formación del símbolo en el niño, pp. 146–231)',
+            editorial: 'Fondo de Cultura Económica',
+            año: '1961',
+            tipo: 'Obligatoria',
+            unidad: 'Parte II · Modelos teóricos: Constructivismo Genético y desarrollo cognitivo'
+          },
+          // Parte III
+          {
+            autor: 'Brazelton, T. B. y Cramer, B. G.',
+            titulo: 'La prehistoria del vínculo y Los albores del vínculo (en La relación más temprana: padres, bebés y el drama del apego inicial, pp. 25–62)',
+            editorial: 'Paidós',
+            año: '1993',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Biotti, M. F. y Panighetti, M. L.',
+            titulo: 'Algunas problemáticas básicas de la Psicología del desarrollo. Características del período neonatal',
+            editorial: 'Ficha de Cátedra · UBA',
+            año: '2007',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Bowlby, J.',
+            titulo: 'El cuidado de los niños y El papel del apego en el desarrollo de la personalidad (en Una base segura, pp. 13–32 y 140–158)',
+            editorial: 'Paidós',
+            año: '1988',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'De Mathía, M.',
+            titulo: 'Características específicas del desarrollo infantil en la primera infancia',
+            editorial: 'Ficha de Cátedra · UBA',
+            año: '2018',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Stern, D.',
+            titulo: 'El repertorio materno (en La primera relación madre-hijo, pp. 23–58)',
+            editorial: 'Morata',
+            año: '1998',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Aranda, N.',
+            titulo: 'Segundo y tercer año de vida: etapa del deambulador',
+            editorial: 'Ficha de Cátedra · UBA',
+            año: '2006',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Moreno, M.',
+            titulo: 'Desarrollo y conducta social de los 2 a los 6 años (en Palacios, Marchesi y Coll, Desarrollo Psicológico y Educación, Tomo 1, pp. 305–326)',
+            editorial: 'Alianza',
+            año: '1999',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Palacios, J., Cubero, R., Luque, A. y Mora, J.',
+            titulo: 'Desarrollo físico y psicomotor después de los 2 años (en Desarrollo Psicológico y Educación, Tomo 1, pp. 179–200)',
+            editorial: 'Alianza',
+            año: '1999',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Gómez, L., Bruno, K. y Bollasina, V.',
+            titulo: 'Una aproximación al desarrollo entre los 3 y los 5 años',
+            editorial: 'Ficha de Cátedra · UBA',
+            año: '2023',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Cáceres, M.',
+            titulo: 'Los años escolares y «Los venenos» de Julio Cortázar',
+            editorial: 'Ficha de Cátedra · UBA',
+            año: '2018',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'UNICEF / Gobierno de la Prov. de Buenos Aires',
+            titulo: 'Guía de sensibilización sobre convivencia digital',
+            editorial: 'UNICEF',
+            año: '2020',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Pizzo, M. E.',
+            titulo: 'El desarrollo de los niños en edad escolar',
+            editorial: 'Ficha de Cátedra · UBA',
+            año: '2006',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Lowenfeld, V.',
+            titulo: 'Etapas del dibujo infantil: garabateo (2–4), pre-esquemática (4–7), esquemática (7–9) y comienzo del realismo (en El desarrollo de la capacidad creadora, pp. 119–241)',
+            editorial: 'Kapelusz',
+            año: '1973',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Krauth, K.',
+            titulo: 'El juego en la evaluación del desarrollo',
+            editorial: 'Ficha de Cátedra · UBA',
+            año: '2012',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Oiberman, A., Paolini, C. y Mansilla, M.',
+            titulo: 'Escala Argentina de Inteligencia Sensorio-motriz (EAIS): Percentiles Nacionales (Interdisciplinaria 29(2), pp. 305–323)',
+            editorial: 'Interdisciplinaria',
+            año: '2012',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Oiberman, A., Paolini, C. y Mansilla, M.',
+            titulo: 'Manual técnico de Administración de la EAIS de 6 meses a 2 años (en Cómo piensan los bebés en el siglo XXI, pp. 65–106)',
+            editorial: 'Lugar Editorial',
+            año: '2020',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Vasen, J.',
+            titulo: 'La biblia y el calefón (en Una nueva epidemia de nombres impropios. El DSM-V invade la infancia en la clínica y en las aulas, pp. 19–26)',
+            editorial: 'Noveduc',
+            año: '2011',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Aberastury, A.',
+            titulo: 'La entrevista inicial con los padres (en Teoría y técnica del psicoanálisis de niños, pp. 75–91)',
+            editorial: 'Paidós',
+            año: '1981',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'García, M. J.',
+            titulo: 'La historia vital evolutiva (notas introductorias)',
+            editorial: 'Ficha de Cátedra · UBA',
+            año: '1989',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'García, M. J., Pizzo, M. E. y Aranda, N.',
+            titulo: 'Orientaciones para la realización de la observación en niños',
+            editorial: 'Ficha de Cátedra · UBA',
+            año: '2004',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Herrero, C. y Rivas, M. S.',
+            titulo: 'Lineamientos para la realización de la entrevista a padres',
+            editorial: 'Ficha de Cátedra · UBA',
+            año: '2006',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Landeira, S.',
+            titulo: 'La utilización del genograma y el esquema diacrónico en la organización de los datos recogidos en la entrevista a padres',
+            editorial: 'Ficha de Cátedra · UBA',
+            año: '2006',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          {
+            autor: 'Rinaldi, G., De Mathía, M., Panzera, G., Gómez, L. y Bruno, K.',
+            titulo: 'Algunas consideraciones para la elaboración del Informe',
+            editorial: 'Ficha de Cátedra · UBA',
+            año: '2025',
+            tipo: 'Obligatoria',
+            unidad: 'Parte III · Diacronía y sincronía, dibujo, evaluación y Trabajo de Campo'
+          },
+          // Parte IV
+          {
+            autor: 'Clerici, G.',
+            titulo: 'Niños, niñas y adolescentes como sujetos de derechos. Intervenciones en el marco del sistema de protección integral. Las medidas de abrigo',
+            editorial: 'Ficha de Cátedra · UBA',
+            año: '2018',
+            tipo: 'Obligatoria',
+            unidad: 'Parte IV · Perspectiva de derechos y problemáticas complejas de la niñez'
+          },
+          {
+            autor: 'Congreso de la Nación Argentina',
+            titulo: 'Ley Nacional N° 26.061 de Protección Integral de los Derechos de Niñas, Niños y Adolescentes',
+            editorial: 'Legislación Nacional',
+            año: '2005',
+            tipo: 'Obligatoria',
+            unidad: 'Parte IV · Perspectiva de derechos y problemáticas complejas de la niñez'
+          },
+          {
+            autor: 'ONU · Asamblea General',
+            titulo: 'Convención sobre los Derechos del Niño',
+            editorial: 'Naciones Unidas',
+            año: '1989',
+            tipo: 'Obligatoria',
+            unidad: 'Parte IV · Perspectiva de derechos y problemáticas complejas de la niñez'
+          },
+          {
+            autor: 'Aranda, N.',
+            titulo: 'Maltrato infantil: introducción a la problemática del maltrato hacia los niños',
+            editorial: 'Ficha de Cátedra · UBA',
+            año: '2010',
+            tipo: 'Obligatoria',
+            unidad: 'Parte IV · Perspectiva de derechos y problemáticas complejas de la niñez'
+          },
+          {
+            autor: 'Toporosi, S.',
+            titulo: '¿Qué es el abuso sexual? (en En carne viva. Abuso sexual infantojuvenil, pp. 23–53)',
+            editorial: 'Topía',
+            año: '2018',
+            tipo: 'Obligatoria',
+            unidad: 'Parte IV · Perspectiva de derechos y problemáticas complejas de la niñez'
+          },
+          {
+            autor: 'Duschatzky, S. y Corea, C.',
+            titulo: 'Chicos en banda. Los caminos de la subjetividad en el declive de las instituciones',
+            editorial: 'Paidós',
+            año: '2001',
+            tipo: 'Obligatoria',
+            unidad: 'Parte IV · Perspectiva de derechos y problemáticas complejas de la niñez'
+          },
+          {
+            autor: 'Rajnerman, G. y Santos, G.',
+            titulo: 'Adolescencias intervenidas: una perspectiva en situaciones de vulnerabilidad social (Intersecciones PSI N° 44)',
+            editorial: 'Facultad de Psicología · UBA',
+            año: '2022',
+            tipo: 'Obligatoria',
+            unidad: 'Parte IV · Perspectiva de derechos y problemáticas complejas de la niñez'
+          },
+          {
+            autor: 'Lipina, S.',
+            titulo: 'Pobreza: conceptos y medición y Aportes de la neurociencia al estudio de los efectos de la pobreza sobre el desarrollo infantil (en Vulnerabilidad social y desarrollo cognitivo)',
+            editorial: 'Jorge Baudino / UNSAM',
+            año: '2008',
+            tipo: 'Obligatoria',
+            unidad: 'Parte IV · Perspectiva de derechos y problemáticas complejas de la niñez'
+          },
+          {
+            autor: 'Vinocur, P. y Ruiz, V.',
+            titulo: 'Inclusión social y desarrollo infantil. La centralidad de la familia (en H. Lejarraga, ed., Desarrollo del niño en contexto, pp. 611–644)',
+            editorial: 'Paidós',
+            año: '2004',
+            tipo: 'Obligatoria',
+            unidad: 'Parte IV · Perspectiva de derechos y problemáticas complejas de la niñez'
+          },
+          {
+            autor: 'Bleichmar, S.',
+            titulo: 'El traumatismo en la Apropiación-Restitución (en Abuelas de Plaza de Mayo, Restitución de niños, pp. 313–319)',
+            editorial: 'Eudeba',
+            año: '1997',
+            tipo: 'Obligatoria',
+            unidad: 'Parte IV · Perspectiva de derechos y problemáticas complejas de la niñez'
+          },
+          {
+            autor: 'Conte, L.',
+            titulo: 'El derecho a la identidad (en Abuelas de Plaza de Mayo, Restitución de niños, pp. 229–234)',
+            editorial: 'Eudeba',
+            año: '1997',
+            tipo: 'Obligatoria',
+            unidad: 'Parte IV · Perspectiva de derechos y problemáticas complejas de la niñez'
+          },
+          {
+            autor: 'Rosenberg, M.',
+            titulo: 'Apuntes sobre identidad, filiación y restitución (en Abuelas de Plaza de Mayo, Restitución de niños, pp. 289–295)',
+            editorial: 'Eudeba',
+            año: '1997',
+            tipo: 'Obligatoria',
+            unidad: 'Parte IV · Perspectiva de derechos y problemáticas complejas de la niñez'
+          },
+          // Complementaria (selección de bibliografía ampliatoria oficial)
+          {
+            autor: 'Erikson, E. H.',
+            titulo: 'Ocho edades del hombre (en Infancia y sociedad, pp. 222–247)',
+            editorial: 'Hormé',
+            año: '1974',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Mahler, M., Pine, F. y Bergman, A.',
+            titulo: 'Sobre la simbiosis humana y las subfases del proceso de separación-individuación (en El nacimiento psicológico del infante humano)',
+            editorial: 'Marymar',
+            año: '1977',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Bronfenbrenner, U.',
+            titulo: 'Conceptos básicos (en La ecología del desarrollo humano, pp. 35–61)',
+            editorial: 'Paidós',
+            año: '1987',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Vygotsky, L. S.',
+            titulo: 'El desarrollo de los procesos psicológicos superiores',
+            editorial: 'Crítica Grijalbo',
+            año: '1988',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Byung-Chul Han',
+            titulo: 'De la cosa a la no-cosa y Smartphone (en No-cosas. Quiebres del mundo de hoy)',
+            editorial: 'Taurus',
+            año: '2022',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Gago Galvagno, L., Azzollini, S. y Elgier, A. M.',
+            titulo: 'Asociaciones entre la exposición a medios electrónicos y comunicación durante la infancia temprana (Pensando Psicología 18(1))',
+            editorial: 'Pensando Psicología',
+            año: '2022',
+            tipo: 'Complementaria'
+          }
         ]
       },
       {
         nombre: 'Cátedra II (Cód. 554)',
-        titular: 'Eugenia Sorgen',
+        titular: 'A designar (ex Paolicchi / Sorgen)',
         link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=554&anio=2026&cuatrimestre=2',
+        enfoque:
+          'Perspectiva compleja, crítica y bio-psico-social organizada diacrónicamente en cinco módulos por franjas etarias (aproximación histórico-crítica, 0 a 2 años, 2 a 6 años, 6 a 12 años e infancias en la actualidad), otorgando predominancia teórica al Psicoanálisis (Freud, Donald Winnicott, René Spitz, Emilce Dio Bleichmar, Silvia Bleichmar, Julio Moreno, María Cristina Rojas, Yago Franco) en articulación con la teoría del apego (John Bowlby), la interacción temprana (Brazelton y Cramer, Daniel Stern), la Psicología Genética (Jean Piaget), el enfoque sociohistórico (Vygotsky), el dibujo infantil según Osterrieth y las investigaciones de la cátedra sobre parentalidad, intersubjetividad, juego y vulnerabilidad social (Paolicchi, Bozzalla, Sorgen, Naiman). Revisa críticamente el criterio evolutivo lineal e integra la diversidad familiar, de género y la perspectiva de derechos.',
+        evaluacion:
+          'Dos instancias evaluativas parciales: 1) Trabajo de Campo en grupos de 3 estudiantes (observación de un niño/a, entrevista a madres/padres, historia vital evolutiva e informe integrador con inferencias teóricas), con una primera evaluación en el TP 7, entrega final escrita y exposición grupal de 10 minutos + autoevaluación en el TP 14; 2) Un examen parcial escrito, presencial e individual dividido en 2 módulos (1° módulo en TP 7). Promoción sin examen final: 75% de asistencia (teóricos, prácticos y Actividades Especiales obligatorias dentro del horario de teóricos), mínimo de 7 en el Parcial y en el Trabajo de Campo (sin posibilidad de recuperar ninguno de los módulos del parcial para mantener la promoción), y presentación de un comentario escrito sobre al menos una Actividad Especial. Con examen final (regular): 75% de asistencia y mínimo de 4 en cada evaluación (examen final oral individual).',
         bibliografia: [
-          { autor: 'Winnicott, D.', titulo: 'El niño y el mundo externo', editorial: 'Paidós', año: '1957', tipo: 'Obligatoria' }
+          // Módulo 1
+          {
+            autor: 'Bleichmar, S.',
+            titulo: 'Límites y excesos del concepto de subjetividad en psicoanálisis (en La subjetividad en riesgo, Cap. XI)',
+            editorial: 'Topía',
+            año: '2007',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 1 · Aproximación histórico-crítica a la Psicología del desarrollo'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'El malestar en la cultura (Cap. 1, Obras Completas Vol. XXI)',
+            editorial: 'Amorrortu',
+            año: '1930',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 1 · Aproximación histórico-crítica a la Psicología del desarrollo'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'Esquema del psicoanálisis (Parte I, Cap. III: «El desarrollo de la función sexual», Vol. XXIII)',
+            editorial: 'Amorrortu',
+            año: '1940',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 1 · Aproximación histórico-crítica a la Psicología del desarrollo'
+          },
+          {
+            autor: 'Moreno, J.',
+            titulo: 'La impronta mediática en el discurso infantil (en La infancia y sus bordes. Un desafío para el psicoanálisis, Cap. 8)',
+            editorial: 'Paidós',
+            año: '2014',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 1 · Aproximación histórico-crítica a la Psicología del desarrollo'
+          },
+          {
+            autor: 'Palacios, J.',
+            titulo: 'Psicología evolutiva: concepto, enfoques, controversias y métodos (en Palacios, Marchesi y Coll, Desarrollo Psicológico y Educación, Tomo I, Cap. 1)',
+            editorial: 'Alianza',
+            año: '1998',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 1 · Aproximación histórico-crítica a la Psicología del desarrollo'
+          },
+          {
+            autor: 'Piaget, J. e Inhelder, B.',
+            titulo: 'Psicología del niño (Introducción y Conclusiones)',
+            editorial: 'Morata',
+            año: '1981',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 1 · Aproximación histórico-crítica a la Psicología del desarrollo'
+          },
+          // Módulo 2
+          {
+            autor: 'Aberastury, A.',
+            titulo: 'La entrevista inicial con los padres (en Teoría y técnica del psicoanálisis de niños, Cap. V — TP Mód. 2)',
+            editorial: 'Paidós',
+            año: '1988',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 2 · Los dos primeros años de vida'
+          },
+          {
+            autor: 'Bleichmar, S.',
+            titulo: 'Primeras inscripciones, primeras ligazones (en La fundación de lo inconsciente, Cap. 1, pp. 31–38)',
+            editorial: 'Amorrortu',
+            año: '2012',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 2 · Los dos primeros años de vida'
+          },
+          {
+            autor: 'Bowlby, J.',
+            titulo: 'La conducta de apego, comienzos y pautas de apego (en El apego, Caps. 13, 14 y 16)',
+            editorial: 'Paidós',
+            año: '1989',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 2 · Los dos primeros años de vida'
+          },
+          {
+            autor: 'Bozzalla, L. y Naiman, F.',
+            titulo: 'Acerca del recién nacido: desarrollo y subjetividad',
+            editorial: 'Dpto. de Publicaciones · UBA',
+            año: '2003',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 2 · Los dos primeros años de vida'
+          },
+          {
+            autor: 'Brazelton, T. B. y Cramer, B. G.',
+            titulo: 'Interacción en contexto y Observación de la interacción temprana (en La relación más temprana, Caps. 11, 13 y 14)',
+            editorial: 'Paidós',
+            año: '1993',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 2 · Los dos primeros años de vida'
+          },
+          {
+            autor: 'Dio Bleichmar, E.',
+            titulo: 'Prefacio e Introducción (en Manual de psicoterapia de la relación padres e hijos, pp. 15–27)',
+            editorial: 'Paidós',
+            año: '2007',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 2 · Los dos primeros años de vida'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'Tres ensayos de teoría sexual (2° ensayo: La sexualidad infantil, Vol. VII)',
+            editorial: 'Amorrortu',
+            año: '1905',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 2 · Los dos primeros años de vida'
+          },
+          {
+            autor: 'Moreno, J.',
+            titulo: 'Cambios actuales en la familia y su impacto en la infancia y el psicoanálisis (en La infancia y sus bordes, Cap. 4)',
+            editorial: 'Paidós',
+            año: '2014',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 2 · Los dos primeros años de vida'
+          },
+          {
+            autor: 'Palacios, J. y Mora, J. / Vila, I.',
+            titulo: 'Crecimiento físico y desarrollo psicomotor hasta los 2 años y Los inicios de la comunicación, la representación y el lenguaje (en Desarrollo Psicológico y Educación, Tomo I, Caps. 2 y 4)',
+            editorial: 'Alianza',
+            año: '1998',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 2 · Los dos primeros años de vida'
+          },
+          {
+            autor: 'Paolicchi, G., Bozzalla, L., Sorgen, E., Bosoer, E., Núñez, A., Maffezzoli, M. y Botana, H.',
+            titulo: 'Parentalidad y constitución subjetiva (Revista Investigaciones en Psicología, pp. 57–65)',
+            editorial: 'Facultad de Psicología · UBA',
+            año: '2017',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 2 · Los dos primeros años de vida'
+          },
+          {
+            autor: 'Piaget, J. e Inhelder, B.',
+            titulo: 'Psicología del niño (Cap. 1: El nivel sensomotor)',
+            editorial: 'Morata',
+            año: '1981',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 2 · Los dos primeros años de vida'
+          },
+          {
+            autor: 'Piaget, J.',
+            titulo: 'Psicología de la inteligencia (Cap. IV)',
+            editorial: 'Psique',
+            año: '1981',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 2 · Los dos primeros años de vida'
+          },
+          {
+            autor: 'Rojas, M. C.',
+            titulo: 'Modelizaciones en psicoanálisis familiar: aproximación teórico-clínica a la familia de hoy (Rev. AAPPG Tomo XXIII, N° 2)',
+            editorial: 'AAPPG / Publicar',
+            año: '2000',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 2 · Los dos primeros años de vida'
+          },
+          {
+            autor: 'Spitz, R.',
+            titulo: 'El primer año de vida (Caps. 3, 4, 6: angustia de los ocho meses, 8 y 9: comunicación semántica)',
+            editorial: 'Aguilar',
+            año: '1972',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 2 · Los dos primeros años de vida'
+          },
+          {
+            autor: 'Winnicott, D. W.',
+            titulo: 'La relación inicial de una madre con su bebé (en La familia y el desarrollo del individuo, Cap. 2)',
+            editorial: 'Hormé',
+            año: '1980',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 2 · Los dos primeros años de vida'
+          },
+          {
+            autor: 'Winnicott, D. W.',
+            titulo: 'Realidad y juego (Cap. 1)',
+            editorial: 'Gedisa',
+            año: '1986',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 2 · Los dos primeros años de vida'
+          },
+          // Módulo 3
+          {
+            autor: 'Franco, Y.',
+            titulo: 'Sexualidad, sexuación, Edipo: alteraciones en la teoría y en la clínica',
+            editorial: 'Colegio de Psicoanalistas',
+            año: '2014',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'El creador literario y el fantaseo (Vol. IX)',
+            editorial: 'Amorrortu',
+            año: '1907',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'Sobre las transposiciones de la pulsión, en particular del erotismo anal (Vol. XVII)',
+            editorial: 'Amorrortu',
+            año: '1917',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'Más allá del principio del placer (Cap. 2, Vol. XVIII)',
+            editorial: 'Amorrortu',
+            año: '1920',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'La organización genital infantil (Vol. XIX)',
+            editorial: 'Amorrortu',
+            año: '1923',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'El yo y el ello (Parte III: El yo y el superyó, Vol. XIX)',
+            editorial: 'Amorrortu',
+            año: '1923',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'El sepultamiento del complejo de Edipo (Vol. XIX)',
+            editorial: 'Amorrortu',
+            año: '1924',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          {
+            autor: 'Freud, S.',
+            titulo: 'Nuevas conferencias de introducción al psicoanálisis (32ª conferencia: Angustia y vida pulsional, Vol. XXII, pp. 81–87)',
+            editorial: 'Amorrortu',
+            año: '1933',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          {
+            autor: 'Osterrieth, P. A.',
+            titulo: 'El dibujo en el niño (en H. Gratiot-Alphandéry y R. Zazzo, Tratado de psicología del niño, Tomo VI, Cap. 1)',
+            editorial: 'Morata',
+            año: '1974',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          {
+            autor: 'Palacios, J., Cubero, R., Luque, A., Mora, J., Pérez Pereira, M. y Moreno, M. C.',
+            titulo: 'Desarrollo físico/motor, lenguaje y conducta social de los 2 a los 6 años (en Desarrollo Psicológico y Educación, Tomo I, Caps. 6, 8 y 11)',
+            editorial: 'Alianza',
+            año: '2011',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          {
+            autor: 'Paolicchi, G., Bozzalla, L., Colombres, R., Garau, A., Botana, H., Cohan Cortada, A. y Maffezzoli, M.',
+            titulo: 'La intersubjetividad como antecedente de la constitución de la simbolización y el juego. Intervenciones en contextos de vulnerabilidad (Rev. Investigaciones en Psicología, pp. 59–72)',
+            editorial: 'Facultad de Psicología · UBA',
+            año: '2011',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          {
+            autor: 'Paolicchi, G., Kohan Cortada, A., Núñez, A. M., Sorgen, E., Colombres, R., Maffezzoli, M. y Abreu, L.',
+            titulo: 'Constitución subjetiva en un ambiente confiable: juego y apego (Anuario de Investigaciones Vol. XXII, Tomo II, pp. 313–321)',
+            editorial: 'Facultad de Psicología · UBA',
+            año: '2015',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          {
+            autor: 'Paolicchi, G.',
+            titulo: 'La función del juego. Desde sus orígenes hasta la aparición de la representación (en J. J. Calzetta, comp., Subjetividad y Aparato Psíquico)',
+            editorial: 'Eudeba',
+            año: '2016',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          {
+            autor: 'Piaget, J. e Inhelder, B.',
+            titulo: 'Psicología del niño (Cap. 3: La función semiótica o simbólica)',
+            editorial: 'Morata',
+            año: '1981',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          {
+            autor: 'Piaget, J.',
+            titulo: 'Psicología de la inteligencia (Cap. V)',
+            editorial: 'Psique',
+            año: '1981',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          {
+            autor: 'Piaget, J.',
+            titulo: 'La formación del símbolo en el niño (Cap. 8)',
+            editorial: 'Fondo de Cultura Económica',
+            año: '1990',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          {
+            autor: 'Winnicott, D. W.',
+            titulo: 'El niño y el mundo externo (Parte 3, Cap. 4)',
+            editorial: 'Hormé',
+            año: '1980',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          {
+            autor: 'Winnicott, D. W.',
+            titulo: 'Realidad y juego (Caps. 3 y 4)',
+            editorial: 'Gedisa',
+            año: '1986',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 3 · De los 2 a los 6 años: estructuración psíquica, lenguaje, juego y dibujo'
+          },
+          // Módulo 4
+          {
+            autor: 'Bozzalla, L. y Naiman, F.',
+            titulo: 'El período de latencia: metapsicología, transformaciones y marcas epocales (en J. J. Calzetta, comp., Subjetividad y Aparato Psíquico, Cap. 4)',
+            editorial: 'Eudeba',
+            año: '2016',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 4 · De los 6 a los 12 años: escolaridad, latencia y operaciones concretas'
+          },
+          {
+            autor: 'Laplanche, J. y Pontalis, J.-B.',
+            titulo: 'Diccionario de Psicoanálisis (Notas sobre Período de Latencia y Sublimación)',
+            editorial: 'Labor',
+            año: '1971',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 4 · De los 6 a los 12 años: escolaridad, latencia y operaciones concretas'
+          },
+          {
+            autor: 'Palacios, J., González, M. y Padilla, M. L.',
+            titulo: 'Conocimiento social y desarrollo de normas y valores entre los 6 años y la adolescencia (en Desarrollo Psicológico y Educación, Tomo I, Cap. 14)',
+            editorial: 'Alianza',
+            año: '2011',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 4 · De los 6 a los 12 años: escolaridad, latencia y operaciones concretas'
+          },
+          {
+            autor: 'Piaget, J. e Inhelder, B.',
+            titulo: 'Psicología del niño (Cap. 4: Las operaciones concretas)',
+            editorial: 'Morata',
+            año: '1981',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 4 · De los 6 a los 12 años: escolaridad, latencia y operaciones concretas'
+          },
+          {
+            autor: 'Piaget, J.',
+            titulo: 'Psicología de la inteligencia (Cap. V)',
+            editorial: 'Psique',
+            año: '1977',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 4 · De los 6 a los 12 años: escolaridad, latencia y operaciones concretas'
+          },
+          // Módulo 5
+          {
+            autor: 'Bleichmar, S.',
+            titulo: 'Nuevas tecnologías, ¿nuevos modos de la subjetividad? (en La subjetividad en riesgo, Cap. X)',
+            editorial: 'Topía',
+            año: '2005',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 5 · Infancia/s en la actualidad'
+          },
+          {
+            autor: 'Duschatzky, S. y Corea, C.',
+            titulo: 'Las instituciones en la pendiente (en Chicos en banda, Cap. 4)',
+            editorial: 'Paidós',
+            año: '2009',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 5 · Infancia/s en la actualidad'
+          },
+          {
+            autor: 'Leoz, G.',
+            titulo: 'La función subjetivante del jugar: pantallas que muestran lo que se quiere ocultar (V Congreso Internacional de Investigación · UBA, pp. 52–56)',
+            editorial: 'Facultad de Psicología · UBA',
+            año: '2013',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 5 · Infancia/s en la actualidad'
+          },
+          {
+            autor: 'Paolicchi, G., Bozzalla, L., Maffezzoli, M. L., Colombres, R., Abreu, L., Botana, H. y Sorgen, E.',
+            titulo: 'Concepto de vulnerabilidad: entre la fragilidad social y el desamparo psíquico (Rev. Investigaciones en Psicología, pp. 103–110)',
+            editorial: 'Facultad de Psicología · UBA',
+            año: '2013',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 5 · Infancia/s en la actualidad'
+          },
+          {
+            autor: 'Vidal, I., Delucca, N., Martínez, A., González Oddera, M., Bravetti, G. y Canal, M.',
+            titulo: 'Investigación y conceptualizaciones sobre las complejidades vinculares actuales (en Diagnóstico o estigma. Encrucijadas éticas, pp. 506–508)',
+            editorial: 'AASM',
+            año: '2012',
+            tipo: 'Obligatoria',
+            unidad: 'Módulo 5 · Infancia/s en la actualidad'
+          },
+          // Complementaria (selección de bibliografía adicional oficial)
+          {
+            autor: 'DeMause, Ll.',
+            titulo: 'Historia de la infancia (Cap. 1)',
+            editorial: 'Alianza',
+            año: '1974',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Ariès, P.',
+            titulo: 'El descubrimiento de la infancia (en El niño y la vida familiar en el antiguo régimen, Cap. 2)',
+            editorial: 'Taurus',
+            año: '1987',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Larrosa, J.',
+            titulo: 'El enigma de la infancia (en Pedagogía Profana. Estudios sobre lenguaje, subjetividad, formación, Cap. 8)',
+            editorial: 'Novedades Educativas',
+            año: '2000',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Stern, D.',
+            titulo: 'Explorando la experiencia subjetiva del infante (en El mundo interpersonal del infante, Cap. 1)',
+            editorial: 'Paidós',
+            año: '2000',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Giberti, E.',
+            titulo: 'Vulnerabilidad y desvalimiento (en Vulnerabilidad, desvalimiento y maltrato infantil en las organizaciones familiares, Cap. 1)',
+            editorial: 'Noveduc',
+            año: '2005',
+            tipo: 'Complementaria'
+          },
+          {
+            autor: 'Roudinesco, E.',
+            titulo: 'La familia venidera (en La familia en desorden, Cap. 8)',
+            editorial: 'Fondo de Cultura Económica',
+            año: '2010',
+            tipo: 'Complementaria'
+          }
         ]
       }
     ]
@@ -4902,26 +8217,226 @@ export const PLAN_ESTUDIOS: Materia[] = [
     año: 2,
     ciclo: 'Formación General',
     cuatrimestre: 2,
-    descripcion: 'Análisis de los cambios psicológicos y sociales durante la adolescencia.',
+    correlativas: ['Psicología del Desarrollo: Niñez', 'Psicoanálisis: Freud'],
+    descripcion: 'Estudio de las transformaciones puberales y los trabajos psíquicos de las adolescencias y juventudes —cuerpo, narcisismo, sexuación, duelos, historización, grupalidades y problemáticas epocales— en articulación con la familia, la escuela, la cultura y los derechos.',
     objetivos: [
-      'Comprender la crisis de la adolescencia.',
-      'Analizar la construcción de la identidad en el adolescente.'
+      'Interrogar los conceptos de pubertad, adolescencias y juventud desde una perspectiva biopsicosocial, histórica y psicoanalítica.',
+      'Analizar los trabajos psíquicos específicos de la adolescencia: integración psicosomática, reorganización narcisista, sexuación, duelos e historización.',
+      'Articular los procesos adolescentes con las funciones parentales, la transmisión entre generaciones, los grupos de pares y las instituciones.',
+      'Diferenciar salud y psicopatología en problemáticas contemporáneas (TICs, redes sociales, apuestas online, consumos, violencias y derechos).'
     ],
     catedras: [
       {
         nombre: 'Cátedra I (Cód. 555)',
-        titular: 'A designar',
+        titular: 'A designar (ex Diego Moreira)',
         link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=555&anio=2026&cuatrimestre=2',
+        enfoque: 'Perspectiva biopsicosocial con eje central en el psicoanálisis freudiano y lacaniano (articulado con los desarrollos de Diego Moreira, Glenda Cryan y equipo) junto a aportes de las neurociencias y el discurso epocal. Parte de la irrupción biológica neuroendocrina de la pubertad hacia el trabajo psíquico de simbolización: temporalidad lógica (après-coup, protón pseudos histérica —caso Emma—, tiempo lógico de Lacan), paradigma indiciario y abducción de Peirce, metamorfosis de la pubertad, narcisismo y estadio del espejo, Edipo/falo/castración, duelo y escisión del yo, sinthome y novelas adolescentes, familia/discurso capitalista, identidad de género (Vega, Gimenez), impacto de TICs y redes sociales (Belcaguy, Cryan y Pena) y toxicomanías (Pousa). Trabaja en TP con análisis de películas y series (Yo, adolescente, Coda, Lady Bird, Atrapados, Atypical, Black Mirror) y noticias actuales.',
+        evaluacion: '2 parciales obligatorios: 1° Parcial individual, escrito y presencial en horario de TP (TP 7; evalúa teóricos y prácticos); 2° Parcial domiciliario e integrador (entrega TP 12) basado en el análisis de una película o serie asignada (introducción, desarrollo grupal y conclusiones individuales) con defensa en coloquio grupal (TP 13 y 14). Promoción sin final: 75% asistencia en teóricos y prácticos + 7 o más en ambos parciales (el aplazo en cualquiera de los dos hace perder la promoción). Regular con final: 75% asistencia + 4 a 6 en uno o ambos parciales. Recuperatorio: solo se puede recuperar UNO de los dos parciales (TP 15; por ausencia justificada en el 1°, en el TP siguiente). Jornada de asistencia optativa un sábado a la mañana (2° cuatrimestre).',
         bibliografia: [
-          { autor: 'Aberastury, A.', titulo: 'La adolescencia normal', editorial: 'Paidós', año: '1971', tipo: 'Obligatoria' }
+          // Unidad I: Paradigma y Lenguaje
+          { autor: 'Cryan, G., Gimenez, A. C., Sánchez, M. y Roitman, D.', titulo: 'Nuevas lógicas en los trabajos psíquicos de las adolescencias', editorial: 'Memorias XVI Congreso UBA (3, pp. 9–12)', año: '2024', tipo: 'Obligatoria', unidad: 'Unidad I · Paradigma y Lenguaje' },
+          { autor: 'Freud, S.', titulo: 'Proyecto de una psicología para neurólogos (Vol. I, pp. 400–403)', editorial: 'Amorrortu', año: '1895', tipo: 'Obligatoria', unidad: 'Unidad I · Paradigma y Lenguaje' },
+          { autor: 'Freud, S.', titulo: 'Cartas a Wilhelm Fließ (1887–1904) — Carta 112 (pp. 218–221)', editorial: 'Amorrortu', año: '1994', tipo: 'Obligatoria', unidad: 'Unidad I · Paradigma y Lenguaje' },
+          { autor: 'Freud, S.', titulo: 'El Moisés de Miguel Ángel (Vol. XIII, pp. 205–222)', editorial: 'Amorrortu', año: '1914', tipo: 'Obligatoria', unidad: 'Unidad I · Paradigma y Lenguaje' },
+          { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 7: La ética del psicoanálisis (1959–1960)', editorial: 'Paidós', año: '1960', tipo: 'Obligatoria', unidad: 'Unidad I · Paradigma y Lenguaje' },
+          { autor: 'Lacan, J.', titulo: 'El tiempo lógico y el aserto de certidumbre anticipada (en Escritos 1)', editorial: 'Siglo XXI', año: '1966', tipo: 'Obligatoria', unidad: 'Unidad I · Paradigma y Lenguaje' },
+          { autor: 'Moreira, D.', titulo: 'La niñez, la adolescencia y el discurso capitalista: El paradigma indiciario y la abducción de Peirce', editorial: 'Letra Viva', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad I · Paradigma y Lenguaje' },
+          { autor: 'Moreira, D.', titulo: 'La niñez, la adolescencia y el discurso capitalista: El argentino de la lengua', editorial: 'Letra Viva', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad I · Paradigma y Lenguaje' },
+          { autor: 'Moreira, D.', titulo: 'La niñez, la adolescencia y el discurso capitalista: Adolescencia: Un entrañable y tardío despertar', editorial: 'Letra Viva', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad I · Paradigma y Lenguaje' },
+          { autor: 'Moreira, D.', titulo: 'La adolescencia o la portación de lo nuevo', editorial: 'Ficha de Cátedra · UBA', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad I · Paradigma y Lenguaje' },
+          { autor: 'Moreira, D.', titulo: 'Sujeto, inconsciente y adolescencia', editorial: 'Ficha de Cátedra · UBA', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad I · Paradigma y Lenguaje' },
+          { autor: 'Moreira, D.', titulo: 'La protón pseudos histérica: Emma', editorial: 'Ficha de Cátedra · UBA', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad I · Paradigma y Lenguaje' },
+          { autor: 'Cryan, G.', titulo: 'Guía de presentación del trabajo final', editorial: 'Ficha de Cátedra · UBA', año: '2022', tipo: 'Obligatoria', unidad: 'Unidad I · Paradigma y Lenguaje' },
+
+          // Unidad II: Construcción e historia
+          { autor: 'Freud, S.', titulo: 'Proyecto de una psicología para neurólogos (Parte II, Sección V, p. 404)', editorial: 'Amorrortu', año: '1895', tipo: 'Obligatoria', unidad: 'Unidad II · Construcción e historia' },
+          { autor: 'Moreira, D.', titulo: 'Crónicas de un origen: El psicoanálisis con niños y adolescentes en Argentina (en La niñez, la adolescencia y el discurso capitalista)', editorial: 'Letra Viva', año: '2016', tipo: 'Obligatoria', unidad: 'Unidad II · Construcción e historia' },
+          { autor: 'Moreira, D.', titulo: 'La adolescencia: Fases. Aspectos descriptivos', editorial: 'Ficha de Cátedra · UBA', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad II · Construcción e historia' },
+          { autor: 'Moreira, D.', titulo: 'Despertar de primavera e inmortalidad', editorial: 'Ficha de Cátedra · UBA', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad II · Construcción e historia' },
+
+          // Unidad III: Conceptos fundamentales del psicoanálisis y adolescencia
+          { autor: 'Cryan, G., Gimenez, A., Sánchez, M. y Roitman, D.', titulo: 'De los cambios biológicos a la inscripción subjetiva del cuerpo: un enfoque biopsicosocial', editorial: 'Memorias XVII Congreso UBA', año: '2025', tipo: 'Obligatoria', unidad: 'Unidad III · Conceptos fundamentales y adolescencia' },
+          { autor: 'Freud, S.', titulo: 'Tres ensayos de teoría sexual — Tercer ensayo: Las metamorfosis de la pubertad (Vol. VII, pp. 189–192)', editorial: 'Amorrortu', año: '1905', tipo: 'Obligatoria', unidad: 'Unidad III · Conceptos fundamentales y adolescencia' },
+          { autor: 'Freud, S.', titulo: 'Tres ensayos de teoría sexual — Tercer ensayo: Peligros del placer previo (Vol. VII, p. 193)', editorial: 'Amorrortu', año: '1905', tipo: 'Obligatoria', unidad: 'Unidad III · Conceptos fundamentales y adolescencia' },
+          { autor: 'Freud, S.', titulo: 'Introducción del narcisismo (Sección I, Cap. 3 — TP 4)', editorial: 'Amorrortu', año: '1914', tipo: 'Obligatoria', unidad: 'Unidad III · Conceptos fundamentales y adolescencia' },
+          { autor: 'Moreira, D.', titulo: 'Guía defensas: desmentida y desestimación', editorial: 'Ficha de Cátedra · UBA', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad III · Conceptos fundamentales y adolescencia' },
+          { autor: 'Moreira, D.', titulo: 'La pubertad y sus tramitaciones (Cap. 4: El desarrollo sexual: segundo tiempo)', editorial: 'Fau Ediciones', año: '1998', tipo: 'Obligatoria', unidad: 'Unidad III · Conceptos fundamentales y adolescencia' },
+          { autor: 'Moreira, D.', titulo: 'Ética y quehacer del analista con niños y adolescentes: La escobilla del estadio del espejo: Marx un precursor', editorial: 'Letra Viva', año: '2016', tipo: 'Obligatoria', unidad: 'Unidad III · Conceptos fundamentales y adolescencia' },
+
+          // Unidad IV: El segundo despertar: lenguaje, metamorfosis y enamoramiento
+          { autor: 'Freud, S.', titulo: 'La organización genital infantil: Una interpolación en la teoría de la sexualidad (Vol. XIX)', editorial: 'Amorrortu', año: '1923', tipo: 'Obligatoria', unidad: 'Unidad IV · El segundo despertar: metamorfosis y enamoramiento' },
+          { autor: 'Freud, S.', titulo: 'El sepultamiento del complejo de Edipo (Vol. XIX)', editorial: 'Amorrortu', año: '1924', tipo: 'Obligatoria', unidad: 'Unidad IV · El segundo despertar: metamorfosis y enamoramiento' },
+          { autor: 'Moreira, D.', titulo: 'Freud y el complejo de Edipo', editorial: 'Ficha de Cátedra · UBA', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad IV · El segundo despertar: metamorfosis y enamoramiento' },
+          { autor: 'Moreira, D.', titulo: 'Ética y quehacer del analista con niños y adolescentes: El Edipo y sus tiempos', editorial: 'Letra Viva', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad IV · El segundo despertar: metamorfosis y enamoramiento' },
+
+          // Unidad V: Lenguaje, deseo y adolescencia
+          { autor: 'Freud, S.', titulo: 'Duelo y melancolía (Caps. 2 y 3 · Vol. XIV)', editorial: 'Amorrortu', año: '1917', tipo: 'Obligatoria', unidad: 'Unidad V · Lenguaje, deseo y adolescencia' },
+          { autor: 'Freud, S.', titulo: 'La escisión del yo en el proceso defensivo (Vol. XXIII)', editorial: 'Amorrortu', año: '1938', tipo: 'Obligatoria', unidad: 'Unidad V · Lenguaje, deseo y adolescencia' },
+          { autor: 'Moreira, D.', titulo: 'La pubertad y sus transmudaciones (Capítulo 7)', editorial: 'Facultad de Psicología · UBA', año: '1997', tipo: 'Obligatoria', unidad: 'Unidad V · Lenguaje, deseo y adolescencia' },
+
+          // Unidad VI: El sinthome, las novelas y el gozo
+          { autor: 'Freud, S.', titulo: 'El carácter y el erotismo anal (Vol. IX)', editorial: 'Amorrortu', año: '1908', tipo: 'Obligatoria', unidad: 'Unidad VI · El sinthome, las novelas y el gozo' },
+          { autor: 'Freud, S.', titulo: 'Sobre un tipo particular de elección de objeto en el hombre (Contribución a la psicología del amor · Vol. XI)', editorial: 'Amorrortu', año: '1910', tipo: 'Obligatoria', unidad: 'Unidad VI · El sinthome, las novelas y el gozo' },
+          { autor: 'Moreira, D.', titulo: 'Las versiones del padre: Adolescencia, juventud y sus posiciones', editorial: 'Ficha de Cátedra · UBA', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad VI · El sinthome, las novelas y el gozo' },
+
+          // Unidad VII: Grupo, familia, escuela, cultura y discurso capitalista
+          { autor: 'Gimenez, A. C.', titulo: 'La consolidación de la identidad de género como uno de los trabajos psíquicos de la adolescencia', editorial: 'Memorias XV Congreso UBA (2, pp. 48–51)', año: '2023', tipo: 'Obligatoria', unidad: 'Unidad VII · Grupo, familia, cultura y discurso capitalista' },
+          { autor: 'Freud, S.', titulo: 'Psicología de las masas y análisis del yo (Vol. XVIII)', editorial: 'Amorrortu', año: '1921', tipo: 'Obligatoria', unidad: 'Unidad VII · Grupo, familia, cultura y discurso capitalista' },
+          { autor: 'Cátedra Adolescencia I', titulo: 'Guía La familia: matrilineal y patrilineal: función y lugares', editorial: 'Ficha de Cátedra · UBA', año: 's/f', tipo: 'Obligatoria', unidad: 'Unidad VII · Grupo, familia, cultura y discurso capitalista' },
+          { autor: 'Vega, V., Maza, J., Roitman, D. y Sánchez, M.', titulo: 'Identidad de Género, construcción subjetiva de la adolescencia', editorial: 'Ficha de Cátedra · UBA', año: '2015', tipo: 'Obligatoria', unidad: 'Unidad VII · Grupo, familia, cultura y discurso capitalista' },
+
+          // Unidad VIII: Psicopatología y problemáticas socioculturales actuales
+          { autor: 'Belcaguy, M., Cimas, M., Cryan, G. y Loureiro, H.', titulo: 'Adolescencia y tecnologías de la información y de la comunicación', editorial: 'Ficha de Cátedra · UBA', año: '2015', tipo: 'Obligatoria', unidad: 'Unidad VIII · Psicopatología y problemáticas actuales' },
+          { autor: 'Cryan, G. y Pena, S.', titulo: 'Impacto de las TICs en la subjetividad del adolescente y en los vínculos intersubjetivos familiares', editorial: 'Subjetividad y procesos cognitivos 25(1)', año: '2021', tipo: 'Obligatoria', unidad: 'Unidad VIII · Psicopatología y problemáticas actuales' },
+          { autor: 'Pousa, R.', titulo: 'Lo nuevo (en Pensando las adicciones)', editorial: 'Comunicarte', año: '1999', tipo: 'Obligatoria', unidad: 'Unidad VIII · Psicopatología y problemáticas actuales' },
+          { autor: 'Pousa, R.', titulo: 'Toxicomanías y lazo social', editorial: 'UBA Publicaciones', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad VIII · Psicopatología y problemáticas actuales' },
+
+          // Complementaria destacada (de la Bibliografía de ampliación oficial)
+          { autor: 'Aberastury, A. y Knobel, M.', titulo: 'La adolescencia normal', editorial: 'Paidós', año: '1971', tipo: 'Complementaria' },
+          { autor: 'Piaget, J.', titulo: 'De la lógica del niño a la lógica del adolescente', editorial: 'Paidós', año: '1973', tipo: 'Complementaria' },
+          { autor: 'Aulagnier, P.', titulo: 'La violencia de la interpretación (El yo y la conjugación del futuro)', editorial: 'Amorrortu', año: '1977', tipo: 'Complementaria' },
+          { autor: 'Foucault, M.', titulo: 'La historia de la sexualidad', editorial: 'Siglo XXI', año: '1978', tipo: 'Complementaria' },
+          { autor: 'Erikson, E. H.', titulo: 'Identidad, juventud y crisis', editorial: 'Taurus', año: '1989', tipo: 'Complementaria' },
+          { autor: 'Wedekind, F.', titulo: 'Despertar de primavera', editorial: 'Quetzal', año: '1991', tipo: 'Complementaria' }
         ]
       },
       {
         nombre: 'Cátedra II (Cód. 556)',
-        titular: 'A designar',
+        titular: 'A designar (ex Adrián Grassi)',
         link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=556&anio=2026&cuatrimestre=2',
+        enfoque: 'Epistemología psicoanalítica plural, vincular e interdisciplinaria articulada en torno a la pregunta «¿Qué es crecer desde el punto de vista psicológico?» y tres ejes: (1) Desarrollo e integración psicosomática («lo originario puberal», entretiempo puberal-adolescente-juventud, imagen inconsciente del cuerpo: Winnicott, Aulagnier, Dolto, Grassi, Córdova, Freud, Nasio, Silvia Bleichmar, Ana María Fernández, Débora Tajer); (2) Relaciones parentales, duelo, historización y transmisión psíquica entre generaciones (Aulagnier, Janine Puget, Serge Tisseron, René Kaës, Yolanda Gampel, Sonia Gomel, Juan Eduardo Tesone sobre restitución de identidad); y (3) Grupalidades adolescentes, pasaje al lazo social y problemáticas epocales (Rassial, Marcelo Viñar, Ricardo Rodulfo, Mario Waserman, Susana Toporosi, Beatriz Janin, María Cristina Rojas, adolescencias trans, virtualidad y apuestas online, consumos, conflicto con la ley penal y derechos). Organiza la lectura en textos de Prácticos, Seminarios Teóricos y «Textos Puente», y recomienda series (Merlí, Sex Education, Poco ortodoxa, Heartstopper, I Am Not Okay With This).',
+        evaluacion: '2 parciales individuales obligatorios (2 hs cátedra semanales de teóricos + 2 hs cátedra semanales de prácticos; talleres optativos de preparación en semanas 6 y 11): 1° Parcial individual, escrito y presencial en comisiones de TP (semanas 6–7; recuperatorio semana 9); 2° Parcial individual, domiciliario e integrador en formato de ensayo académico de 3 a 5 hojas escrito en computadora (consigna semana 12, entrega semana 13, devolución semana 14, recuperatorio semana 15). Promoción sin examen final: 75% asistencia en teóricos y prácticos + mínimo 7 en cada parcial. Regular con examen final: 75% asistencia + notas entre 4 y 6 en los parciales.',
         bibliografia: [
-          { autor: 'Dolto, F.', titulo: 'La causa de los adolescentes', editorial: 'Paidós', año: '1988', tipo: 'Obligatoria' }
+          // Unidad 1: Contextos: epistemológico, histórico y social
+          { autor: 'Dolto, F.', titulo: 'Cap. I: El concepto de adolescencia. Puntos de referencia, puntos de ruptura (en La causa de los adolescentes)', editorial: 'Paidós', año: '2005', tipo: 'Obligatoria', unidad: 'Unidad 1 · Contextos: epistemológico, histórico y social' },
+          { autor: 'Nasio, J. D.', titulo: '¿Cómo actuar con un adolescente difícil?', editorial: 'Paidós', año: '2011', tipo: 'Obligatoria', unidad: 'Unidad 1 · Contextos: epistemológico, histórico y social' },
+          { autor: 'Grassi, A.', titulo: 'Entrevista a J. D. Nasio: El estadio del espejo en el niño y el adolescente', editorial: 'Actualidad Psicológica (411)', año: '2012', tipo: 'Obligatoria', unidad: 'Unidad 1 · Contextos: epistemológico, histórico y social' },
+          { autor: 'Córdova, N.', titulo: 'La primavera del significante (en Entre niños, adolescentes y funciones parentales)', editorial: 'Entreideas', año: '2010', tipo: 'Obligatoria', unidad: 'Unidad 1 · Contextos: epistemológico, histórico y social' },
+          { autor: 'Córdova, N.', titulo: 'Extravío sexual de la pubertad y neurosis del desarrollo (en Territorios Adolescentes y entretiempo de la sexuación)', editorial: 'Entreideas', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad 1 · Contextos: epistemológico, histórico y social' },
+          { autor: 'Grassi, A.', titulo: 'Niñez y Adolescencia. Nuevos paradigmas, sus nombres y escritura (en Entre niños, adolescentes y funciones parentales)', editorial: 'Entreideas', año: '2010', tipo: 'Obligatoria', unidad: 'Unidad 1 · Contextos: epistemológico, histórico y social' },
+          { autor: 'Grassi, A.', titulo: 'Desvíos-bordes y desbordes. Sobre los modelos para el estudio de las adolescencias', editorial: 'Entreideas', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad 1 · Contextos: epistemológico, histórico y social' },
+          { autor: 'Najmanovich, D.', titulo: 'El desafío de la complejidad: redes y cartografías dinámicas (en Mirar con nuevos ojos)', editorial: 'Biblos', año: '2008', tipo: 'Obligatoria', unidad: 'Unidad 1 · Contextos: epistemológico, histórico y social' },
+          { autor: 'Resnizky, S.', titulo: 'Cap. 2: Laberintos de la vincularidad (en Clínica Psicoanalítica Vincular)', editorial: 'Letra Viva', año: '2024', tipo: 'Obligatoria', unidad: 'Unidad 1 · Contextos: epistemológico, histórico y social' },
+          { autor: 'Aduriz, F. M.', titulo: 'Del adolescente derecho a detenerse (en Adolescencias por venir)', editorial: 'Gredos', año: '2012', tipo: 'Obligatoria', unidad: 'Unidad 1 · Contextos: epistemológico, histórico y social' },
+          { autor: 'Blanco, C. y Brea, N.', titulo: 'Culturas adolescentes', editorial: 'Inédito · Cátedra II', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 1 · Contextos: epistemológico, histórico y social' },
+          { autor: 'De Lucca, N.', titulo: 'Transitando diferentes paradigmas (en Territorios adolescentes y entretiempo de la sexuación)', editorial: 'Entreideas', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad 1 · Contextos: epistemológico, histórico y social' },
+          { autor: 'Franco, A.', titulo: 'Los espejos. Función de los pares en los trabajos subjetivos', editorial: 'Entreideas', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad 1 · Contextos: epistemológico, histórico y social' },
+          { autor: 'Najmanovich, D.', titulo: 'Del cuerpo máquina al cuerpo entramado', editorial: 'Campo Grupal (30)', año: '2001', tipo: 'Obligatoria', unidad: 'Unidad 1 · Contextos: epistemológico, histórico y social' },
+          { autor: 'Otero, M. E.', titulo: 'Territorios adolescentes. Cartografías de un devenir', editorial: 'Entreideas', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad 1 · Contextos: epistemológico, histórico y social' },
+
+          // Unidad 2: Cuerpo, narcisismo y subjetividad
+          { autor: 'Bleichmar, S.', titulo: 'Producción de subjetividad y constitución de psiquismo (en El desmantelamiento de la subjetividad. Estallido del Yo)', editorial: 'Topía', año: '2009', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+          { autor: 'Córdova, N.', titulo: 'La creación del cuerpo adolescente (en Entre niños, adolescentes y funciones parentales)', editorial: 'Entreideas', año: '2010', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+          { autor: 'Freud, S.', titulo: 'Metamorfosis de la pubertad (en Tres ensayos para una teoría sexual · Vol. VII)', editorial: 'Amorrortu', año: '1905', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+          { autor: 'Grassi, A.', titulo: 'Adolescencia: reorganización y nuevos modelos de subjetividad', editorial: 'Entreideas', año: '2010', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+          { autor: 'Fernández, A. M.', titulo: 'Cap. 15: Más allá de la diferencia… Las multiplicidades sexo-genéricas (en Psicoanálisis. De los lapsus fundacionales a los feminismos del siglo XXI)', editorial: 'Paidós', año: '2021', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+          { autor: 'Córdova, N.', titulo: 'Del pictograma al pentagrama (en Entre niños, adolescentes y funciones parentales)', editorial: 'Entreideas', año: '2010', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+          { autor: 'Córdova, N.', titulo: 'Confluencia del bifasismo sexual en el entretiempo de la sexuación', editorial: 'Ficha de Cátedra · UBA', año: '2013', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+          { autor: 'Córdova, N.', titulo: 'Del yo ideal al ideal del yo. La construcción de un horizonte en tiempos de distopías', editorial: 'Ficha de Cátedra · UBA', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+          { autor: 'Córdova, N.', titulo: 'Grafo del Entretiempo', editorial: 'Ficha de Cátedra · UBA', año: '2020', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+          { autor: 'Córdova, N.', titulo: 'Instantes decisivos. Tiempos y procesos adolescentes', editorial: 'Ficha de Cátedra · UBA', año: '2021', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+          { autor: 'Grassi, A.', titulo: 'Lo originario. Un aporte a la conceptualización de la integración psicosomática y subjetividad', editorial: 'Entreideas', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+          { autor: 'Freud, S.', titulo: 'El sepultamiento del complejo de Edipo (Vol. XIX)', editorial: 'Amorrortu', año: '1924', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+          { autor: 'Freud, S.', titulo: 'La descomposición de la personalidad psíquica (Conferencia 31 · Vol. XXII)', editorial: 'Amorrortu', año: '1933', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+          { autor: 'Nasio, J. D.', titulo: 'Mi cuerpo y sus imágenes', editorial: 'Paidós', año: '2008', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+          { autor: 'Otero, M. E.', titulo: 'Las escrituras (in)visibles de la violencia (en Entreveros y afinidades 2. Clínica Vincular)', editorial: 'Altobelli y Grandal', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+          { autor: 'Bleichmar, S.', titulo: 'La difícil tarea de ser joven (en Dolor País, pp. 58–64)', editorial: 'Libros del Zorzal', año: '2000', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+          { autor: 'Grassi, A.', titulo: 'Sexo, sexuación e identidades de género. Derechos de niños/as adolescentes', editorial: 'Revista Generaciones N° 4 · Eudeba', año: '2015', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+          { autor: 'Tajer, D.', titulo: 'Género, Salud mental y Psicoanálisis en la Argentina (en Psicoanálisis para todxs)', editorial: 'Topía', año: '2021', tipo: 'Obligatoria', unidad: 'Unidad 2 · Cuerpo, narcisismo y subjetividad' },
+
+          // Unidad 3: La construcción de la identidad sexual y hallazgo de objeto
+          { autor: 'Córdova, N.', titulo: 'Del trauma puberal al acontecimiento adolescente (Partes I y II)', editorial: 'Ficha de Cátedra · UBA', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+          { autor: 'Rassial, J. J.', titulo: 'Cap. 7: Los padres del adolescente (en El pasaje adolescente. De la familia al vínculo social)', editorial: 'Del Serbal', año: '1999', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+          { autor: 'Waserman, M.', titulo: 'Cap. 1: Condenado a explorar y Cap. 3: Hallazgo de objeto (en Condenados a explorar)', editorial: 'Noveduc', año: '2011', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+          { autor: 'Winnicott, D. W.', titulo: 'Cap. 11: Conceptos contemporáneos sobre el desarrollo adolescente (en Realidad y juego, pp. 179–193)', editorial: 'Gedisa', año: '1979', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+          { autor: 'Bleichmar, S.', titulo: 'La identidad sexual: entre la sexualidad, el sexo y el género (en Paradojas de la sexualidad masculina, pp. 91–108)', editorial: 'Paidós', año: '2006', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+          { autor: 'Dolto, F.', titulo: 'Introducción. Lo que piensa Freud del asunto (en La sexualidad femenina, pp. 74–87)', editorial: 'Paidós', año: '1987', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+          { autor: 'Freud, S.', titulo: 'La feminidad (Conferencia 33 · Vol. XXII)', editorial: 'Amorrortu', año: '1933', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+          { autor: 'Freud, S.', titulo: 'Sobre la sexualidad femenina (Vol. XXI)', editorial: 'Amorrortu', año: '1931', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+          { autor: 'Grassi, A.', titulo: 'Metamorfosis de la pubertad: el hallazgo (?) de objeto', editorial: 'Entreideas', año: '2013', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+          { autor: 'Grassi, A.', titulo: 'Notas sobre trauma y acontecimiento (Partes I y II)', editorial: 'Ficha de Cátedra · UBA', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+          { autor: 'Grassi, A.', titulo: 'Sobre los intereses libidinales de los jóvenes y la subjetividad en devenir (Homenaje a S. Bleichmar)', editorial: 'Revista Generaciones N° 1 · Eudeba', año: '2012', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+          { autor: 'Franco, A.', titulo: 'La niña púber. De la maduración del aparato genital hacia la genitalización psíquica de la sexualidad', editorial: 'Maipue', año: '2021', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+          { autor: 'Fernández, A. M.', titulo: 'Com-posiciones actuales de las identidades sexuales', editorial: 'Revista Generaciones (4)', año: '2015', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+          { autor: 'Glocer-Fiorini, L.', titulo: 'Identidad y diferencia. Paradojas en la construcción de subjetividad', editorial: 'Revista Generaciones (4)', año: '2015', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+          { autor: 'Lepka, M.', titulo: 'La llegada de la pareja en la adolescencia (en Intervenciones. Entre la teoría y la clínica)', editorial: 'Letra Viva', año: '2013', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+          { autor: 'Otero, M. E.', titulo: 'Habitar la luna. Un viaje adolescente', editorial: 'Actualidad Psicológica (508)', año: '2021', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+          { autor: 'Sigal, A. M.', titulo: 'Todavía el psicoanálisis en el campo de la sexuación', editorial: 'Revista Generaciones (4)', año: '2015', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+          { autor: 'Soler, M.', titulo: 'El otro por venir', editorial: 'Ficha de Cátedra · UBA', año: '2012', tipo: 'Obligatoria', unidad: 'Unidad 3 · Identidad sexual y hallazgo de objeto' },
+
+          // Unidad 4: Intersubjetividad, familia, duelo e historización
+          { autor: 'Aulagnier, P.', titulo: 'Construirse un pasado (y Los dos principios del funcionamiento identificatorio: permanencia y cambio)', editorial: 'Revista de Psicoanálisis APdeBA XIII(3)', año: '1991', tipo: 'Obligatoria', unidad: 'Unidad 4 · Intersubjetividad, familia, duelo e historización' },
+          { autor: 'Grassi, A.', titulo: 'La investigación histórica familiar (en Entre niños, adolescentes y funciones parentales)', editorial: 'Entreideas', año: '2010', tipo: 'Obligatoria', unidad: 'Unidad 4 · Intersubjetividad, familia, duelo e historización' },
+          { autor: 'Córdova, N.', titulo: 'Duelos e historización. Construir(se) un pasado — Elaborar un duelo', editorial: 'Ficha de Cátedra · UBA', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 4 · Intersubjetividad, familia, duelo e historización' },
+          { autor: 'Altobelli, H., Guaragna, A. y Otero, M. E.', titulo: 'Violencia, funciones parentales y sus efectos de poder (en Entramados vinculares y subjetividad)', editorial: 'Entreideas', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 4 · Intersubjetividad, familia, duelo e historización' },
+          { autor: 'Blanco, C.', titulo: 'Un punto de encuentro entre Piera Aulagnier y su historia', editorial: 'Entreideas', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 4 · Intersubjetividad, familia, duelo e historización' },
+          { autor: 'Britos, M. y Grassi, A.', titulo: 'En-tramando lo traumático. Haciéndo-se sujeto de su historia', editorial: 'Entreideas', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 4 · Intersubjetividad, familia, duelo e historización' },
+          { autor: 'Córdova, N.', titulo: 'Medea: una dimensión trágica de los divorcios controvertidos', editorial: 'Entreideas', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 4 · Intersubjetividad, familia, duelo e historización' },
+          { autor: 'Gutiérrez, M. I.', titulo: 'De la historización al proyecto identificatorio. Aportes de Piera Aulagnier a la Orientación Vocacional', editorial: 'Entreideas', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 4 · Intersubjetividad, familia, duelo e historización' },
+          { autor: 'Lastra, S.', titulo: 'La historización como construcción subjetivante', editorial: 'Entreideas', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 4 · Intersubjetividad, familia, duelo e historización' },
+          { autor: 'Liñares, F.', titulo: 'Lo puberal adolescente en trámite', editorial: 'Entreideas', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad 4 · Intersubjetividad, familia, duelo e historización' },
+          { autor: 'Nasio, J. D.', titulo: '¡El inconsciente es repetición!', editorial: 'Revista Generaciones (2)', año: '2013', tipo: 'Obligatoria', unidad: 'Unidad 4 · Intersubjetividad, familia, duelo e historización' },
+          { autor: 'Otero, M. E.', titulo: 'Visitando a Piera Aulagnier', editorial: 'Entreideas', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 4 · Intersubjetividad, familia, duelo e historización' },
+          { autor: 'Soler, M.', titulo: 'Situaciones familiares difíciles: ¿donde lo difícil desata violencias o potencialidad vincular?', editorial: 'Entreideas', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 4 · Intersubjetividad, familia, duelo e historización' },
+          { autor: 'Tesone, J. E.', titulo: 'El robo de la identidad de los niños: Restitución de su identidad y el valor de la recuperación de sus nombres', editorial: 'Aesthethika 10(3)', año: '2014', tipo: 'Obligatoria', unidad: 'Unidad 4 · Intersubjetividad, familia, duelo e historización' },
+
+          // Unidad 5: Pasaje adolescente y transmisión psíquica entre generaciones
+          { autor: 'Gampel, Y.', titulo: 'Introducción y Cap. 4: Se lo contarás a tus hijos (en Esos padres que viven a través de mí)', editorial: 'Paidós', año: '2006', tipo: 'Obligatoria', unidad: 'Unidad 5 · Transmisión psíquica entre generaciones' },
+          { autor: 'Puget, J.', titulo: 'Historización en la adolescencia (en Cuadernos de APdeBA N° 1 de Niñez y Adolescencia)', editorial: 'APdeBA', año: '1999', tipo: 'Obligatoria', unidad: 'Unidad 5 · Transmisión psíquica entre generaciones' },
+          { autor: 'Tisseron, S.', titulo: 'Introducción: El psicoanálisis ante la prueba de las generaciones (pp. 11–31)', editorial: 'Amorrortu', año: '2000', tipo: 'Obligatoria', unidad: 'Unidad 5 · Transmisión psíquica entre generaciones' },
+          { autor: 'Kaës, R.', titulo: 'Transmisión de la vida psíquica entre generaciones (Introducción, pp. 13–29)', editorial: 'Amorrortu', año: '2000', tipo: 'Obligatoria', unidad: 'Unidad 5 · Transmisión psíquica entre generaciones' },
+          { autor: 'Grassi, A. y otros', titulo: 'Guía para la lectura de textos de Piera Aulagnier', editorial: 'Ficha de Cátedra · UBA', año: '2008', tipo: 'Obligatoria', unidad: 'Unidad 5 · Transmisión psíquica entre generaciones' },
+          { autor: 'Gomel, S.', titulo: 'Cap. 6: Transmisión generacional (en Familias, parejas, analistas. La escena clínica)', editorial: 'Lugar Editorial', año: '2020', tipo: 'Obligatoria', unidad: 'Unidad 5 · Transmisión psíquica entre generaciones' },
+          { autor: 'Lastra, S. y Saladino, G.', titulo: 'De la genealogía al proyecto identificatorio. Algunas puntualizaciones acerca de adolescencia y transmisión', editorial: 'Entreideas', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 5 · Transmisión psíquica entre generaciones' },
+          { autor: 'Lastra, S. y Otero, M. E.', titulo: 'Construcciones acerca de la clínica y la transmisión docente', editorial: 'Entreideas', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 5 · Transmisión psíquica entre generaciones' },
+
+          // Unidad 6: Grupalidades adolescentes y proyecto identificatorio
+          { autor: 'Altobelli, H. y Guaragna, A.', titulo: 'Adolescencias trans. Un acto de traición (en Territorios adolescentes y entretiempo de la sexuación)', editorial: 'Entreideas', año: '2010', tipo: 'Obligatoria', unidad: 'Unidad 6 · Grupalidades adolescentes y proyecto identificatorio' },
+          { autor: 'Córdova, N.', titulo: 'Figuras de la grupalidad adolescente', editorial: 'Ficha de Cátedra · UBA', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 6 · Grupalidades adolescentes y proyecto identificatorio' },
+          { autor: 'Meiss, M.', titulo: 'Reflexiones sobre adolescentes en conflicto con la ley penal. Distinciones clínicas y nuevos dispositivos', editorial: 'Entreideas', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 6 · Grupalidades adolescentes y proyecto identificatorio' },
+          { autor: 'Viñar, M.', titulo: 'Del mundo interno y las relaciones objetales a la prioridad del otro (en Psicoanálisis y adolescencia)', editorial: 'Psicolibro', año: '2010', tipo: 'Obligatoria', unidad: 'Unidad 6 · Grupalidades adolescentes y proyecto identificatorio' },
+          { autor: 'Grassi, A.', titulo: 'Vínculos intersubjetivos y adolescencia (Clases I y II)', editorial: 'Ficha de Cátedra · UBA', año: '2011', tipo: 'Obligatoria', unidad: 'Unidad 6 · Grupalidades adolescentes y proyecto identificatorio' },
+          { autor: 'Lepka, M.', titulo: 'Lo grupal (en Pensando la sexualidad en la escuela)', editorial: 'Qué diría Víctor Hugo', año: '2016', tipo: 'Obligatoria', unidad: 'Unidad 6 · Grupalidades adolescentes y proyecto identificatorio' },
+          { autor: 'Rodulfo, R.', titulo: 'Un nuevo acto psíquico: la inscripción o la escritura del nosotros en la adolescencia (en El psicoanálisis de nuevo)', editorial: 'Eudeba', año: '2004', tipo: 'Obligatoria', unidad: 'Unidad 6 · Grupalidades adolescentes y proyecto identificatorio' },
+          { autor: 'Toporosi, S.', titulo: '¿Juegos sexuales o conductas sexuales abusivas? (en En carne viva. Abuso sexual infanto juvenil)', editorial: 'Topía', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad 6 · Grupalidades adolescentes y proyecto identificatorio' },
+          { autor: 'Winnicott, D. W.', titulo: 'Deprivación y delincuencia — Segunda parte: La tendencia antisocial (1956, pp. 125–132)', editorial: 'Paidós', año: '1990', tipo: 'Obligatoria', unidad: 'Unidad 6 · Grupalidades adolescentes y proyecto identificatorio' },
+          { autor: 'Belmes, D. y Farina, S.', titulo: 'Cap. 9: La escuela y el juego de las alianzas (en Alianzas entre Pares)', editorial: 'Ediciones Conjunto', año: '2020', tipo: 'Obligatoria', unidad: 'Unidad 6 · Grupalidades adolescentes y proyecto identificatorio' },
+          { autor: 'Lepka, M.', titulo: 'Rol del profesional en salud mental en condiciones de vulnerabilidad', editorial: 'Entreideas', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 6 · Grupalidades adolescentes y proyecto identificatorio' },
+          { autor: 'Liñares, F.', titulo: 'Posibles usos y des-usos de las drogas en tiempos adolescentes', editorial: 'Entreideas', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 6 · Grupalidades adolescentes y proyecto identificatorio' },
+          { autor: 'Pelento, M.', titulo: 'Los códigos del coraje', editorial: 'Revista Generaciones (3) · Eudeba', año: '2014', tipo: 'Obligatoria', unidad: 'Unidad 6 · Grupalidades adolescentes y proyecto identificatorio' },
+          { autor: 'Toporosi, S.', titulo: 'Grupos de confrontación generacional en un Servicio Hospitalario de Adolescencia', editorial: 'Entreideas', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 6 · Grupalidades adolescentes y proyecto identificatorio' },
+          { autor: 'Soler, M.', titulo: 'El nos-otros por venir: Amigos adolescentes que intentan salvar el mundo', editorial: 'Inédito · Cátedra II', año: '2025', tipo: 'Obligatoria', unidad: 'Unidad 6 · Grupalidades adolescentes y proyecto identificatorio' },
+
+          // Unidad 7: Sufrimiento, creatividad y problemáticas adolescentes epocales
+          { autor: 'Bergara, G.', titulo: 'Para alcanzar el paraíso de un solo golpe', editorial: 'Revista Generaciones N° 5 · Eudeba', año: '2016', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Blanco, C. y Brea, N.', titulo: 'Hipersexualización en y de las infancias: efectos en las adolescencias', editorial: 'Congreso AASM', año: '2022', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Blanco, C. y Brea, N.', titulo: 'Los efectos de la virtualidad en la subjetividad adolescente (en Nuevas Adolescencias)', editorial: 'Vergara', año: '2025', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Blanco, C. y Brea, N.', titulo: 'Cuando jugar no es un juego: consumos problemáticos digitales (en Apuestas online y Adolescencia)', editorial: 'Actualidad Psicológica', año: '2025', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Córdova, N. y Vega, N.', titulo: 'Adolescencia: nuevos síntomas y nuevas subjetividades. Problemáticas emergentes del contexto epocal', editorial: 'Letra Viva', año: '2012', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Del Giorgio, A.', titulo: 'Consumos problemáticos en adolescencia (en Clínica de las adicciones)', editorial: 'Noveduc', año: '2020', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Janin, B.', titulo: 'Los adolescentes en épocas de desamparo social (en Clínica con Adolescentes)', editorial: 'Entreideas', año: '2020', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Meiss, M. y Clemeno, L.', titulo: 'Crecer en tiempos virtuales: una clínica con adolescencias (en Nuevas Adolescencias)', editorial: 'Vergara', año: '2025', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Rojas, M. C.', titulo: 'Los adolescentes y los otros: apuntalamiento y vulnerabilidad', editorial: 'Desvalimiento Psicosocial 3(1) · UCES', año: '2016', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Ruibal, A.', titulo: 'En busca del tiempo perdido. Por el camino de Eros', editorial: 'Actualidad Psicológica N° 516', año: '2022', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Soler, M. y Lepka, M.', titulo: 'Lo epocal en los trabajos del entretiempo', editorial: 'Entreideas', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Altobelli, H. y Giorla, G.', titulo: 'La resiliencia. Dicotomías entre sujeto y objeto', editorial: 'Actualidad Psicológica', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Córdova, N.', titulo: 'Adolescencias difíciles, sufrimiento y creatividad', editorial: 'Revista Generaciones (2)', año: '2013', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Otero, M. E.', titulo: 'Pinceladas y notas acerca de la adolescencia', editorial: 'Revista Generaciones (2)', año: '2013', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Soler, M.', titulo: 'Creatividad y adolescencia', editorial: 'Ficha de Cátedra · UBA', año: '2007', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Angeli, E., Altobelli, H. y Otero, M. E.', titulo: 'Postmodernidad y adolescencias. Recuperando y creando la dimensión del tiempo y el espacio', editorial: 'Ficha de Cátedra · UBA', año: '2009', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Blanco, C.', titulo: 'El ejercicio profesional desde una perspectiva de derechos', editorial: 'Entreideas', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Bleichmar, S.', titulo: 'Subjetividad en riesgo: herramientas para su rescate (en Violencia social-violencia escolar)', editorial: 'Noveduc', año: '2008', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Naddeo, M.', titulo: 'Niños, niñas y adolescentes como sujetos de derechos. Tensiones entre la legislación y la realidad social', editorial: 'Revista Generaciones (6)', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Otero, M. E. y otros', titulo: 'Dispositivos actuales. La universidad abierta a la comunidad', editorial: 'Revista Generaciones (4)', año: '2015', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+          { autor: 'Sotolano, O.', titulo: 'Baja de la edad de imputabilidad. ¿Responsabilidad juvenil o irresponsable desamparo?', editorial: 'Revista Generaciones (6)', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad 7 · Sufrimiento, creatividad y problemáticas epocales' },
+
+          // Complementaria destacada (de la Bibliografía de referencia oficial)
+          { autor: 'Aberastury, A. y Knobel, M.', titulo: 'La adolescencia normal', editorial: 'Paidós', año: '1971', tipo: 'Complementaria' },
+          { autor: 'Aulagnier, P.', titulo: 'La violencia de la interpretación', editorial: 'Amorrortu', año: '1982', tipo: 'Complementaria' },
+          { autor: 'Gutton, P.', titulo: 'Lo Puberal', editorial: 'Paidós', año: '1993', tipo: 'Complementaria' },
+          { autor: 'McDougall, J.', titulo: 'Las mil y una caras de Eros', editorial: 'Paidós', año: '1998', tipo: 'Complementaria' },
+          { autor: 'Benjamin, J.', titulo: 'Los lazos del amor', editorial: 'Paidós', año: '1999', tipo: 'Complementaria' },
+          { autor: 'Butler, J.', titulo: 'El género en disputa', editorial: 'Paidós', año: '2007', tipo: 'Complementaria' }
         ]
       }
     ]
@@ -4932,26 +8447,225 @@ export const PLAN_ESTUDIOS: Materia[] = [
     año: 3,
     ciclo: 'Formación General',
     cuatrimestre: 'Anual',
-    descripcion: 'Estudio de los trastornos mentales y las estructuras clínicas.',
+    correlativas: ['Neurofisiología', 'Psicología del Desarrollo: Adolescencia'],
+    descripcion: 'Materia anual bisagra hacia el Ciclo de Formación Profesional dedicada al estudio de los paradigmas psiquiátricos clásicos y contemporáneos, la clínica estructural psicoanalítica (neurosis, psicosis y perversión), el diagnóstico diferencial con cuadros orgánicos y fenómenos psicosomáticos, y las presentaciones sintomáticas de la época.',
     objetivos: [
-      'Diferenciar las estructuras clínicas (neurosis, psicosis, perversión).',
-      'Analizar la semiología psiquiátrica y psicoanalítica.'
+      'Contextualizar el surgimiento de la psicopatología y contrastar la semiología de la psiquiatría clásica, los manuales actuales (DSM/CIE) y la ética del diagnóstico psicoanalítico.',
+      'Diferenciar en profundidad las estructuras clínicas (psicosis, neurosis y perversión) y sus tipos clínicos a partir de la obra de Freud, Lacan y casos fundamentales.',
+      'Articular el diagnóstico diferencial con los cuadros orgánicos, las epilepsias, las demencias, los fenómenos psicosomáticos, la psicofarmacología y la psicopatología infantojuvenil.',
+      'Analizar los padecimientos contemporáneos —psicosis ordinarias e inclasificables, toxicomanías, anorexias/bulimias, pánico, cortes en el cuerpo, depresiones y debates sobre sexuación y género— con rigor clínico.'
     ],
     catedras: [
       {
         nombre: 'Cátedra I (Cód. 037)',
-        titular: 'Fabián Naparstek',
+        titular: 'Fabián Abraham Naparstek',
         link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=37&anio=2026&cuatrimestre=2',
+        enfoque: 'Orientación psicoanalítica lacaniana con referencia explícita a la lectura de Jacques-Alain Miller (orientación lacaniana actualizada a la «subjetividad de la época», pensada como un «antivirus» que se renueva permanentemente). Parte de la exigencia científica de Karl Jaspers (Psicopatología General) y de los grandes clínicos de la psiquiatría clásica (Pinel, Esquirol, Kraepelin, Bleuler, Sérieux y Capgras, De Clérambault, Ballet, Ey, Lanteri-Laura) para reelaborarlos desde el diagnóstico estructural con Freud, Lacan (clínica de la pregunta, clínica de la respuesta y clínica del síntoma/parlêtre) y Miller. Pone foco distintivo en la ética hipermoderna (Lipovetsky, Bauman, Harari), las psicosis ordinarias e inclasificables, los nuevos síntomas —toxicomanías y alcoholismo (línea central de Naparstek), anorexias/bulimias, ataques de pánico, depresiones y violencias—, la psicofarmacología, los cuadros orgánicos, los manuales DSM/CIE y la psicopatología infantojuvenil. Cursa 6 hs semanales obligatorias: Teóricos generales (2 hs), Elucidación de Textos (2 hs) y Comisiones de Lectura de Casos (2 hs: 1° cuatrimestre psiquiatría clásica, Schreber y psicosis ordinarias; 2° cuatrimestre Dora, Hombre de las Ratas, Juanito y casos actuales), más 20 cursos optativos, conversaciones clínicas y comisiones hospitalarias (7 semanas).',
+        evaluacion: 'Materia anual con examen final obligatorio (sin promoción directa). Para regularizar: 75% de asistencia en los tres espacios obligatorios (teóricos, elucidación de textos y lectura de casos) + 1 trabajo monográfico domiciliario individual de concepto en el 1° cuatrimestre (entrega Semana 8) + 2 exámenes parciales escritos (1° cuatrimestre Semana 15 y 2° cuatrimestre Semana 10), aprobados con mínimo 4 en cada uno. Recuperatorio por inasistencia a la semana siguiente de cada parcial; al final de la cursada se puede recuperar un solo parcial por aplazo. Examen final distinguido: promedio de 8 o más en los parciales + asistencia a 7 clases de teóricos especiales (o práctica hospitalaria + 3 clases especiales), consistente en redactar y defender una monografía final ante un adjunto o JTP.',
         bibliografia: [
-          { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 3: Las psicosis', editorial: 'Paidós', año: '1984', tipo: 'Obligatoria' }
+          // Trayecto I: Psicopatología y ética: de Jaspers a la ética hipermoderna
+          { autor: 'Jaspers, K.', titulo: 'Psicopatología General (Intro. puntos 1 y 3; Sexta parte punto 4: Salud y enfermedad)', editorial: 'Beta', año: '1913', tipo: 'Obligatoria', unidad: 'Trayecto I · Psicopatología y ética: de Jaspers a la ética hipermoderna' },
+          { autor: 'Canguilhem, G.', titulo: 'Lo normal y lo patológico (Parte I cap. 1; Parte II caps. 1–3 y conclusión)', editorial: 'Siglo XXI', año: '1943', tipo: 'Obligatoria', unidad: 'Trayecto I · Psicopatología y ética: de Jaspers a la ética hipermoderna' },
+          { autor: 'Freud, S.', titulo: '16ª Conferencia: Psicoanálisis y psiquiatría (Vol. XVI)', editorial: 'Amorrortu', año: '1916', tipo: 'Obligatoria', unidad: 'Trayecto I · Psicopatología y ética: de Jaspers a la ética hipermoderna' },
+          { autor: 'Lacan, J.', titulo: 'Psicoanálisis y medicina (en Intervenciones y textos 1)', editorial: 'Manantial', año: '1966', tipo: 'Obligatoria', unidad: 'Trayecto I · Psicopatología y ética: de Jaspers a la ética hipermoderna' },
+          { autor: 'Lipovetsky, G.', titulo: 'La era del vacío', editorial: 'Anagrama', año: '1998', tipo: 'Obligatoria', unidad: 'Trayecto I · Psicopatología y ética: de Jaspers a la ética hipermoderna' },
+          { autor: 'Lipovetsky, G.', titulo: 'Los tiempos hipermodernos', editorial: 'Anagrama', año: '2008', tipo: 'Obligatoria', unidad: 'Trayecto I · Psicopatología y ética: de Jaspers a la ética hipermoderna' },
+          { autor: 'Miller, J.-A.', titulo: 'Patología de la ética (en Lógicas de la vida amorosa)', editorial: 'Manantial', año: '1989', tipo: 'Obligatoria', unidad: 'Trayecto I · Psicopatología y ética: de Jaspers a la ética hipermoderna' },
+          { autor: 'Miller, J.-A.', titulo: 'El ruiseñor de Lacan (en Del Edipo a la sexuación)', editorial: 'Paidós', año: '2005', tipo: 'Obligatoria', unidad: 'Trayecto I · Psicopatología y ética: de Jaspers a la ética hipermoderna' },
+          { autor: 'Miller, J.-A.', titulo: 'El porvenir de Mycoplasma laboratorium (El Caldero de la Escuela N° 6)', editorial: 'Grama', año: '2008', tipo: 'Obligatoria', unidad: 'Trayecto I · Psicopatología y ética: de Jaspers a la ética hipermoderna' },
+          { autor: 'Naparstek, F.', titulo: 'La era de la fiesta permanente (en Introducción a la clínica con toxicomanías y alcoholismo II)', editorial: 'Grama', año: '2009', tipo: 'Obligatoria', unidad: 'Trayecto I · Psicopatología y ética: de Jaspers a la ética hipermoderna' },
+          { autor: 'Naparstek, F.', titulo: 'La toxicomanía banalizada o los síntomas de hoy y los de antes', editorial: 'Grama', año: '2010', tipo: 'Obligatoria', unidad: 'Trayecto I · Psicopatología y ética: de Jaspers a la ética hipermoderna' },
+          { autor: 'Naparstek, F.', titulo: 'Ética y psicopatología (en Teóricos 2014)', editorial: 'Ed. Cátedra', año: '2011', tipo: 'Obligatoria', unidad: 'Trayecto I · Psicopatología y ética: de Jaspers a la ética hipermoderna' },
+          { autor: 'Berger, A.', titulo: 'El surgimiento de la psicopatología (en Teóricos 2014)', editorial: 'Ed. Cátedra', año: '2013', tipo: 'Obligatoria', unidad: 'Trayecto I · Psicopatología y ética: de Jaspers a la ética hipermoderna' },
+          { autor: 'Berger, A.', titulo: 'Psicoanálisis, hijo ilegítimo de la ciencia', editorial: 'Revista Lacaniana 24 · Grama', año: '2018', tipo: 'Obligatoria', unidad: 'Trayecto I · Psicopatología y ética: de Jaspers a la ética hipermoderna' },
+          { autor: 'Mazzoni, Y.', titulo: 'El diagnóstico en singular', editorial: 'Ficha de Cátedra · UBA', año: 's/f', tipo: 'Obligatoria', unidad: 'Trayecto I · Psicopatología y ética: de Jaspers a la ética hipermoderna' },
+
+          // Trayecto II: Psicopatología y Psiquiatría: clásica y contemporánea
+          { autor: 'Ackernecht, E. H.', titulo: 'Breve historia de la psiquiatría (Caps. 1, 2, 3 y 5)', editorial: 'Eudeba', año: '1979', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Foucault, M.', titulo: 'Historia de la locura en la época clásica (Cap. 1)', editorial: 'FCE', año: '1961', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Bercherie, P.', titulo: 'Los fundamentos de la clínica (Intro., Caps. 1 y 12)', editorial: 'Manantial', año: '1980', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Bercherie, P.', titulo: 'Presentación e Introducción (en Automatismo Mental-Paranoia)', editorial: 'Polemos', año: '1995', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Kraepelin, E.', titulo: 'Introducción a la clínica psiquiátrica (Lección 3: Demencia precoz; Lección 15: Paranoia; Lección 16: Formas paranoides)', editorial: 'Nieva', año: '1901', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Kraepelin, E.', titulo: 'Las parafrenias (Cap. 13 en La demencia precoz, 2ª parte)', editorial: 'Polemos', año: '1913', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Bleuler, E.', titulo: 'La Demencia Precoz o el grupo de las esquizofrenias', editorial: 'Polemos', año: '1911', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Sérieux, P. y Capgras, J.', titulo: 'Las locuras razonantes (en Alucinar y delirar, Tomo II)', editorial: 'Polemos', año: '1909', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Ballet, G.', titulo: 'Psicosis Alucinatorias Crónicas (en Alucinar y delirar, Tomo II)', editorial: 'Polemos', año: '1911', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'De Clérambault, G.', titulo: 'Automatismo mental y escisión del yo / Los delirios pasionales (en Automatismo Mental, Paranoia)', editorial: 'Polemos', año: '1920', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Seglás, J.', titulo: 'Demencias paranoides (en Alucinar y delirar, Tomo II)', editorial: 'Polemos', año: '1900', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Lanteri-Laura, G.', titulo: 'Cap. 4: Los problemas del paradigma actual (en Ensayo sobre los paradigmas de la psiquiatría moderna)', editorial: 'Tricastela', año: '2000', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Stagnaro, J. C.', titulo: 'Perspectiva crítica de las nosografías psiquiátricas contemporáneas (en Psiquiatría y Psicoanálisis)', editorial: 'Grama', año: '2007', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Organización Mundial de la Salud', titulo: 'CIE-10: Clasificación estadística internacional de enfermedades', editorial: 'OMS', año: '1992', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Wainstein, R.', titulo: 'Manuales de diagnóstico DSM y CIE / Epilepsias', editorial: 'Fichas de Cátedra · UBA', año: '2011', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Mussa, A.', titulo: 'Psicofarmacología', editorial: 'Ficha de Cátedra · UBA', año: '2011', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'De Julis, P.', titulo: 'Enfermedades del sistema endocrino y síntomas psiquiátricos / Tóxicos desde una perspectiva psiquiátrica', editorial: 'Fichas de Cátedra · UBA', año: '2011', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Gabe, R.', titulo: 'Semiología psiquiátrica: H. Ey', editorial: 'Ficha de Cátedra · UBA', año: '2011', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Esteban, F. y Soto, S.', titulo: 'Clínica de las psicosis en la obra de Emil Kraepelin', editorial: 'Ficha de Cátedra · UBA', año: '2020', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Harari, Y. N.', titulo: 'De animales a Dioses (Caps. 1 y 2)', editorial: 'Penguin Random House', año: '2019', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+          { autor: 'Skiadaresis, R.', titulo: 'Aspectos médicos en toxicomanías y alcoholismo', editorial: 'Grama', año: '2005', tipo: 'Obligatoria', unidad: 'Trayecto II · Psicopatología y Psiquiatría: clásica y contemporánea' },
+
+          // Trayecto III: Psicopatología y psicoanálisis: de Freud a las estructuras subjetivas lacanianas
+          { autor: 'Freud, S.', titulo: 'Algunas consideraciones con miras a un estudio comparativo de las parálisis motrices e histéricas (Vol. I)', editorial: 'Amorrortu', año: '1893', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'Las neuropsicosis de defensa (Caps. 1 y 2 · Vol. III)', editorial: 'Amorrortu', año: '1894', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'Manuscrito H: Paranoia (Vol. I) / Obsesiones y fobias / Neurosis de angustia (Vol. III)', editorial: 'Amorrortu', año: '1895', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'Nuevas puntualizaciones sobre las neuropsicosis de defensa (Vol. III)', editorial: 'Amorrortu', año: '1896', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'Fragmento de análisis de un caso de histeria [Dora] y Tres ensayos de teoría sexual, Cap. 1 (Vol. VII)', editorial: 'Amorrortu', año: '1905', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'Acciones obsesivas y prácticas religiosas (Vol. IX)', editorial: 'Amorrortu', año: '1907', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'Las fantasías histéricas y su relación con la bisexualidad (Vol. IX)', editorial: 'Amorrortu', año: '1908', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'A propósito de un caso de neurosis obsesiva [Hombre de las Ratas] y Análisis de la fobia de un niño de cinco años [Juanito] (Vol. X)', editorial: 'Amorrortu', año: '1909', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Schreber, D. P.', titulo: 'Memorias de un neurópata (Carta abierta, Intro., Caps. 1, 4, 5, 10, 13, 16, 21 y Peritajes)', editorial: 'Centro Editor Argentino', año: '1903', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'Puntualizaciones psicoanalíticas sobre un caso de paranoia [Schreber] (Vol. XII)', editorial: 'Amorrortu', año: '1911', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'Tótem y tabú (Cap. 4 · Vol. XIII)', editorial: 'Amorrortu', año: '1913', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'Introducción del narcisismo (Cap. 1 · Vol. XIV)', editorial: 'Amorrortu', año: '1914', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'Lo inconsciente (Cap. 4 · Vol. XIV)', editorial: 'Amorrortu', año: '1915', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'Duelo y melancolía (Vol. XIV) y Conferencias 17ª, 20ª, 23ª, 25ª y 26ª (Vol. XVI)', editorial: 'Amorrortu', año: '1917', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'Pegan a un niño (Vol. XVII)', editorial: 'Amorrortu', año: '1919', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'Psicología de las masas y análisis del yo (Caps. 7 y 8 · Vol. XVIII)', editorial: 'Amorrortu', año: '1921', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'Neurosis y psicosis / La pérdida de la realidad en la neurosis y la psicosis (Vol. XIX)', editorial: 'Amorrortu', año: '1924', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'La negación (Vol. XIX)', editorial: 'Amorrortu', año: '1925', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'Inhibición, síntoma y angustia (Caps. 3–9 · Vol. XX)', editorial: 'Amorrortu', año: '1926', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Freud, S.', titulo: 'Fetichismo (Vol. XXI)', editorial: 'Amorrortu', año: '1927', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Abraham, K.', titulo: 'Un breve estudio de la evolución de la libido considerada a la luz de los trastornos mentales', editorial: 'Hormé', año: '1924', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Lacan, J.', titulo: 'Intervención sobre la transferencia / Función y campo / La instancia de la letra / La dirección de la cura / De una cuestión preliminar (en Escritos 1 y 2)', editorial: 'Siglo XXI', año: '1951–1958', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 1 (Caps. 7, 10, 11) y Libro 2 (Caps. 14 y 15)', editorial: 'Paidós', año: '1953–1955', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 3: Las psicosis (selección de capítulos)', editorial: 'Paidós', año: '1955–1956', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 4: La relación de objeto (Caps. 9, 13, 14, 15, 21 y 23)', editorial: 'Paidós', año: '1956–1957', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 5: Las formaciones del inconsciente (Caps. 8, 10, 20, 22, 23 y 26)', editorial: 'Paidós', año: '1957–1958', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 10: La angustia (Caps. 1, 8, 11, 12, 21, 22 y 23)', editorial: 'Paidós', año: '1962–1963', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 16: De un Otro al otro (Cap. 16: Clínica de la perversión)', editorial: 'Paidós', año: '1968–1969', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Lacan, J.', titulo: 'Dos notas sobre el niño (en Intervenciones y textos 2)', editorial: 'Manantial', año: '1969', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Lacan, J.', titulo: 'Joyce el síntoma (en El Seminario, Libro 23: El sinthome)', editorial: 'Paidós', año: '1975', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Miller, J.-A.', titulo: 'Leer un síntoma (Revista Lacaniana 12) / Variaciones sobre Diana y Acteón / La soledad del goce', editorial: 'Grama / Paidós', año: '2012', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Naparstek, F.', titulo: 'Teóricos 2014 (Los tres tiempos de Freud, Función paterna, Tres registros, Edipo y neurosis, Freud y psicosis, Síntoma y fantasía, Identificaciones, Pregunta neurótica, Angustia, Fobias, Perversiones)', editorial: 'Ed. Cátedra', año: '2014', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Berger, A.', titulo: 'La angustia entre la Mantis Religiosa y el vientre oscuro de la araña (Caps. 1–4)', editorial: 'Grama', año: '2022', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Mazzoni, Y.', titulo: 'Función paterna en Lacan / Forclusión del Nombre del Padre y fenómenos elementales', editorial: 'Ed. Cátedra', año: '2011', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+          { autor: 'Lejbowicz, J. y Vargas, R.', titulo: 'Psicopatología infantil: Psicosis e infancia / Neurosis en la infancia', editorial: 'Fichas de Cátedra · UBA', año: '2011', tipo: 'Obligatoria', unidad: 'Trayecto III · Psicopatología y psicoanálisis: de Freud a las estructuras lacanianas' },
+
+          // Trayecto IV: Sufrimientos hipermodernos: inclasificables, nuevos síntomas y psicosomáticas
+          { autor: 'Bauman, Z.', titulo: 'Modernidad líquida', editorial: 'FCE', año: '1999', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+          { autor: 'Miller, J.-A.', titulo: 'Enganches, desenganches, reenganches (Intro. en La Psicosis Ordinaria)', editorial: 'Paidós', año: '2004', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+          { autor: 'Miller, J.-A.', titulo: 'Algunas reflexiones sobre el fenómeno psicosomático (en Matemas II)', editorial: 'Manantial', año: '1987', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+          { autor: 'Aromí, A. y Esqué, J.', titulo: 'Las psicosis ordinarias y las otras bajo transferencia (XI Congreso AMP)', editorial: 'AMP', año: '2018', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+          { autor: 'Laurent, E.', titulo: 'Los nuevos síntomas y los otros', editorial: 'El Caldero de la Escuela 57', año: '1997', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+          { autor: 'Tarrab, M.', titulo: 'Producir nuevos síntomas (en Nuevos síntomas, nuevas angustias)', editorial: 'Grama', año: '2005', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+          { autor: 'Naparstek, F. y colab.', titulo: 'Introducción a la clínica con toxicomanías y alcoholismo', editorial: 'Grama', año: '2005', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+          { autor: 'Naparstek, F.', titulo: 'Los inclasificables en las toxicomanías y la psicosis', editorial: 'Grama', año: '2009', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+          { autor: 'Naparstek, F.', titulo: 'La época actual y la psicopatología (en Teóricos 2014)', editorial: 'Ed. Cátedra', año: '2011', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+          { autor: 'Berger, A.', titulo: 'Del ataque de pánico a la angustia como brújula', editorial: 'Redes y Paradigmas 4', año: '2010', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+          { autor: 'Berger, A., Karpel, P., Lejbowicz, J. y Racki, G.', titulo: 'Efectos del pánico en la época actual / El banquete de las anoréxicas / Banquetes y ayunos', editorial: 'Anuario UBA / Cythere', año: '2022', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+          { autor: 'Bousoño, N., Mazzoni, Y. y Naparstek, F.', titulo: 'Actualidad del concepto de manía', editorial: 'Intersecciones PSI · UBA', año: 's/f', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+          { autor: 'Esqué, X.', titulo: 'La depresión vista desde la perspectiva psicoanalítica', editorial: 'NEL', año: '2012', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+          { autor: 'Lejbowicz, J. y Vargas, R.', titulo: 'Psicosomáticas', editorial: 'Ficha de Cátedra · UBA', año: '2011', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+          { autor: 'Moizeszowicz, J.', titulo: 'Psicofarmacología psicodinámica', editorial: 'Paidós', año: '1982', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+          { autor: 'Karpel, P. y Lejbowicz, J.', titulo: 'Bulimia y anorexia / Feminidad: segregación y lazos', editorial: 'Fichas de Cátedra · UBA', año: '2011', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+          { autor: 'Racki, G.', titulo: 'Tipos clínicos: lo clásico y lo actual / Palpitaciones ordinarias', editorial: 'Ficha de Cátedra / AMP', año: '2011', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+          { autor: 'Morao, M.', titulo: 'Violencia, cuerpo y lazo entre los seres humanos', editorial: 'Ficha de Cátedra · UBA', año: '2013', tipo: 'Obligatoria', unidad: 'Trayecto IV · Sufrimientos hipermodernos: inclasificables y nuevos síntomas' },
+
+          // Complementaria destacada
+          { autor: 'Kuhn, T. S.', titulo: 'La estructura de las revoluciones científicas', editorial: 'FCE', año: '1962', tipo: 'Complementaria' },
+          { autor: 'Maleval, J.-C.', titulo: 'La forclusión del Nombre del Padre', editorial: 'Paidós', año: '2002', tipo: 'Complementaria' },
+          { autor: 'Laurent, E.', titulo: 'Estabilizaciones en las psicosis', editorial: 'Manantial', año: '1989', tipo: 'Complementaria' },
+          { autor: 'Miller, J.-A. y otros', titulo: 'Los inclasificables de la clínica psicoanalítica', editorial: 'Paidós', año: '1999', tipo: 'Complementaria' },
+          { autor: 'Recalcati, M.', titulo: 'La clínica contemporánea como clínica del vacío', editorial: 'Grama', año: '2003', tipo: 'Complementaria' },
+          { autor: 'Cotard, J.', titulo: 'Del delirio de las negaciones (en Alucinar y delirar)', editorial: 'Polemos', año: '1882', tipo: 'Complementaria' }
         ]
       },
       {
         nombre: 'Cátedra II (Cód. 038)',
-        titular: 'Fabián Schejtman',
+        titular: 'Fabián Darío Schejtman',
         link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=38&anio=2026&cuatrimestre=2',
+        enfoque: 'Psicoanálisis de orientación lacaniana (tradición desde 1984 con fuerte articulación entre enseñanza, investigación UBACyT, revista Ancla y extensión en el Servicio de Psicopatología de Sede San Isidro). Transmite un «Lacan no amputado» que integra desde el grado tanto la primera enseñanza como la clínica nodal del último Lacan (nudos borromeos, trenzas, sinthome, encadenamientos y desencadenamientos junto a Mazzuca, Schejtman, Godoy, Leibson y Soria). Sostiene una psico-pato-logía generalizada («no hay normalidad, sino el pathos que el logos inyecta en la psyché») y construye el diagnóstico estructural por entrecruzamiento de múltiples ejes sin reducir cada estructura a un único mecanismo. Incorpora un eje específico y riguroso sobre Sexuación y Género (fórmulas de la sexuación, debates Lacan–Foucault y Butler–Copjec, desvinculando explícitamente identidad o elección sexual de diagnóstico) y un 4° conjunto temático sobre síntomas actuales (cortes en el cuerpo, anorexias/bulimias, discurso capitalista y declinación del padre). Cursa 6 hs semanales obligatorias —Teóricos (2 hs), Seminarios de lectura de textos (2 hs) y Comisiones de casos clínicos y escritura diagnóstica (2 hs)— más un amplio menú optativo (conferencias, ~10 ateneos clínicos, comisiones de hospitales presenciales, grupos de lectura y Psicopato Voz).',
+        evaluacion: 'Materia anual con examen final obligatorio (sin promoción directa), organizada en 4 Conjuntos Temáticos (32 semanas). Para regularizar: 75% de asistencia en los tres espacios obligatorios (teóricos, seminarios y comisiones) + 3 exámenes parciales escritos (al cierre de cada uno de los primeros tres conjuntos temáticos), aprobados con mínimo 4 en cada uno. Cada parcial tiene recuperatorio por inasistencia a la semana siguiente y al final del año se puede recuperar un parcial por aplazo. Régimen de Examen Final Especial (REFE): 75% de asistencia obligatoria + asistencia a 10 clases de actividades optativas (conferencias, ateneos, grupos de lectura y/o comisiones hospitalarias) + promedio de 8 o más en los 3 parciales sin ningún aplazo; consiste en elaborar, aprobar y defender un trabajo escrito en las mesas de final.',
         bibliografia: [
-          { autor: 'Schejtman, F.', titulo: 'Psicopatología: Clínica y Ética', editorial: 'Gramma', año: '2013', tipo: 'Obligatoria' }
+          // Módulo 1: Introducción: Ética, Clínica, Psiquiatría–Psicoanálisis y Nociones Básicas
+          { autor: 'Schejtman, F. (comp.) et al.', titulo: 'Psicopatología: clínica y ética. De la psiquiatría al psicoanálisis', editorial: 'Grama', año: '2013', tipo: 'Obligatoria', unidad: 'Módulo 1 · Ética, Clínica, Psiquiatría–Psicoanálisis y Nociones Básicas' },
+          { autor: 'Schejtman, F.', titulo: 'Sexo, Pathos, Logos (Ancla · Revista de la Cátedra II, N° 7)', editorial: 'UBA', año: '2017', tipo: 'Obligatoria', unidad: 'Módulo 1 · Ética, Clínica, Psiquiatría–Psicoanálisis y Nociones Básicas' },
+          { autor: 'AA.VV.', titulo: 'Una po-ética del pathos (Ancla · Revista de la Cátedra II, N° 7)', editorial: 'UBA', año: '2017', tipo: 'Obligatoria', unidad: 'Módulo 1 · Ética, Clínica, Psiquiatría–Psicoanálisis y Nociones Básicas' },
+          { autor: 'Freud, S.', titulo: 'Tótem y tabú (Cap. IV · Vol. XIII)', editorial: 'Amorrortu', año: '1913', tipo: 'Obligatoria', unidad: 'Módulo 1 · Ética, Clínica, Psiquiatría–Psicoanálisis y Nociones Básicas' },
+          { autor: 'Freud, S.', titulo: 'Introducción del narcisismo (Cap. I · Vol. XIV)', editorial: 'Amorrortu', año: '1914', tipo: 'Obligatoria', unidad: 'Módulo 1 · Ética, Clínica, Psiquiatría–Psicoanálisis y Nociones Básicas' },
+          { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 1: Los escritos técnicos de Freud (Caps. VII, X y XI)', editorial: 'Paidós', año: '1953–1954', tipo: 'Obligatoria', unidad: 'Módulo 1 · Ética, Clínica, Psiquiatría–Psicoanálisis y Nociones Básicas' },
+          { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 3: Las psicosis (Caps. IV, V, VII y XXIII)', editorial: 'Paidós', año: '1955–1956', tipo: 'Obligatoria', unidad: 'Módulo 1 · Ética, Clínica, Psiquiatría–Psicoanálisis y Nociones Básicas' },
+          { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 5: Las formaciones del inconsciente (Caps. VIII, IX y X)', editorial: 'Paidós', año: '1957–1958', tipo: 'Obligatoria', unidad: 'Módulo 1 · Ética, Clínica, Psiquiatría–Psicoanálisis y Nociones Básicas' },
+
+          // Módulo 2: La Clínica Psiquiátrica
+          { autor: 'Bercherie, P.', titulo: 'Los fundamentos de la clínica (Intro., Caps. 1 y 12)', editorial: 'Manantial', año: '1980', tipo: 'Obligatoria', unidad: 'Módulo 2 · La Clínica Psiquiátrica' },
+          { autor: 'Kraepelin, E.', titulo: 'La locura sistemática (paranoia) / La psychose irréversible (Demencia precoz, 6ª ed.)', editorial: 'Fichas de Cátedra · UBA', año: '1899', tipo: 'Obligatoria', unidad: 'Módulo 2 · La Clínica Psiquiátrica' },
+          { autor: 'Kraepelin, E.', titulo: 'Introducción a la clínica psiquiátrica (Lecciones 3, 8, 15 y 16)', editorial: 'Sánchez Calleja', año: '1905', tipo: 'Obligatoria', unidad: 'Módulo 2 · La Clínica Psiquiátrica' },
+          { autor: 'Kraepelin, E.', titulo: 'La locura maníaco-depresiva (en La locura maníaco-depresiva, la catatonía, la hebefrenia)', editorial: 'Polemos', año: '1913', tipo: 'Obligatoria', unidad: 'Módulo 2 · La Clínica Psiquiátrica' },
+          { autor: 'Bleuler, E.', titulo: 'Dementia praecox o el grupo de las esquizofrenias (Prefacio, Intro. y Cap. I: Asociación)', editorial: 'Lumen', año: '1911', tipo: 'Obligatoria', unidad: 'Módulo 2 · La Clínica Psiquiátrica' },
+          { autor: 'Sérieux, P. y Capgras, J.', titulo: 'Délire d\'interprétation, délire de revendication (Analytica 30)', editorial: 'Ficha de Cátedra · UBA', año: '1909', tipo: 'Obligatoria', unidad: 'Módulo 2 · La Clínica Psiquiátrica' },
+          { autor: 'De Clérambault, G.', titulo: 'Las psicosis pasionales (en Metáfora y delirio)', editorial: 'Eolia Dor', año: '1921', tipo: 'Obligatoria', unidad: 'Módulo 2 · La Clínica Psiquiátrica' },
+          { autor: 'De Clérambault, G.', titulo: 'Psicosis basadas en el automatismo (Oeuvre Psychiatrique)', editorial: 'Ficha de Cátedra · UBA', año: '1925', tipo: 'Obligatoria', unidad: 'Módulo 2 · La Clínica Psiquiátrica' },
+          { autor: 'Albaya, P.', titulo: 'Psicosis maníaco-depresiva', editorial: 'Ficha de Cátedra · UBA', año: '2008', tipo: 'Obligatoria', unidad: 'Módulo 2 · La Clínica Psiquiátrica' },
+          { autor: 'Sosso, O.', titulo: 'Trastornos del estado de ánimo', editorial: 'Ficha de Cátedra · UBA', año: '2001', tipo: 'Obligatoria', unidad: 'Módulo 2 · La Clínica Psiquiátrica' },
+          { autor: 'Zlotnik, M.', titulo: 'La psicosis en el DSM-IV (Esquizofrenia, Trastorno delirante y Estado de ánimo)', editorial: 'Fichas de Cátedra · UBA', año: '1997', tipo: 'Obligatoria', unidad: 'Módulo 2 · La Clínica Psiquiátrica' },
+
+          // Módulo 3: La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión
+          { autor: 'Schreber, D. P.', titulo: 'Memorias de un enfermo nervioso (Intro., Carta abierta, Caps. 1, 4, 5, 10, 13, 16, 21 y Dictámenes)', editorial: 'Lohlé', año: '1903', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Freud, S.', titulo: 'Las neuropsicosis de defensa / Nuevas puntualizaciones / Manuscrito H / Obsesiones y fobias / Neurosis de angustia', editorial: 'Amorrortu', año: '1894–1896', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Freud, S.', titulo: 'Estudios sobre la histeria (Cap. 4 · Vol. II)', editorial: 'Amorrortu', año: '1895', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Freud, S.', titulo: 'Fragmento de análisis de un caso de histeria [Dora] y Tres ensayos de teoría sexual, Cap. 1 (Vol. VII)', editorial: 'Amorrortu', año: '1905', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Freud, S.', titulo: 'Acciones obsesivas y prácticas religiosas / Las fantasías histéricas y su relación con la bisexualidad (Vol. IX)', editorial: 'Amorrortu', año: '1907–1908', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Freud, S.', titulo: 'El Hombre de las Ratas y Análisis de la fobia de un niño de cinco años [Juanito] (Vol. X)', editorial: 'Amorrortu', año: '1909', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Freud, S.', titulo: 'Un recuerdo infantil de Leonardo da Vinci (Caps. 2 y 3 · Vol. XI)', editorial: 'Amorrortu', año: '1910', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Freud, S.', titulo: 'Puntualizaciones psicoanalíticas sobre un caso de paranoia [Schreber] (Vol. XII)', editorial: 'Amorrortu', año: '1911', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Freud, S.', titulo: 'La represión / Lo inconsciente (Cap. 4 · Vol. XIV)', editorial: 'Amorrortu', año: '1915', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Freud, S.', titulo: '17ª Conferencia: El sentido de los síntomas (Vol. XVI)', editorial: 'Amorrortu', año: '1917', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Freud, S.', titulo: 'Pegan a un niño (Vol. XVII)', editorial: 'Amorrortu', año: '1919', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Freud, S.', titulo: 'Psicología de las masas y análisis del yo (Caps. 7 y 8 · Vol. XVIII)', editorial: 'Amorrortu', año: '1921', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Freud, S.', titulo: 'Neurosis y psicosis / La pérdida de la realidad / El problema económico del masoquismo (Vol. XIX)', editorial: 'Amorrortu', año: '1924', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Freud, S.', titulo: 'La negación (Vol. XIX) e Inhibición, síntoma y angustia (Caps. 3–7 · Vol. XX)', editorial: 'Amorrortu', año: '1925–1926', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Freud, S.', titulo: 'Fetichismo (Vol. XXI)', editorial: 'Amorrortu', año: '1927', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Lacan, J.', titulo: 'Intervención sobre la transferencia / El mito individual del neurótico / Función y campo / Variantes de la cura-tipo / De una cuestión preliminar / Juventud de Gide', editorial: 'Siglo XXI / Paidós', año: '1951–1958', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 3: Las psicosis (selección de capítulos)', editorial: 'Paidós', año: '1955–1956', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 4: Las relaciones de objeto (selección sobre Juanito y fetichismo)', editorial: 'Paidós', año: '1956–1957', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 5: Las formaciones del inconsciente (selección)', editorial: 'Paidós', año: '1957–1958', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 8 (Cap. XIV) y Libro 10: La angustia (Caps. XI–XIII, XXI–XXIV)', editorial: 'Paidós', año: '1960–1963', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 16 (Cap. XVI), Libro 17 (Cap. V) y Libro 19: ...o peor (Cap. V)', editorial: 'Paidós', año: '1968–1972', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Lacan, J.', titulo: 'El Seminario, Libro 20: Aun (Caps. I, VI, VII) y Libro 23: El sinthome (Caps. V, VI, X) / Una psicosis lacaniana', editorial: 'Paidós / El analiticón', año: '1972–1976', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Schejtman, F. (comp.) et al.', titulo: 'Elaboraciones lacanianas sobre la psicosis', editorial: 'Grama', año: '2013', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Schejtman, F. (comp.) et al.', titulo: 'Elaboraciones lacanianas sobre la neurosis', editorial: 'Grama', año: '2013', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Schejtman, F.', titulo: 'La liquidación de las perversiones / Sobre las fantasías perversas de los neuróticos', editorial: 'Grama', año: '2007', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Godoy, C.', titulo: 'Auxiliares de Dios (Ancla · Revista de la Cátedra II, N° 4/5)', editorial: 'UBA', año: '2012', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+          { autor: 'Deutsch, H.', titulo: 'Un caso de fobia a las gallinas (en Elaboraciones lacanianas sobre la psicosis)', editorial: 'Grama', año: '1930', tipo: 'Obligatoria', unidad: 'Módulo 3 · La Clínica Psicoanalítica: Psicosis, Neurosis y Perversión' },
+
+          // Módulo 4: Diagnóstico Diferencial, Cuadros Orgánicos, Psicosomática y Nudos
+          { autor: 'Rosenstein, M.', titulo: 'Demencias / Trastornos mentales orgánicos (tumores y endocrinología)', editorial: 'Fichas de Cátedra · UBA', año: '1997–2002', tipo: 'Obligatoria', unidad: 'Módulo 4 · Diagnóstico Diferencial, Cuadros Orgánicos, Psicosomática y Nudos' },
+          { autor: 'Rosenstein, M., Sosso, O. y Thomson, A.', titulo: 'Alcoholismo / Epilepsias', editorial: 'Fichas de Cátedra · UBA', año: '2001', tipo: 'Obligatoria', unidad: 'Módulo 4 · Diagnóstico Diferencial, Cuadros Orgánicos, Psicosomática y Nudos' },
+          { autor: 'Sosso, O.', titulo: 'Otras adicciones', editorial: 'Ficha de Cátedra · UBA', año: '2001', tipo: 'Obligatoria', unidad: 'Módulo 4 · Diagnóstico Diferencial, Cuadros Orgánicos, Psicosomática y Nudos' },
+          { autor: 'Mazzuca, M.', titulo: 'Toxicomanías y psicoanálisis', editorial: 'Ficha de Cátedra · UBA', año: '2008', tipo: 'Obligatoria', unidad: 'Módulo 4 · Diagnóstico Diferencial, Cuadros Orgánicos, Psicosomática y Nudos' },
+          { autor: 'Leibson, L.', titulo: 'Fenómeno psicosomático', editorial: 'Ficha de Cátedra · UBA', año: '2004', tipo: 'Obligatoria', unidad: 'Módulo 4 · Diagnóstico Diferencial, Cuadros Orgánicos, Psicosomática y Nudos' },
+          { autor: 'Miller, J.-A.', titulo: 'Algunas reflexiones sobre el fenómeno psicosomático (en Matemas II)', editorial: 'Manantial', año: '1988', tipo: 'Obligatoria', unidad: 'Módulo 4 · Diagnóstico Diferencial, Cuadros Orgánicos, Psicosomática y Nudos' },
+          { autor: 'Schejtman, F.', titulo: 'Síntoma y sinthome / Introducción de la trenza / Encadenamientos y desencadenamientos neuróticos', editorial: 'Grama', año: '2008–2010', tipo: 'Obligatoria', unidad: 'Módulo 4 · Diagnóstico Diferencial, Cuadros Orgánicos, Psicosomática y Nudos' },
+          { autor: 'Schejtman, F.', titulo: 'Locuras del último Lacan (Ancla · Revista de la Cátedra II, N° 6)', editorial: 'UBA', año: '2016', tipo: 'Obligatoria', unidad: 'Módulo 4 · Diagnóstico Diferencial, Cuadros Orgánicos, Psicosomática y Nudos' },
+          { autor: 'Godoy, C.', titulo: 'Editorial: Folisofía (Ancla · Revista de la Cátedra II, N° 6)', editorial: 'UBA', año: '2016', tipo: 'Obligatoria', unidad: 'Módulo 4 · Diagnóstico Diferencial, Cuadros Orgánicos, Psicosomática y Nudos' },
+          { autor: 'Godoy, C., Mazzuca, R. y Schejtman, F.', titulo: 'El amor al padre y la estabilidad histérica en la primera enseñanza de Lacan', editorial: 'Grama', año: '2005', tipo: 'Obligatoria', unidad: 'Módulo 4 · Diagnóstico Diferencial, Cuadros Orgánicos, Psicosomática y Nudos' },
+          { autor: 'Leibson, L.', titulo: 'Desencadenamientos y locuras en la neurosis', editorial: 'Grama', año: '2013', tipo: 'Obligatoria', unidad: 'Módulo 4 · Diagnóstico Diferencial, Cuadros Orgánicos, Psicosomática y Nudos' },
+
+          // Módulo 5: Temas Especiales: Infancia, Psicofarmacología, Angustia, Melancolía, Síntomas Actuales y Sexuación
+          { autor: 'Bugacoff, A.', titulo: 'Psicopatología infantil', editorial: 'Ficha de Cátedra · UBA', año: '2008', tipo: 'Obligatoria', unidad: 'Módulo 5 · Temas Especiales: Infancia, Síntomas Actuales y Sexuación' },
+          { autor: 'Tendlarz, S.', titulo: 'Lacan y la psicosis en la infancia (Cap. I en ¿De qué sufren los niños?)', editorial: 'Lugar Editorial', año: '1996', tipo: 'Obligatoria', unidad: 'Módulo 5 · Temas Especiales: Infancia, Síntomas Actuales y Sexuación' },
+          { autor: 'Sosso, O.', titulo: 'Psicofarmacología', editorial: 'Ficha de Cátedra · UBA', año: '1997', tipo: 'Obligatoria', unidad: 'Módulo 5 · Temas Especiales: Infancia, Síntomas Actuales y Sexuación' },
+          { autor: 'Freud, S.', titulo: 'Duelo y melancolía (Vol. XIV)', editorial: 'Amorrortu', año: '1917', tipo: 'Obligatoria', unidad: 'Módulo 5 · Temas Especiales: Infancia, Síntomas Actuales y Sexuación' },
+          { autor: 'Freud, S.', titulo: 'El malestar en la cultura (Caps. I y II · Vol. XXI)', editorial: 'Amorrortu', año: '1930', tipo: 'Obligatoria', unidad: 'Módulo 5 · Temas Especiales: Infancia, Síntomas Actuales y Sexuación' },
+          { autor: 'Freud, S.', titulo: 'Contribuciones a la psicología del amor / Algunas consecuencias psíquicas de la diferencia anatómica / 33ª Conferencia: La feminidad', editorial: 'Amorrortu', año: '1910–1932', tipo: 'Obligatoria', unidad: 'Módulo 5 · Temas Especiales: Infancia, Síntomas Actuales y Sexuación' },
+          { autor: 'Lacan, J.', titulo: 'Nota sobre el padre / Nota sobre el niño / El Seminario 17 (Caps. I, II, VI–XII) / El Seminario 18 (Cap. X) / Conferencia en Milán / Televisión', editorial: 'Paidós / EOL / Manantial', año: '1968–1973', tipo: 'Obligatoria', unidad: 'Módulo 5 · Temas Especiales: Infancia, Síntomas Actuales y Sexuación' },
+          { autor: 'Godoy, C.', titulo: 'Psicosis y sexuación (en Elaboraciones lacanianas sobre la psicosis)', editorial: 'Grama', año: '2013', tipo: 'Obligatoria', unidad: 'Módulo 5 · Temas Especiales: Infancia, Síntomas Actuales y Sexuación' },
+          { autor: 'Godoy, C., Schejtman, F. y Soria, N.', titulo: 'Un banquete hipermoderno (en Porciones de nada)', editorial: 'Serie del Bucle', año: '2009', tipo: 'Obligatoria', unidad: 'Módulo 5 · Temas Especiales: Infancia, Síntomas Actuales y Sexuación' },
+          { autor: 'Schejtman, F.', titulo: 'Identificación de la epidemia / Capitalismo y anorexia: discursos y fórmulas', editorial: 'Grama', año: '2013', tipo: 'Obligatoria', unidad: 'Módulo 5 · Temas Especiales: Infancia, Síntomas Actuales y Sexuación' },
+          { autor: 'Schejtman, F.', titulo: 'Notas sobre diagnóstico y sexuación (Memorias VII Congreso UBA)', editorial: 'UBA', año: '2015', tipo: 'Obligatoria', unidad: 'Módulo 5 · Temas Especiales: Infancia, Síntomas Actuales y Sexuación' },
+          { autor: 'Soria, N.', titulo: 'Síntomas de discurso capitalista (Memorias XI Congreso UBA)', editorial: 'UBA', año: '2018', tipo: 'Obligatoria', unidad: 'Módulo 5 · Temas Especiales: Infancia, Síntomas Actuales y Sexuación' },
+          { autor: 'Dartiguelongue, J.', titulo: 'Cortes en el cuerpo (en El sujeto y los cortes en el cuerpo)', editorial: 'Letra Viva', año: '2012', tipo: 'Obligatoria', unidad: 'Módulo 5 · Temas Especiales: Infancia, Síntomas Actuales y Sexuación' },
+          { autor: 'Mazzuca, M. y Zaffore, C.', titulo: 'Del estrago al síntoma (Ancla · Revista de la Cátedra II, N° 1)', editorial: 'UBA', año: '2007', tipo: 'Obligatoria', unidad: 'Módulo 5 · Temas Especiales: Infancia, Síntomas Actuales y Sexuación' },
+          { autor: 'Folgar, S.', titulo: '¿Cuánto puede pegar una mujer? (Ancla · Revista de la Cátedra II, N° 4/5)', editorial: 'UBA', año: '2012', tipo: 'Obligatoria', unidad: 'Módulo 5 · Temas Especiales: Infancia, Síntomas Actuales y Sexuación' },
+          { autor: 'Schejtman, F.', titulo: 'El sexo (y el silencio) de las sirenas', editorial: 'Ficha de Cátedra · UBA', año: '2021', tipo: 'Obligatoria', unidad: 'Módulo 5 · Temas Especiales: Infancia, Síntomas Actuales y Sexuación' },
+
+          // Complementaria destacada
+          { autor: 'Mazzuca, R., Schejtman, F. y Zlotnik, M.', titulo: 'Las dos clínicas de Lacan. Introducción a la clínica de los nudos', editorial: 'Tres Haches', año: '2000', tipo: 'Complementaria' },
+          { autor: 'Schejtman, F.', titulo: 'Sinthome: ensayos de clínica psicoanalítica nodal', editorial: 'Grama', año: '2013', tipo: 'Complementaria' },
+          { autor: 'Soler, C.', titulo: 'Estudios sobre las psicosis', editorial: 'Manantial', año: '1992', tipo: 'Complementaria' },
+          { autor: 'Butler, J.', titulo: 'El género en disputa', editorial: 'Paidós', año: '2007', tipo: 'Complementaria' },
+          { autor: 'Copjec, J.', titulo: 'El sexo y la eutanasia de la razón', editorial: 'Paidós', año: '2006', tipo: 'Complementaria' },
+          { autor: 'Foucault, M.', titulo: 'El nacimiento de la clínica', editorial: 'Siglo XXI', año: '1961', tipo: 'Complementaria' }
         ]
       }
     ]

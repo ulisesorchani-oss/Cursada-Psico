@@ -578,37 +578,101 @@ export const CATEDRAS_SUGERIDAS_RULES: readonly CatedraSugeridaRule[] = [
     id: 'cat-salud-1',
     materiaId: 'salud-publica-mental',
     materiaNombre: 'Salud Pública y Salud Mental',
-    catedraNombre: 'Cátedra I',
+    catedraNombre: 'Cátedra I (Cód. 065)',
     titular: 'Martín De Lellis',
-    motivo: 'Foco en políticas públicas, atención primaria, promoción de la salud y gestión en salud mental comunitaria.',
-    pesos: { 'salud-comunitaria': 2.8, 'trabajo-organizaciones': 0.6, 'educacion-desarrollo': 0.5 }
+    motivo:
+      'Enfoque sanitarista integral y de Psicología de la Salud Comunitaria (Saforcada, de Lellis, Mozobancyk): epidemiología de problemáticas prevalentes, APS, planificación estratégica, Sistema Total de Salud, parcial a libro abierto, salida a terreno y trabajo integrador.',
+    pesos: { 'salud-comunitaria': 2.8, 'trabajo-organizaciones': 0.6, 'educacion-desarrollo': 0.6 }
   },
   {
     id: 'cat-salud-2',
     materiaId: 'salud-publica-mental',
     materiaNombre: 'Salud Pública y Salud Mental',
-    catedraNombre: 'Cátedra II',
+    catedraNombre: 'Cátedra II (Cód. 066)',
     titular: 'Débora Tajer',
-    motivo: 'Perspectiva de salud colectiva con fuerte impronta de estudios de género, derechos y epidemiología crítica.',
-    pesos: { 'salud-comunitaria': 2.4, 'juridica-etica': 1.6, 'filosofia-fenomenologia': 0.8 }
+    motivo:
+      'Pensamiento sanitario crítico y Salud Colectiva latinoamericana (Stolkiner, Tajer, Galende, Rovere): proceso salud/enfermedad/cuidado, estudios de género y decolonialidad, crítica a la biomedicalización, clínica ampliada, comisiones temáticas y monografía de campo.',
+    pesos: { 'salud-comunitaria': 2.4, 'juridica-etica': 1.6, 'filosofia-fenomenologia': 0.8, psicoanalisis: 0.6 }
+  },
+  {
+    id: 'cat-grupos-1',
+    materiaId: 'teoria-tecnica-grupos',
+    materiaNombre: 'Teoría y Técnica de Grupos',
+    catedraNombre: 'Cátedra I (Cód. 063)',
+    titular: 'A designar (ex Ana María Fernández)',
+    motivo:
+      'Tradición de la Escuela Grupalista Argentina y elucidación crítica (Ana María Fernández, Pichon-Rivière, Bion, Anzieu, Pavlovsky, Ulloa, Castoriadis, Foucault, Deleuze): tres momentos epistémicos, psicodrama, multiplicación dramática y lógicas colectivas en lo público no estatal, con 1 parcial presencial, Jornada de Producciones Grupales, informe y coloquio.',
+    pesos: { 'salud-comunitaria': 2.4, psicoanalisis: 1.6, 'filosofia-fenomenologia': 1.2 }
+  },
+  {
+    id: 'cat-grupos-2',
+    materiaId: 'teoria-tecnica-grupos',
+    materiaNombre: 'Teoría y Técnica de Grupos',
+    catedraNombre: 'Cátedra II (Cód. 064)',
+    titular: 'Cintia Gisella Rolón',
+    motivo:
+      'Enfoque plural, interseccional y contemporáneo (Butler, Sara Ahmed, Berlant, Fisher, Lewkowicz, Illouz, Winnicott, Romero): precariedad, giro afectivo, ética del cuidado, crítica a la «happycracia» y el coaching, equipos laborales, arte/juego e intervenciones en crisis y catástrofes, con 2 parciales presenciales y crónica grupal en coloquio.',
+    pesos: { 'filosofia-fenomenologia': 2.2, 'salud-comunitaria': 1.8, 'trabajo-organizaciones': 1.0, 'educacion-desarrollo': 0.8 }
+  },
+  {
+    id: 'cat-ninez-1',
+    materiaId: 'psico-desarrollo-niñez',
+    materiaNombre: 'Psicología del Desarrollo: Niñez',
+    catedraNombre: 'Cátedra I (Cód. 553)',
+    titular: 'A designar (ex María Elena Pizzo)',
+    motivo:
+      'Equilibrio entre psicoanálisis (Freud, S. Bleichmar, Winnicott, Tajer, Urribarri), constructivismo piagetiano en profundidad (6 estadios sensoriomotores y Rivière/Teoría de la Mente), neurodesarrollo, dibujo (Lowenfeld), evaluación (escala EAIS) y derechos (Ley 26.061, Lipina sobre pobreza/neurociencias, Toporosi y Abuelas de Plaza de Mayo), con Trabajo de Campo en parejas.',
+    pesos: { 'educacion-desarrollo': 2.4, 'neuro-psicometria': 1.2, 'salud-comunitaria': 1.2, 'juridica-etica': 1.0 }
+  },
+  {
+    id: 'cat-ninez-2',
+    materiaId: 'psico-desarrollo-niñez',
+    materiaNombre: 'Psicología del Desarrollo: Niñez',
+    catedraNombre: 'Cátedra II (Cód. 554)',
+    titular: 'A designar (ex Paolicchi / Sorgen)',
+    motivo:
+      'Recorrido diacrónico por franjas etarias (0–2, 2–6, 6–12 e infancias actuales) con predominancia psicoanalítica y relacional (Freud, Winnicott, Spitz, Bowlby, Emilce Dio Bleichmar, Silvia Bleichmar, Julio Moreno) articulada con Piaget y el dibujo (Osterrieth), Trabajo de Campo en grupos de 3 con exposición final y Actividades Especiales obligatorias.',
+    pesos: { psicoanalisis: 2.2, 'educacion-desarrollo': 2.0, 'salud-comunitaria': 0.8 }
+  },
+  {
+    id: 'cat-adolescencia-1',
+    materiaId: 'psico-desarrollo-adolescencia',
+    materiaNombre: 'Psicología del Desarrollo: Adolescencia',
+    catedraNombre: 'Cátedra I (Cód. 555)',
+    titular: 'A designar (ex Diego Moreira)',
+    motivo:
+      'Lectura biopsicosocial con fuerte eje freudo-lacaniano (Freud, Lacan, Diego Moreira, Glenda Cryan): protón pseudos (caso Emma), tiempo lógico, sinthome, novelas adolescentes, discurso capitalista, identidad de género, TICs/redes y toxicomanías, con 1° parcial presencial y 2° parcial domiciliario integrador sobre una película/serie (conclusiones individuales + coloquio grupal).',
+    pesos: { psicoanalisis: 2.5, 'educacion-desarrollo': 1.4, 'salud-comunitaria': 0.8 }
+  },
+  {
+    id: 'cat-adolescencia-2',
+    materiaId: 'psico-desarrollo-adolescencia',
+    materiaNombre: 'Psicología del Desarrollo: Adolescencia',
+    catedraNombre: 'Cátedra II (Cód. 556)',
+    titular: 'A designar (ex Adrián Grassi)',
+    motivo:
+      'Psicoanálisis plural, vincular y transgeneracional («lo originario puberal», Winnicott, Piera Aulagnier, Dolto, Kaës, Tisseron, Rodulfo, Viñar, Silvia Bleichmar, Ana María Fernández, Tajer): historización, grupalidades, adolescencias trans, virtualidad/apuestas online y derechos, con 1° parcial presencial y 2° parcial domiciliario individual en formato ensayo (3–5 hojas) sin coloquio.',
+    pesos: { 'educacion-desarrollo': 2.2, 'salud-comunitaria': 1.8, psicoanalisis: 1.6, 'juridica-etica': 1.0 }
   },
   {
     id: 'cat-metodologia-1',
     materiaId: 'metodologia-inv',
     materiaNombre: 'Metodología de la Investigación',
-    catedraNombre: 'Cátedra I',
-    titular: 'Susana Azzollini',
-    motivo: 'Enfoque en diseños empíricos, operativización de variables y rigor metodológico cuantitativo-experimental.',
-    pesos: { 'neuro-psicometria': 2.6, 'tcc-evidencia': 1.4, 'trabajo-organizaciones': 0.6 }
+    catedraNombre: 'Cátedra I (Cód. 061)',
+    titular: 'Susana Celeste Azzollini',
+    motivo:
+      'Modelo «científico-practicante» (Boulder) con eje en diseños experimentales, factoriales, de sujeto único, correlacionales, cualitativos y mixtos (Sampieri, León & Montero), lectura de papers, software de análisis y elaboración de proyecto de tesina.',
+    pesos: { 'neuro-psicometria': 2.6, 'tcc-evidencia': 1.6, 'trabajo-organizaciones': 0.6 }
   },
   {
     id: 'cat-metodologia-2',
     materiaId: 'metodologia-inv',
     materiaNombre: 'Metodología de la Investigación',
-    catedraNombre: 'Cátedra II',
-    titular: 'Roxana Ynoub',
-    motivo: 'Articulación entre epistemología, semiótica, enfoques cualitativos y construcción conceptual del objeto.',
-    pesos: { 'filosofia-fenomenologia': 2.6, psicoanalisis: 1.2, 'salud-comunitaria': 1 }
+    catedraNombre: 'Cátedra II (Cód. 062)',
+    titular: 'Roxana Cecilia Ynoub',
+    motivo:
+      'Metodología crítica y dialéctica (Samaja, Ynoub, Varsavsky): ciencia como praxis, matrices de datos, investigación cualitativa, hermenéutica (en diálogo con el psicoanálisis), IAP, uso crítico de IA, pilotaje de campo grupal y coloquio integrador.',
+    pesos: { 'filosofia-fenomenologia': 2.6, psicoanalisis: 1.2, 'salud-comunitaria': 1.2 }
   },
   {
     id: 'cat-exploracion-1-cat1',
@@ -650,19 +714,21 @@ export const CATEDRAS_SUGERIDAS_RULES: readonly CatedraSugeridaRule[] = [
     id: 'cat-psicopatologia-1',
     materiaId: 'psicopatologia',
     materiaNombre: 'Psicopatología',
-    catedraNombre: 'Cátedra I',
-    titular: 'Fabián Naparstek',
-    motivo: 'Lectura psicoanalítica lacaniana articulada con clínica contemporánea, angustia y consumos problemáticos.',
-    pesos: { psicoanalisis: 2.8, 'salud-comunitaria': 0.6 }
+    catedraNombre: 'Cátedra I (Cód. 037)',
+    titular: 'Fabián Abraham Naparstek',
+    motivo:
+      'Orientación lacaniana-milleriana desde Jaspers y la psiquiatría clásica hacia la época hipermoderna (Lipovetsky, Bauman), psicosis ordinarias, toxicomanías/alcoholismo y nuevos síntomas; 2 parciales + 1 monografía en el 1° cuatrimestre (final obligatorio; opción final distinguido con 8+).',
+    pesos: { psicoanalisis: 2.8, 'salud-comunitaria': 0.8, 'filosofia-fenomenologia': 0.5 }
   },
   {
     id: 'cat-psicopatologia-2',
     materiaId: 'psicopatologia',
     materiaNombre: 'Psicopatología',
-    catedraNombre: 'Cátedra II',
-    titular: 'Fabián Schejtman',
-    motivo: 'Diálogo entre psiquiatría clásica, estructuras freudolacanianas y clínica nodal del sinthome.',
-    pesos: { psicoanalisis: 2.6, 'filosofia-fenomenologia': 1.4 }
+    catedraNombre: 'Cátedra II (Cód. 038)',
+    titular: 'Fabián Darío Schejtman',
+    motivo:
+      'Lacan «no amputado» con fuerte desarrollo de la clínica nodal (nudos borromeos, trenzas, sinthome), eje específico de Sexuación y Género (fórmulas de la sexuación, Butler–Copjec) y revista Ancla; 3 parciales escritos sin monografía obligatoria en cursada (final obligatorio; opción REFE con 8+ sin aplazos y 10 optativas).',
+    pesos: { psicoanalisis: 2.7, 'filosofia-fenomenologia': 1.4, 'juridica-etica': 0.4 }
   },
   {
     id: 'cat-social-1',

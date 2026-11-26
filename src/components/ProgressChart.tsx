@@ -237,22 +237,27 @@ export function ProgressChart({
 
         {totalRawApproved > 0 && (
           <div className="flex flex-wrap items-center gap-2 shrink-0">
-            <div className="inline-flex items-center p-1 bg-paper border border-ink/8 rounded-xl text-xs font-medium">
+            <div
+              role="group"
+              aria-label="Filtrar materias por estado"
+              className="inline-flex items-center p-1 bg-paper border border-ink/8 rounded-xl text-xs font-medium"
+            >
               {(
                 [
                   ['all', 'Todas'],
-                  ['approved', 'Aprobadas'],
+                  ['approved', `Aprobadas (${totalRawApproved})`],
                   ['pending', 'Pendientes']
                 ] as const
               ).map(([value, label]) => (
                 <button
                   key={value}
                   type="button"
+                  aria-pressed={onlyApprovedFilter === value}
                   onClick={() => onChangeApprovedFilter(value)}
                   className={cn(
-                    'px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap',
+                    'px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap cursor-pointer tabular-nums',
                     onlyApprovedFilter === value
-                      ? 'bg-ink text-white'
+                      ? 'bg-ink text-white shadow-xs'
                       : 'text-muted hover:text-ink'
                   )}
                 >
@@ -264,7 +269,7 @@ export function ProgressChart({
             <button
               type="button"
               onClick={onResetProgress}
-              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-muted hover:text-bordo transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-muted hover:text-bordo transition-colors whitespace-nowrap cursor-pointer"
               title="Reiniciar materias marcadas"
             >
               <RotateCcw size={13} />

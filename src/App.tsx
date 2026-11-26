@@ -235,12 +235,60 @@ export default function App() {
     }
   }, []);
 
+  const matchesApprovalFilter = useCallback(
+    (materiaId: string, filter: 'all' | 'approved' | 'pending') => {
+      if (filter === 'approved') return approvedSet.has(materiaId);
+      if (filter === 'pending') return !approvedSet.has(materiaId);
+      return true;
+    },
+    [approvedSet]
+  );
+
+  const handleChangeApprovedFilter = useCallback(
+    (nextFilter: 'all' | 'approved' | 'pending') => {
+      setOnlyApprovedFilter(nextFilter);
+      setSelectedArea('all');
+
+      if (nextFilter === 'all') {
+        if (selectedCycle === 'Todos') {
+          setSelectedCycle('CBC');
+        }
+        return;
+      }
+
+      const currentCycleCount = PLAN_ESTUDIOS.filter(
+        (m) =>
+          (selectedCycle === 'Todos' || m.ciclo === selectedCycle) &&
+          matchesApprovalFilter(m.id, nextFilter)
+      ).length;
+
+      if (currentCycleCount === 0) {
+        if (nextFilter === 'approved') {
+          setSelectedCycle('Todos');
+        } else {
+          const priorityCycles = [
+            'CBC',
+            'Formación General',
+            'Formación Profesional',
+            'Electivas General',
+            'Electivas Profesional',
+            'Prácticas'
+          ];
+          const firstWithPending = priorityCycles.find((cycle) =>
+            PLAN_ESTUDIOS.some((m) => m.ciclo === cycle && !approvedSet.has(m.id))
+          );
+          setSelectedCycle(firstWithPending ?? 'Todos');
+        }
+      }
+    },
+    [selectedCycle, approvedSet, matchesApprovalFilter]
+  );
+
   const filteredMaterias = useMemo(() => {
     const query = normalizeText(searchQuery.trim());
 
     return PLAN_ESTUDIOS.filter((m) => {
-      if (onlyApprovedFilter === 'approved' && !approvedSet.has(m.id)) return false;
-      if (onlyApprovedFilter === 'pending' && approvedSet.has(m.id)) return false;
+      if (!matchesApprovalFilter(m.id, onlyApprovedFilter)) return false;
 
       if (query) {
         return (
@@ -265,26 +313,30 @@ export default function App() {
         );
       }
 
-      const matchesCycle = m.ciclo === selectedCycle;
+      const matchesCycle = selectedCycle === 'Todos' || m.ciclo === selectedCycle;
       const matchesArea = selectedArea === 'all' || m.area === selectedArea;
       return matchesCycle && matchesArea;
     });
-  }, [selectedCycle, selectedArea, searchQuery, onlyApprovedFilter, approvedSet]);
+  }, [selectedCycle, selectedArea, searchQuery, onlyApprovedFilter, matchesApprovalFilter]);
 
   const areas = useMemo(() => {
+    if (selectedCycle === 'Todos') return ['all'];
     const allAreas = PLAN_ESTUDIOS.filter((m) => m.ciclo === selectedCycle)
       .map((m) => m.area)
       .filter((area): area is string => Boolean(area));
     return ['all', ...Array.from(new Set(allAreas))];
   }, [selectedCycle]);
 
-  const cycleCounts = useMemo(() => {
+  const { cycleCounts, totalForApprovedFilter } = useMemo(() => {
     const counts: Record<string, number> = {};
+    let total = 0;
     for (const m of PLAN_ESTUDIOS) {
+      if (!matchesApprovalFilter(m.id, onlyApprovedFilter)) continue;
       counts[m.ciclo] = (counts[m.ciclo] ?? 0) + 1;
+      total += 1;
     }
-    return counts;
-  }, []);
+    return { cycleCounts: counts, totalForApprovedFilter: total };
+  }, [onlyApprovedFilter, matchesApprovalFilter]);
 
   const openCorrelativa = (corrName: string) => {
     const target = findCorrelativaMateria(corrName);
@@ -443,11 +495,22 @@ export default function App() {
               setSelectedCycle(cycle);
               setSelectedArea('all');
               setSearchQuery('');
+              if (
+                onlyApprovedFilter !== 'all' &&
+                !PLAN_ESTUDIOS.some(
+                  (m) => m.ciclo === cycle && matchesApprovalFilter(m.id, onlyApprovedFilter)
+                )
+              ) {
+                setOnlyApprovedFilter('all');
+              }
             }}
-            onChangeApprovedFilter={setOnlyApprovedFilter}
+            onChangeApprovedFilter={handleChangeApprovedFilter}
             onResetProgress={() => {
               setApprovedIds([]);
               setOnlyApprovedFilter('all');
+              if (selectedCycle === 'Todos') {
+                setSelectedCycle('CBC');
+              }
             }}
           />
 
@@ -463,40 +526,113 @@ export default function App() {
                 <button
                   type="button"
                   onClick={() => setSearchQuery('')}
-                  className="text-xs font-bold text-bordo hover:underline transition-colors whitespace-nowrap"
+                  className="text-xs font-bold text-bordo hover:underline transition-colors whitespace-nowrap cursor-pointer"
                 >
                   Limpiar búsqueda
                 </button>
               </div>
             ) : (
-              CYCLES.map((cycle) => (
-                <button
-                  key={cycle}
-                  type="button"
-                  onClick={() => {
-                    setSelectedCycle(cycle);
-                    setSelectedArea('all');
-                  }}
-                  className={cn(
-                    'px-4 sm:px-6 py-2.5 rounded-full text-xs font-bold transition-all border whitespace-nowrap tabular-nums',
-                    selectedCycle === cycle
-                      ? 'bg-ink border-ink text-white shadow-md shadow-ink/15'
-                      : 'bg-white border-ink/10 text-muted hover:border-bordo hover:text-bordo'
-                  )}
-                >
-                  {cycle}{' '}
-                  <span
+              <>
+                {onlyApprovedFilter !== 'all' && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSelectedCycle('Todos');
+                      setSelectedArea('all');
+                    }}
                     className={cn(
-                      'ml-1 font-normal',
-                      selectedCycle === cycle ? 'text-white/70' : 'text-muted/70'
+                      'px-4 sm:px-6 py-2.5 rounded-full text-xs font-bold transition-all border whitespace-nowrap tabular-nums cursor-pointer',
+                      selectedCycle === 'Todos'
+                        ? 'bg-bordo border-bordo text-white shadow-md shadow-bordo/20'
+                        : 'bg-white border-bordo/25 text-bordo hover:bg-bordo/5'
                     )}
                   >
-                    ({cycleCounts[cycle] ?? 0})
-                  </span>
-                </button>
-              ))
+                    Todos los ciclos{' '}
+                    <span
+                      className={cn(
+                        'ml-1 font-normal',
+                        selectedCycle === 'Todos' ? 'text-white/80' : 'text-bordo/70'
+                      )}
+                    >
+                      ({totalForApprovedFilter})
+                    </span>
+                  </button>
+                )}
+                {CYCLES.map((cycle) => {
+                  const countInCycle = cycleCounts[cycle] ?? 0;
+                  return (
+                    <button
+                      key={cycle}
+                      type="button"
+                      onClick={() => {
+                        setSelectedCycle(cycle);
+                        setSelectedArea('all');
+                      }}
+                      className={cn(
+                        'px-4 sm:px-6 py-2.5 rounded-full text-xs font-bold transition-all border whitespace-nowrap tabular-nums cursor-pointer',
+                        selectedCycle === cycle
+                          ? 'bg-ink border-ink text-white shadow-md shadow-ink/15'
+                          : countInCycle === 0
+                            ? 'bg-white/60 border-ink/8 text-muted/55 hover:border-bordo hover:text-bordo'
+                            : 'bg-white border-ink/10 text-muted hover:border-bordo hover:text-bordo'
+                      )}
+                    >
+                      {cycle}{' '}
+                      <span
+                        className={cn(
+                          'ml-1 font-normal',
+                          selectedCycle === cycle ? 'text-white/70' : 'text-muted/70'
+                        )}
+                      >
+                        ({countInCycle})
+                      </span>
+                    </button>
+                  );
+                })}
+              </>
             )}
           </div>
+
+          {/* Active Approved/Pending Filter Banner */}
+          {!searchQuery.trim() && onlyApprovedFilter !== 'all' && (
+            <div className="mb-6 px-5 py-3.5 bg-white border border-bordo/20 rounded-2xl flex flex-wrap items-center justify-between gap-3">
+              <span className="text-xs font-semibold text-ink tabular-nums">
+                Mostrando{' '}
+                <strong className="text-bordo">
+                  {filteredMaterias.length}{' '}
+                  {onlyApprovedFilter === 'approved'
+                    ? filteredMaterias.length === 1
+                      ? 'materia aprobada'
+                      : 'materias aprobadas'
+                    : filteredMaterias.length === 1
+                      ? 'materia pendiente'
+                      : 'materias pendientes'}
+                </strong>{' '}
+                {selectedCycle === 'Todos' ? 'en todo el plan' : `en ${selectedCycle}`}
+              </span>
+              <div className="flex flex-wrap items-center gap-3">
+                {selectedCycle !== 'Todos' && totalForApprovedFilter > filteredMaterias.length && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSelectedCycle('Todos');
+                      setSelectedArea('all');
+                    }}
+                    className="text-xs font-bold text-violeta hover:underline whitespace-nowrap cursor-pointer"
+                  >
+                    Ver las {totalForApprovedFilter} de todo el plan
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={() => handleChangeApprovedFilter('all')}
+                  className="text-xs font-bold text-bordo hover:underline whitespace-nowrap cursor-pointer"
+                >
+                  Mostrar todas
+                </button>
+              </div>
+            </div>
+          )}
 
           {/* Area Filter */}
           {!searchQuery.trim() && areas.length > 1 && (
@@ -527,88 +663,81 @@ export default function App() {
 
         {/* Grid of Materias */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          <AnimatePresence mode="popLayout">
-            {filteredMaterias.map((materia) => {
-              const isApproved = approvedSet.has(materia.id);
-              return (
-                <motion.article
-                  layout
-                  key={materia.id}
-                  initial={{ opacity: 0, scale: 0.98 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.98 }}
-                  transition={{ duration: 0.2 }}
-                  onClick={() => setSelectedMateria(materia)}
-                  className={cn(
-                    'group cursor-pointer bg-white border p-6 sm:p-8 rounded-3xl hover:border-bordo transition-all hover:shadow-xl hover:shadow-bordo/5 relative flex flex-col h-full',
-                    isApproved ? 'border-emerald-600/30 bg-emerald-50/20' : 'border-ink/8'
-                  )}
-                >
-                  <div className="flex items-start justify-between gap-3 mb-4">
-                    <span
-                      className={cn(
-                        'text-[11px] font-bold tracking-wide leading-snug',
-                        materia.ciclo === 'CBC' ? 'text-violeta' : 'text-bordo'
-                      )}
-                    >
-                      {materia.ciclo}
-                      {materia.area ? ` · ${materia.area}` : ''}
-                      {materia.año > 0 ? ` · ${materia.año}° Año` : ''} ·{' '}
-                      {materia.cuatrimestre === 'Anual' ? 'Anual' : `${materia.cuatrimestre}° Cuat.`}
+          {filteredMaterias.map((materia) => {
+            const isApproved = approvedSet.has(materia.id);
+            return (
+              <article
+                key={materia.id}
+                onClick={() => setSelectedMateria(materia)}
+                className={cn(
+                  'group cursor-pointer bg-white border p-6 sm:p-8 rounded-3xl hover:border-bordo transition-all hover:shadow-xl hover:shadow-bordo/5 relative flex flex-col h-full',
+                  isApproved ? 'border-emerald-600/30 bg-emerald-50/20' : 'border-ink/8'
+                )}
+              >
+                <div className="flex items-start justify-between gap-3 mb-4">
+                  <span
+                    className={cn(
+                      'text-[11px] font-bold tracking-wide leading-snug',
+                      materia.ciclo === 'CBC' ? 'text-violeta' : 'text-bordo'
+                    )}
+                  >
+                    {materia.ciclo}
+                    {materia.area ? ` · ${materia.area}` : ''}
+                    {materia.año > 0 ? ` · ${materia.año}° Año` : ''} ·{' '}
+                    {materia.cuatrimestre === 'Anual' ? 'Anual' : `${materia.cuatrimestre}° Cuat.`}
+                  </span>
+
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      toggleApproved(materia.id);
+                    }}
+                    aria-label={
+                      isApproved
+                        ? `Quitar ${materia.nombre} de aprobadas`
+                        : `Marcar ${materia.nombre} como aprobada`
+                    }
+                    aria-pressed={isApproved}
+                    className={cn(
+                      'shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-colors cursor-pointer',
+                      isApproved
+                        ? 'bg-emerald-700 border-emerald-700 text-white'
+                        : 'bg-paper border-ink/15 text-muted/60 hover:border-bordo hover:text-bordo'
+                    )}
+                    title={isApproved ? 'Materia aprobada' : 'Marcar como aprobada'}
+                  >
+                    <Check size={15} />
+                  </button>
+                </div>
+
+                <h3 className="text-2xl font-serif font-bold leading-snug mb-3 group-hover:text-bordo transition-colors">
+                  {materia.nombre}
+                </h3>
+
+                <p className="text-sm text-muted mb-6 leading-relaxed line-clamp-3">
+                  {materia.descripcion}
+                </p>
+
+                <div className="mt-auto pt-5 border-t border-ink/6 flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-2.5 text-xs font-semibold text-ink tabular-nums">
+                    <Users size={15} className="text-bordo shrink-0" />
+                    <span>
+                      {materia.catedras.length}{' '}
+                      {materia.catedras.length === 1 ? 'Cátedra' : 'Cátedras'}
                     </span>
-
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        toggleApproved(materia.id);
-                      }}
-                      aria-label={
-                        isApproved
-                          ? `Quitar ${materia.nombre} de aprobadas`
-                          : `Marcar ${materia.nombre} como aprobada`
-                      }
-                      aria-pressed={isApproved}
-                      className={cn(
-                        'shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-colors',
-                        isApproved
-                          ? 'bg-emerald-700 border-emerald-700 text-white'
-                          : 'bg-paper border-ink/15 text-muted/60 hover:border-bordo hover:text-bordo'
-                      )}
-                      title={isApproved ? 'Materia aprobada' : 'Marcar como aprobada'}
-                    >
-                      <Check size={15} />
-                    </button>
+                    {isApproved && (
+                      <span className="text-emerald-700 font-bold">· Aprobada</span>
+                    )}
                   </div>
-
-                  <h3 className="text-2xl font-serif font-bold leading-snug mb-3 group-hover:text-bordo transition-colors">
-                    {materia.nombre}
-                  </h3>
-
-                  <p className="text-sm text-muted mb-6 leading-relaxed line-clamp-3">
-                    {materia.descripcion}
-                  </p>
-
-                  <div className="mt-auto pt-5 border-t border-ink/6 flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-2.5 text-xs font-semibold text-ink tabular-nums">
-                      <Users size={15} className="text-bordo shrink-0" />
-                      <span>
-                        {materia.catedras.length}{' '}
-                        {materia.catedras.length === 1 ? 'Cátedra' : 'Cátedras'}
-                      </span>
-                      {isApproved && (
-                        <span className="text-emerald-700 font-bold">· Aprobada</span>
-                      )}
-                    </div>
-                    <ChevronRight
-                      size={18}
-                      className="text-bordo opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all shrink-0"
-                    />
-                  </div>
-                </motion.article>
-              );
-            })}
-          </AnimatePresence>
+                  <ChevronRight
+                    size={18}
+                    className="text-bordo opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all shrink-0"
+                  />
+                </div>
+              </article>
+            );
+          })}
         </div>
 
         {filteredMaterias.length === 0 && (
@@ -621,9 +750,9 @@ export default function App() {
               onClick={() => {
                 setSearchQuery('');
                 setSelectedArea('all');
-                setOnlyApprovedFilter('all');
+                handleChangeApprovedFilter('all');
               }}
-              className="px-5 py-2.5 rounded-full bg-bordo text-white text-xs font-bold hover:bg-bordo-light transition-colors"
+              className="px-5 py-2.5 rounded-full bg-bordo text-white text-xs font-bold hover:bg-bordo-light transition-colors cursor-pointer"
             >
               Ver todas las materias
             </button>

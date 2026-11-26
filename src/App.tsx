@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import { PLAN_ESTUDIOS, Materia } from './constants';
 import { cn } from './lib/utils';
-import { ProgressChart } from './components/ProgressChart';
+import { ProgressChart, CYCLE_REQUIRED } from './components/ProgressChart';
 import { CurriculumFlowchart } from './components/CurriculumFlowchart';
 import { AutoresSection } from './components/AutoresSection';
 import { AutorModal } from './components/AutorModal';
@@ -235,13 +235,87 @@ export default function App() {
     }
   }, []);
 
+  const cyclePlanMeta = useMemo(() => {
+    const rawApprovedByCycle: Record<string, number> = {};
+    const catalogByCycle: Record<string, number> = {};
+
+    for (const cycle of CYCLES) {
+      rawApprovedByCycle[cycle] = 0;
+      catalogByCycle[cycle] = 0;
+    }
+
+    for (const m of PLAN_ESTUDIOS) {
+      catalogByCycle[m.ciclo] = (catalogByCycle[m.ciclo] ?? 0) + 1;
+      if (approvedSet.has(m.id)) {
+        rawApprovedByCycle[m.ciclo] = (rawApprovedByCycle[m.ciclo] ?? 0) + 1;
+      }
+    }
+
+    const practicasRaw = rawApprovedByCycle['Prácticas'] ?? 0;
+    const extraPracticaForCfp = practicasRaw > 1 ? 1 : 0;
+
+    const byCycle: Record<
+      string,
+      {
+        approvedRaw: number;
+        counted: number;
+        required: number;
+        pendingRequired: number;
+        unapprovedCatalog: number;
+        catalogTotal: number;
+        isElectivePool: boolean;
+      }
+    > = {};
+
+    let totalPendingRequired = 0;
+    let totalApprovedRaw = 0;
+
+    for (const cycle of CYCLES) {
+      const approvedRaw = rawApprovedByCycle[cycle] ?? 0;
+      const catalogTotal = catalogByCycle[cycle] ?? 0;
+      const required = CYCLE_REQUIRED[cycle] ?? catalogTotal;
+
+      let effectiveApproved = approvedRaw;
+      if (cycle === 'Electivas Profesional' && extraPracticaForCfp > 0 && approvedRaw < required) {
+        effectiveApproved = Math.min(required, approvedRaw + extraPracticaForCfp);
+      }
+
+      const counted = Math.min(effectiveApproved, required);
+      const pendingRequired = Math.max(0, required - counted);
+      const unapprovedCatalog = Math.max(0, catalogTotal - approvedRaw);
+
+      byCycle[cycle] = {
+        approvedRaw,
+        counted,
+        required,
+        pendingRequired,
+        unapprovedCatalog,
+        catalogTotal,
+        isElectivePool: catalogTotal > required
+      };
+
+      totalPendingRequired += pendingRequired;
+      totalApprovedRaw += approvedRaw;
+    }
+
+    return {
+      byCycle,
+      totalPendingRequired,
+      totalApprovedRaw
+    };
+  }, [approvedSet]);
+
   const matchesApprovalFilter = useCallback(
-    (materiaId: string, filter: 'all' | 'approved' | 'pending') => {
-      if (filter === 'approved') return approvedSet.has(materiaId);
-      if (filter === 'pending') return !approvedSet.has(materiaId);
+    (materia: Materia, filter: 'all' | 'approved' | 'pending') => {
+      if (filter === 'approved') return approvedSet.has(materia.id);
+      if (filter === 'pending') {
+        const meta = cyclePlanMeta.byCycle[materia.ciclo];
+        if (meta && meta.pendingRequired === 0) return false;
+        return !approvedSet.has(materia.id);
+      }
       return true;
     },
-    [approvedSet]
+    [approvedSet, cyclePlanMeta]
   );
 
   const handleChangeApprovedFilter = useCallback(
@@ -256,39 +330,46 @@ export default function App() {
         return;
       }
 
-      const currentCycleCount = PLAN_ESTUDIOS.filter(
-        (m) =>
-          (selectedCycle === 'Todos' || m.ciclo === selectedCycle) &&
-          matchesApprovalFilter(m.id, nextFilter)
-      ).length;
-
-      if (currentCycleCount === 0) {
-        if (nextFilter === 'approved') {
+      if (nextFilter === 'approved') {
+        const currentHasApproved =
+          selectedCycle === 'Todos'
+            ? cyclePlanMeta.totalApprovedRaw > 0
+            : (cyclePlanMeta.byCycle[selectedCycle]?.approvedRaw ?? 0) > 0;
+        if (!currentHasApproved) {
           setSelectedCycle('Todos');
-        } else {
-          const priorityCycles = [
-            'CBC',
-            'Formación General',
-            'Formación Profesional',
-            'Electivas General',
-            'Electivas Profesional',
-            'Prácticas'
-          ];
-          const firstWithPending = priorityCycles.find((cycle) =>
-            PLAN_ESTUDIOS.some((m) => m.ciclo === cycle && !approvedSet.has(m.id))
-          );
-          setSelectedCycle(firstWithPending ?? 'Todos');
         }
+        return;
+      }
+
+      // nextFilter === 'pending'
+      const currentHasPending =
+        selectedCycle === 'Todos'
+          ? cyclePlanMeta.totalPendingRequired > 0
+          : (cyclePlanMeta.byCycle[selectedCycle]?.pendingRequired ?? 0) > 0;
+
+      if (!currentHasPending) {
+        const priorityCycles = [
+          'CBC',
+          'Formación General',
+          'Formación Profesional',
+          'Electivas General',
+          'Electivas Profesional',
+          'Prácticas'
+        ];
+        const firstWithPending = priorityCycles.find(
+          (cycle) => (cyclePlanMeta.byCycle[cycle]?.pendingRequired ?? 0) > 0
+        );
+        setSelectedCycle(firstWithPending ?? 'Todos');
       }
     },
-    [selectedCycle, approvedSet, matchesApprovalFilter]
+    [selectedCycle, cyclePlanMeta]
   );
 
   const filteredMaterias = useMemo(() => {
     const query = normalizeText(searchQuery.trim());
 
     return PLAN_ESTUDIOS.filter((m) => {
-      if (!matchesApprovalFilter(m.id, onlyApprovedFilter)) return false;
+      if (!matchesApprovalFilter(m, onlyApprovedFilter)) return false;
 
       if (query) {
         return (
@@ -329,14 +410,34 @@ export default function App() {
 
   const { cycleCounts, totalForApprovedFilter } = useMemo(() => {
     const counts: Record<string, number> = {};
+    if (onlyApprovedFilter === 'pending') {
+      for (const cycle of CYCLES) {
+        counts[cycle] = cyclePlanMeta.byCycle[cycle]?.pendingRequired ?? 0;
+      }
+      return {
+        cycleCounts: counts,
+        totalForApprovedFilter: cyclePlanMeta.totalPendingRequired
+      };
+    }
+
+    if (onlyApprovedFilter === 'approved') {
+      for (const cycle of CYCLES) {
+        counts[cycle] = cyclePlanMeta.byCycle[cycle]?.approvedRaw ?? 0;
+      }
+      return {
+        cycleCounts: counts,
+        totalForApprovedFilter: cyclePlanMeta.totalApprovedRaw
+      };
+    }
+
     let total = 0;
-    for (const m of PLAN_ESTUDIOS) {
-      if (!matchesApprovalFilter(m.id, onlyApprovedFilter)) continue;
-      counts[m.ciclo] = (counts[m.ciclo] ?? 0) + 1;
-      total += 1;
+    for (const cycle of CYCLES) {
+      const cat = cyclePlanMeta.byCycle[cycle]?.catalogTotal ?? 0;
+      counts[cycle] = cat;
+      total += cat;
     }
     return { cycleCounts: counts, totalForApprovedFilter: total };
-  }, [onlyApprovedFilter, matchesApprovalFilter]);
+  }, [onlyApprovedFilter, cyclePlanMeta]);
 
   const openCorrelativa = (corrName: string) => {
     const target = findCorrelativaMateria(corrName);
@@ -498,7 +599,7 @@ export default function App() {
               if (
                 onlyApprovedFilter !== 'all' &&
                 !PLAN_ESTUDIOS.some(
-                  (m) => m.ciclo === cycle && matchesApprovalFilter(m.id, onlyApprovedFilter)
+                  (m) => m.ciclo === cycle && matchesApprovalFilter(m, onlyApprovedFilter)
                 )
               ) {
                 setOnlyApprovedFilter('all');
@@ -594,45 +695,94 @@ export default function App() {
           </div>
 
           {/* Active Approved/Pending Filter Banner */}
-          {!searchQuery.trim() && onlyApprovedFilter !== 'all' && (
-            <div className="mb-6 px-5 py-3.5 bg-white border border-bordo/20 rounded-2xl flex flex-wrap items-center justify-between gap-3">
-              <span className="text-xs font-semibold text-ink tabular-nums">
-                Mostrando{' '}
-                <strong className="text-bordo">
-                  {filteredMaterias.length}{' '}
-                  {onlyApprovedFilter === 'approved'
-                    ? filteredMaterias.length === 1
-                      ? 'materia aprobada'
-                      : 'materias aprobadas'
-                    : filteredMaterias.length === 1
-                      ? 'materia pendiente'
-                      : 'materias pendientes'}
-                </strong>{' '}
-                {selectedCycle === 'Todos' ? 'en todo el plan' : `en ${selectedCycle}`}
-              </span>
-              <div className="flex flex-wrap items-center gap-3">
-                {selectedCycle !== 'Todos' && totalForApprovedFilter > filteredMaterias.length && (
+          {!searchQuery.trim() && onlyApprovedFilter !== 'all' && (() => {
+            const activeMeta =
+              selectedCycle !== 'Todos' ? cyclePlanMeta.byCycle[selectedCycle] : undefined;
+
+            const isPendingView = onlyApprovedFilter === 'pending';
+            const pendingCountForScope = isPendingView
+              ? selectedCycle === 'Todos'
+                ? cyclePlanMeta.totalPendingRequired
+                : (activeMeta?.pendingRequired ?? 0)
+              : filteredMaterias.length;
+
+            const showOptionsSubtitle =
+              isPendingView &&
+              pendingCountForScope > 0 &&
+              (selectedCycle === 'Todos'
+                ? filteredMaterias.length > pendingCountForScope
+                : Boolean(activeMeta?.isElectivePool));
+
+            return (
+              <div className="mb-6 px-5 py-3.5 bg-white border border-bordo/20 rounded-2xl flex flex-wrap items-center justify-between gap-3">
+                <span className="text-xs font-semibold text-ink tabular-nums">
+                  {isPendingView ? (
+                    pendingCountForScope === 0 ? (
+                      <>
+                        <strong className="text-emerald-700">0 materias pendientes</strong>{' '}
+                        {selectedCycle === 'Todos'
+                          ? 'en el plan de estudios'
+                          : `en ${selectedCycle} (ciclo completo)`}
+                      </>
+                    ) : (
+                      <>
+                        {pendingCountForScope === 1 ? 'Falta ' : 'Faltan '}
+                        <strong className="text-bordo">
+                          {pendingCountForScope}{' '}
+                          {pendingCountForScope === 1
+                            ? 'materia pendiente'
+                            : 'materias pendientes'}
+                        </strong>{' '}
+                        {selectedCycle === 'Todos' ? 'en todo el plan' : `en ${selectedCycle}`}
+                        {showOptionsSubtitle && (
+                          <span className="text-muted font-normal">
+                            {' '}
+                            · Mostrando {filteredMaterias.length} opciones disponibles para elegir
+                          </span>
+                        )}
+                      </>
+                    )
+                  ) : (
+                    <>
+                      Mostrando{' '}
+                      <strong className="text-bordo">
+                        {filteredMaterias.length}{' '}
+                        {filteredMaterias.length === 1
+                          ? 'materia aprobada'
+                          : 'materias aprobadas'}
+                      </strong>{' '}
+                      {selectedCycle === 'Todos' ? 'en todo el plan' : `en ${selectedCycle}`}
+                    </>
+                  )}
+                </span>
+                <div className="flex flex-wrap items-center gap-3">
+                  {selectedCycle !== 'Todos' &&
+                    totalForApprovedFilter >
+                      (isPendingView ? pendingCountForScope : filteredMaterias.length) && (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setSelectedCycle('Todos');
+                          setSelectedArea('all');
+                        }}
+                        className="text-xs font-bold text-violeta hover:underline whitespace-nowrap cursor-pointer"
+                      >
+                        {isPendingView
+                          ? `Ver las ${totalForApprovedFilter} pendientes del plan`
+                          : `Ver las ${totalForApprovedFilter} de todo el plan`}
+                      </button>
+                    )}
                   <button
                     type="button"
-                    onClick={() => {
-                      setSelectedCycle('Todos');
-                      setSelectedArea('all');
-                    }}
-                    className="text-xs font-bold text-violeta hover:underline whitespace-nowrap cursor-pointer"
+                    onClick={() => handleChangeApprovedFilter('all')}
+                    className="text-xs font-bold text-bordo hover:underline whitespace-nowrap cursor-pointer"
                   >
-                    Ver las {totalForApprovedFilter} de todo el plan
+                    Mostrar todas
                   </button>
-                )}
-                <button
-                  type="button"
-                  onClick={() => handleChangeApprovedFilter('all')}
-                  className="text-xs font-bold text-bordo hover:underline whitespace-nowrap cursor-pointer"
-                >
-                  Mostrar todas
-                </button>
+                </div>
               </div>
-            </div>
-          )}
+            );
+          })()}
 
           {/* Area Filter */}
           {!searchQuery.trim() && areas.length > 1 && (
@@ -740,24 +890,48 @@ export default function App() {
           })}
         </div>
 
-        {filteredMaterias.length === 0 && (
-          <div className="text-center py-16 px-6 bg-white border border-ink/8 rounded-3xl">
-            <p className="text-muted text-base mb-4">
-              No se encontraron materias con los filtros actuales.
-            </p>
-            <button
-              type="button"
-              onClick={() => {
-                setSearchQuery('');
-                setSelectedArea('all');
-                handleChangeApprovedFilter('all');
-              }}
-              className="px-5 py-2.5 rounded-full bg-bordo text-white text-xs font-bold hover:bg-bordo-light transition-colors cursor-pointer"
-            >
-              Ver todas las materias
-            </button>
-          </div>
-        )}
+        {filteredMaterias.length === 0 && (() => {
+          const activeMeta =
+            selectedCycle !== 'Todos' ? cyclePlanMeta.byCycle[selectedCycle] : undefined;
+          const isCompletedCycleInPending =
+            !searchQuery.trim() &&
+            onlyApprovedFilter === 'pending' &&
+            Boolean(activeMeta && activeMeta.pendingRequired === 0);
+
+          return (
+            <div className="text-center py-16 px-6 bg-white border border-ink/8 rounded-3xl">
+              {isCompletedCycleInPending && activeMeta ? (
+                <>
+                  <p className="text-ink font-serif font-bold text-xl mb-2">
+                    ¡Ciclo {selectedCycle} completo!
+                  </p>
+                  <p className="text-muted text-sm sm:text-base mb-5 max-w-lg mx-auto">
+                    Ya aprobaste las {activeMeta.required}{' '}
+                    {activeMeta.required === 1 ? 'materia requerida' : 'materias requeridas'} de
+                    este ciclo, por lo que no tenés pendientes acá.
+                  </p>
+                </>
+              ) : (
+                <p className="text-muted text-base mb-4">
+                  No se encontraron materias con los filtros actuales.
+                </p>
+              )}
+              <button
+                type="button"
+                onClick={() => {
+                  setSearchQuery('');
+                  setSelectedArea('all');
+                  handleChangeApprovedFilter('all');
+                }}
+                className="px-5 py-2.5 rounded-full bg-bordo text-white text-xs font-bold hover:bg-bordo-light transition-colors cursor-pointer"
+              >
+                {isCompletedCycleInPending
+                  ? `Ver todas las opciones de ${selectedCycle}`
+                  : 'Ver todas las materias'}
+              </button>
+            </div>
+          );
+        })()}
       </main>
 
       {/* Official Interactive Flowchart Diagram */}

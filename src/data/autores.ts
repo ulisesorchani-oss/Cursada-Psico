@@ -86,7 +86,8 @@ export const AUTORES: AutorProfile[] = [
       'psico-desarrollo-adolescencia',
       'psico-clinica-psicoterapias-1',
       'teoria-tecnica-grupos',
-      'historia-psico'
+      'historia-psico',
+      'psico-fenomenologica-existencial'
     ],
     fechas: '1856 – 1939',
     origen: 'Freiberg (Moravia) · Viena, Austria',
@@ -183,6 +184,7 @@ export const AUTORES: AutorProfile[] = [
     matchKeys: ['lacan'],
     materiaIdsExtra: [
       'psicopatologia',
+      'psico-fenomenologica-existencial',
       'psicoanalisis-francesa-1',
       'psicoanalisis-francesa-2',
       'psico-clinica-psicoterapias-1',
@@ -570,7 +572,7 @@ export const AUTORES: AutorProfile[] = [
     nombre: 'Jean Laplanche & J.-B. Pontalis',
     apellidoCorto: 'Laplanche',
     matchKeys: ['laplanche', 'pontalis'],
-    materiaIdsExtra: ['psicoanalisis-freud', 'psicopatologia', 'psicoanalisis-francesa-1'],
+    materiaIdsExtra: ['psicoanalisis-freud', 'psicopatologia', 'psicoanalisis-francesa-1', 'psico-fenomenologica-existencial'],
     fechas: '1924 – 2012 / 1924 – 2013',
     origen: 'París, Francia',
     corriente: 'Psicoanálisis',

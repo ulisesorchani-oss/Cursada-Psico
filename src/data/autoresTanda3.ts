@@ -209,7 +209,6 @@ export const AUTORES_TANDA_3: AutorProfile[] = [
     matchKeys: ['rogers'],
     materiaIdsExtra: [
       'psico-clinica-psicoterapias-2',
-      'psico-fenomenologica-existencial',
       'historia-psico',
       'psico-personalidad'
     ],
@@ -275,7 +274,6 @@ export const AUTORES_TANDA_3: AutorProfile[] = [
     apellidoCorto: 'Frankl',
     matchKeys: ['frankl'],
     materiaIdsExtra: [
-      'psico-fenomenologica-existencial',
       'psico-clinica-psicoterapias-2',
       'abordaje-cuidados-paliativos'
     ],
@@ -285,7 +283,7 @@ export const AUTORES_TANDA_3: AutorProfile[] = [
     resumenCorto:
       'Médico neurólogo y psiquiatra austríaco fundador de la Logoterapia y el Análisis Existencial ("Tercera Escuela Vienesa de Psicoterapia"). Planteó la voluntad de sentido y la libertad interior frente al sufrimiento.',
     biografia:
-      'Formado en Viena en diálogo crítico con Sigmund Freud y Alfred Adler, Viktor Emil Frankl sobrevivió entre 1942 y 1945 a cuatro campos de concentración nazis (entre ellos Auschwitz y Dachau), donde perdió a casi toda su familia. De esa experiencia extrema nació su célebre testimonio y ensayo "El hombre en busca de sentido".\n\nSu Logoterapia —estudiada en Psicología Fenomenológica y Existencial y en cuidados paliativos— concibe al ser humano como una unidad bio-psico-espiritual capaz de asumir una postura libre y responsable incluso ante condiciones límite.',
+      'Formado en Viena en diálogo crítico con Sigmund Freud y Alfred Adler, Viktor Emil Frankl sobrevivió entre 1942 y 1945 a cuatro campos de concentración nazis (entre ellos Auschwitz y Dachau), donde perdió a casi toda su familia. De esa experiencia extrema nació su célebre testimonio y ensayo "El hombre en busca de sentido".\n\nSu Logoterapia —referente en psicoterapia existencial y en cuidados paliativos— concibe al ser humano como una unidad bio-psico-espiritual capaz de asumir una postura libre y responsable incluso ante condiciones límite.',
     principalesAportes: [
       'Fundación de la Logoterapia (terapia a través del sentido), centrada en la "voluntad de sentido" frente a la voluntad de placer (Freud) o de poder (Adler).',
       'Descripción del "vacío existencial" y de las "neurosis noógenas" ligadas a la pérdida de propósito y valores.',
@@ -341,14 +339,14 @@ export const AUTORES_TANDA_3: AutorProfile[] = [
     nombre: 'Ludwig Binswanger',
     apellidoCorto: 'Binswanger',
     matchKeys: ['binswanger'],
-    materiaIdsExtra: ['psico-fenomenologica-existencial', 'psicopatologia', 'historia-psico'],
+    materiaIdsExtra: ['psicopatologia', 'historia-psico'],
     fechas: '1881 – 1966',
     origen: 'Kreuzlingen, Suiza',
     corriente: 'Sistémica y Humanista',
     resumenCorto:
       'Psiquiatra suizo fundador del Análisis Existencial (Daseinsanalyse). Integró la fenomenología de Husserl y la analítica existencial de Heidegger en la psicopatología y la comprensión clínica.',
     biografia:
-      'Director durante casi medio siglo del célebre sanatorio Bellevue en Suiza y amigo cercano —a la vez que interlocutor crítico— de Sigmund Freud durante más de treinta años, Ludwig Binswanger inauguró la psiquiatría fenomenológico-existencial.\n\nEn Psicología Fenomenológica y Existencial de la UBA es un autor troncal para comprender cómo el padecimiento psíquico (melancolía, manía, esquizofrenia) no es un mero "déficit biológico" aislado, sino una transformación singular del modo de "ser-en-el-mundo" (tiempo, espacio, corporalidad y encuentro con los otros).',
+      'Director durante casi medio siglo del célebre sanatorio Bellevue en Suiza y amigo cercano —a la vez que interlocutor crítico— de Sigmund Freud durante más de treinta años, Ludwig Binswanger inauguró la psiquiatría fenomenológico-existencial.\n\nEn la tradición fenomenológico-existencial es un autor clave para comprender cómo el padecimiento psíquico (melancolía, manía, esquizofrenia) no es un mero "déficit biológico" aislado, sino una transformación singular del modo de "ser-en-el-mundo" (tiempo, espacio, corporalidad y encuentro con los otros).',
     principalesAportes: [
       'Creación del Daseinsanalyse (Análisis Existencial) como método fenomenológico para describir los mundos vividos en la psicopatología.',
       'Relectura crítica de la psicopatología clásica: el delirio o la melancolía revelan una estructuración particular de la temporalidad y la espacialidad.',
@@ -897,6 +895,7 @@ export const AUTORES_TANDA_3: AutorProfile[] = [
     matchKeys: ['masotta'],
     materiaIdsExtra: [
       'historia-psico',
+      'psico-fenomenologica-existencial',
       'psicoanalisis-francesa-1',
       'psicoanalisis-francesa-2',
       'psicoanalisis-freud'

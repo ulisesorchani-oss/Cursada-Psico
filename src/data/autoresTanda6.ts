@@ -615,8 +615,7 @@ export const AUTORES_TANDA_6: AutorProfile[] = [
     materiaIdsExtra: [
       'historia-psico',
       'psico-personalidad',
-      'psico-trabajo-prof',
-      'psico-fenomenologica-existencial'
+      'psico-trabajo-prof'
     ],
     fechas: '1908 – 1970',
     origen: 'Brooklyn, Nueva York · California, Estados Unidos',

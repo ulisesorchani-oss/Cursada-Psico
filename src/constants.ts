@@ -875,9 +875,29 @@ export const PLAN_ESTUDIOS: Materia[] = [
     año: 3,
     ciclo: 'Electivas General',
     cuatrimestre: 1,
-    descripcion: 'Estudio de las bases filosóficas y psicológicas de la fenomenología y el existencialismo.',
-    objetivos: ['Analizar los conceptos de Dasein y ser-en-el-mundo.', 'Comprender la relación entre filosofía y psicología clínica.'],
-    catedras: [{ nombre: 'Cátedra Única (Cód. 078)', titular: 'Pablo Diego Muñoz', link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=78&anio=2026&cuatrimestre=2', bibliografia: [] }],
+    descripcion: 'Estudio del método fenomenológico (Husserl, Heidegger, Sartre, Merleau-Ponty, Jaspers) y la tradición existencial en diálogo crítico con el psicoanálisis (Freud y Lacan) alrededor de la conciencia intencional, el Dasein, la comprensión, la locura, el cuerpo, el prójimo y la libertad.',
+    objetivos: [
+      'Apropiarse de los conceptos fundamentales del método fenomenológico y la tradición existencial.',
+      'Conocer los fundamentos históricos y conceptuales de la relación entre fenomenología, existencialismo y psicoanálisis.',
+      'Analizar núcleos temáticos comunes: intencionalidad, Dasein, comprensión, locura, cuerpo, el prójimo y la libertad.'
+    ],
+    catedras: [
+      {
+        nombre: 'Cátedra I · Única (Cód. 078)',
+        titular: 'Pablo Diego Muñoz',
+        link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=78&anio=2026&cuatrimestre=2',
+        bibliografia: [
+          { autor: 'Pablo Diego Muñoz', titulo: '(Des)encuentros entre fenomenología y psicoanálisis (Vol. I y II)', editorial: 'Eudeba', año: '2014–2015', tipo: 'Obligatoria' },
+          { autor: 'Jean-Paul Sartre', titulo: 'El ser y la nada (Las relaciones concretas con el prójimo; El psicoanálisis existencial) y El existencialismo es un humanismo', editorial: 'Losada / Sur', año: '1943 / 1948', tipo: 'Obligatoria' },
+          { autor: 'Martin Heidegger', titulo: 'Ser y tiempo (§ 9, § 12, § 14–16 y § 39–41: Dasein, estar-en-el-mundo, angustia y cuidado)', editorial: 'Trotta', año: '1927', tipo: 'Obligatoria' },
+          { autor: 'Karl Jaspers', titulo: 'Psicopatología general (Fenomenología y Psicología comprensiva) y Escritos psicopatológicos (Desarrollo o proceso)', editorial: 'FCE / Gredos', año: '1910 / 1946', tipo: 'Obligatoria' },
+          { autor: 'Jacques Lacan', titulo: 'De la psicosis paranoica en sus relaciones con la personalidad, Acerca de la causalidad psíquica, Seminario 10 y Seminario 11', editorial: 'Siglo XXI / Paidós', año: '1932–1964', tipo: 'Obligatoria' },
+          { autor: 'Maurice Merleau-Ponty', titulo: 'Fenomenología de la percepción (Parte I: El cuerpo) y El mundo de la percepción', editorial: 'Península', año: '1945 / 1948', tipo: 'Obligatoria' },
+          { autor: 'Georges Lanteri-Laura', titulo: 'Proceso y psicogénesis en la obra de J. Lacan', editorial: 'Litoral', año: '1984', tipo: 'Obligatoria' },
+          { autor: 'Agustín Kripper y Luciano Lutereau', titulo: 'Introducción a la fenomenología (Heidegger, Jaspers, Sartre y Merleau-Ponty)', editorial: 'Cátedra UBA', año: '2015', tipo: 'Obligatoria' }
+        ]
+      }
+    ],
     correlativas: ['Psicoanálisis: Freud', 'Historia de la Psicología']
   },
   {

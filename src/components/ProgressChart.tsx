@@ -246,7 +246,7 @@ export function ProgressChart({
                 [
                   ['all', 'Todas'],
                   ['approved', `Aprobadas (${totalRawApproved})`],
-                  ['pending', 'Pendientes']
+                  ['pending', `Pendientes (${Math.max(0, TOTAL_REQUIRED_MATERIAS - totalCounted)})`]
                 ] as const
               ).map(([value, label]) => (
                 <button

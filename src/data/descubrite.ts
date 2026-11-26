@@ -557,22 +557,44 @@ export const CATEDRAS_SUGERIDAS_RULES: readonly CatedraSugeridaRule[] = [
     pesos: { 'tcc-evidencia': 2.2, 'neuro-psicometria': 2, 'educacion-desarrollo': 0.8 }
   },
   {
-    id: 'cat-psicoterapias-1',
+    id: 'cat-adultos-1',
     materiaId: 'psico-clinica-psicoterapias-1',
-    materiaNombre: 'Psicología Clínica y Psicoterapias',
-    catedraNombre: 'Cátedra I (Psicoterapias I)',
-    titular: 'Martín Etchevers',
-    motivo: 'Recorrido clínico con fuerte anclaje psicodinámico, psicopatología e investigación en psicoterapia.',
-    pesos: { psicoanalisis: 2.5, 'salud-comunitaria': 0.8, 'filosofia-fenomenologia': 0.6 }
+    materiaNombre: 'Psicología Clínica y Psicoterapias I (Adultos)',
+    catedraNombre: 'Cátedra I (Cód. 574)',
+    titular: 'Vanina Muraro',
+    motivo:
+      'Orientación psicoanalítica freudiano-lacaniana rigurosa (continuadora de Lombardi: Freud, Lacan, Soler, Lombardi, Mazzuca, Muraro), centrada en el síntoma en transferencia, Taller de Lectura de Textos y Principios de la Práctica Clínica (Servicio de Adultos en Avellaneda, Moyano, Álvarez); final oral obligatorio tras parcial escrito + informe clínico domiciliario con defensa oral.',
+    pesos: { psicoanalisis: 3, 'filosofia-fenomenologia': 0.8, 'salud-comunitaria': 0.6 }
+  },
+  {
+    id: 'cat-adultos-2',
+    materiaId: 'psico-clinica-psicoterapias-1',
+    materiaNombre: 'Psicología Clínica y Psicoterapias I (Adultos)',
+    catedraNombre: 'Cátedra II (Cód. 575)',
+    titular: 'Silvia Vázquez',
+    motivo:
+      'Psicoanálisis clínico plural de base freudiana en diálogo con Lacan, Aulagnier, Soler, Korman, Heinrich, Galende y crítica al DSM (Frances); divide prácticos en A (neurosis) y B (psicosis, bordes, urgencias, hospital e interconsulta, con optativas en Borda, Álvarez y PRISMA). Final oral obligatorio tras 2 parciales presenciales escritos individuales.',
+    pesos: { psicoanalisis: 2.6, 'salud-comunitaria': 1.3, 'juridica-etica': 0.5 }
+  },
+  {
+    id: 'cat-psicoterapias-1',
+    materiaId: 'psico-clinica-psicoterapias-2',
+    materiaNombre: 'Psicología Clínica y Psicoterapias II',
+    catedraNombre: 'Cátedra I (Cód. 570)',
+    titular: 'Martín Juan Etchevers',
+    motivo:
+      'Orientación psicodinámica con apoyo en investigación empírica: Escuela Inglesa (Winnicott, Bion), Apego (Bowlby), Mentalización (Fonagy/Bateman, MBT), DIT, conflicto y déficit (Killingmo), enfoque Modular-Transformacional (Bleichmar), Alianza Terapéutica, DSM-5, crisis/suicidio/catástrofes (Defusing/Debriefing) e interconsulta. Promoción sin final con 7+ en 2 parciales.',
+    pesos: { psicoanalisis: 2.4, 'tcc-evidencia': 1.0, 'salud-comunitaria': 0.8 }
   },
   {
     id: 'cat-psicoterapias-2',
     materiaId: 'psico-clinica-psicoterapias-2',
-    materiaNombre: 'Psicología Clínica y Psicoterapias',
-    catedraNombre: 'Cátedra II (Psicoterapias II)',
-    titular: 'Eduardo G. Keegan',
-    motivo: 'Referente UBA en Terapia Cognitivo-Conductual, formulación de casos y tratamientos basados en evidencia.',
-    pesos: { 'tcc-evidencia': 3, 'neuro-psicometria': 1 }
+    materiaNombre: 'Psicología Clínica y Psicoterapias II',
+    catedraNombre: 'Cátedra II (Cód. 571)',
+    titular: 'Eduardo Gustavo Keegan',
+    motivo:
+      'Referente UBA en psicoterapia basada en evidencia y TCC (Aaron y Judith Beck, Protocolo Unificado transdiagnóstico de Barlow, terapias basadas en procesos de Hofmann/Hayes, Mindfulness/MBCT) más Psicoterapia Interpersonal (TIP): conceptualización de casos con viñetas y role-playing, tratamientos combinados, riesgo suicida, interconsulta y sistemas de salud. Promoción sin final con 7+.',
+    pesos: { 'tcc-evidencia': 3, 'neuro-psicometria': 1, 'salud-comunitaria': 0.5 }
   },
   {
     id: 'cat-salud-1',
@@ -718,19 +740,21 @@ export const CATEDRAS_SUGERIDAS_RULES: readonly CatedraSugeridaRule[] = [
     id: 'cat-juridica-1',
     materiaId: 'psico-juridica',
     materiaNombre: 'Psicología Jurídica',
-    catedraNombre: 'Cátedra I',
-    titular: 'Claudio Ghiso',
-    motivo: 'Mirada institucional y de derechos sobre vulnerabilidad, discurso jurídico y subjetividad.',
-    pesos: { 'juridica-etica': 2.4, 'salud-comunitaria': 1.4, psicoanalisis: 0.8 }
+    catedraNombre: 'Cátedra I (Cód. 768)',
+    titular: 'Claudio Daniel Ghiso',
+    motivo:
+      'Recorrido amplio y crítico con fuentes clásicas y contemporáneas (Foucault, Basaglia, Bourdieu, Goffman, Wacquant, Zaffaroni, Segato, Crenshaw, Diges, Intebi) más legislación comentada; incluye ámbito policial, perfiles criminales y Psicología del Testimonio, análisis de casos y visitas institucionales optativas. Promocionable sin final con 7+ (parcial presencial individual + parcial grupal domiciliario de caso).',
+    pesos: { 'juridica-etica': 2.5, 'salud-comunitaria': 1.5, 'filosofia-fenomenologia': 0.9 }
   },
   {
     id: 'cat-juridica-2',
     materiaId: 'psico-juridica',
     materiaNombre: 'Psicología Jurídica',
-    catedraNombre: 'Cátedra II',
-    titular: 'Stella M. Puhl',
-    motivo: 'Perfil técnico-forense centrado en actividad pericial, evaluación psicológica en tribunales y criminología.',
-    pesos: { 'juridica-etica': 2.8, 'neuro-psicometria': 1, 'tcc-evidencia': 0.5 }
+    catedraNombre: 'Cátedra II (Cód. 769)',
+    titular: 'Stella Maris Puhl',
+    motivo:
+      'Perfil técnico-pericial articulado en tres paradigmas (DD.HH., Géneros y Niñez) con bibliografía unificada y actualizada del equipo docente (APJRA/AAPJ 2018–2026); profundiza en protocolos de evaluación forense, acoso laboral, autopsia psicológica, incapacidad sobreviniente e historia criminológica con estudios de caso y visitas presenciales/virtuales optativas. Promocionable sin final con 7+ (parcial presencial individual + domiciliario grupal con coloquio).',
+    pesos: { 'juridica-etica': 2.8, 'neuro-psicometria': 1.1, 'salud-comunitaria': 0.7 }
   },
   {
     id: 'cat-psicopatologia-1',
@@ -836,10 +860,81 @@ export const CATEDRAS_SUGERIDAS_RULES: readonly CatedraSugeridaRule[] = [
     id: 'cat-etica-1',
     materiaId: 'etica-deontologia-ddhh',
     materiaNombre: 'Ética, Deontología y Derechos Humanos',
-    catedraNombre: 'Cátedra I',
+    catedraNombre: 'Cátedra I (Cód. 577)',
     titular: 'Elizabeth Beatriz Ormart',
-    motivo: 'Ética profesional, cine, bioética y reflexión dilemática aplicada a la práctica clínica y comunitaria.',
-    pesos: { 'juridica-etica': 2.2, 'filosofia-fenomenologia': 1.8, 'educacion-desarrollo': 0.6 }
+    motivo:
+      'Psicoanálisis, filosofía y estética/cine (Michel Fariña, Salomone, Lewkowicz, Ormart): doble movimiento ético (Universal–Particular–Singular), lectura clínica de films y series, terrorismo de Estado, apropiación/restitución y TRHA; 2 parciales presenciales + PPO/informe para promocionar con 7+.',
+    pesos: { 'juridica-etica': 2.2, 'filosofia-fenomenologia': 1.8, psicoanalisis: 1.4 }
+  },
+  {
+    id: 'cat-etica-2',
+    materiaId: 'etica-deontologia-ddhh',
+    materiaNombre: 'Ética, Deontología y Derechos Humanos',
+    catedraNombre: 'Cátedra II (Cód. 578)',
+    titular: 'Julieta Bareiro',
+    motivo:
+      'Ética Aplicada, Bioética y Psico-ética (Habermas, Ricoeur, França-Tarragó, Beauchamp, Segato, IA/terapias virtuales) con foco fuerte en legislación argentina y prácticas en CELS, Defensoría, Lanari o Borda; 1° parcial presencial + 2° parcial domiciliario integrador + PPO/nota para promocionar con 7+.',
+    pesos: { 'juridica-etica': 2.5, 'salud-comunitaria': 1.6, 'filosofia-fenomenologia': 1.4 }
+  },
+  {
+    id: 'cat-institucional-1',
+    materiaId: 'psico-organizacional-institucional',
+    materiaNombre: 'Psicología Organizacional e Institucional',
+    catedraNombre: 'Cátedra I (Cód. 644)',
+    titular: 'Mariana Silvia Funes Molineri',
+    motivo:
+      'Clínica institucional, investigación-acción y etnografía (Schejter, Bleger, Ulloa, Malfé, Kaës, Lourau, Guattari, Castoriadis, Bourdieu, Guber): análisis de prácticas, implicación y devolución comunitaria en comisiones temáticas elegibles; parcial domiciliario + trabajo de campo grupal + coloquio grupal o final individual.',
+    pesos: { 'salud-comunitaria': 2.3, psicoanalisis: 1.8, 'filosofia-fenomenologia': 1.4, 'trabajo-organizaciones': 1.3 }
+  },
+  {
+    id: 'cat-institucional-2',
+    materiaId: 'psico-organizacional-institucional',
+    materiaNombre: 'Psicología Organizacional e Institucional',
+    catedraNombre: 'Cátedra II (Cód. 539)',
+    titular: 'Nora Beatriz Vitale',
+    motivo:
+      'Puente «InstituOrganizacional» entre Psicología Organizacional y consultoría (Schein, Schlemenson, Weisbord, FODA, PyMEs, empresas familiares y ONGs) y corrientes institucionalistas + atravesamientos actuales (managerismo, género, virtualidad e IA con Sadin); parcial presencial + Informe Institucional grupal + opción de conversación institucional en el final.',
+    pesos: { 'trabajo-organizaciones': 2.6, 'salud-comunitaria': 1.5, psicoanalisis: 1.3, 'tcc-evidencia': 0.8 }
+  },
+  {
+    id: 'cat-educacional-1',
+    materiaId: 'psico-educativa-prof',
+    materiaNombre: 'Psicología Educacional',
+    catedraNombre: 'Cátedra I (Cód. 083)',
+    titular: 'Débora Ruth Nakache',
+    motivo:
+      'Marco Epistémico Relacional y tradición UBA (Elichiry, Castorina, Baquero, Terigi, Rogoff, Vygotski, Ferreiro, Meirieu, Zelmanovich, Nakache): mirada etnográfica, inclusión, crítica a neurociencias/educación emocional y prácticas más allá de la escuela (medios, cine infantil y orientación vocacional); promocionable con 7+ (parcial a libro abierto + trabajo de campo con 3 entrevistas y coloquio).',
+    pesos: { 'educacion-desarrollo': 2.6, 'salud-comunitaria': 1.5, psicoanalisis: 1.1 }
+  },
+  {
+    id: 'cat-educacional-2',
+    materiaId: 'psico-educativa-prof',
+    materiaNombre: 'Psicología Educacional',
+    catedraNombre: 'Cátedra II (Cód. 041)',
+    titular: 'A designar',
+    motivo:
+      'Giro contextualista-situacional (Baquero, Terigi, Rivière, Vygotsky, Cazden) con una unidad entera dedicada a Derechos, Género, Interseccionalidad y ESI (Morgade, Segato, Fainsod), despatologización (Acta CONISMA, Skliar, Benasayag) y convivencia/equipos de orientación (Greco, Korinfeld, Bleichmar); promocionable con 7+ (parcial a libro abierto + trabajo de campo en 8 ejes y coloquio).',
+    pesos: { 'educacion-desarrollo': 2.5, 'salud-comunitaria': 1.8, 'juridica-etica': 1.3 }
+  },
+  {
+    id: 'cat-trabajo-1',
+    materiaId: 'psico-trabajo-prof',
+    materiaNombre: 'Psicología del Trabajo',
+    catedraNombre: 'Cátedra I (Cód. 040)',
+    titular: 'Liliana Edith Ferrari',
+    motivo:
+      'Historicidad, psicología social del trabajo y competencias aplicadas (Ferrari, Filippi, Bandura, Alcover, Levy-Leboyer, Burin, Cortina, Dubet): selección de talentos y Assessment Center, trabajo digital, psicología positiva/flow, riesgos psicosociales y RSE; promocionable con 7+ (2 parciales domiciliarios de caso + choice campus + encuesta UBACyT).',
+    pesos: { 'trabajo-organizaciones': 2.6, 'salud-comunitaria': 1.4, 'juridica-etica': 1.1 }
+  },
+  {
+    id: 'cat-trabajo-2',
+    materiaId: 'psico-trabajo-prof',
+    materiaNombre: 'Psicología del Trabajo',
+    catedraNombre: 'Cátedra II (Cód. 724)',
+    titular: 'Virginia Laura Borrajo',
+    motivo:
+      'Psicodinámica y clínica de la actividad (Dejours, Clot, Alonzo, Schvarstein, Schlemenson, Bauman, Byung-Chul Han, Neffa): análisis organizacional en crisis, consultoría/coaching, trabajo híbrido y plataformas, empresas familiares, emprendimientos, desempleo y jubilación; promocionable con 7+ (parcial presencial + monografía grupal de campo).',
+    pesos: { 'trabajo-organizaciones': 2.5, psicoanalisis: 1.4, 'salud-comunitaria': 1.5, 'filosofia-fenomenologia': 1.1 }
   }
 ];
 
@@ -981,12 +1076,7 @@ export function computeDescubriteResult(
   const bestByMateria = new Map<string, { rule: CatedraSugeridaRule; materia?: Materia; afinidad: number }>();
 
   for (const rule of CATEDRAS_SUGERIDAS_RULES) {
-    // Group Psicoterapias I and II together as a single choice slot
-    const groupKey =
-      rule.materiaId === 'psico-clinica-psicoterapias-1' ||
-      rule.materiaId === 'psico-clinica-psicoterapias-2'
-        ? 'grupo-psicoterapias'
-        : rule.materiaId;
+    const groupKey = rule.materiaId;
 
     const afinidad = scoreWeights(rule.pesos);
     const existing = bestByMateria.get(groupKey);

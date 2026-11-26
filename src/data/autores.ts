@@ -1389,7 +1389,7 @@ export const AUTORES: AutorProfile[] = [
     id: 'beck',
     nombre: 'Aaron T. Beck',
     apellidoCorto: 'Beck',
-    matchKeys: ['beck'],
+    matchKeys: ['beck, a', 'aaron beck', 'aaron t. beck'],
     materiaIdsExtra: [
       'psico-clinica-psicoterapias-2',
       'clinica-cognitivo-comportamental',

@@ -1280,7 +1280,7 @@ export const AUTORES_TANDA_6: AutorProfile[] = [
     id: 'korman',
     nombre: 'Víctor Korman',
     apellidoCorto: 'Korman',
-    matchKeys: ['korman', 'victor korman'],
+    matchKeys: ['korman, v', 'victor korman'],
     materiaIdsExtra: [
       'clinica-toxicomanias',
       'clinica-adicciones-interdisciplinario',

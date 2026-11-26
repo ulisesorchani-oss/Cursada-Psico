@@ -118,6 +118,37 @@ const FAQ_ITEMS: readonly FaqItem[] = [
     ]
   },
   {
+    id: 'baja-materias-penalizacion-anuales',
+    categoria: 'Trámites e Inscripciones',
+    pregunta: '¿Cómo me doy de baja de una materia y qué pasa si dejo de cursar sin tramitarla a tiempo?',
+    respuesta: [
+      'Si te inscribiste a una cursada y decidís no hacerla, debés tramitar la baja formal desde el Sistema Académico dentro del período habilitado en el Calendario Académico. No alcanza con avisar al docente ni dejar de asistir.',
+      'Si abandonás la cursada sin darte de baja en fecha, quedás en condición de ausente/libre y se aplica la penalización reglamentaria que te bloquea la inscripción a esa misma asignatura en la instancia siguiente. Ojo especial con las materias anuales —como Psicoanálisis: Freud o Psicopatología—: perder la cursada y sufrir penalización puede atrasarte casi dos años toda la cadena de correlativas.',
+      'Consejo práctico para ingresantes: apenas termines el CBC, priorizá anotarte a Psicoanálisis: Freud en tu primer cuatrimestre (ya que es anual y destraba materias centrales del plan) y revisá tu disponibilidad real antes de que cierre la ventana de bajas.'
+    ],
+    links: [
+      { label: 'Ir al Sistema Académico', href: 'http://academica.psi.uba.ar/', external: true },
+      {
+        label: 'Ver Calendario Académico 2026',
+        href: 'https://www.psi.uba.ar/estudiantes.php?var=calendario2026/2026.php',
+        external: true
+      }
+    ]
+  },
+  {
+    id: 'vencimiento-regularidad-aplazos-finales',
+    categoria: 'Trámites e Inscripciones',
+    pregunta: '¿Cuánto dura la regularidad de una materia y qué pasa si se vence o acumulo aplazos en el final?',
+    respuesta: [
+      'Cuando aprobás los trabajos prácticos sin promoción directa (nota entre 4 y 6), quedás en condición de alumno regular para rendir el examen final durante un plazo determinado (en Psicología UBA la regularidad tiene una vigencia reglamentaria de dos años / ciclos lectivos; chequeá siempre tu fecha exacta de vencimiento en el Sistema Académico).',
+      'Si se vence el plazo sin aprobar el final, o si alcanzás el tope reglamentario de 3 (tres) aplazos en el final de esa misma cursada, perdés la regularidad y vas a tener que volver a cursar la materia (o rendirla en condición de libre, si la asignatura lo permite).',
+      'Además, si te anotaste a una mesa de examen final y decidís no presentarte, recordá darte de baja de la mesa dentro del plazo habilitado en el Sistema Académico para evitar sanciones en llamados posteriores.'
+    ],
+    links: [
+      { label: 'Consultar tu situación en el Sistema Académico', href: 'http://academica.psi.uba.ar/', external: true }
+    ]
+  },
+  {
     id: 'tramites-certificados-libreta',
     categoria: 'Trámites e Inscripciones',
     pregunta: '¿Cómo pido constancia de alumno regular, analítico parcial o consulta de legajo?',

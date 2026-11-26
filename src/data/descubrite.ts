@@ -129,7 +129,7 @@ export const EJES_PERFIL: readonly PerfilEje[] = [
       'Gusto por la interrogación conceptual y epistemológica: fenomenología, existencialismo, historia crítica de la psicología y lecturas de la cultura.',
     enfoqueTeorico: 'Fenomenología, hermenéutica, filosofía contemporánea, antropología, sociología y crítica cultural.',
     ambitosTipicos: 'Docencia universitaria, investigación teórica y epistemológica, escritura académica y crítica clínica-cultural.',
-    autoresSugeridos: ['husserl', 'heidegger', 'sartre', 'merleau-ponty', 'jaspers', 'pablo-munoz', 'ricoeur', 'dilthey']
+    autoresSugeridos: ['husserl', 'heidegger', 'sartre', 'merleau-ponty', 'hadot', 'jaspers', 'pablo-munoz', 'ricoeur', 'dilthey']
   }
 ] as const;
 
@@ -497,6 +497,66 @@ export const MATERIA_PERFIL_WEIGHTS: Record<string, AxisWeights> = {
  */
 export const CATEDRAS_SUGERIDAS_RULES: readonly CatedraSugeridaRule[] = [
   {
+    id: 'cat-procesos-1',
+    materiaId: 'procesos-psico-basicos',
+    materiaNombre: 'Procesos Psicológicos Básicos',
+    catedraNombre: 'Cátedra I (Cód. 544)',
+    titular: 'Federico Faustino González',
+    motivo:
+      'Enfoque en Psicología Cognitiva contemporánea, ciencia de la conciencia, IA y micro-investigación empírica, con evaluación mediante parciales multiple choice.',
+    pesos: { 'neuro-psicometria': 2.6, 'tcc-evidencia': 1.8, 'trabajo-organizaciones': 0.5 }
+  },
+  {
+    id: 'cat-procesos-2',
+    materiaId: 'procesos-psico-basicos',
+    materiaNombre: 'Procesos Psicológicos Básicos',
+    catedraNombre: 'Cátedra II (Cód. 545)',
+    titular: 'Félix Ricardo Bur',
+    motivo:
+      'Integración de la Teoría Histórico-Cultural (Vygotski, Bruner, Engeström) y cognición corporizada, con parciales escritos y prácticos colaborativos.',
+    pesos: { 'educacion-desarrollo': 2.6, 'filosofia-fenomenologia': 1.6, 'salud-comunitaria': 0.8 }
+  },
+  {
+    id: 'cat-historia-1',
+    materiaId: 'historia-psico',
+    materiaNombre: 'Historia de la Psicología',
+    catedraNombre: 'Cátedra I (Cód. 118)',
+    titular: 'Marcela Patricia Borinsky',
+    motivo:
+      'Historia intelectual y crítica (Foucault, Danziger, Rose), debates de género y salud mental, historia argentina del campo psi y 6 seminarios de profundización (incluyendo Foucault/Hadot, trauma y familia).',
+    pesos: { 'filosofia-fenomenologia': 2.4, 'salud-comunitaria': 1.8, psicoanalisis: 1.2, 'juridica-etica': 0.8 }
+  },
+  {
+    id: 'cat-historia-2',
+    materiaId: 'historia-psico',
+    materiaNombre: 'Historia de la Psicología',
+    catedraNombre: 'Cátedra II (Cód. 034)',
+    titular: 'María Florencia Ibarra',
+    motivo:
+      'Recorrido estructurado sobre las Emociones y Pasiones con lectura directa de fuentes primarias (Descartes, Hume, Darwin, Wundt, James, Ribot, Sartre, Freud) y taller de investigación tipo paper.',
+    pesos: { 'filosofia-fenomenologia': 2.2, 'neuro-psicometria': 1.4, 'educacion-desarrollo': 1.2, 'tcc-evidencia': 0.8 }
+  },
+  {
+    id: 'cat-estadistica-1',
+    materiaId: 'estadistica',
+    materiaNombre: 'Estadística',
+    catedraNombre: 'Cátedra I (Cód. 060)',
+    titular: 'María Silvia Galibert',
+    motivo:
+      'Enfoque conceptual integrado (manual de Bologna, tamaño del efecto y lectura de papers), con teóricos virtuales por Teams y guías de ejercicios presenciales.',
+    pesos: { 'neuro-psicometria': 2.6, 'trabajo-organizaciones': 1.2, 'salud-comunitaria': 0.8 }
+  },
+  {
+    id: 'cat-estadistica-2',
+    materiaId: 'estadistica',
+    materiaNombre: 'Estadística',
+    catedraNombre: 'Cátedra II (Cód. 167)',
+    titular: 'Roberto Daniel Muiños',
+    motivo:
+      'Enfoque intuitivo y aplicado sobre un Caso Problema clínico, con app estadística propia (celular/PC) para reducir cálculo manual y seguimiento con autoevaluaciones en Campus.',
+    pesos: { 'tcc-evidencia': 2.2, 'neuro-psicometria': 2, 'educacion-desarrollo': 0.8 }
+  },
+  {
     id: 'cat-psicoterapias-1',
     materiaId: 'psico-clinica-psicoterapias-1',
     materiaNombre: 'Psicología Clínica y Psicoterapias',
@@ -605,13 +665,84 @@ export const CATEDRAS_SUGERIDAS_RULES: readonly CatedraSugeridaRule[] = [
     pesos: { psicoanalisis: 2.6, 'filosofia-fenomenologia': 1.4 }
   },
   {
+    id: 'cat-social-1',
+    materiaId: 'psico-social',
+    materiaNombre: 'Psicología Social',
+    catedraNombre: 'Cátedra I (Cód. 035)',
+    titular: 'Gabriel Sergio Vodovotz',
+    motivo:
+      'Enfoque desde el Construccionismo Social, la comunicación sistémica, familia, estigma y redes/TIC (Watzlawick, Berger y Luckmann, Gergen, Goffman), con parcial escrito y trabajo de campo grupal.',
+    pesos: { 'salud-comunitaria': 2.2, 'trabajo-organizaciones': 1.4, 'educacion-desarrollo': 1, 'tcc-evidencia': 0.6 }
+  },
+  {
     id: 'cat-social-2',
     materiaId: 'psico-social',
     materiaNombre: 'Psicología Social',
-    catedraNombre: 'Cátedra II',
+    catedraNombre: 'Cátedra II (Cód. 036)',
     titular: 'Elena Zubieta',
-    motivo: 'Investigación empírica sobre representaciones sociales, valores culturales, bienestar y psicología social europea.',
-    pesos: { 'salud-comunitaria': 2, 'neuro-psicometria': 1.2, 'trabajo-organizaciones': 1 }
+    motivo:
+      'Psicología Social Tripolar, Crítica y Latinoamericana (Moscovici, Martín-Baró, Montero, Pichon-Rivière), memoria colectiva, movimientos sociales y estudios empíricos de la era digital, con parcial multiple choice e investigación grupal.',
+    pesos: { 'salud-comunitaria': 2.2, 'filosofia-fenomenologia': 1.4, 'neuro-psicometria': 1, 'juridica-etica': 0.8 }
+  },
+  {
+    id: 'cat-freud-1',
+    materiaId: 'psicoanalisis-freud',
+    materiaNombre: 'Psicoanálisis: Freud',
+    catedraNombre: 'Cátedra I (Cód. 049)',
+    titular: 'Silvia Patricia Pino',
+    motivo:
+      'Dictado anual con lectura lógica "a la letra" de orientación lacaniana (Módulos A–H en Teóricos, Seminarios y Prácticos sobre paradigmas del síntoma), Semana Clínica, taller de escritura y 3 parciales escritos con articulación.',
+    pesos: { psicoanalisis: 2.8, 'filosofia-fenomenologia': 1.2, 'salud-comunitaria': 0.6 }
+  },
+  {
+    id: 'cat-freud-2',
+    materiaId: 'psicoanalisis-freud',
+    materiaNombre: 'Psicoanálisis: Freud',
+    catedraNombre: 'Cátedra II (Cód. 050)',
+    titular: 'David Alberto Laznik',
+    motivo:
+      'Dictado anual centrado en el psicoanálisis como teoría de una praxis, con traducciones críticas propias, seguimiento sistemático de historiales clínicos y de las tres teorías de la angustia, y 3 parciales escritos (el 3° integrador).',
+    pesos: { psicoanalisis: 2.8, 'educacion-desarrollo': 0.8, 'filosofia-fenomenologia': 0.8 }
+  },
+  {
+    id: 'cat-aprendizaje-1',
+    materiaId: 'psico-aprendizaje',
+    materiaNombre: 'Psicología del Aprendizaje',
+    catedraNombre: 'Cátedra I (Cód. 546)',
+    titular: 'Alicia Viviana Barreiro',
+    motivo:
+      'Perspectiva constructivista y sociohistórica relacional (Piaget, Vygotsky, Ferreiro, Castorina), alfabetización, juicio moral, intersubjetividad y desarrollos diversos (TEA, ceguera, sordera), con 2 parciales y entrevista clínica piagetiana en pareja.',
+    pesos: { 'educacion-desarrollo': 2.8, 'salud-comunitaria': 1.2, 'filosofia-fenomenologia': 0.8 }
+  },
+  {
+    id: 'cat-aprendizaje-2',
+    materiaId: 'psico-aprendizaje',
+    materiaNombre: 'Psicología del Aprendizaje',
+    catedraNombre: 'Cátedra II (Cód. 547)',
+    titular: 'Diana Concepción Fernández Zalazar',
+    motivo:
+      'Enfoque desde la complejidad que integra cognitivismo, constructivismo, Teoría de la Actividad, cognición distribuida, TIC, gamificación, IA y Diseño Universal del Aprendizaje (DUA), con portfolio grupal y escrito integrador individual.',
+    pesos: { 'educacion-desarrollo': 2.4, 'neuro-psicometria': 1.4, 'tcc-evidencia': 1, 'trabajo-organizaciones': 0.8 }
+  },
+  {
+    id: 'cat-neuro-1',
+    materiaId: 'neuro-fisiologia',
+    materiaNombre: 'Neurofisiología',
+    catedraNombre: 'Cátedra I (Cód. 048)',
+    titular: 'Norma Nancy China',
+    motivo:
+      'Enfoque contemporáneo de Neurociencias y Neuropsicología cognitiva (tradición Ferreres/China) con apuntes propios, videos grabados, casos clínicos de lesiones, cerebro social (empatía/mentalización) y exámenes multiple-choice.',
+    pesos: { 'neuro-psicometria': 2.8, 'tcc-evidencia': 1.6, 'educacion-desarrollo': 0.6 }
+  },
+  {
+    id: 'cat-neuro-2',
+    materiaId: 'neuro-fisiologia',
+    materiaNombre: 'Neurofisiología',
+    catedraNombre: 'Cátedra II (Cód. 123)',
+    titular: 'María del Pilar Kufa',
+    motivo:
+      'Psicobiología y fisiología clásica desde manuales internacionales (Carlson, Bear, Purves, Guyton) y relatos clínicos de Oliver Sacks, con eje en sueño, conducta motivacional, estrés/psicosomática y psicofarmacología, evaluada con parciales escritos.',
+    pesos: { 'neuro-psicometria': 2.6, 'salud-comunitaria': 1.2, 'tcc-evidencia': 1, psicoanalisis: 0.6 }
   },
   {
     id: 'cat-etica-1',

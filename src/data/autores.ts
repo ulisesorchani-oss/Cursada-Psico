@@ -722,7 +722,7 @@ export const AUTORES: AutorProfile[] = [
     id: 'vygotsky',
     nombre: 'Lev S. Vygotsky',
     apellidoCorto: 'Vygotsky',
-    matchKeys: ['vygotsky', 'vigotsky'],
+    matchKeys: ['vygotsky', 'vigotsky', 'vygotski', 'vigotski'],
     materiaIdsExtra: [
       'procesos-psico-basicos',
       'psico-aprendizaje',
@@ -1056,7 +1056,8 @@ export const AUTORES: AutorProfile[] = [
     influenciadoPor: [
       { nombre: 'Friedrich Nietzsche', autorId: 'nietzsche', nota: 'Método genealógico y crítica de la verdad' },
       { nombre: 'Georges Canguilhem', autorId: 'canguilhem', nota: 'Historia de las ciencias y lo normal y lo patológico' },
-      { nombre: 'Maurice Merleau-Ponty', autorId: 'merleau-ponty', nota: 'Formación filosófica inicial en París' }
+      { nombre: 'Maurice Merleau-Ponty', autorId: 'merleau-ponty', nota: 'Formación filosófica inicial en París' },
+      { nombre: 'Pierre Hadot', autorId: 'hadot', nota: 'Amistad intelectual en el Collège de France y fuente clave sobre ejercicios espirituales y cuidado de sí en su última etapa' }
     ],
     influencioA: [
       { nombre: 'Giorgio Agamben', autorId: 'agamben', nota: 'Biopolítica contemporánea, Homo Sacer y dispositivos' },

@@ -353,6 +353,95 @@ export const AUTORES_TANDA_7: AutorProfile[] = [
       { nombre: 'Jacques Lacan', autorId: 'lacan', nota: 'Referencia explícita sobre la angustia y la repetición en el Seminario 10 y 11' }
     ]
   },
+  {
+    id: 'hadot',
+    nombre: 'Pierre Hadot',
+    apellidoCorto: 'Hadot',
+    matchKeys: ['hadot', 'pierre hadot'],
+    materiaIdsExtra: [
+      'historia-psico',
+      'problemas-filosoficos',
+      'etica-deontologia-ddhh',
+      'psico-fenomenologica-existencial'
+    ],
+    fechas: '1922 – 2010',
+    origen: 'París, Francia',
+    corriente: 'Filosofía y Fenomenología',
+    resumenCorto:
+      'Filósofo e historiador de la filosofía antigua francés, profesor en el Collège de France. Redescubrió la filosofía como "manera de vivir" y práctica de ejercicios espirituales, y sostuvo un célebre diálogo filosófico y amistad intelectual con Michel Foucault en torno al cuidado de sí.',
+    biografia:
+      'Especialista en estoicismo (Marco Aurelio y Epicteto), epicureísmo y neoplatonismo (Plotino), Pierre Hadot fue elegido profesor del Collège de France en 1982 gracias, en gran medida, al impulso y la admiración de Michel Foucault. Su tesis revolucionó la lectura de la Antigüedad: antes que sistemas teóricos abstractos, las escuelas filosóficas antiguas eran formas de vida orientadas a transformar la mirada, calmar las pasiones y convertir al propio sujeto mediante "ejercicios espirituales".\n\nEn Psicología UBA es una referencia muy valorada en Historia de la Psicología (Cát. I, Seminario D sobre Foucault y la genealogía de la subjetividad) y en debates ético-filosóficos: su amistoso pero riguroso contrapunto con Foucault sobre el "cultivo del yo" y la "estética de la existencia" abre una vía luminosa para pensar la subjetivación, la atención al presente y el cuidado de sí sin caer en el individualismo.',
+    principalesAportes: [
+      'Distinción fundamental entre "filosofía" (elección existencial y arte de vivir) y "discurso filosófico" (elaboración teórica al servicio de esa transformación vital).',
+      'Redescubrimiento de los "ejercicios espirituales" antiguos (atención al presente o prosoche, diálogo socrático, premeditación de los males, mirada desde lo alto) como verdaderas terapéuticas del alma.',
+      'Relectura renovadora de las Meditaciones de Marco Aurelio ("La ciudadela interior") y de la filosofía helenística frente a la tradición puramente escolástica.',
+      'Diálogo intelectual y amistad con Michel Foucault: inspiró el giro ético del último Foucault ("cuidado de sí" y "tecnologías del yo") y formuló una crítica fecunda a la noción foucaultiana de "cultivo del yo".'
+    ],
+    conceptosClave: [
+      {
+        termino: 'Ejercicios espirituales (Askesis)',
+        explicacion:
+          'Prácticas voluntarias de pensamiento, imaginación y atención —no meramente religiosas— destinadas a transformar la visión del mundo y el modo de ser del sujeto.'
+      },
+      {
+        termino: 'Filosofía como manera de vivir',
+        explicacion:
+          'En la Antigüedad ser filósofo no significaba producir tratados eruditos, sino adoptar una conducta cotidiana coherente orientada a la lucidez, la libertad interior y la paz del ánimo.'
+      },
+      {
+        termino: 'Prosoche (atención al presente) y "mirada desde lo alto"',
+        explicacion:
+          'Vigilancia serena sobre el instante presente combinada con el ejercicio de situar la propia existencia dentro de la inmensidad del cosmos para relativizar las angustias egoístas.'
+      },
+      {
+        termino: 'Crítica al "cultivo del yo" (Diálogo con Foucault)',
+        explicacion:
+          'Aunque compartía el interés por las prácticas de sí, Hadot señaló que los antiguos no buscaban un esteticismo individualista ni encerrarse en el yo, sino superarlo hacia la universalidad y la comunidad.'
+      }
+    ],
+    obrasEsenciales: [
+      {
+        titulo: 'Ejercicios espirituales y filosofía antigua',
+        año: '1981 / 2006',
+        resumen:
+          'Obra central donde sistematiza los ejercicios espirituales e incluye sus célebres textos sobre el diálogo interrumpido con Michel Foucault.'
+      },
+      {
+        titulo: 'La ciudadela interior: Introducción a los Pensamientos de Marco Aurelio',
+        año: '1992',
+        resumen:
+          'Muestra cómo el diario del emperador estoico es un cuaderno vivo de ejercicios espirituales cotidianos.'
+      },
+      {
+        titulo: '¿Qué es la filosofía antigua?',
+        año: '1995',
+        resumen:
+          'Síntesis magistral desde Sócrates hasta el neoplatonismo sobre la filosofía como elección de vida.'
+      },
+      {
+        titulo: 'La filosofía como forma de vida',
+        año: '2001',
+        resumen:
+          'Conversaciones accesibles sobre su trayectoria intelectual, el sentido existencial de leer a los antiguos y su relación con Foucault.'
+      }
+    ],
+    influenciadoPor: [
+      { nombre: 'Sócrates, Marco Aurelio y Plotino', nota: 'Tradición antigua del diálogo, el estoicismo y el cuidado del alma' },
+      { nombre: 'Ludwig Wittgenstein', nota: 'Juegos del lenguaje para comprender el sentido práctico de los textos antiguos' },
+      { nombre: 'Henri Bergson', nota: 'Atención a la experiencia vivida y la percepción del presente' }
+    ],
+    influencioA: [
+      {
+        nombre: 'Michel Foucault',
+        autorId: 'foucault',
+        nota: 'Amistad intelectual en el Collège de France y fuente directa para "tecnologías del yo" y "cuidado de sí"'
+      },
+      {
+        nombre: 'Ética contemporánea y terapias contextuales',
+        nota: 'Revalorización actual de los ejercicios estoicos y de la atención plena (prosoche) en filosofía y clínica'
+      }
+    ]
+  },
 
   // ======================== DESARROLLO Y COGNICIÓN ========================
   {

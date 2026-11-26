@@ -19,6 +19,7 @@ import { ProgressChart, CYCLE_REQUIRED } from './components/ProgressChart';
 import { CurriculumFlowchart } from './components/CurriculumFlowchart';
 import { AutoresSection } from './components/AutoresSection';
 import { AutorModal } from './components/AutorModal';
+import { DescubriteSection } from './components/DescubriteSection';
 import { TesisSection } from './components/TesisSection';
 import {
   AUTORES,
@@ -469,6 +470,9 @@ export default function App() {
             </a>
             <a href="#autores" className="hover:text-bordo transition-colors whitespace-nowrap">
               Autores
+            </a>
+            <a href="#descubrite" className="hover:text-bordo transition-colors whitespace-nowrap">
+              Descubrite
             </a>
             <a href="#tesis" className="hover:text-bordo transition-colors whitespace-nowrap">
               Tesis
@@ -955,6 +959,20 @@ export default function App() {
       {/* Core Authors Library */}
       <AutoresSection
         materias={PLAN_ESTUDIOS}
+        onSelectAutor={(autor) => {
+          setSelectedMateria(null);
+          setSelectedAutor(autor);
+        }}
+      />
+
+      {/* Descubrite: Academic Exploration Compass */}
+      <DescubriteSection
+        materias={PLAN_ESTUDIOS}
+        approvedSet={approvedSet}
+        onSelectMateria={(materia) => {
+          setSelectedAutor(null);
+          setSelectedMateria(materia);
+        }}
         onSelectAutor={(autor) => {
           setSelectedMateria(null);
           setSelectedAutor(autor);

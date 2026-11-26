@@ -33,7 +33,7 @@ function normalizeText(value: string): string {
 }
 
 export function AutoresSection({ materias, onSelectAutor }: AutoresSectionProps) {
-  const [selectedCorriente, setSelectedCorriente] = useState<string>('Todas');
+  const [selectedCorriente, setSelectedCorriente] = useState<string>('Todos');
   const [searchQuery, setSearchQuery] = useState('');
 
   const materiasCountByAutor = useMemo(() => {
@@ -45,7 +45,7 @@ export function AutoresSection({ materias, onSelectAutor }: AutoresSectionProps)
   }, [materias]);
 
   const corrienteCounts = useMemo(() => {
-    const counts: Record<string, number> = { Todas: AUTORES.length };
+    const counts: Record<string, number> = { Todos: AUTORES.length };
     for (const a of AUTORES) {
       counts[a.corriente] = (counts[a.corriente] ?? 0) + 1;
     }
@@ -75,7 +75,7 @@ export function AutoresSection({ materias, onSelectAutor }: AutoresSectionProps)
         );
       }
 
-      return selectedCorriente === 'Todas' || a.corriente === selectedCorriente;
+      return selectedCorriente === 'Todos' || a.corriente === selectedCorriente;
     });
   }, [selectedCorriente, searchQuery]);
 
@@ -147,7 +147,7 @@ export function AutoresSection({ materias, onSelectAutor }: AutoresSectionProps)
               </button>
             </div>
           ) : (
-            ['Todas', ...CORRIENTES_AUTORES].map((corriente) => (
+            ['Todos', ...CORRIENTES_AUTORES].map((corriente) => (
               <button
                 key={corriente}
                 type="button"
@@ -235,7 +235,7 @@ export function AutoresSection({ materias, onSelectAutor }: AutoresSectionProps)
               type="button"
               onClick={() => {
                 setSearchQuery('');
-                setSelectedCorriente('Todas');
+                setSelectedCorriente('Todos');
               }}
               className="px-4 py-2 rounded-full bg-bordo text-white text-xs font-bold hover:bg-bordo-light transition-colors"
             >

@@ -1141,6 +1141,7 @@ export const AUTORES_TANDA_3: AutorProfile[] = [
       }
     ],
     influenciadoPor: [
+      { nombre: 'Roberto Mazzuca', autorId: 'mazzuca', nota: 'Maestro, predecesor como titular de Psicopatología Cátedra II (1984–2005) y coautor en clínica nodal' },
       { nombre: 'Jacques Lacan', autorId: 'lacan', nota: 'Psicopatología estructural y topología borromea' },
       { nombre: 'Jacques-Alain Miller', autorId: 'miller', nota: 'Orientación lacaniana, paradigmas del goce y psicosis ordinaria' },
       { nombre: 'Sigmund Freud', autorId: 'freud', nota: 'Nosología psicoanalítica clásica' }

@@ -677,20 +677,42 @@ export const CATEDRAS_SUGERIDAS_RULES: readonly CatedraSugeridaRule[] = [
   {
     id: 'cat-exploracion-1-cat1',
     materiaId: 'exploracion-diagnostico-1',
-    materiaNombre: 'Exploración y Diagnóstico · Módulo I',
-    catedraNombre: 'Cátedra I',
-    titular: 'Isabel M. Mikulic',
-    motivo: 'Evaluación psicológica en contexto, validez ecológica y adaptación local de técnicas psicométricas.',
-    pesos: { 'neuro-psicometria': 2.2, 'salud-comunitaria': 1.2, 'educacion-desarrollo': 0.8 }
+    materiaNombre: 'Exploración y Diagnóstico · Módulo I (Psicométricas)',
+    catedraNombre: 'Cátedra I (Cód. 059)',
+    titular: 'Isabel María Mikulic',
+    motivo:
+      'Enfoque integrativo y ecoevaluativo con amplísima batería en 7 ámbitos (MMPI-2-RF, NEO-PI-R, WAIS-III, WISC-IV, MMSE/IFS, LISRES, CRI, Moos, MISS, BDI-II), entrenamiento en informes y oratoria; promocionable con 7+ (1° parcial teórico + 2° evaluación e informe libre + coloquio).',
+    pesos: { 'neuro-psicometria': 2.4, 'salud-comunitaria': 1.2, 'educacion-desarrollo': 0.8, 'tcc-evidencia': 0.6 }
   },
   {
     id: 'cat-exploracion-1-cat2',
     materiaId: 'exploracion-diagnostico-1',
-    materiaNombre: 'Exploración y Diagnóstico · Módulo I',
-    catedraNombre: 'Cátedra II',
-    titular: 'Alejandro Castro Solano',
-    motivo: 'Evaluación de la personalidad, psicometría aplicada, liderazgo y psicología positiva/organizacional.',
-    pesos: { 'trabajo-organizaciones': 2.4, 'neuro-psicometria': 2, 'tcc-evidencia': 1 }
+    materiaNombre: 'Exploración y Diagnóstico · Módulo I (Psicométricas)',
+    catedraNombre: 'Cátedra II (Cód. 058)',
+    titular: 'Alejandro Alberto Castro Solano',
+    motivo:
+      'Psicometría del siglo XXI (estándares ITC, ciberpsicología, IA y gamificación), screening infantil (SNN-UBA), MIPS, Big Five, PID-5, ICCP, Psicología Positiva (VIA) y SCL-90-R; promocionable con 7+ sin promediar (1° parcial = TP niños/adultos + 2° parcial teórico).',
+    pesos: { 'neuro-psicometria': 2.2, 'trabajo-organizaciones': 2, 'tcc-evidencia': 1.2 }
+  },
+  {
+    id: 'cat-exploracion-2-cat1',
+    materiaId: 'exploracion-diagnostico-2',
+    materiaNombre: 'Exploración y Diagnóstico · Módulo II (Proyectivas)',
+    catedraNombre: 'Cátedra I (Cód. 113)',
+    titular: 'Andrés Febbraio',
+    motivo:
+      'Enfoque dinámico freudiano (Celener, Passalacqua, Lunazi, Febbraio) con unidad exclusiva de Adultos Mayores (MoCA y SAT), además de niños (Hora de Juego, HTP, Familia Kinética, CAT-A) y adultos (Dos Personas, TRO); promocionable con 7+ en 2 parciales presenciales y batería individual.',
+    pesos: { psicoanalisis: 2.1, 'educacion-desarrollo': 1.1, 'neuro-psicometria': 0.9 }
+  },
+  {
+    id: 'cat-exploracion-2-cat2',
+    materiaId: 'exploracion-diagnostico-2',
+    materiaNombre: 'Exploración y Diagnóstico · Módulo II (Proyectivas)',
+    catedraNombre: 'Cátedra II (Cód. 042)',
+    titular: 'María Andrea Vinué',
+    motivo:
+      'Enfoque psicodinámico integrador (Sendín, Veccia, Vinué) con repertorio verbal más amplio (Cuestionario Desiderativo, TAT, TRO, CAT-A/S), enfoque interseccional/diversidad en juego y familia, y diálogo con IA; promocionable con 7+ no promediable en 1 parcial + carpeta TP + coloquio.',
+    pesos: { psicoanalisis: 1.9, 'salud-comunitaria': 1.2, 'educacion-desarrollo': 1 }
   },
   {
     id: 'cat-juridica-1',

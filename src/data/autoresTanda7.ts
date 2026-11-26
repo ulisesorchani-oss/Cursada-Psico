@@ -512,5 +512,81 @@ export const AUTORES_TANDA_7: AutorProfile[] = [
       { nombre: 'Kurt Danziger', autorId: 'danziger', nota: 'Analizado como eje del "experimento clínico francés" en historia de la psicología' },
       { nombre: 'Pierre Janet y Neuropsicología moderna', nota: 'Tradición psicopatológica francesa y ley de gradiente temporal en la memoria' }
     ]
+  },
+
+  // ======================== REFERENTES UBA / ARGENTINA ========================
+  {
+    id: 'mazzuca',
+    nombre: 'Roberto Mazzuca',
+    apellidoCorto: 'Mazzuca',
+    matchKeys: ['roberto mazzuca', 'mazzuca, r.'],
+    materiaIdsExtra: ['psicopatologia', 'psicoanalisis-francesa-1', 'psico-clinica-psicoterapias-1'],
+    fechas: 'Contemporáneo',
+    origen: 'Buenos Aires, Argentina',
+    corriente: 'Referentes UBA / Argentina',
+    resumenCorto:
+      'Psicoanalista (EOL / AMP), Lic. en Psicología y Filosofía y Profesor Consulto de la UBA. Fue el histórico Titular Plenario fundador de Psicopatología Cátedra II (1984–2005), cátedra que hoy continúa su discípulo Fabián Schejtman.',
+    biografia:
+      'Licenciado en Psicología y en Filosofía por la UBA, psicoanalista miembro de la Escuela de la Orientación Lacaniana (EOL) y de la Asociación Mundial de Psicoanálisis (AMP), Roberto Mazzuca es uno de los grandes arquitectos de la enseñanza universitaria de la psicopatología psicoanalítica en la Argentina.\n\nCon la recuperación democrática de 1984 asumió como Profesor Titular Plenario de la Segunda Cátedra de Psicopatología en la Facultad de Psicología de la UBA (1984–2005), construyendo un equipo docente y de investigación UBACyT que sentó las bases de la tradición que hoy continúa Fabián Schejtman. Profesor Consulto de la UBA, docente en maestrías de posgrado (UBA y UNSAM) y distinguido en 2024 como Personalidad Destacada de la Salud por la Legislatura Porteña, su obra articula con rigor la psiquiatría clásica, las estructuras freudolacanianas y el pasaje hacia la clínica borromea de los nudos.',
+    principalesAportes: [
+      'Fundación y dirección histórica (1984–2005) de Psicopatología Cátedra II en la UBA, formando a generaciones enteras de clínicos y docentes (Fabián Schejtman, Claudio Godoy, Leonardo Leibson, Nieves Soria, entre otros).',
+      'Sistematización del contrapunto entre la psiquiatría clásica (Kraepelin, Bleuler, Clérambault, Sérieux y Capgras) y el diagnóstico estructural psicoanalítico, sin caer en reduccionismos ni en el empirismo ateórico del DSM.',
+      'Difusión pionera en la universidad argentina de «las dos clínicas de Lacan»: la articulación entre la clínica estructuralista del significante y la clínica nodal del último Lacan (nudo borromeo y sinthome).',
+      'Investigaciones de referencia sobre la neurosis («cizalla del cuerpo y del alma»), la perversión, las estabilizaciones en las psicosis y la ética del diagnóstico psicoanalítico.'
+    ],
+    conceptosClave: [
+      {
+        termino: 'Las dos clínicas de Lacan',
+        explicacion:
+          'Distinción y articulación entre la primera clínica lacaniana (discontinuista, estructurada en torno al Nombre-del-Padre y la forclusión) y la segunda clínica nodal (continuista, centrada en los modos de anudamiento borromeo y el sinthome).'
+      },
+      {
+        termino: 'Encuentros y desencuentros: Psiquiatría y Psicoanálisis',
+        explicacion:
+          'Relectura crítica de los grandes nosógrafos clásicos para rescatar su fineza semiológica sin perder la especificidad ética del sujeto del inconsciente y la transferencia.'
+      },
+      {
+        termino: 'Cizalla del cuerpo y del alma',
+        explicacion:
+          'Fórmula con la que Mazzuca aborda la división subjetiva en las neurosis (histeria y neurosis obsesiva) siguiendo su desarrollo desde los primeros textos de Freud hasta Lacan.'
+      },
+      {
+        termino: 'Diagnóstico estructural y estabilidad clínica',
+        explicacion:
+          'Análisis riguroso de las condiciones de encadenamiento, desencadenamiento y suplencia tanto en las psicosis como en la estabilidad histérica y obsesiva.'
+      }
+    ],
+    obrasEsenciales: [
+      {
+        titulo: 'Las dos clínicas de Lacan. Introducción a la clínica de los nudos (con F. Schejtman y M. Zlotnik)',
+        año: '2000',
+        resumen: 'Texto clásico de la UBA que introduce el pasaje de la clínica estructuralista a la topología borromea.'
+      },
+      {
+        titulo: 'Cizalla del cuerpo y del alma. La neurosis de Freud a Lacan',
+        año: '2003',
+        resumen: 'Recorrido sistemático por la construcción del concepto de neurosis en Freud y su reformulación lacaniana.'
+      },
+      {
+        titulo: 'Perversión. De la Psychopathia sexualis a la subjetividad perversa',
+        año: '2003',
+        resumen: 'Estudio histórico-clínico de la categoría de perversión desde la psiquiatría clásica hasta el psicoanálisis.'
+      },
+      {
+        titulo: 'Psicoanálisis y psiquiatría: encuentros y desencuentros (comp. junto a C. Godoy, F. Schejtman y M. Zlotnik)',
+        año: '2003',
+        resumen: 'Obra colectiva de la Cátedra II sobre la relación epistemológica y clínica entre ambas disciplinas.'
+      }
+    ],
+    influenciadoPor: [
+      { nombre: 'Jacques Lacan', autorId: 'lacan', nota: 'Psicopatología estructural y clínica nodal de la última enseñanza' },
+      { nombre: 'Sigmund Freud', autorId: 'freud', nota: 'Nosología psicoanalítica y clínica de las neurosis y psicosis' },
+      { nombre: 'Jacques-Alain Miller', autorId: 'miller', nota: 'Orientación lacaniana y lectura de la última enseñanza de Lacan' }
+    ],
+    influencioA: [
+      { nombre: 'Fabián Schejtman', autorId: 'schejtman', nota: 'Discípulo, coautor en clínica nodal y sucesor en la titularidad de Psicopatología Cátedra II (UBA)' },
+      { nombre: 'Cátedra II de Psicopatología (UBA)', nota: 'Tradición docente, revista Ancla e investigación UBACyT iniciada en 1984' }
+    ]
   }
 ];
+

@@ -8676,26 +8676,130 @@ export const PLAN_ESTUDIOS: Materia[] = [
     año: 3,
     ciclo: 'Formación General',
     cuatrimestre: 1,
-    descripcion: 'Introducción a las técnicas de evaluación y diagnóstico psicológico.',
+    correlativas: ['Metodología de la Investigación', 'Psicopatología (puede cursarse simultáneamente)'],
+    descripcion: 'Materia instrumental del último tramo del Ciclo de Formación General centrada en la teoría psicométrica, la construcción y adaptación transcultural de tests, la confiabilidad y validez, la administración e interpretación de baterías psicométricas y la elaboración ética de informes psicológicos en los distintos ámbitos profesionales.',
     objetivos: [
-      'Conocer los fundamentos de la evaluación psicológica.',
-      'Aprender la aplicación de tests psicométricos y proyectivos.'
+      'Dominar los fundamentos teóricos y éticos de la evaluación psicológica, los niveles de medición y las propiedades psicométricas (confiabilidad, validez, sesgos y baremos).',
+      'Comprender los procedimientos de construcción y adaptación cultural de tests según estándares nacionales e internacionales.',
+      'Entrenar la administración, puntuación e interpretación de técnicas psicométricas de inteligencia, habilidades cognitivas, personalidad, estrés, apoyo social y riesgo psicopatológico.',
+      'Integrar la información recolectada en un proceso evaluativo para redactar informes psicológicos y realizar devoluciones adecuadas a cada ámbito de aplicación (clínico, educativo, laboral, jurídico, neuropsicológico, deportológico e investigación).'
     ],
     catedras: [
       {
         nombre: 'Cátedra I (Cód. 059)',
-        titular: 'Isabel M. Mikulic',
+        titular: 'Isabel María Mikulic',
         link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=59&anio=2026&cuatrimestre=2',
+        enfoque: 'Enfoque integrativo, aplicado y ecológico (modelo ecoevaluativo desarrollado por Mikulic y equipo sobre la base de Forns Santacana), que analiza al sujeto biopsicosocial en covariación con su ambiente percibido y objetivo. Recorre los distintos modelos de evaluación (atributo, médico, dinámico, conductual, cognitivo, neuropsicológico y ecológico), la teoría clásica, de la generalizabilidad y respuesta al ítem, confiabilidad y validez (incluida validez ecológica), y entrena en un repertorio muy amplio de técnicas aplicadas a 7 ámbitos (clínico/salud, laboral, jurídico, educativo, neuropsicológico, deportológico e investigación): MMPI-2-RF, NEO-PI-R, ICSE (competencias socioemocionales), DAT, Raven, WAIS-III, WISC-IV, MMSE, INECO Frontal Screening (IFS), ACE-R, Bender (TGV), BTS-1 (atención), LISRES, CRI, Escala de Trauma de Davidson (DTS), Escalas de Clima Social de Moos (CES/FES/WES), Entrevista MISS, BDI-II, BHS y CUMO. Incluye entrenamiento explícito en escritura de informes y fundamentos de oratoria para el coloquio grupal. Cursa 6 hs semanales (2 hs teórico + 4 hs seguidas de práctico). Web: www.mikulic.com.ar.',
+        evaluacion: 'Promoción sin examen final: 75% de asistencia a teóricos y a prácticos + aprobación de los 2 parciales obligatorios con 7 o más. Regulares (con final integrador): 75% de asistencia + aprobación (4 a 6) de ambos parciales; al final se debe concurrir con el programa cursado y la carpeta de trabajos prácticos e informe corregido (papel o digital). Los 2 parciales consisten en: 1° Parcial teórico (Unidades 1, 2 y 3) y 2° Parcial práctico con entrega de una evaluación psicológica completa y su informe individual (el estudiante selecciona objetivo, contexto y etapa vital del evaluado; entrega en TP 12), más acreditación de TP grupal y coloquio grupal (TP 14–15). Recuperatorio en TP 14.',
         bibliografia: [
-          { autor: 'Mikulic, I. M.', titulo: 'Evaluación Psicológica', editorial: 'Eudeba', año: '2010', tipo: 'Obligatoria' }
+          // Unidad 1: Evaluación Psicológica: Conceptos, Modelos, Proceso y Garantías
+          { autor: 'Aiken, L. R.', titulo: 'Test psicológicos y evaluación (Caps. 1 y 15)', editorial: 'Pearson Educación', año: '2003', tipo: 'Obligatoria', unidad: 'Unidad 1 · Evaluación Psicológica: Conceptos, Modelos, Proceso y Garantías' },
+          { autor: 'Buela-Casal, G. y Sierra, J. C.', titulo: 'Manual de evaluación psicológica. Fundamentos, técnicas y aplicaciones (Caps. 10, 12 y 13)', editorial: 'Siglo XXI', año: '1997', tipo: 'Obligatoria', unidad: 'Unidad 1 · Evaluación Psicológica: Conceptos, Modelos, Proceso y Garantías' },
+          { autor: 'Cohen, R. J. y Swerdlik, M. E.', titulo: 'Pruebas y evaluación psicológicas. Introducción a las pruebas y a la medición (Caps. 13 y 16)', editorial: 'McGraw-Hill', año: '2001', tipo: 'Obligatoria', unidad: 'Unidad 1 · Evaluación Psicológica: Conceptos, Modelos, Proceso y Garantías' },
+          { autor: 'Mikulic, I. M.', titulo: 'La Evaluación Psicológica y el Análisis Ecoevaluativo', editorial: 'Ficha de Cátedra · UBA', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad 1 · Evaluación Psicológica: Conceptos, Modelos, Proceso y Garantías' },
+          { autor: 'Mikulic, I. M.', titulo: 'Calidad de Vida: Aportes del Inventario de Calidad de Vida percibida y del Inventario de Respuestas de Afrontamiento (CRI)', editorial: 'Ficha de Cátedra · UBA', año: '2007', tipo: 'Obligatoria', unidad: 'Unidad 1 · Evaluación Psicológica: Conceptos, Modelos, Proceso y Garantías' },
+          { autor: 'Mikulic, I. M.', titulo: 'Evaluación del Apoyo Social. Aportes de la Entrevista MISS', editorial: 'Cauquén Editora', año: '2008', tipo: 'Obligatoria', unidad: 'Unidad 1 · Evaluación Psicológica: Conceptos, Modelos, Proceso y Garantías' },
+
+          // Unidad 2: Técnicas Psicométricas: Construcción y Adaptación de Tests Psicológicos
+          { autor: 'Hogan, T.', titulo: 'Pruebas psicológicas. Una introducción práctica (Cap. 6)', editorial: 'Manual Moderno', año: '2004', tipo: 'Obligatoria', unidad: 'Unidad 2 · Construcción y Adaptación de Tests Psicológicos' },
+          { autor: 'Mikulic, I. M.', titulo: 'Introducción a la construcción y adaptación de tests', editorial: 'Ficha de Cátedra · UBA', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad 2 · Construcción y Adaptación de Tests Psicológicos' },
+
+          // Unidad 3: Confiabilidad y Validez
+          { autor: 'Hogan, T.', titulo: 'Pruebas psicológicas. Una introducción práctica (Caps. 4 y 5: Confiabilidad y Validez)', editorial: 'Manual Moderno', año: '2004', tipo: 'Obligatoria', unidad: 'Unidad 3 · Confiabilidad y Validez' },
+          { autor: 'Mikulic, I. M.', titulo: 'Introducción a la construcción y adaptación de tests (Sección Confiabilidad y Validez)', editorial: 'Ficha de Cátedra · UBA', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad 3 · Confiabilidad y Validez' },
+
+          // Unidad 4: Las Técnicas Psicométricas y el Informe Psicológico
+          { autor: 'Allegri, R. F. et al.', titulo: 'El "Mini-Mental State Examination" en Argentina: Instrucciones para su administración', editorial: 'Rev. Neurología Argentina, 24(1)', año: '1999', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Butman, J., Arizaga, R., Allegri, R. F. et al.', titulo: 'El "Mini-Mental State Examination" en español. Normas para Buenos Aires', editorial: 'Rev. Neurología Argentina, 26(1)', año: '2001', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Beck, A. T., Steer, R. A. y Brown, G. K.', titulo: 'Inventario de Depresión de Beck (BDI-II). Manual', editorial: 'Paidós', año: '2006', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Bender, L.', titulo: 'Test Guestáltico Visomotor. Uso y Aplicaciones Clínicas', editorial: 'Paidós', año: '1984', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Koppitz, E.', titulo: 'El test gestáltico visomotor para niños', editorial: 'Guadalupe', año: '1989', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Bennett, G., Seashore, H. y Wesman, A.', titulo: 'Test de Aptitudes Diferenciales (DAT). Manual forma T', editorial: 'Paidós', año: '2007', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Raven, J. C. y Court, J. H.', titulo: 'Test de Matrices Progresivas', editorial: 'Paidós', año: '1993', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Wechsler, D.', titulo: 'WAIS-III. Escala de Inteligencia para adultos de Wechsler', editorial: 'Paidós', año: '2002', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Wechsler, D.', titulo: 'WISC-IV. Test de inteligencia para niños', editorial: 'Paidós', año: '2011', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Kaufman, A. y Lichtenberg, E.', titulo: 'WAIS-III: Claves para la evaluación con el WAIS-III', editorial: 'TEA Ediciones', año: '1999', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Flanagan, D. y Kaufman, A.', titulo: 'Claves para la evaluación con el WISC-IV', editorial: 'Manual Moderno', año: '2012', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Forns, M.', titulo: 'Evaluación Psicológica Infantil', editorial: 'Barcanova', año: '1993', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Sattler, J.', titulo: 'Evaluación infantil: Fundamentos cognitivos (Vol. 1, Cap. 1)', editorial: 'Manual Moderno', año: '2007', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Tonglet, E. C.', titulo: 'Batería de tests con símbolos BTS 1 (atención sostenida), BTS 2 y BTS 3', editorial: 'Paidós', año: '2015', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Lichtenberger, E. O., Mather, N., Kaufman, N. L. y Kaufman, A. S.', titulo: 'Claves para la elaboración de Informes de Evaluación (Caps. 1 y 2)', editorial: 'TEA Ediciones', año: '2009', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Kurt, N. C.', titulo: 'Hablar en público: Cómo lograrlo con éxito (Caps. 4, 5, 6 y 7)', editorial: 'Ediciones B Argentina', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Cassullo, G. L.', titulo: 'Consideraciones teóricas acerca del concepto de clima social y su evaluación: Escalas de Clima Social de R. Moos', editorial: 'Ficha de Cátedra · UBA', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Cassullo, G., Puglia, M. V., Aboy, S., Ballesteros, J. y Paolo, A. M.', titulo: 'Evaluación psicológica en el contexto educativo', editorial: 'Ficha de Cátedra · UBA', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Colombo, R. I. y Alonso, G. M.', titulo: 'Maltrato y abuso sexual infantil: Pericia psicológica', editorial: 'Cauquén Editora', año: '2014', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Colombo, R. I. y Pierri, J.', titulo: 'Evaluación psicológica en el contexto jurídico', editorial: 'Ficha de Cátedra · UBA', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Crespi, M., Aruanno, Y., Prieto, F., Sarudiansky, M. y Vizioli, N.', titulo: 'Evaluación psicológica en el contexto investigativo', editorial: 'Ficha de Cátedra · UBA', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Farfallini, L., Pagano, A. y Picorelli, M.', titulo: 'Evaluación psicológica en el contexto deportivo', editorial: 'Ficha de Cátedra · UBA', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Radusky, P. D., Gallardo, F. y Torres, R.', titulo: 'Evaluación psicológica en el contexto clínico y psicología de la salud', editorial: 'Ficha de Cátedra · UBA', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Moreno, J. E. y Migone de Faletty, R.', titulo: 'Claves para la evaluación y orientación vocacional', editorial: 'Lugar Editorial', año: '2015', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Mikulic, I. M.', titulo: 'La evaluación psicológica de los recursos sociales y los estresores de vida. Aportes del Inventario LISRES', editorial: 'Cauquén Editora', año: '2006', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Mikulic, I. M.', titulo: 'Desesperanza: Aportes de la Escala BHS de Beck a la evaluación psicológica', editorial: 'Ficha de Cátedra · UBA', año: '2006', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Mikulic, I. M., Crespi, M. y Caballero, R.', titulo: 'Inventario Multifásico de Personalidad de Minnesota Reestructurado: Guía de Administración e Interpretación del MMPI-2-RF', editorial: 'Ficha de Cátedra · UBA', año: '2023', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Mikulic, I. M., Crespi, M. y Aruanno, Y.', titulo: 'Evaluación Psicológica de la Personalidad: El Inventario NEO-PI-R de Costa y McCrae', editorial: 'Ficha de Cátedra · UBA', año: '2024', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Mikulic, I. M., Crespi, M. y Radusky, P.', titulo: 'Construcción y validación de un Inventario de Competencias Socioemocionales (ICSE) para adultos', editorial: 'Interdisciplinaria, 32(2)', año: '2015', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Mikulic, I. M., Giardina, E., Valdez, G. y Crespi, M.', titulo: 'El Inventario de Depresión de Beck (BDI-II)', editorial: 'Ficha de Cátedra · UBA', año: '2020', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Mikulic, I. M., Lastra, A. S. y Borrego Maturana, M. F.', titulo: 'Evaluación psicológica en el contexto laboral', editorial: 'Ficha de Cátedra · UBA', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Mikulic, I. M., Petino, M. L. y Crespi, M.', titulo: 'Escala de Inteligencia para Adultos de Wechsler (WAIS-III): Ficha Teórica y Guía para su puntuación', editorial: 'Fichas de Cátedra · UBA', año: '2020', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Stazone, N., Petino Zappala, M. L. y Mikulic, I. M.', titulo: 'Evaluación psicológica en el contexto neuropsicológico', editorial: 'Ficha de Cátedra · UBA', año: '2024', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+          { autor: 'Villafañe, A., Milanesio, M. S., Marcellino, C. M. y Amodei, C.', titulo: 'La evaluación del trastorno por estrés postraumático: Propiedades psicométricas de la Escala de Trauma de Davidson (DTS)', editorial: 'Evaluar, 3, 80–93', año: '2003', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Psicométricas y el Informe Psicológico' },
+
+          // Complementaria destacada
+          { autor: 'Anastasi, A. y Urbina, S.', titulo: 'Tests Psicológicos', editorial: 'Aguilar', año: '1998', tipo: 'Complementaria' },
+          { autor: 'Martínez Arias, R.', titulo: 'Psicometría', editorial: 'Síntesis Psicológica', año: '1995', tipo: 'Complementaria' },
+          { autor: 'Nunnally, J. y Bernstein, I.', titulo: 'Teoría Psicométrica', editorial: 'Trillas', año: '1995', tipo: 'Complementaria' },
+          { autor: 'Kline, P.', titulo: 'Handbook of Psychological Testing', editorial: 'Routledge', año: '2000', tipo: 'Complementaria' },
+          { autor: 'Muñiz, J.', titulo: 'La validez desde una óptica psicométrica', editorial: 'Acta Comportamentalia, 13', año: '2005', tipo: 'Complementaria' },
+          { autor: 'Fernández Fernández, J. L.', titulo: 'Evaluación Psicológica', editorial: 'Pires', año: '2019', tipo: 'Complementaria' }
         ]
       },
       {
         nombre: 'Cátedra II (Cód. 058)',
-        titular: 'Alejandro Castro Solano',
+        titular: 'Alejandro Alberto Castro Solano',
         link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=58&anio=2026&cuatrimestre=2',
+        enfoque: 'Concibe la Evaluación Psicológica como un proceso riguroso de toma de decisiones sustentado en los lineamientos internacionales del ITC (Bartram, Hambleton, Oakland, Iliescu, van de Vijver) y en la psicometría contemporánea del siglo XXI junto a Mercedes Fernández Liporace y Guadalupe de la Iglesia. Se destaca por incorporar de lleno la ciberpsicología y la evaluación basada en tecnología (tests adaptativos informatizados, plataformas digitales, videojuegos, chatbots, realidad virtual, gamificación e Inteligencia Artificial), el screening neuropsicológico infantil (SNN-UBA), el modelo CHC y críticas actuales a la inteligencia (Sternberg y Gardner), y un fuerte eje en la evaluación de la personalidad normal, patológica y positiva: Big Five (BFI), Inventario de Estilos de Personalidad de Millon (MIPS), rasgos patológicos del DSM-5 (PID-5), Inventario de los Cinco Continuos (ICCP), Psicología Positiva y fortalezas del carácter (VIA), y detección de riesgo psicopatológico (SCL-90-R). Cuenta con Aula Virtual y difusión en Instagram (@psicometricas2). No admite oyentes.',
+        evaluacion: 'Promoción sin examen final: 75% de asistencia + calificación de al menos 7 en cada una de las 2 instancias de evaluación (no promediable). Regulares (con final): 75% de asistencia + mínimo 4 en ambas instancias. Las 2 instancias son: 1° Parcial = Trabajo Práctico consistente en administrar, evaluar e interpretar una batería de tests de un caso de niño/a más la interpretación de un caso de adulto (según Guías de TP Niños y Adultos 2026); 2° Parcial = Examen parcial sobre contenidos teóricos de la asignatura. Existe recuperatorio solo para una de las dos instancias. En condición de libre: examen escrito y examen oral sobre la totalidad del programa vigente.',
         bibliografia: [
-          { autor: 'Castro Solano, A.', titulo: 'Técnicas de exploración psicológica', editorial: 'Paidós', año: '2004', tipo: 'Obligatoria' }
+          // Unidad I: La evaluación psicológica y los instrumentos psicométricos en el siglo XXI
+          { autor: 'Bartram, D. y Hambleton, D.', titulo: 'Lineamientos de la ITC. Estándares internacionales relacionados con las pruebas y la evaluación (en Manual internacional ITC)', editorial: 'Manual Moderno', año: '2020', tipo: 'Obligatoria', unidad: 'Unidad I · Evaluación psicológica e instrumentos psicométricos en el siglo XXI' },
+          { autor: 'Castro Solano, A.', titulo: 'Ciberpsicología vs. la psicología de Internet: Un enfoque introductorio (en La psicología de Internet)', editorial: 'Paidós', año: '2024', tipo: 'Obligatoria', unidad: 'Unidad I · Evaluación psicológica e instrumentos psicométricos en el siglo XXI' },
+          { autor: 'de la Iglesia, G.', titulo: 'Innovaciones Tecnológicas en la Evaluación Psicológica: Plataformas Digitales, Videojuegos, Chatbots, Realidad Virtual e Inteligencia Artificial', editorial: 'Persona, (28), 11–36', año: '2025', tipo: 'Obligatoria', unidad: 'Unidad I · Evaluación psicológica e instrumentos psicométricos en el siglo XXI' },
+          { autor: 'Fernández Liporace, M. M., Cayssials, A. y Pérez, M.', titulo: 'Curso básico de Psicometría', editorial: 'Lugar Editorial', año: '2009', tipo: 'Obligatoria', unidad: 'Unidad I · Evaluación psicológica e instrumentos psicométricos en el siglo XXI' },
+          { autor: 'Oakland, T. e Iliescu, D.', titulo: 'Estándares éticos, lineamientos y temas clave en pruebas y evaluaciones internacionales (en Manual internacional ITC)', editorial: 'Manual Moderno', año: '2020', tipo: 'Obligatoria', unidad: 'Unidad I · Evaluación psicológica e instrumentos psicométricos en el siglo XXI' },
+          { autor: 'van de Vijver, F.', titulo: 'Adaptaciones de pruebas (en Manual internacional de pruebas y evaluación del ITC)', editorial: 'Manual Moderno', año: '2020', tipo: 'Obligatoria', unidad: 'Unidad I · Evaluación psicológica e instrumentos psicométricos en el siglo XXI' },
+
+          // Unidad II: El proceso de la evaluación psicológica
+          { autor: 'Castro Solano, A. y Fernández Liporace, M. M. (comp.)', titulo: 'La evaluación psicológica en niños (Caps. 1, 2 y 4: Entrevista, EEDI e Informe)', editorial: 'Paidós', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad II · El proceso de la evaluación psicológica' },
+          { autor: 'Cohen, R. J. y Swerdlik, M. E.', titulo: 'Pruebas y Evaluación Psicológicas (Cap. 13: Informe, pp. 535–541)', editorial: 'McGraw-Hill', año: '2000', tipo: 'Obligatoria', unidad: 'Unidad II · El proceso de la evaluación psicológica' },
+          { autor: 'Sattler, J. M.', titulo: 'Evaluación infantil: Fundamentos Cognitivos, Vol. I (5ª ed., Cap. 19: Redacción del informe)', editorial: 'Manual Moderno', año: '2010', tipo: 'Obligatoria', unidad: 'Unidad II · El proceso de la evaluación psicológica' },
+          { autor: 'Cátedra Psicométricas II', titulo: 'Guías para la confección del Trabajo Práctico – Niños y Adultos', editorial: 'Fichas de Cátedra · UBA', año: '2026', tipo: 'Obligatoria', unidad: 'Unidad II · El proceso de la evaluación psicológica' },
+
+          // Unidad III: La evaluación de las habilidades cognitivas
+          { autor: 'Castro Solano, A. y Fernández Liporace, M. M. (eds.)', titulo: 'La evaluación psicológica en niños (Caps. 5, 6 y 7: Bender, DFH, SNN-UBA e inteligencia)', editorial: 'Paidós', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad III · La evaluación de las habilidades cognitivas' },
+          { autor: 'Cohen, R. J., Schneider, W. J. y Tobin, R. M.', titulo: 'Evaluación y pruebas psicológicas: Una introducción a las pruebas y la medición (10ª ed., Cap. 9)', editorial: 'McGraw-Hill', año: '2023', tipo: 'Obligatoria', unidad: 'Unidad III · La evaluación de las habilidades cognitivas' },
+          { autor: 'Fernández Liporace, M. M.', titulo: 'Modelos clásicos y contemporáneos sobre inteligencia y habilidades (2ª ed.)', editorial: 'Ficha de Cátedra · UBA', año: '2020', tipo: 'Obligatoria', unidad: 'Unidad III · La evaluación de las habilidades cognitivas' },
+          { autor: 'Bender, L.', titulo: 'Test Guestáltico Visomotor (B.G.) Bender. Juego de 9 tarjetas', editorial: 'Paidós', año: '2012', tipo: 'Obligatoria', unidad: 'Unidad III · La evaluación de las habilidades cognitivas' },
+          { autor: 'Pérez, M.', titulo: 'Normas del Test de Raven para Ciudad de Buenos Aires. Escala General', editorial: 'Ficha de Cátedra · UBA', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad III · La evaluación de las habilidades cognitivas' },
+          { autor: 'Raven, J. C., Court, J. H. y Raven, J.', titulo: 'Test de Matrices Progresivas. Escalas Coloreada, General y Avanzada (Manual, Parte I Secs. 2–3 y Cuadernillo)', editorial: 'Paidós', año: '1993', tipo: 'Obligatoria', unidad: 'Unidad III · La evaluación de las habilidades cognitivas' },
+          { autor: 'Wechsler, D.', titulo: 'WAIS-III. Test de Inteligencia para Adultos', editorial: 'Paidós', año: '1999', tipo: 'Obligatoria', unidad: 'Unidad III · La evaluación de las habilidades cognitivas' },
+          { autor: 'Wechsler, D.', titulo: 'WISC-IV. Test de Inteligencia para Niños (Manual y Caps. 1 y 2)', editorial: 'Paidós', año: '2010', tipo: 'Obligatoria', unidad: 'Unidad III · La evaluación de las habilidades cognitivas' },
+
+          // Unidad IV: La evaluación de la personalidad normal, patológica y positiva
+          { autor: 'Castro Solano, A., Casullo, M. M. y Pérez, M.', titulo: 'Aplicaciones del MIPS en los ámbitos laboral, educativo y médico (Caps. 2, 4, 7 y Anexos)', editorial: 'Paidós', año: '2004', tipo: 'Obligatoria', unidad: 'Unidad IV · Evaluación de la personalidad normal, patológica y positiva' },
+          { autor: 'Castro Solano, A.', titulo: 'Concepciones teóricas acerca de la psicología positiva (en Fundamentos de psicología positiva, pp. 17–41)', editorial: 'Paidós', año: '2010', tipo: 'Obligatoria', unidad: 'Unidad IV · Evaluación de la personalidad normal, patológica y positiva' },
+          { autor: 'de la Iglesia, G. y Castro Solano, A.', titulo: 'Inventario de los cinco continuos de la personalidad (ICCP): Evaluación de rasgos positivos y patológicos', editorial: 'Paidós', año: '2021', tipo: 'Obligatoria', unidad: 'Unidad IV · Evaluación de la personalidad normal, patológica y positiva' },
+          { autor: 'Derogatis, L. (Cátedra II)', titulo: 'El Inventario de Síntomas SCL-90-R de L. Derogatis', editorial: 'Ficha de Cátedra · UBA', año: '2024', tipo: 'Obligatoria', unidad: 'Unidad IV · Evaluación de la personalidad normal, patológica y positiva' },
+          { autor: 'Fernández Liporace, M. y Castro Solano, A. (eds.)', titulo: 'Teoría e instrumentos de evaluación de la personalidad normal y sus trastornos (Cap. 6)', editorial: 'Lugar Editorial', año: '2015', tipo: 'Obligatoria', unidad: 'Unidad IV · Evaluación de la personalidad normal, patológica y positiva' },
+          { autor: 'Iliescu, D. e Ispas, D.', titulo: 'Evaluación de la personalidad (en Manual internacional de pruebas y evaluación del ITC, pp. 135–147)', editorial: 'Manual Moderno', año: '2020', tipo: 'Obligatoria', unidad: 'Unidad IV · Evaluación de la personalidad normal, patológica y positiva' },
+          { autor: 'Millon, T.', titulo: 'El Inventario de Estilos de Personalidad (MIPS) (Caps. 1, 2 y 3, pp. 70–78)', editorial: 'Paidós', año: '1997', tipo: 'Obligatoria', unidad: 'Unidad IV · Evaluación de la personalidad normal, patológica y positiva' },
+
+          // Complementaria / Consulta destacada
+          { autor: 'A.P.A.', titulo: 'Guía de consulta de los criterios diagnósticos del DSM-5', editorial: 'Médica Panamericana', año: '2014', tipo: 'Complementaria' },
+          { autor: 'Castro Solano, A. y de la Iglesia, G.', titulo: 'Is there a virtual personality? A psycholexical informed exploratory study of personality traits in virtual environments', editorial: 'Personality Science, 6', año: '2025', tipo: 'Complementaria' },
+          { autor: 'Ayala, J., Cosentino, A. y Castro Solano, A.', titulo: 'Fortalezas y virtudes del carácter en universitarios: un estudio ético derivado', editorial: 'Avances en Psicol. Latinoamericana, 42(3)', año: '2025', tipo: 'Complementaria' },
+          { autor: 'García Cueto, E.', titulo: 'Introducción a la psicometría', editorial: 'Siglo XXI', año: '1993', tipo: 'Complementaria' },
+          { autor: 'Freiberg Hoffmann, A. y Fernández Liporace, M.', titulo: 'Normas APA: referencias y citas. Breve guía para psicólogos y estudiantes', editorial: 'Depto. Publicaciones · UBA', año: '2010', tipo: 'Complementaria' },
+          { autor: 'Cohen, R. J. y Swerdlik, M. E.', titulo: 'Pruebas y Evaluación Psicológicas (Caps. 1 a 7)', editorial: 'McGraw-Hill', año: '2000', tipo: 'Complementaria' }
         ]
       }
     ]
@@ -8706,26 +8810,131 @@ export const PLAN_ESTUDIOS: Materia[] = [
     año: 3,
     ciclo: 'Formación General',
     cuatrimestre: 2,
-    descripcion: 'Profundización en las técnicas de diagnóstico y elaboración de informes psicológicos.',
+    correlativas: ['Metodología de la Investigación', 'Psicopatología (puede cursarse simultáneamente con Módulo I)'],
+    descripcion: 'Materia obligatoria de cierre del Ciclo de Formación General dedicada al método psicodiagnóstico y a las técnicas proyectivas (entrevista clínica semidirigida, hora de juego diagnóstica, técnicas gráficas y verbales) a lo largo de todo el ciclo vital, el análisis por recurrencias y convergencias, la devolución y la redacción de informes psicológicos.',
     objetivos: [
-      'Integrar los resultados de diferentes técnicas de evaluación.',
-      'Desarrollar habilidades para la entrevista diagnóstica.'
+      'Fundamentar el estatus epistemológico, metodológico y ético del proceso psicodiagnóstico y de las técnicas proyectivas en articulación con instrumentos psicométricos.',
+      'Entrenar la entrevista semidirigida clínica (padres, niños, adolescentes, adultos y adultos mayores), la disociación instrumental y la construcción de hipótesis diagnósticas.',
+      'Dominar la administración y los criterios de interpretación de técnicas lúdicas (Hora de Juego), gráficas (HTP, Familia Kinética, Dos Personas) y verbales (TRO, CAT-A/S, Cuestionario Desiderativo, TAT y SAT).',
+      'Integrar el material de una batería psicodiagnóstica mediante recurrencias y convergencias para realizar entrevistas de devolución y redactar informes acordes a cada ámbito profesional.'
     ],
     catedras: [
       {
         nombre: 'Cátedra I (Cód. 113)',
         titular: 'Andrés Febbraio',
         link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=113&anio=2026&cuatrimestre=2',
+        enfoque: 'Enfoque dinámico de base psicoanalítica freudiana (determinismo psíquico, apercepción y proyección) articulado con la psicología de rasgos/atributos y la escuela psicodiagnóstica de Graciela Celener, Alicia Passalacqua, Helena Lunazi y Andrés Febbraio. Profundiza en el estatus epistemológico, validez y confiabilidad de las técnicas proyectivas, el juicio clínico, los niveles de inferencia y las defensas prevalentes según estructuras psicopatológicas. Su rasgo distintivo es abarcar todo el ciclo vital incluyendo una unidad específica dedicada a la evaluación en Adultos Mayores (vejez y envejecimiento, screening cognitivo MoCA, HTP y Dos Personas en vejez y SAT — Técnica de Apercepción para Adultos Mayores de Bellak y Abrams), junto con niños (Entrevista a padres, Hora de Juego Diagnóstica, HTP, Familia Kinética, CAT-A) y adolescentes/adultos (Entrevista semidirigida, HTP, Familia Kinética, Dos Personas y TRO de Phillipson). En los prácticos (4 hs cátedra obligatorias + teóricos obligatorios) trabaja con Caso Modelo, dramatizaciones de consignas, grupos de 5 integrantes y supervisión directa de la carpeta individual.',
+        evaluacion: 'Promoción sin examen final: 75% de asistencia a teóricos y prácticos + nota mínima de 7 en cada uno de los dos exámenes parciales individuales presenciales teórico-prácticos (TP 7 y TP 12, promediables entre sí) y nota mínima de 7 en la presentación de la batería de psicodiagnóstico de administración individual (a un niño, adulto o adulto mayor, supervisada encuentro a encuentro por el ayudante). Regular con examen final: 75% de asistencia + nota mínima de 4 en cada parcial y en la batería.',
         bibliografia: [
-          { autor: 'Febbraio, A.', titulo: 'El proceso de diagnóstico psicológico', editorial: 'Eudeba', año: '2012', tipo: 'Obligatoria' }
+          // Unidad I: Fundamentación de las Técnicas de Exploración Psicológica
+          { autor: 'Celener, G.', titulo: 'Temas en Psicodiagnóstico. Las Técnicas Proyectivas. Su estatus epistemológico actual (pp. 21–70, 111–127, 149–159)', editorial: 'JVE Psiqué', año: '1998', tipo: 'Obligatoria', unidad: 'Unidad I · Fundamentación de las Técnicas de Exploración Psicológica' },
+          { autor: 'Passalacqua, A. y Febbraio, A.', titulo: 'Validez y Confiabilidad en las Técnicas Proyectivas', editorial: 'V Congreso Internacional · UBA', año: '2013', tipo: 'Obligatoria', unidad: 'Unidad I · Fundamentación de las Técnicas de Exploración Psicológica' },
+          { autor: 'Sneiderman, S.', titulo: 'Consideraciones acerca de la confiabilidad y validez en las técnicas proyectivas', editorial: 'Subjetividad y Procesos Cognitivos, 15(2)', año: '2011', tipo: 'Obligatoria', unidad: 'Unidad I · Fundamentación de las Técnicas de Exploración Psicológica' },
+          { autor: 'Cátedra Proyectivas I', titulo: 'Cuadernillo de Orientación al alumno', editorial: 'Ficha de Cátedra · UBA', año: '2026', tipo: 'Obligatoria', unidad: 'Unidad I · Fundamentación de las Técnicas de Exploración Psicológica' },
+
+          // Unidad II: La Exploración Psicológica
+          { autor: 'Celener, G., Febbraio, A. y otros', titulo: 'Referentes teóricos y proceso psicodiagnóstico (en Técnicas Proyectivas, Tomo I, pp. 11–48)', editorial: 'Lugar Editorial', año: '2011', tipo: 'Obligatoria', unidad: 'Unidad II · La Exploración Psicológica' },
+          { autor: 'Celener, G.', titulo: 'Un modelo de pensamiento para interpretar (en Técnicas Proyectivas, Tomo I, pp. 49–65)', editorial: 'Lugar Editorial', año: '2011', tipo: 'Obligatoria', unidad: 'Unidad II · La Exploración Psicológica' },
+          { autor: 'Lunazi, H.', titulo: 'El juicio clínico (en Relectura del Psicodiagnóstico, Vol. 1, pp. 23–25)', editorial: 'Lugar Editorial', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad II · La Exploración Psicológica' },
+          { autor: 'Calabrese, M. y Gasco, F.', titulo: 'El Proceso Psicodiagnóstico. Interpretación de las Técnicas Proyectivas', editorial: 'Ficha de Cátedra · UBA', año: '2024', tipo: 'Obligatoria', unidad: 'Unidad II · La Exploración Psicológica' },
+          { autor: 'Febbraio, A., Calabrese, M. y Gasco, F.', titulo: 'Las defensas prevalentes y secundarias según las estructuras y cuadros psicopatológicos', editorial: 'Ficha de Cátedra · UBA', año: '2024', tipo: 'Obligatoria', unidad: 'Unidad II · La Exploración Psicológica' },
+          { autor: 'Cátedra Proyectivas I', titulo: 'Ficha de Consignas de técnicas y tests', editorial: 'Ficha de Cátedra · UBA', año: '2026', tipo: 'Obligatoria', unidad: 'Unidad II · La Exploración Psicológica' },
+
+          // Unidad III: La Entrevista en el Proceso de Exploración Psicológica
+          { autor: 'Rosenfeld, N. y Avrutin, H.', titulo: 'La entrevista psicológica (en Celener, Técnicas Proyectivas, Tomo II, pp. 15–23)', editorial: 'Lugar Editorial', año: '2011', tipo: 'Obligatoria', unidad: 'Unidad III · La Entrevista en el Proceso de Exploración Psicológica' },
+          { autor: 'Fernández, G., Ragel, G., Serfaty, D. et al.', titulo: 'La Entrevista Semidirigida en el Proceso Psicodiagnóstico. Lineamientos en adultos', editorial: 'Ficha de Cátedra · UBA', año: '2024', tipo: 'Obligatoria', unidad: 'Unidad III · La Entrevista en el Proceso de Exploración Psicológica' },
+
+          // Unidad IV: La Exploración Psicológica en Niños
+          { autor: 'Borelle, A. y Russo, S.', titulo: 'Algunas consideraciones acerca del proceso psicodiagnóstico en la niñez y Entrevista inicial a padres (en El Psicodiagnóstico de Niños)', editorial: 'Paidós', año: '2013', tipo: 'Obligatoria', unidad: 'Unidad IV · La Exploración Psicológica en Niños' },
+          { autor: 'Borelle, A. y Russo, S.', titulo: 'Funcionamientos neuróticos, organizaciones psicóticas y organizaciones límites en la infancia (en El Psicodiagnóstico de Niños)', editorial: 'Paidós', año: '2013', tipo: 'Obligatoria', unidad: 'Unidad IV · La Exploración Psicológica en Niños' },
+          { autor: 'Febbraio, A.', titulo: 'Nuevas aportaciones a la hora de juego diagnóstica (en Celener, Técnicas Proyectivas, Tomo I, pp. 136–180)', editorial: 'Lugar Editorial', año: '2011', tipo: 'Obligatoria', unidad: 'Unidad IV · La Exploración Psicológica en Niños' },
+          { autor: 'Febbraio, A.', titulo: 'Desarrollo y actualización de la evolutiva gráfica (en Celener, Técnicas Proyectivas, Tomo I, pp. 109–152)', editorial: 'Lugar Editorial', año: '2011', tipo: 'Obligatoria', unidad: 'Unidad IV · La Exploración Psicológica en Niños' },
+          { autor: 'Reynoso, R.', titulo: 'Juego (en Psicología y clínica infanto-juvenil, Tomo 1, pp. 165–253)', editorial: 'Editorial Belgrano', año: '1995', tipo: 'Obligatoria', unidad: 'Unidad IV · La Exploración Psicológica en Niños' },
+          { autor: 'Frank de Verthelyi, R. y Méndez de Rodríguez, F.', titulo: 'Test de la familia kinética. Versión actual (en Interacción y proyecto familiar, pp. 23–60)', editorial: 'Paidós', año: '1999', tipo: 'Obligatoria', unidad: 'Unidad IV · La Exploración Psicológica en Niños' },
+          { autor: 'Bellak, L.', titulo: 'CAT-A. Test de apercepción infantil con figuras animales. Manual de aplicación', editorial: 'Paidós', año: '1981', tipo: 'Obligatoria', unidad: 'Unidad IV · La Exploración Psicológica en Niños' },
+          { autor: 'Baringoltz, S.', titulo: 'Tres esquemas de interpretación del CAT (en El CAT en el psicodiagnóstico de niños, pp. 75–109)', editorial: 'Paidós', año: '2000', tipo: 'Obligatoria', unidad: 'Unidad IV · La Exploración Psicológica en Niños' },
+
+          // Unidad V: La Exploración Psicológica en Adolescentes y Adultos
+          { autor: 'Febbraio, A.', titulo: 'Aportes a la entrevista semidirigida en los procesos psicodiagnósticos frente a los nuevos paradigmas', editorial: 'Revista Conceptos · UMSA, 521', año: '2024', tipo: 'Obligatoria', unidad: 'Unidad V · La Exploración Psicológica en Adolescentes y Adultos' },
+          { autor: 'Celener, G.', titulo: 'Síntesis bibliográfica de algunos conceptos sobre las técnicas proyectivas gráficas (Tomo I, pp. 153–161)', editorial: 'Lugar Editorial', año: '2011', tipo: 'Obligatoria', unidad: 'Unidad V · La Exploración Psicológica en Adolescentes y Adultos' },
+          { autor: 'Febbraio, A.', titulo: 'La interpretación de las pautas formales y de contenido en las técnicas gráficas (Actualizaciones)', editorial: 'Ficha de Cátedra · UBA', año: '2011', tipo: 'Obligatoria', unidad: 'Unidad V · La Exploración Psicológica en Adolescentes y Adultos' },
+          { autor: 'Frank de Verthelyi, R. y otros', titulo: 'Administración y criterios de interpretación en el test de las dos personas (pp. 36–58)', editorial: 'Paidós', año: '2003', tipo: 'Obligatoria', unidad: 'Unidad V · La Exploración Psicológica en Adolescentes y Adultos' },
+          { autor: 'Frank de Verthelyi, R. (comp.)', titulo: 'Una breve introducción al test de relaciones objetales (en Actualizaciones en el test de Phillipson, pp. 17–41)', editorial: 'Paidós', año: '1989', tipo: 'Obligatoria', unidad: 'Unidad V · La Exploración Psicológica en Adolescentes y Adultos' },
+          { autor: 'Phillipson, H.', titulo: 'T.R.O. Test de Relaciones Objetales. Manual de aplicación', editorial: 'Paidós', año: '2012', tipo: 'Obligatoria', unidad: 'Unidad V · La Exploración Psicológica en Adolescentes y Adultos' },
+          { autor: 'Novara, P., Ragel, G., Battista Wagner, F. et al.', titulo: 'Respuestas a las Láminas del Test de Relaciones Objetales: análisis desde los cuatro criterios de interpretación', editorial: 'Ficha de Cátedra · UBA', año: '2024', tipo: 'Obligatoria', unidad: 'Unidad V · La Exploración Psicológica en Adolescentes y Adultos' },
+
+          // Unidad VI: La Evaluación en Adultos Mayores
+          { autor: 'Febbraio, A.', titulo: 'Conceptos básicos sobre vejez y envejecimiento / Test de las dos personas en adultos mayores (Tesis doctoral)', editorial: 'USAL', año: '2014', tipo: 'Obligatoria', unidad: 'Unidad VI · La Evaluación en Adultos Mayores' },
+          { autor: 'Febbraio, A.', titulo: 'Algunas consideraciones sobre la entrevista psicológica con adultos mayores', editorial: 'Ficha de Cátedra · UBA', año: '2016', tipo: 'Obligatoria', unidad: 'Unidad VI · La Evaluación en Adultos Mayores' },
+          { autor: 'Nasreddine, Z. y Bedirian, V.', titulo: 'Evaluación Cognitiva Montreal (MoCA). Versión en español', editorial: 'MoCA Test', año: '2004', tipo: 'Obligatoria', unidad: 'Unidad VI · La Evaluación en Adultos Mayores' },
+          { autor: 'Palau, F., Berrios, W., Golimstok, A. et al.', titulo: 'Validez de la prueba MoCA como herramienta de screening para Deterioro Cognitivo Leve en Buenos Aires', editorial: 'VERTEX, Vol. XXIX', año: '2018', tipo: 'Obligatoria', unidad: 'Unidad VI · La Evaluación en Adultos Mayores' },
+          { autor: 'Herrera, G.', titulo: 'Indicadores de la prueba gráfica HTP en Adultos Mayores (en Colombo y Gurvich, pp. 251–280)', editorial: 'Cauquén Editora', año: '2012', tipo: 'Obligatoria', unidad: 'Unidad VI · La Evaluación en Adultos Mayores' },
+          { autor: 'Bellak, L. y Abrams, D.', titulo: 'SAT – Técnica de Apercepción para adultos mayores. Manual', editorial: 'Paidós', año: '2014', tipo: 'Obligatoria', unidad: 'Unidad VI · La Evaluación en Adultos Mayores' },
+
+          // Unidad VII: Devolución e Informe Psicodiagnóstico
+          { autor: 'Perriot, A.', titulo: 'Entrevista de devolución e informe en el proceso psicodiagnóstico (en Febbraio, La Evaluación Psicológica, pp. 145–151)', editorial: 'Ed. Museo Social Argentino', año: '2019', tipo: 'Obligatoria', unidad: 'Unidad VII · Devolución e Informe Psicodiagnóstico' },
+          { autor: 'Rosenfeld, N., Avrutin, H. y Jordá, A.', titulo: 'Entrevista de devolución (en Celener, Técnicas Proyectivas, Tomo II, pp. 61–70)', editorial: 'Lugar Editorial', año: '2011', tipo: 'Obligatoria', unidad: 'Unidad VII · Devolución e Informe Psicodiagnóstico' },
+          { autor: 'Rosenfeld, N. y Avrutin, H.', titulo: 'El informe escrito (en Celener, Técnicas Proyectivas, Tomo II, pp. 71–78)', editorial: 'Lugar Editorial', año: '2011', tipo: 'Obligatoria', unidad: 'Unidad VII · Devolución e Informe Psicodiagnóstico' },
+
+          // Complementaria destacada
+          { autor: 'Casullo, M. M.', titulo: 'Evaluación psicológica y psicodiagnóstico: discriminaciones y prejuicios vigentes', editorial: 'Sec. de Cultura · UBA', año: '1998', tipo: 'Complementaria' },
+          { autor: 'Ávila Espada, A.', titulo: 'La entrevista clínica, eje de la estrategia del Psicodiagnóstico de adultos', editorial: 'Amarú Ediciones', año: '1997', tipo: 'Complementaria' },
+          { autor: 'Pugliese, A.', titulo: 'Entrevista familiar diagnóstica en el psicodiagnóstico de niños y adolescentes', editorial: 'Ed. Museo Social Argentino', año: '2019', tipo: 'Complementaria' },
+          { autor: 'Schwartz de Scafati, L. E. y Caride de Mizes, M. R.', titulo: 'C.A.T.-A: Contribuciones para su interpretación', editorial: 'UNLP', año: '2000', tipo: 'Complementaria' },
+          { autor: 'Caride de Mizes, M. R.', titulo: 'Contribuciones actuales para el análisis de las técnicas verbales: El Test de Relaciones Objetales', editorial: 'UCES', año: '2013', tipo: 'Complementaria' },
+          { autor: 'Sendon, A. M., Gasco, F. y Stigliano, M.', titulo: 'La Autoridad ¿Figura Simbólica o Imaginaria? ¿Cómo responden los jóvenes hoy a la Lámina CG del T.R.O.?', editorial: 'XVII Congreso Nacional de Psicodiagnóstico', año: '2013', tipo: 'Complementaria' }
         ]
       },
       {
         nombre: 'Cátedra II (Cód. 042)',
-        titular: 'Andrea Vinue',
+        titular: 'María Andrea Vinué',
         link: 'http://academica.psi.uba.ar/Psi/Ver521.php?catedra=42&anio=2026&cuatrimestre=2',
+        enfoque: 'Enfoque psicodinámico (de orientación psicoanalítica) desde una perspectiva integradora (Maganto y Ávila Espada, María Concepción Sendín, Teresa Veccia —tradición histórica de la cátedra— y María Andrea Vinué). Emplea las técnicas proyectivas como «reactivos» cualitativos ambiguos articulados con entrevistas, historia familiar y contraste con técnicas psicométricas, valorando tanto los recursos adaptativos como los indicadores de conflicto bajo el Código de Ética de ADEIP y la Ley 23.277. Se distingue por incluir un abanico verbal más amplio —sumando el Cuestionario Desiderativo de Bernstein, el Test de Apercepción Temática (TAT) de Murray, el TRO de Phillipson y CAT-A/CAT-S— y actualizaciones 2026 con enfoque holístico, interseccional, de diversidad y nuevas configuraciones familiares (Grisolía 2026; Justet y Pietramala 2026), además de reflexiones sobre Evaluación Psicológica e Inteligencia Artificial (Vinué 2026). También sostiene proyectos UBACyT y UBANEX de prevención de la violencia escolar («Tratarnos bien, ¡No te borres!»).',
+        evaluacion: 'Promoción sin examen final: 75% de asistencia a teóricos y prácticos (~3 inasistencias máx.) + nota mínima de 7 (NO promediable) en el único examen parcial escrito individual (mitad del cuatrimestre, en horario de TP) + nota mínima de 7 (NO promediable) en la carpeta de trabajo práctico (individual o grupal, supervisada mediante entregas parciales; se administra con consentimiento informado firmado a un participante voluntario ajeno al círculo íntimo —niño 6–10, adolescente 11–19 o adulto 20–70, sin devolución—) + aprobación de un coloquio final integrador defendiendo la batería (con Guía de Preguntas de cátedra). Regular con examen final: 75% de asistencia + mínimo 4 (no promediable) en el parcial y en el trabajo práctico.',
         bibliografia: [
-          { autor: 'Vinue, A.', titulo: 'Diagnóstico y Evaluación', editorial: 'Eudeba', año: '2015', tipo: 'Obligatoria' }
+          // Unidad 1: El método psicodiagnóstico
+          { autor: 'ADEIP', titulo: 'Código de ética del psicodiagnosticador', editorial: 'ADEIP', año: '1999', tipo: 'Obligatoria', unidad: 'Unidad 1 · El método psicodiagnóstico' },
+          { autor: 'Sendín, M. C.', titulo: 'Bases conceptuales, encuadre, objetivos y fases del proceso diagnóstico (en Diagnóstico Psicológico, pp. 45–88)', editorial: 'Psimática', año: '2000', tipo: 'Obligatoria', unidad: 'Unidad 1 · El método psicodiagnóstico' },
+          { autor: 'Veccia, T.', titulo: 'Enfoque Conceptual Psicodinámico del Diagnóstico Psicológico', editorial: 'Ficha de Cátedra · UBA', año: '2005', tipo: 'Obligatoria', unidad: 'Unidad 1 · El método psicodiagnóstico' },
+
+          // Unidad 2: Las Técnicas Proyectivas y la Psicología Proyectiva
+          { autor: 'Cattaneo, B.', titulo: 'Introducción a las técnicas proyectivas (en El dibujo en el contexto del Psicodiagnóstico, pp. 19–40)', editorial: 'Paidós', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad 2 · Las Técnicas Proyectivas y la Psicología Proyectiva' },
+          { autor: 'Pérez Lalli, M.', titulo: 'Las técnicas proyectivas: un abordaje epistemo-metodológico (en Veccia, Técnicas y métodos cualitativos, pp. 27–41)', editorial: 'Lugar Editorial', año: '2014', tipo: 'Obligatoria', unidad: 'Unidad 2 · Las Técnicas Proyectivas y la Psicología Proyectiva' },
+          { autor: 'Veccia, T.', titulo: 'Revisión de los conceptos de Personalidad y Proyección. Diferencias entre Técnicas Psicométricas y Proyectivas', editorial: 'Ficha de Cátedra · UBA', año: '2005', tipo: 'Obligatoria', unidad: 'Unidad 2 · Las Técnicas Proyectivas y la Psicología Proyectiva' },
+          { autor: 'Veccia, T.', titulo: 'El Método Psicodiagnóstico y el Ejercicio Profesional del Psicólogo (pp. 9–38)', editorial: 'Eudeba', año: '1998', tipo: 'Obligatoria', unidad: 'Unidad 2 · Las Técnicas Proyectivas y la Psicología Proyectiva' },
+
+          // Unidad 3: La entrevista psicológica
+          { autor: 'Albajari, V.', titulo: 'La entrevista en el proceso psicodiagnóstico (Caps. 2, 3 y 5)', editorial: 'Ed. Psicoteca', año: '1996', tipo: 'Obligatoria', unidad: 'Unidad 3 · La entrevista psicológica' },
+          { autor: 'Maladesky, F. A.', titulo: 'Pre-Entrevista y Entrevista a Padres (en Diagnóstico en Niños. Vínculos y Prevención, pp. 18–30)', editorial: 'Lugar Editorial', año: '2004', tipo: 'Obligatoria', unidad: 'Unidad 3 · La entrevista psicológica' },
+          { autor: 'Veccia, T.', titulo: 'Teoría y Práctica de la Entrevista. Validez y confiabilidad del instrumento (en Diagnóstico de la Personalidad, pp. 11–40)', editorial: 'Lugar Editorial', año: '2002', tipo: 'Obligatoria', unidad: 'Unidad 3 · La entrevista psicológica' },
+
+          // Unidad 4: Las Técnicas Proyectivas Gráficas y Lúdicas
+          { autor: 'Buck, J. N. y Warren, W. L.', titulo: 'Manual y Guía de Interpretación de la Técnica de Dibujo Proyectivo H-T-P (pp. 1–121)', editorial: 'Manual Moderno', año: '1995', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Proyectivas Gráficas y Lúdicas' },
+          { autor: 'Cattaneo, B.', titulo: 'El dibujo en el contexto del Psicodiagnóstico (Caps. 3, 4 y 5, pp. 77–209)', editorial: 'Paidós', año: '2017', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Proyectivas Gráficas y Lúdicas' },
+          { autor: 'Frank de Verthelyi, R., Hirsch, S. B. y Braude, M.', titulo: 'Identidad y Vínculo en el test de las Dos Personas (Caps. 2 y 3, pp. 36–95)', editorial: 'Paidós', año: '1985', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Proyectivas Gráficas y Lúdicas' },
+          { autor: 'Frank de Verthelyi, R. y Menéndez, F.', titulo: 'Interacción y proyecto familiar (Caps. 2, 3 y 5)', editorial: 'Gedisa', año: '2000', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Proyectivas Gráficas y Lúdicas' },
+          { autor: 'Grisolía, E.', titulo: 'La hora de juego individual, vincular y familiar. Un enfoque holístico, interseccional y de diversidad', editorial: 'Ficha de Cátedra · UBA', año: '2026', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Proyectivas Gráficas y Lúdicas' },
+          { autor: 'Justet, F. y Pietramala, K.', titulo: 'Implementación y análisis de la Técnica Gráfica de la Familia frente a las nuevas configuraciones familiares', editorial: 'Ficha de Cátedra · UBA', año: '2026', tipo: 'Obligatoria', unidad: 'Unidad 4 · Las Técnicas Proyectivas Gráficas y Lúdicas' },
+
+          // Unidad 5: Las Técnicas Proyectivas Verbales: asociativas y temáticas
+          { autor: 'Bellak, L.', titulo: 'CAT. Manual de la técnica', editorial: 'Paidós', año: '2005', tipo: 'Obligatoria', unidad: 'Unidad 5 · Las Técnicas Proyectivas Verbales: asociativas y temáticas' },
+          { autor: 'Celener de Nijamkim, G. y Guinzbourg de Braude, M.', titulo: 'El Cuestionario Desiderativo (5ª ed. actualizada, pp. 11–42)', editorial: 'Lugar Editorial', año: '2001', tipo: 'Obligatoria', unidad: 'Unidad 5 · Las Técnicas Proyectivas Verbales: asociativas y temáticas' },
+          { autor: 'Maladesky, F. A.', titulo: 'Test de Apercepción infantil: CAT-A y CAT-S (en Diagnóstico en Niños, pp. 63–108)', editorial: 'Lugar Editorial', año: '2004', tipo: 'Obligatoria', unidad: 'Unidad 5 · Las Técnicas Proyectivas Verbales: asociativas y temáticas' },
+          { autor: 'Murray, H.', titulo: 'El Test de Apercepción Temática (TAT). Manual de la técnica', editorial: 'Paidós', año: '1964', tipo: 'Obligatoria', unidad: 'Unidad 5 · Las Técnicas Proyectivas Verbales: asociativas y temáticas' },
+          { autor: 'Phillipson, H.', titulo: 'Test de Relaciones Objetales (TRO). Manual de la Técnica y Breve introducción (en Actualizaciones)', editorial: 'Paidós', año: '1990', tipo: 'Obligatoria', unidad: 'Unidad 5 · Las Técnicas Proyectivas Verbales: asociativas y temáticas' },
+          { autor: 'Sneiderman, S.', titulo: 'El cuestionario desiderativo: su historia y tradición (en Aportes para una actualización, pp. 101–109)', editorial: 'Paidós', año: '2012', tipo: 'Obligatoria', unidad: 'Unidad 5 · Las Técnicas Proyectivas Verbales: asociativas y temáticas' },
+
+          // Unidad 6: Integración psicodiagnóstica y comunicación de resultados
+          { autor: 'Cattaneo, B. H. (comp.)', titulo: 'Informe Psicológico (Caps. 2, 3, 6 y 9)', editorial: 'Eudeba', año: '2005', tipo: 'Obligatoria', unidad: 'Unidad 6 · Integración psicodiagnóstica y comunicación de resultados' },
+          { autor: 'Sendín, M. C.', titulo: 'Tercera fase del proceso diagnóstico: la entrevista de comunicación de resultados (pp. 323–338)', editorial: 'Psimática', año: '2000', tipo: 'Obligatoria', unidad: 'Unidad 6 · Integración psicodiagnóstica y comunicación de resultados' },
+
+          // Complementaria destacada
+          { autor: 'Vinué, A.', titulo: 'Los modelos en Evaluación Psicológica en diálogo con la Inteligencia Artificial. Algunas reflexiones', editorial: 'Ficha de Cátedra · UBA', año: '2026', tipo: 'Complementaria' },
+          { autor: 'Eguidazu, S. y Naser, I.', titulo: 'Herramientas y Proceso de Evaluación Psicológica en la Vejez', editorial: 'Ficha de Cátedra · UBA', año: '2026', tipo: 'Complementaria' },
+          { autor: 'Hammer, E.', titulo: 'Tests proyectivos gráficos (Caps. 3, 4, 8 y 9)', editorial: 'Paidós', año: '2004', tipo: 'Complementaria' },
+          { autor: 'Rapaport, D.', titulo: 'El modelo Psicoanalítico, la teoría del pensamiento y las técnicas proyectivas', editorial: 'Hormé', año: '1978', tipo: 'Complementaria' },
+          { autor: 'García Arzeno, M. E.', titulo: 'Nuevas aportaciones al psicodiagnóstico clínico (Caps. 16, 17 y 18)', editorial: 'Nueva Visión', año: '1999', tipo: 'Complementaria' },
+          { autor: 'Abt, L. y Bellak, L.', titulo: 'Psicología Proyectiva. Enfoque clínico de la personalidad total', editorial: 'Paidós', año: '1967', tipo: 'Complementaria' }
         ]
       }
     ]

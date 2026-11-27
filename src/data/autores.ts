@@ -6,6 +6,9 @@ import { AUTORES_TANDA_4 } from './autoresTanda4';
 import { AUTORES_TANDA_5 } from './autoresTanda5';
 import { AUTORES_TANDA_6 } from './autoresTanda6';
 import { AUTORES_TANDA_7 } from './autoresTanda7';
+import { AUTORES_TANDA_8 } from './autoresTanda8';
+import { AUTORES_TANDA_9 } from './autoresTanda9';
+import { AUTORES_TANDA_10 } from './autoresTanda10';
 
 export type CorrienteAutor =
   | 'Psicoanálisis'
@@ -72,7 +75,7 @@ export interface AutorProfile {
   ediRecursos?: EdiRecurso[];
 }
 
-export const AUTORES: AutorProfile[] = [
+const AUTORES_RAW: AutorProfile[] = [
   // ======================== PSICOANÁLISIS ========================
   {
     id: 'freud',
@@ -255,6 +258,7 @@ export const AUTORES: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Sigmund Freud', autorId: 'freud', nota: 'Eje central del "retorno a Freud"' },
+      { nombre: 'Georg Wilhelm Friedrich Hegel', autorId: 'hegel', nota: 'Dialéctica del amo y el esclavo, deseo como deseo del Otro y alma bella (vía Kojève e Hyppolite)' },
       { nombre: 'Gaëtan Gatian de Clérambault', autorId: 'clerambault', nota: 'Su "único maestro en psiquiatría" (automatismo mental)' },
       { nombre: 'Ferdinand de Saussure', autorId: 'saussure', nota: 'Subversión del signo lingüístico (S/s)' },
       { nombre: 'Karl Jaspers', autorId: 'jaspers', nota: 'Psicopatología fenomenológica en su tesis doctoral sobre la paranoia' },
@@ -1782,8 +1786,27 @@ export const AUTORES: AutorProfile[] = [
   ...AUTORES_TANDA_4,
   ...AUTORES_TANDA_5,
   ...AUTORES_TANDA_6,
-  ...AUTORES_TANDA_7
+  ...AUTORES_TANDA_7,
+  ...AUTORES_TANDA_8,
+  ...AUTORES_TANDA_9,
+  ...AUTORES_TANDA_10
 ];
+
+export const AUTORES: AutorProfile[] = [...AUTORES_RAW].sort((a, b) => {
+  const yearDiff = getAuthorBirthYear(a.fechas) - getAuthorBirthYear(b.fechas);
+  if (yearDiff !== 0) return yearDiff;
+  return a.apellidoCorto.localeCompare(b.apellidoCorto, 'es');
+});
+
+export function getAuthorBirthYear(fechas: string): number {
+  const birthPart = fechas.split(/[–-]/)[0]?.trim() ?? '';
+  const bcMatch = birthPart.match(/(\d+)\s*a\.?\s*C\.?/i);
+  if (bcMatch) return -parseInt(bcMatch[1], 10);
+  const yearMatch = birthPart.match(/^(\d{4})\b/);
+  if (yearMatch) return parseInt(yearMatch[1], 10);
+  if (/siglo\s*xx/i.test(birthPart)) return 9998;
+  return 9999;
+}
 
 function normalizeKey(value: string): string {
   return value

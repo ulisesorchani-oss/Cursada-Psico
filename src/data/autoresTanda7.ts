@@ -274,10 +274,93 @@ export const AUTORES_TANDA_7: AutorProfile[] = [
       { nombre: 'René Descartes', autorId: 'descartes', nota: 'Tradición racionalista que Kant somete a crítica trascendental' }
     ],
     influencioA: [
+      { nombre: 'Georg Wilhelm Friedrich Hegel', autorId: 'hegel', nota: 'Desarrollo dialéctico e histórico del idealismo alemán tras la crítica kantiana' },
       { nombre: 'Wilhelm Dilthey', autorId: 'dilthey', nota: 'Inspiración para fundamentar las ciencias del espíritu' },
       { nombre: 'Jean Piaget', autorId: 'piaget', nota: 'Epistemología genética como "kantismo evolutivo" (categorías construidas en el desarrollo)' },
       { nombre: 'Lawrence Kohlberg', autorId: 'kohlberg', nota: 'Ética de principios universales y autonomía moral posconvencional' },
       { nombre: 'Jacques Lacan', autorId: 'lacan', nota: 'Lectura crítica de la ley moral en el Seminario 7 y "Kant con Sade"' }
+    ]
+  },
+  {
+    id: 'hegel',
+    nombre: 'Georg Wilhelm Friedrich Hegel',
+    apellidoCorto: 'Hegel',
+    matchKeys: ['hegel', 'georg wilhelm friedrich hegel', 'hegeliano'],
+    materiaIdsExtra: [
+      'psicoanalisis-francesa-1',
+      'psicoanalisis-francesa-2',
+      'problemas-filosoficos',
+      'metodologia-inv',
+      'historia-psico',
+      'psico-clinica-psicoterapias-1'
+    ],
+    fechas: '1770 – 1831',
+    origen: 'Stuttgart · Jena · Berlín, Alemania',
+    corriente: 'Filosofía y Fenomenología',
+    resumenCorto:
+      'Filósofo alemán cumbre del idealismo y autor de la "Fenomenología del espíritu" (1807). Su dialéctica del amo y el esclavo, la lucha por el reconocimiento y el "alma bella" —leídos vía Kojève e Hyppolite— son pilares de la Escuela Francesa de Psicoanálisis (Lacan), además de nutrir la epistemología dialéctica de Samaja.',
+    biografia:
+      'Nacido en Stuttgart y profesor en Jena, Heidelberg y Berlín, Georg Wilhelm Friedrich Hegel revolucionó la filosofía moderna al concebir la razón, la conciencia y el sujeto no como sustancias fijas sino como un movimiento histórico y dialéctico movido por la negatividad y la contradicción.\n\nEn Psicología UBA es imprescindible para comprender a Jacques Lacan y toda la Escuela Francesa: a través de los célebres cursos de Alexandre Kojève en París (1933–1939) y el diálogo con Jean Hyppolite (sobre la Verneinung freudiana), Lacan tomó de la "Fenomenología del espíritu" la dialéctica del amo y el esclavo, la fórmula del deseo como deseo del Otro, la crítica al "alma bella" y a la "ley del corazón" (clave en su lectura del caso Dora y del estadio del espejo), para luego subvertir el "saber absoluto" hegeliano con el sujeto dividido del inconsciente. También reaparece en Metodología de la Investigación (Cat. II · Samaja/Ynoub) por la lógica dialéctica de la Aufhebung.',
+    principalesAportes: [
+      'Dialéctica del Amo y el Esclavo ("Fenomenología del espíritu"): el deseo humano es esencialmente deseo de reconocimiento por otra autoconciencia; la lucha a puro prestigio engendra la dialéctica de dominación y trabajo que Lacan retoma para el deseo y el Discurso del Amo (Seminario 17).',
+      'Crítica del "alma bella" y de la "ley del corazón": figuras de la conciencia que denuncian el desorden del mundo como algo ajeno sin advertir su propia implicación en él (decisivas en "Intervención sobre la transferencia" de Lacan sobre el caso Dora y en la teoría del yo).',
+      'Lógica dialéctica y Aufhebung (superación que niega, conserva y eleva): la contradicción no es un error lógico sino el motor del devenir histórico, de la ciencia y de la simbolización (retomada por Hyppolite y Lacan en torno a la negación freudiana, y por Juan Samaja en Metodología).',
+      'Historicidad del sujeto y del Espíritu (Geist): frente a un yo aislado e intemporal, la subjetividad se constituye siempre en la mediación del lenguaje, el trabajo, las instituciones y el reconocimiento mutuo.'
+    ],
+    conceptosClave: [
+      {
+        termino: 'Dialéctica del Amo y el Esclavo',
+        explicacion:
+          'En la lucha por el reconocimiento, el amo arriesga la vida y somete al esclavo, pero queda dependiendo del reconocimiento de alguien a quien no reconoce; el esclavo, al trabajar y transformar la naturaleza, produce el saber (S2 en el Discurso del Amo de Lacan).'
+      },
+      {
+        termino: 'Deseo de reconocimiento',
+        explicacion:
+          'A diferencia de la necesidad biológica, el deseo humano apunta a otro deseo: ser reconocido por otra conciencia (antecedente directo —vía Kojève— del axioma lacaniano "el deseo del hombre es el deseo del Otro").'
+      },
+      {
+        termino: 'Alma bella y Ley del corazón',
+        explicacion:
+          'Posición de quien se vive inocente y acusa al mundo de su sufrimiento sin reconocer su propia participación en el desorden que denuncia; Lacan la usa para desmontar el narcisismo del yo y operar la "inversión dialéctica" en Dora.'
+      },
+      {
+        termino: 'Aufhebung (Superación dialéctica)',
+        explicacion:
+          'Movimiento por el cual una determinación es a la vez suprimida, conservada y elevada a un plano superior —clave tanto en la dialéctica epistemológica de Samaja como en el comentario de Hyppolite sobre la Verneinung de Freud.'
+      }
+    ],
+    obrasEsenciales: [
+      {
+        titulo: 'Fenomenología del espíritu',
+        año: '1807',
+        resumen:
+          'Obra decisiva para la Escuela Francesa: desarrolla la autoconciencia, la dialéctica del amo y el esclavo, el alma bella y la ley del corazón.'
+      },
+      {
+        titulo: 'Ciencia de la lógica',
+        año: '1812–1816',
+        resumen:
+          'Sistematiza la lógica dialéctica del ser, la esencia, la contradicción y la Aufhebung.'
+      },
+      {
+        titulo: 'Principios de la filosofía del derecho',
+        año: '1820',
+        resumen:
+          'Desarrolla la eticidad (Sittlichkeit), la familia, la sociedad civil y el Estado como encarnaciones históricas de la libertad.'
+      }
+    ],
+    influenciadoPor: [
+      { nombre: 'Immanuel Kant', autorId: 'kant', nota: 'Punto de partida crítico cuya separación entre fenómeno y cosa en sí busca superar dialécticamente' },
+      { nombre: 'René Descartes', autorId: 'descartes', nota: 'Filosofía moderna de la conciencia y la subjetividad' },
+      { nombre: 'Baruch Spinoza, J. G. Fichte y F. W. J. Schelling', nota: 'Sustancia-sujeto y tradición del idealismo alemán' }
+    ],
+    influencioA: [
+      { nombre: 'Jacques Lacan', autorId: 'lacan', nota: 'Deseo como deseo del Otro, amo/esclavo, alma bella y contrapunto en "Subversión del sujeto" y Seminario 17 (vía Kojève e Hyppolite)' },
+      { nombre: 'Søren Kierkegaard', autorId: 'kierkegaard', nota: 'Reacción existencial radical contra el sistema totalizador hegeliano' },
+      { nombre: 'Jean-Paul Sartre', autorId: 'sartre', nota: 'Dialéctica del para-sí, la mirada del otro y el existencialismo francés' },
+      { nombre: 'Juan Samaja', autorId: 'samaja', nota: 'Lógica dialéctica, Aufhebung y superación de binarismos en Metodología de la Investigación (UBA)' },
+      { nombre: 'Judith Butler', autorId: 'butler', nota: 'Deseo, reconocimiento y "Sujetos del deseo: reflexiones hegelianas en la Francia del siglo XX"' },
+      { nombre: 'Karl Marx y Escuela de Frankfurt', nota: 'Inversión materialista de la dialéctica, alienación y teoría crítica' }
     ]
   },
   {
@@ -344,7 +427,8 @@ export const AUTORES_TANDA_7: AutorProfile[] = [
       }
     ],
     influenciadoPor: [
-      { nombre: 'Sócrates y crítica a G. W. F. Hegel', nota: 'Ironía socrática y defensa del individuo existente frente al sistema hegeliano' }
+      { nombre: 'Georg Wilhelm Friedrich Hegel', autorId: 'hegel', nota: 'Contrapunto existencial: defensa del individuo concreto frente al sistema totalizador hegeliano' },
+      { nombre: 'Sócrates', nota: 'Ironía socrática y pasión por la verdad subjetiva' }
     ],
     influencioA: [
       { nombre: 'Martin Heidegger', autorId: 'heidegger', nota: 'Distinción ontológica entre miedo y angustia en "Ser y Tiempo"' },
@@ -427,7 +511,7 @@ export const AUTORES_TANDA_7: AutorProfile[] = [
     ],
     influenciadoPor: [
       { nombre: 'Sócrates, Marco Aurelio y Plotino', nota: 'Tradición antigua del diálogo, el estoicismo y el cuidado del alma' },
-      { nombre: 'Ludwig Wittgenstein', nota: 'Juegos del lenguaje para comprender el sentido práctico de los textos antiguos' },
+      { nombre: 'Ludwig Wittgenstein', autorId: 'wittgenstein', nota: 'Juegos del lenguaje para comprender el sentido práctico de los textos antiguos' },
       { nombre: 'Henri Bergson', nota: 'Atención a la experiencia vivida y la percepción del presente' }
     ],
     influencioA: [

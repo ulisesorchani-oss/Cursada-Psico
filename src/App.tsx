@@ -22,6 +22,7 @@ import { DescubriteSection } from './components/DescubriteSection';
 import { TesisSection } from './components/TesisSection';
 import { FaqSection } from './components/FaqSection';
 import { MateriaCatedrasPanel } from './components/MateriaCatedrasPanel';
+import { TipsDeEstudio } from './components/TipsDeEstudio';
 import {
   AUTORES,
   AutorProfile,
@@ -1170,6 +1171,8 @@ export default function App() {
                         </p>
                       </div>
                     </div>
+
+                    <TipsDeEstudio materia={selectedMateria} />
                   </div>
 
                   {/* Right Column: Cátedras (segmented tabs + collapsible syllabus) */}

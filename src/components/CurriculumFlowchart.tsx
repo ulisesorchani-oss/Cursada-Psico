@@ -13,10 +13,12 @@ import {
   ExternalLink,
   BookOpen,
   Image as ImageIcon,
-  GitBranch
+  GitBranch,
+  Flame
 } from 'lucide-react';
 import { Materia } from '../constants';
 import { cn } from '../lib/utils';
+import { WorkloadHeatmapD3 } from './WorkloadHeatmapD3';
 
 const FLOWCHART_SRC = '/assets/aistudio/plan_estudios_psicologia_2026_new_b3884e5a.png';
 const REQ_STORAGE_KEY = 'psi_uba_requisitos_v1';
@@ -370,6 +372,31 @@ export function CurriculumFlowchart({
     });
   };
 
+  const unlockedMateriaIds = useMemo(() => {
+    const unlocked = new Set<string>();
+    for (const node of FLOW_NODES) {
+      if (node.kind !== 'materia') continue;
+      if (node.col === 'cbc') {
+        unlocked.add(node.id);
+        continue;
+      }
+      if (node.requiresCbc && !allCbcApproved) continue;
+      if (node.prereqs.length === 0) {
+        if (allCbcApproved) unlocked.add(node.id);
+        continue;
+      }
+      const allMet = node.prereqs.every((preId) => {
+        const preNode = nodeMap.get(preId);
+        if (!preNode) return false;
+        if (preNode.kind === 'materia') return approvedSet.has(preNode.id);
+        if (preNode.kind === 'requirement') return completedReqSet.has(preNode.id);
+        return (slotCounts[preNode.id] ?? 0) >= (preNode.requiredCount ?? 1);
+      });
+      if (allMet) unlocked.add(node.id);
+    }
+    return unlocked;
+  }, [allCbcApproved, approvedSet, completedReqSet, nodeMap, slotCounts]);
+
   // Active node (hover takes temporary precedence, otherwise pinned)
   const activeId = hoveredId ?? pinnedId;
 
@@ -486,33 +513,46 @@ export function CurriculumFlowchart({
             </p>
           </div>
 
-          {/* View Switcher */}
-          <div className="inline-flex items-center p-1 bg-paper border border-ink/10 rounded-2xl text-xs font-bold self-start lg:self-auto shrink-0">
+          {/* View Switcher + Quick Jump to Heatmap */}
+          <div className="flex flex-wrap items-center gap-2.5 self-start lg:self-auto shrink-0">
+            <div className="inline-flex items-center p-1 bg-paper border border-ink/10 rounded-2xl text-xs font-bold">
+              <button
+                type="button"
+                onClick={() => setViewMode('interactive')}
+                className={cn(
+                  'inline-flex items-center gap-2 px-4 py-2 rounded-xl transition-colors whitespace-nowrap cursor-pointer',
+                  viewMode === 'interactive'
+                    ? 'bg-ink text-white shadow-xs'
+                    : 'text-muted hover:text-ink'
+                )}
+              >
+                <GitBranch size={14} />
+                Mapa interactivo
+              </button>
+              <button
+                type="button"
+                onClick={() => setViewMode('poster')}
+                className={cn(
+                  'inline-flex items-center gap-2 px-4 py-2 rounded-xl transition-colors whitespace-nowrap cursor-pointer',
+                  viewMode === 'poster'
+                    ? 'bg-ink text-white shadow-xs'
+                    : 'text-muted hover:text-ink'
+                )}
+              >
+                <ImageIcon size={14} />
+                Imagen oficial
+              </button>
+            </div>
+
             <button
               type="button"
-              onClick={() => setViewMode('interactive')}
-              className={cn(
-                'inline-flex items-center gap-2 px-4 py-2 rounded-xl transition-colors whitespace-nowrap',
-                viewMode === 'interactive'
-                  ? 'bg-ink text-white shadow-xs'
-                  : 'text-muted hover:text-ink'
-              )}
+              onClick={() =>
+                document.getElementById('mapa-calor')?.scrollIntoView({ behavior: 'smooth' })
+              }
+              className="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-2xl bg-bordo/8 border border-bordo/20 text-bordo text-xs font-bold hover:bg-bordo hover:text-white transition-colors whitespace-nowrap cursor-pointer"
             >
-              <GitBranch size={14} />
-              Mapa interactivo
-            </button>
-            <button
-              type="button"
-              onClick={() => setViewMode('poster')}
-              className={cn(
-                'inline-flex items-center gap-2 px-4 py-2 rounded-xl transition-colors whitespace-nowrap',
-                viewMode === 'poster'
-                  ? 'bg-ink text-white shadow-xs'
-                  : 'text-muted hover:text-ink'
-              )}
-            >
-              <ImageIcon size={14} />
-              Imagen oficial
+              <Flame size={14} />
+              Mapa de calor
             </button>
           </div>
         </div>
@@ -1140,6 +1180,16 @@ export function CurriculumFlowchart({
             </div>
           </div>
         )}
+
+        {/* Dynamic D3.js Cumulative Annual Workload Heatmap */}
+        <WorkloadHeatmapD3
+          materias={materias}
+          approvedSet={approvedSet}
+          unlockedIds={unlockedMateriaIds}
+          onToggleApproved={onToggleApproved}
+          onOpenMateria={onOpenMateria}
+          onJumpToCycle={onJumpToCycle}
+        />
 
         {/* Official Plan 1985 Key Rules */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-ink/8 text-xs sm:text-sm leading-relaxed">
